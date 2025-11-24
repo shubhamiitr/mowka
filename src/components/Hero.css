@@ -11,16 +11,16 @@
 
 .hero-container {
   text-align: center;
-  max-width: 1000px;
+  max-width: 1311px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3.5rem;
+  gap: 2.5rem;
   position: relative;
   z-index: 1;
-  padding: 3rem 3rem;
+  padding: 2rem 3rem;
 }
 
 .logo-container {
@@ -32,7 +32,7 @@
 }
 
 .logo-mark {
-  width: clamp(240px, 28vw, 360px);
+  width: clamp(200px, 24vw, 320px);
   height: auto;
   animation: rotate 30s linear infinite, pulseGlow 4s ease-in-out infinite;
   box-shadow: 
@@ -100,7 +100,7 @@
   line-height: 1.65;
   color: #1d1d1f;
   margin: 0;
-  max-width: 820px;
+  max-width: 920px;
   animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
   letter-spacing: 0.01em;
   text-shadow:
@@ -121,6 +121,63 @@
   text-shadow:
     0 1px 6px rgba(0, 0, 0, 0.02),
     0 0 15px rgba(58, 134, 143, 0.04);
+}
+
+.hero-cta {
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+}
+
+.hero-cta-button {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #173054;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 4px 14px rgba(23, 48, 84, 0.15),
+    0 0 0 0 rgba(58, 134, 143, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.hero-cta-button:hover {
+  background-color: #3a868f;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(58, 134, 143, 0.25),
+    0 0 0 4px rgba(58, 134, 143, 0.1);
+}
+
+.hero-cta-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.hero-cta-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 10px rgba(58, 134, 143, 0.2),
+    0 0 0 2px rgba(58, 134, 143, 0.15);
 }
 
 @keyframes fadeInUp {
@@ -175,23 +232,32 @@
   }
 
   .hero-container {
-    gap: 4rem;
-    padding: 4rem 2rem;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .logo-mark {
-    width: clamp(220px, 55vw, 320px);
+    width: clamp(180px, 50vw, 280px);
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 12vw, 4.5rem);
+    font-size: clamp(2.25rem, 10vw, 4rem);
   }
 
   .hero-value-prop {
-    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
   }
 
   .hero-subtitle {
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(0.95rem, 2.8vw, 1.15rem);
+  }
+
+  .hero-cta {
+    margin-top: 0.5rem;
+  }
+
+  .hero-cta-button {
+    padding: 0.875rem 2rem;
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
   }
 }
