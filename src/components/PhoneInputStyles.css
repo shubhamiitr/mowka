@@ -1,0 +1,55 @@
+/* Custom styles for react-phone-input-2 to match Mowka design */
+
+.react-tel-input .form-control:focus {
+  border-bottom: 1px solid #3a868f !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .flag-dropdown:hover,
+.react-tel-input .flag-dropdown:focus {
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+
+.react-tel-input .country-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: #f8fafc;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: #173054 !important;
+  color: white;
+}
+
+/* Disabled state */
+.react-tel-input .form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Better scrollbar for country list */
+.react-tel-input .country-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+

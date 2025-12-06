@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import './PhoneInputStyles.css';
 import { Footer } from './Footer';
 
 export const Contact = () => {
@@ -26,12 +29,13 @@ export const Contact = () => {
         return null;
     };
 
-    // Phone validation - basic format check
+    // Phone validation - check if phone number is valid
     const validatePhone = (phone) => {
-        const phoneRegex = /^[\d\s\+\-\(\)]{10,}$/;
+        // Remove all non-digit characters except +
+        const digits = phone.replace(/[^\d+]/g, '');
         
-        if (!phoneRegex.test(phone)) {
-            return 'Please enter a valid phone number (min 10 digits)';
+        if (digits.length < 10) {
+            return 'Please enter a valid phone number';
         }
         
         return null;
@@ -139,15 +143,44 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <label htmlFor="phone" className="block text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-gray-400">Mobile Number</label>
-                                        <input 
-                                            type="tel" 
-                                            id="phone"
-                                            required
+                                        <PhoneInput
+                                            country={'in'}
+                                            value={phone}
+                                            onChange={setPhone}
                                             disabled={isLoading}
                                             placeholder="+91 98765 43210"
-                                            className="w-full px-0 py-2 md:py-3 bg-transparent border-b border-gray-200 focus:border-mowka-teal outline-none transition-all font-medium text-lg placeholder:text-gray-300 rounded-none focus:ring-0 disabled:opacity-50"
-                                            value={phone}
-                                            onChange={(e) => setPhone(e.target.value)}
+                                            inputProps={{
+                                                required: true,
+                                                id: 'phone',
+                                            }}
+                                            containerClass="w-full"
+                                            inputClass="w-full"
+                                            buttonClass="border-gray-200"
+                                            containerStyle={{
+                                                width: '100%',
+                                            }}
+                                            inputStyle={{
+                                                width: '100%',
+                                                height: 'auto',
+                                                padding: '10px 14px 10px 58px',
+                                                fontSize: '1.125rem',
+                                                fontWeight: '500',
+                                                border: 'none',
+                                                borderBottom: '1px solid #e5e7eb',
+                                                borderRadius: '0',
+                                                backgroundColor: 'transparent',
+                                                outline: 'none',
+                                            }}
+                                            buttonStyle={{
+                                                border: 'none',
+                                                borderBottom: '1px solid #e5e7eb',
+                                                borderRadius: '0',
+                                                backgroundColor: 'transparent',
+                                            }}
+                                            dropdownStyle={{
+                                                borderRadius: '8px',
+                                                boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
+                                            }}
                                         />
                                     </div>
                                     {error && (
@@ -162,7 +195,7 @@ export const Contact = () => {
                                         {!isLoading && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                                     </button>
                                     <p className="text-[10px] text-center text-gray-400 mt-4 uppercase tracking-wide">
-                                        Direct line to Shubham. Limited availability.
+                                        Direct line to Team Mowka
                                     </p>
                                 </form>
                             ) : (
@@ -171,7 +204,7 @@ export const Contact = () => {
                                         <Send className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-2xl font-serif font-medium mb-2">Request Received!</h3>
-                                    <p className="text-gray-500 font-light">Shubham will reach out within 24 hours.</p>
+                                    <p className="text-gray-500 font-light">We will reach out within 24 hours.</p>
                                 </div>
                             )}
                         </div>
