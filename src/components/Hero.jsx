@@ -89,14 +89,14 @@ export const Hero = () => {
           <div className="grid grid-cols-2 gap-8 md:gap-24 w-full max-w-xl md:max-w-3xl border-t border-gray-100 pt-6 md:pt-10 animate-fade-in-up delay-300 opacity-0" style={{ animationFillMode: 'forwards' }}>
              <div className="flex flex-col items-center gap-1 md:gap-2 group cursor-default">
                 <Target className="w-4 h-4 md:w-5 md:h-5 text-mowka-teal mb-1 md:hidden" />
-                <span className="text-2xl md:text-4xl font-serif text-mowka-navy tracking-tight">3:1</span>
-                <span className="text-[8px] md:text-xs font-semibold uppercase tracking-widest text-gray-400">Screen-to-Offer</span>
+                <span className="text-2xl md:text-4xl font-serif text-mowka-navy tracking-tight">10:1</span>
+                <span className="text-[8px] md:text-xs font-semibold uppercase tracking-widest text-gray-400">Profile-to-Offer Ratio</span>
              </div>
              
              <div className="flex flex-col items-center gap-1 md:gap-2 md:border-l md:border-gray-100 group cursor-default">
                 <Users className="w-4 h-4 md:w-5 md:h-5 text-mowka-teal mb-1 md:hidden" />
                 <span className="text-2xl md:text-4xl font-serif text-mowka-navy tracking-tight">90%</span>
-                <span className="text-[8px] md:text-xs font-semibold uppercase tracking-widest text-gray-400">Interview Rate</span>
+                <span className="text-[8px] md:text-xs font-semibold uppercase tracking-widest text-gray-400">Offer Acceptance Rate</span>
              </div>
           </div>
         </div>
