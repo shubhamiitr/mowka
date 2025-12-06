@@ -4,29 +4,43 @@ import { Footer } from './Footer';
 
 export const Contact = () => {
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setIsLoading(true);
+        setError('');
         
-        // Open Google Form in new tab with pre-filled email (if entry ID is known)
-        // Since we don't have the exact entry ID, we'll just append it as a query param for now
-        // or just open the form. The user asked for pre-fill.
-        // Usually it's something like entry.123456789=email
-        // We will construct the URL but user might need to inspect form to get the ID.
-        // For now, I'll just open the form.
-        
-        const googleFormUrl = "https://forms.gle/qXGnh47znrFhRzHN9";
-        // If we knew the entry ID: 
-        // const prefillUrl = `https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?entry.YOUR_ENTRY_ID=${encodeURIComponent(email)}`;
-        
-        window.open(googleFormUrl, '_blank');
+        try {
+            const response = await fetch('/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, phone }),
+            });
 
-        setTimeout(() => {
-            setSubmitted(false);
-            setEmail('');
-        }, 4000);
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitted(true);
+                setTimeout(() => {
+                    setSubmitted(false);
+                    setEmail('');
+                    setPhone('');
+                }, 4000);
+            } else {
+                setError(data.error || 'Submission failed. Please try again.');
+            }
+        } catch (err) {
+            setError('Network error. Please check your connection.');
+            console.error('Submission error:', err);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
   return (
@@ -67,25 +81,43 @@ export const Contact = () => {
                         <div className="bg-white text-mowka-navy p-6 md:p-10 rounded-[20px] md:rounded-[24px] w-full max-w-md shadow-2xl relative border border-white/10">
                             
                             {!submitted ? (
-                                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                                     <div>
                                         <label htmlFor="email" className="block text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-gray-400">Work Email</label>
                                         <input 
                                             type="email" 
                                             id="email"
                                             required
+                                            disabled={isLoading}
                                             placeholder="name@company.com"
-                                            className="w-full px-0 py-2 md:py-3 bg-transparent border-b border-gray-200 focus:border-mowka-teal outline-none transition-all font-medium text-lg placeholder:text-gray-300 rounded-none focus:ring-0"
+                                            className="w-full px-0 py-2 md:py-3 bg-transparent border-b border-gray-200 focus:border-mowka-teal outline-none transition-all font-medium text-lg placeholder:text-gray-300 rounded-none focus:ring-0 disabled:opacity-50"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </div>
+                                    <div>
+                                        <label htmlFor="phone" className="block text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-gray-400">Mobile Number</label>
+                                        <input 
+                                            type="tel" 
+                                            id="phone"
+                                            required
+                                            disabled={isLoading}
+                                            placeholder="+91 98765 43210"
+                                            className="w-full px-0 py-2 md:py-3 bg-transparent border-b border-gray-200 focus:border-mowka-teal outline-none transition-all font-medium text-lg placeholder:text-gray-300 rounded-none focus:ring-0 disabled:opacity-50"
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
+                                        />
+                                    </div>
+                                    {error && (
+                                        <p className="text-red-500 text-sm text-center">{error}</p>
+                                    )}
                                     <button 
                                         type="submit"
-                                        className="w-full py-3 md:py-4 bg-mowka-navy text-white font-semibold text-base rounded-xl hover:bg-[#233f6b] transition-all flex items-center justify-center gap-3 group shadow-lg shadow-mowka-navy/20 mt-2"
+                                        disabled={isLoading}
+                                        className="w-full py-3 md:py-4 bg-mowka-navy text-white font-semibold text-base rounded-xl hover:bg-[#233f6b] transition-all flex items-center justify-center gap-3 group shadow-lg shadow-mowka-navy/20 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        Partner with Us 
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        {isLoading ? 'Submitting...' : 'Partner with Us'}
+                                        {!isLoading && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                                     </button>
                                     <p className="text-[10px] text-center text-gray-400 mt-4 uppercase tracking-wide">
                                         Direct line to Shubham. Limited availability.
@@ -96,8 +128,8 @@ export const Contact = () => {
                                     <div className="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Send className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-2xl font-serif font-medium mb-2">Request Received</h3>
-                                    <p className="text-gray-500 font-light">Opening the partner form...</p>
+                                    <h3 className="text-2xl font-serif font-medium mb-2">Request Received!</h3>
+                                    <p className="text-gray-500 font-light">Shubham will reach out within 24 hours.</p>
                                 </div>
                             )}
                         </div>
