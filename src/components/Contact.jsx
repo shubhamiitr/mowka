@@ -9,10 +9,52 @@ export const Contact = () => {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
+    // Email validation - must be work email (not free providers)
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const freeProviders = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com'];
+        
+        if (!emailRegex.test(email)) {
+            return 'Please enter a valid email address';
+        }
+        
+        const domain = email.split('@')[1]?.toLowerCase();
+        if (freeProviders.includes(domain)) {
+            return 'Please use your work email address';
+        }
+        
+        return null;
+    };
+
+    // Phone validation - basic format check
+    const validatePhone = (phone) => {
+        const phoneRegex = /^[\d\s\+\-\(\)]{10,}$/;
+        
+        if (!phoneRegex.test(phone)) {
+            return 'Please enter a valid phone number (min 10 digits)';
+        }
+        
+        return null;
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
         setError('');
+        
+        // Validate inputs
+        const emailError = validateEmail(email);
+        if (emailError) {
+            setError(emailError);
+            return;
+        }
+        
+        const phoneError = validatePhone(phone);
+        if (phoneError) {
+            setError(phoneError);
+            return;
+        }
+        
+        setIsLoading(true);
         
         try {
             const response = await fetch('/api/submit', {
@@ -36,7 +78,7 @@ export const Contact = () => {
                 setError(data.error || 'Submission failed. Please try again.');
             }
         } catch (err) {
-            setError('Network error. Please check your connection.');
+            setError('Submission failed. Please try again or contact us at shubham@mowka.in');
             console.error('Submission error:', err);
         } finally {
             setIsLoading(false);
