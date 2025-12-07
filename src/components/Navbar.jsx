@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Why Us', href: '#philosophy' },
-  { label: 'Difference', href: '#process' },
+  { label: 'Philosophy', href: '#philosophy' },
+  { label: 'The Method', href: '#process' },
   { label: 'Founder', href: '#founder' },
 ];
 

@@ -4,9 +4,6 @@ import { X, Check } from 'lucide-react';
 export const Comparison = () => {
     return (
         <section id="process" className="bg-white h-[100dvh] flex flex-col relative snap-start overflow-hidden">
-            {/* Technical Grid Background */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#173054 1px, transparent 1px), linear-gradient(90deg, #173054 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-
             {/* Main Scrollable Content */}
             <div className="w-full h-full overflow-y-auto no-scrollbar flex flex-col relative z-10 scrollable-content">
                 {/* Mobile: justify-center with reduced padding, Desktop: justify-center */}
@@ -15,7 +12,7 @@ export const Comparison = () => {
 
                         <div className="text-center mb-4 md:mb-16 shrink-0">
                             <span className="text-mowka-teal font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">The Strategic Shift</span>
-                            <h2 className="text-3xl md:text-5xl font-medium font-serif mb-3 md:mb-4 text-mowka-navy">Vendor vs. Partner</h2>
+                            <h2 className="text-3xl md:text-5xl font-medium font-serif mb-3 md:mb-4 text-mowka-navy">Volume vs. Signal</h2>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl isolate max-w-6xl mx-auto w-full">
