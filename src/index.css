@@ -59,7 +59,7 @@ section {
     height: 100dvh;
     min-height: 100dvh;
     max-height: 100dvh;
-  }
+}
 }
 
 /* Enable internal scrolling if content overflows */
