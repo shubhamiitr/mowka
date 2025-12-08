@@ -34,10 +34,7 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled || mobileMenuOpen
-          ? 'bg-mowka-bg-primary/95 backdrop-blur-xl border-mowka-border-light/50 py-3 shadow-sm'
-          : 'bg-transparent border-transparent py-4 md:py-6'
-          }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-mowka-bg-secondary/90 backdrop-blur-md py-2 shadow-sm"
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
@@ -65,7 +62,7 @@ export const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-link transition-colors"
+                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
               >
                 {item.label}
               </a>
@@ -73,10 +70,9 @@ export const Navbar = () => {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="relative px-6 py-2.5 bg-mowka-action-primary text-white text-sm font-medium rounded-full overflow-hidden group shadow-lg shadow-mowka-action-primary/20 hover:shadow-mowka-action-primary/40 transition-all hover:-translate-y-0.5 cursor-pointer"
+              className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
             >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <span className="relative z-10">Partner with Us</span>
+              Partner with Us
             </a>
           </div>
 

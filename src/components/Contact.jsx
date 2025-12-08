@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './PhoneInputStyles.css';
 import { Footer } from './Footer';
+import { Reveal } from './Reveal';
 
 export const Contact = () => {
     const [email, setEmail] = useState('');
@@ -97,13 +98,19 @@ export const Contact = () => {
 
                         {/* Section Header - Centered like other sections */}
                         <div className="text-center mb-8 md:mb-16">
-                            <span className="text-mowka-label font-bold tracking-[0.2em] uppercase text-[10px] mb-3 md:mb-4 block">Strategic Partnership</span>
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-serif mb-3 md:mb-4 text-mowka-text-primary leading-tight">
-                                Empower Your Team.
-                            </h2>
-                            <p className="text-sm md:text-lg text-mowka-text-secondary max-w-2xl mx-auto leading-relaxed font-light">
-                                Turn your engineering hiring from a bottleneck into a competitive advantage.
-                            </p>
+                            <Reveal>
+                                <span className="text-mowka-label font-bold tracking-[0.2em] uppercase text-[10px] mb-3 md:mb-4 block">Strategic Partnership</span>
+                            </Reveal>
+                            <Reveal delay={0.1}>
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-serif mb-3 md:mb-4 text-mowka-text-primary leading-tight">
+                                    Grow with Mowka
+                                </h2>
+                            </Reveal>
+                            <Reveal delay={0.2}>
+                                <p className="text-sm md:text-lg text-mowka-text-secondary max-w-2xl mx-auto leading-relaxed font-light">
+                                    Turn your engineering hiring from a bottleneck into a competitive advantage.
+                                </p>
+                            </Reveal>
                         </div>
 
                         <div className="max-w-md mx-auto w-full">
