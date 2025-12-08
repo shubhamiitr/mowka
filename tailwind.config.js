@@ -7,16 +7,39 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
       colors: {
         mowka: {
-          navy: '#173054', // Cloud Burst
-          teal: '#3a868f', // Accent
-          light: '#f8fafc',
-          white: '#ffffff',
-          glass: 'rgba(255, 255, 255, 0.7)',
+          // Apple-inspired Backgrounds - Warm off-whites
+          'bg-primary': '#fbfbfd',      // Main background - all sections
+          'bg-secondary': '#f5f5f7',    // Buttons/CTAs - warmer secondary
+          'bg-tertiary': '#ffffff',     // Pure white cards
+
+          // Apple-inspired Text - Soft blacks, never harsh
+          'text-primary': '#1d1d1f',    // Headings - soft black
+          'text-secondary': '#424245',  // Body text - medium gray
+          'text-tertiary': '#6e6e73',   // Secondary text
+          'text-quaternary': '#86868b', // Very light text
+
+          // Primary Action Color (Buttons, CTAs, Cards)
+          'action-primary': '#173054',     // Primary button/card background (navy)
+          'action-primary-hover': '#233f6b', // Hover state for primary buttons
+
+          // Link Color - Uses brand teal for consistency
+          'link': '#2d6d75',            // Links & metrics (same as teal-vibrant)
+          'link-hover': '#1f4d54',      // Darker on hover
+
+          // Label Color - For section labels
+          'label': '#2d6d75',           // Uppercase section labels (same as teal)
+
+          // Teal - Keep for accents only
+          'teal-vibrant': '#2d6d75',    // Teal accent - darker for better contrast
+
+          // Borders - Apple-style subtle separators
+          'border-light': '#d2d2d7',    // Light borders
+          'border-medium': '#b4b4b9',   // Medium borders
         }
       },
       animation: {

@@ -6,7 +6,8 @@
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Prevent default scrolling */
+  overflow: hidden;
+  /* Prevent default scrolling */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,7 +22,8 @@ body {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  background-color: #ffffff;
+  background-color: #fbfbfd;
+  /* Warm off-white, not pure white - Apple style */
 }
 
 /* Cinematic Grain Overlay */
@@ -59,7 +61,7 @@ section {
     height: 100dvh;
     min-height: 100dvh;
     max-height: 100dvh;
-}
+  }
 }
 
 /* Enable internal scrolling if content overflows */
@@ -92,8 +94,10 @@ section .scrollable-content {
   transform: translateY(0);
 }
 
-/* Premium Selection */
+/* Premium Selection - Apple-style soft colors */
 ::selection {
-  background-color: rgba(58, 134, 143, 0.2);
-  color: #173054;
+  background-color: #173054;
+  /* Button primary color (mowka-btn-primary) */
+  color: #ffffff;
+  /* White text for contrast */
 }

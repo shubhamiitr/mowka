@@ -35,7 +35,7 @@ export const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isScrolled || mobileMenuOpen
-          ? 'bg-white/95 backdrop-blur-xl border-gray-200/50 py-3 shadow-sm'
+          ? 'bg-mowka-bg-primary/95 backdrop-blur-xl border-mowka-border-light/50 py-3 shadow-sm'
           : 'bg-transparent border-transparent py-4 md:py-6'
           }`}
       >
@@ -55,7 +55,7 @@ export const Navbar = () => {
               alt="Mowka Logo"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <span className="text-xl md:text-2xl font-bold tracking-tight font-serif text-mowka-navy">Mowka</span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight font-serif text-mowka-text-primary">Mowka</span>
           </a>
 
           {/* Desktop Nav */}
@@ -65,7 +65,7 @@ export const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="text-sm font-medium text-gray-600 hover:text-mowka-navy transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-mowka-teal after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-link transition-colors"
               >
                 {item.label}
               </a>
@@ -73,7 +73,7 @@ export const Navbar = () => {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="relative px-6 py-2.5 bg-mowka-navy text-white text-sm font-medium rounded-full overflow-hidden group shadow-lg shadow-mowka-navy/20 hover:shadow-mowka-navy/40 transition-all hover:-translate-y-0.5 cursor-pointer"
+              className="relative px-6 py-2.5 bg-mowka-action-primary text-white text-sm font-medium rounded-full overflow-hidden group shadow-lg shadow-mowka-action-primary/20 hover:shadow-mowka-action-primary/40 transition-all hover:-translate-y-0.5 cursor-pointer"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
               <span className="relative z-10">Partner with Us</span>
@@ -82,7 +82,7 @@ export const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden z-50 relative text-mowka-navy p-2"
+            className="md:hidden z-50 relative text-mowka-text-primary p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -93,14 +93,14 @@ export const Navbar = () => {
 
       {/* Mobile Menu - Moved out of Nav to avoid backdrop-filter clipping */}
       <div
-        className={`fixed inset-0 bg-white z-40 flex flex-col justify-start items-center pt-32 space-y-8 transition-all duration-500 ease-in-out md:hidden ${mobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'
+        className={`fixed inset-0 bg-mowka-bg-primary z-40 flex flex-col justify-start items-center pt-32 space-y-8 transition-all duration-500 ease-in-out md:hidden ${mobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'
           }`}
       >
         {navItems.map((item) => (
           <a
             key={item.label}
             href={item.href}
-            className="text-3xl font-serif text-mowka-navy hover:text-mowka-teal transition-colors"
+            className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors"
             onClick={(e) => handleScrollTo(e, item.href)}
           >
             {item.label}
@@ -108,7 +108,7 @@ export const Navbar = () => {
         ))}
         <a
           href="#contact"
-          className="px-10 py-4 bg-mowka-navy text-white text-xl font-medium rounded-full shadow-xl"
+          className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl"
           onClick={(e) => handleScrollTo(e, '#contact')}
         >
           Partner with Us

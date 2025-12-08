@@ -6,9 +6,8 @@ export const Founder = () => {
 
 
     return (
-        <section id="founder" className="bg-white h-[100dvh] flex flex-col border-t border-gray-50 relative overflow-hidden snap-start">
-            {/* Soft Background Glow */}
-            <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gray-50 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none opacity-60"></div>
+        <section id="founder" className="bg-mowka-bg-primary h-[100dvh] flex flex-col border-t border-mowka-border-light relative overflow-hidden snap-start">
+            {/* Soft Background Glow - Removed for color consistency */}
 
             {/* Main Scrollable Content */}
             <div className="w-full h-full overflow-y-auto no-scrollbar flex flex-col relative z-10 scrollable-content">
@@ -25,7 +24,7 @@ export const Founder = () => {
                                         alt="Shubham Kansal"
                                         className="object-cover w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-105 filter grayscale-[10%] group-hover:grayscale-0"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-mowka-navy/90 via-transparent to-transparent opacity-60"></div>
+                                    {/* Gradient overlay removed for cleaner look */}
                                 </div>
                             </div>
 
@@ -41,24 +40,24 @@ export const Founder = () => {
 
                                     {/* Headline Group */}
                                     <div className="flex-1 mb-4 md:mb-10">
-                                        <span className="text-mowka-teal font-bold tracking-[0.2em] uppercase text-[9px] md:text-[10px] mb-2 md:mb-5 block">The Practitioner's Edge</span>
-                                        <h2 className="text-xl md:text-4xl lg:text-5xl font-serif font-medium text-mowka-navy leading-tight">
+                                        <span className="text-mowka-label font-bold tracking-[0.2em] uppercase text-[9px] md:text-[10px] mb-2 md:mb-5 block">The Practitioner's Edge</span>
+                                        <h2 className="text-xl md:text-4xl lg:text-5xl font-serif font-medium text-mowka-text-primary leading-tight">
                                             From Prime Video to Adobe Acquisition.
                                         </h2>
                                     </div>
                                 </div>
 
-                                <div className="space-y-4 md:space-y-4 text-gray-500 font-light text-[13px] md:text-base leading-relaxed mb-10 md:mb-14 md:mt-6 text-left hyphens-auto">
+                                <div className="space-y-4 md:space-y-4 text-mowka-text-secondary font-light text-xs md:text-xl leading-relaxed mb-10 md:mb-14 md:mt-6 text-left hyphens-auto">
                                     <p>
-                                        At <a href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-teal">Amazon Prime Video</a>, I built the patent-backed copyright system for the movie catalog and the engine that selects the cover image shown for each title. At <span className="text-mowka-navy">Rephrase.ai</span>, I led the infrastructure for the <a href="https://www.youtube.com/watch?v=R3FnhpelBR0" target="_blank" rel="noopener noreferrer" className="text-mowka-teal">SRK x Cadbury campaign</a> and the systems that later became part of <span className="text-mowka-navy">Adobe’s first AI acquisition in India</span>. I’ve also worked on product and engineering teams at <a href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" className="text-mowka-teal">Apollo.io</a>, <a href="https://www.nirvanatech.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-teal">Nirvana Insurance</a>, and <a href="https://theproducthighway.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-teal">The Product Highway</a>.
+                                        At <a href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1">Amazon Prime Video<ExternalLink className="w-3 h-3 inline" /></a>, I built the patent-backed copyright system for the movie catalog and the engine that selects the cover image shown for each title. At Rephrase.ai, I led the infrastructure for the <a href="https://www.youtube.com/watch?v=R3FnhpelBR0" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1">SRK x Cadbury campaign<ExternalLink className="w-3 h-3 inline" /></a> and the systems that later became part of Adobe's first AI acquisition in India. I've also worked on product and engineering teams at <a href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1">Apollo.io<ExternalLink className="w-3 h-3 inline" /></a>, <a href="https://www.nirvanatech.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1">Nirvana Insurance<ExternalLink className="w-3 h-3 inline" /></a>, and <a href="https://theproducthighway.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1">The Product Highway<ExternalLink className="w-3 h-3 inline" /></a>.
                                     </p>
                                 </div>
 
                                 {/* Metrics Grid */}
-                                <div className="grid grid-cols-3 gap-2 md:gap-6 border-t border-gray-100 pt-6 md:pt-10 mb-8 md:mb-10">
+                                <div className="grid grid-cols-3 gap-2 md:gap-6 border-t border-mowka-border-light pt-6 md:pt-10 mb-8 md:mb-10">
                                     <div>
-                                        <span className="block text-base md:text-3xl font-serif text-mowka-teal leading-none mb-1.5">2000+</span>
-                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-gray-400 font-semibold block">Interviews</span>
+                                        <span className="block text-base md:text-3xl font-serif text-mowka-link leading-none mb-1.5">2000+</span>
+                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-mowka-text-quaternary font-semibold block">Interviews</span>
                                     </div>
                                     <a
                                         href="https://economictimes.indiatimes.com/tech/startups/adobe-acquires-bengaluru-based-genai-startup-rephrase-ai/articleshow/105393666.cms"
@@ -66,8 +65,8 @@ export const Founder = () => {
                                         rel="noopener noreferrer"
                                         className="block cursor-pointer"
                                     >
-                                        <span className="block text-base md:text-3xl font-serif text-mowka-teal leading-none mb-1.5">Adobe</span>
-                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-gray-400 font-semibold flex items-center gap-1">
+                                        <span className="block text-base md:text-3xl font-serif text-mowka-link leading-none mb-1.5">Adobe</span>
+                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-mowka-text-quaternary font-semibold flex items-center gap-1">
                                             Successful Exit
                                             <ExternalLink className="w-2 h-2" />
                                         </span>
@@ -78,8 +77,8 @@ export const Founder = () => {
                                         rel="noopener noreferrer"
                                         className="block cursor-pointer"
                                     >
-                                        <span className="block text-base md:text-3xl font-serif text-mowka-teal leading-none mb-1.5">US Patent</span>
-                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-gray-400 font-semibold flex items-center gap-1">
+                                        <span className="block text-base md:text-3xl font-serif text-mowka-link leading-none mb-1.5">US Patent</span>
+                                        <span className="text-[7px] md:text-[9px] uppercase tracking-widest text-mowka-text-quaternary font-semibold flex items-center gap-1">
                                             11645249B1
                                             <ExternalLink className="w-2 h-2" />
                                         </span>
