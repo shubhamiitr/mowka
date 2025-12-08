@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styles for Controlled Scrolling */
+/* Global Styles */
 html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  /* Prevent default scrolling */
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,13 +14,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow-y: scroll;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
   background-color: #fbfbfd;
-  /* Warm off-white, not pure white - Apple style */
 }
 
 /* Cinematic Grain Overlay */
@@ -42,44 +34,39 @@ body::after {
 }
 
 section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
   width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-/* Mobile devices - use dynamic viewport height */
-@supports (height: 100dvh) {
-  section {
-    height: 100dvh;
-    min-height: 100dvh;
-    max-height: 100dvh;
+/* Global Typography System */
+@layer components {
+
+  /* Section Labels (e.g. "THE PRACTITIONER'S EDGE") */
+  .type-label {
+    @apply font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs text-mowka-label;
   }
-}
 
-/* Enable internal scrolling if content overflows */
-section .scrollable-content {
-  width: 100%;
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+  /* Main Section Headings (e.g. "From Prime Video...") */
+  .type-h2 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-serif font-medium text-mowka-text-primary leading-[1.1];
+  }
 
-/* Utilities */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
+  /* Lead Paragraphs (e.g. "Traditional sourcing fails...") */
+  .type-body-lead {
+    @apply text-base md:text-xl font-light leading-relaxed text-mowka-text-secondary;
+  }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* Standard Body Text (Bio, Cards) */
+  .type-body {
+    @apply text-sm md:text-base font-light leading-relaxed text-mowka-text-secondary;
+  }
+
+  /* Small Text (Card details, captions) */
+  .type-caption {
+    @apply text-xs md:text-sm font-light leading-relaxed text-mowka-text-tertiary;
+  }
 }
 
 .animate-on-scroll {

@@ -29,23 +29,17 @@ export const Hero = () => {
     <section
       id="home"
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden snap-start pt-20 md:pt-0"
+      className="relative w-full min-h-[85vh] flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden pt-32 pb-2 md:pt-0"
     >
       {/* Cinematic Aurora Background - Removed for color consistency */}
 
       <div className="max-w-7xl w-full px-4 md:px-6 relative z-10 flex flex-col justify-center h-full">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto w-full">
 
-          <div className="animate-fade-in-up">
-            <span className="inline-block py-1.5 md:py-2 px-4 md:px-6 rounded-full bg-mowka-action-primary/[0.03] border border-mowka-border-light text-[9px] md:text-xs font-bold tracking-[0.2em] uppercase text-mowka-text-secondary mb-3 md:mb-0">
-              Strategic Talent Scouting
-            </span>
-          </div>
-
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-medium tracking-tighter md:tracking-tight text-mowka-text-primary mt-3 md:mt-8 mb-4 md:mb-6 leading-[1.05] md:leading-[1.05] font-serif animate-fade-in-up delay-75">
-            Connecting Right Talent<br />
+            Connecting The Right Talent<br />
             <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary bg-300% animate-shimmer">
-              To Right Opportunity.
+              To The Right Team.
             </span>
           </h1>
 
@@ -63,7 +57,7 @@ export const Hero = () => {
               className="group relative inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-mowka-action-primary text-white text-sm md:text-base rounded-full font-medium overflow-hidden transition-all shadow-xl shadow-mowka-action-primary/10 hover:shadow-mowka-action-primary/30 hover:-translate-y-0.5 z-20 cursor-pointer w-full sm:w-auto"
             >
               <span className="relative flex items-center gap-2 md:gap-3 z-10 tracking-wide">
-                Start Scouting
+                Partner with Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </a>

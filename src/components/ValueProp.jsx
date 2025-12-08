@@ -3,16 +3,16 @@ import { Brain, Code, Heart } from 'lucide-react';
 
 export const ValueProp = () => {
     return (
-        <section id="philosophy" className="bg-mowka-bg-primary relative h-[100dvh] flex flex-col snap-start overflow-hidden">
+        <section id="philosophy" className="bg-mowka-bg-primary flex flex-col relative py-12 md:py-24 scroll-mt-20">
 
             {/* Ambient Light Leak - Removed for color consistency */}
 
             {/* Main Container with Scroll for Mobile Vertical Layout */}
-            <div className="w-full h-full overflow-y-auto no-scrollbar flex flex-col relative z-10 scrollable-content">
-                <div className="w-full min-h-full flex flex-col justify-start md:justify-center pt-24 pb-8 md:py-12 px-4 md:px-6">
+            <div className="w-full h-full flex flex-col relative z-10">
+                <div className="w-full min-h-full flex flex-col justify-start md:justify-center px-4 md:px-6">
                     <div className="max-w-7xl mx-auto w-full">
 
-                        <div className="text-center mb-4 md:mb-20 shrink-0">
+                        <div className="text-center mb-8 md:mb-20 shrink-0">
                             <span className="text-mowka-label font-bold tracking-[0.2em] uppercase text-[10px] md:text-[10px] mb-2 md:mb-4 block">The Sourcing Methodology</span>
                             <h2 className="text-2xl md:text-5xl font-serif text-mowka-text-primary mb-3 md:mb-6 leading-tight">
                                 Beyond Resumes.<br />We Scout for Context.
@@ -23,9 +23,8 @@ export const ValueProp = () => {
                         </div>
 
                         {/* Vertical Grid on Mobile, 3-Col Grid on Desktop */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 pb-10 md:pb-0">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 pb-0 md:pb-0">
 
-                            {/* Card 1 */}
                             {/* Card 1 */}
                             <div className="bg-mowka-bg-tertiary p-3 md:p-10 rounded-xl md:rounded-2xl border border-mowka-border-light shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                                 <div className="flex items-center gap-3 md:block mb-2 md:mb-8">
@@ -40,7 +39,6 @@ export const ValueProp = () => {
                             </div>
 
                             {/* Card 2 */}
-                            {/* Card 2 */}
                             <div className="bg-mowka-bg-tertiary p-3 md:p-10 rounded-xl md:rounded-2xl border border-mowka-border-light shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-12 h-12 md:w-24 md:h-24 bg-mowka-teal/5 rounded-bl-[60px] md:rounded-bl-[100px] transition-transform group-hover:scale-110"></div>
                                 <div className="flex items-center gap-3 md:block mb-2 md:mb-8 relative z-10">
@@ -54,7 +52,6 @@ export const ValueProp = () => {
                                 </p>
                             </div>
 
-                            {/* Card 3 */}
                             {/* Card 3 */}
                             <div className="bg-white p-3 md:p-10 rounded-xl md:rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                                 <div className="flex items-center gap-3 md:block mb-2 md:mb-8">

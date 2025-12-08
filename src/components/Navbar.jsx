@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
-  { label: 'The Method', href: '#process' },
+  { label: 'Our Approach', href: '#process' },
   { label: 'Founder', href: '#founder' },
 ];
 
