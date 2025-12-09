@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
 export const Reveal = ({ children, width = "100%", delay = 0.25, className = "" }) => {

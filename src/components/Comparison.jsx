@@ -1,5 +1,4 @@
-import React from 'react';
-import { X, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 export const Comparison = () => {

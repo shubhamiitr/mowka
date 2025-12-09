@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
@@ -9,18 +9,9 @@ const navItems = [
 ];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleScrollTo = (e, href) => {
     e.preventDefault();

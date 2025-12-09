@@ -1,5 +1,4 @@
-import React from 'react';
-import { ExternalLink, PlayCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import { Reveal } from './Reveal';
 

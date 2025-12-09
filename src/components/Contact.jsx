@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Send } from 'lucide-react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './PhoneInputStyles.css';

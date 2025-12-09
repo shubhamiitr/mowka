@@ -1,32 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Target, Users, Bot, Cpu, Terminal } from 'lucide-react';
+import { useRef } from 'react';
 import { Reveal } from './Reveal';
 import { MotionLogo } from './MotionLogo';
 import { SITE_CONTENT } from '../constants/content';
 
 export const Hero = () => {
   const containerRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!containerRef.current) return;
-      const { innerWidth, innerHeight } = window;
-      const x = (e.clientX - innerWidth / 2) / 60;
-      const y = (e.clientY - innerHeight / 2) / 60;
-      setMousePosition({ x, y });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  const handleScrollTo = (e, id) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <section
