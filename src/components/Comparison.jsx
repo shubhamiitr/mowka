@@ -55,7 +55,7 @@ export const Comparison = () => {
 
                             {/* Mowka */}
                             <Reveal delay={0.3} className="h-full">
-                                <div className="bg-white p-4 md:p-10 border-2 border-mowka-teal-vibrant rounded-2xl md:rounded-3xl flex flex-col shadow-lg relative overflow-hidden h-full">
+                                <div className="bg-white p-4 md:p-10 border border-mowka-teal-vibrant rounded-2xl md:rounded-3xl flex flex-col shadow-lg relative overflow-hidden h-full">
                                     {/* Subtle gradient accent */}
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-mowka-teal-vibrant/5 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
 

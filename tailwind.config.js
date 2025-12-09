@@ -14,7 +14,7 @@ export default {
         mowka: {
           // Apple-inspired Backgrounds - Warm off-whites
           'bg-primary': '#fbfbfd',      // Main background - all sections
-          'bg-secondary': '#dcdce0',    // Distinct darker grey for Header/Footer (Contrast)
+          'bg-secondary': '#f4f4f6',    // Subtle premium grey for Header/Footer (Light & Airy)
           'bg-tertiary': '#ffffff',     // Pure white cards
 
           // Apple-inspired Text - Soft blacks, never harsh
