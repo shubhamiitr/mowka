@@ -1,12 +1,22 @@
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { ValueProp } from './components/ValueProp';
-import { Comparison } from './components/Comparison';
-import { Founder } from './components/Founder';
-import { Contact } from './components/Contact';
+import { Home } from './components/Home';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { TermsOfService } from './components/TermsOfService';
 
 import Lenis from 'lenis';
+
+// Scroll to top wrapper for route changes
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   useEffect(() => {
@@ -35,14 +45,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <ValueProp />
-      <Comparison />
-      <Founder />
-      <Contact />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="App bg-mowka-bg-primary min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

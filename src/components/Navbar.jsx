@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
@@ -10,6 +11,8 @@ const navItems = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,10 +27,21 @@ export const Navbar = () => {
     setMobileMenuOpen(false);
 
     const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
 
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation then scroll
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -38,12 +52,14 @@ export const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center gap-3 z-50 relative group"
             onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              if (location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
               setMobileMenuOpen(false);
             }}
           >
@@ -53,7 +69,7 @@ export const Navbar = () => {
               className="h-8 md:h-10 w-auto object-contain"
             />
             <span className="text-xl md:text-2xl font-bold tracking-tight font-serif text-mowka-text-primary">Mowka</span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -62,7 +78,7 @@ export const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
+                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer"
               >
                 {item.label}
               </a>
@@ -70,7 +86,7 @@ export const Navbar = () => {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
+              className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer"
             >
               Partner with Us
             </a>
@@ -96,7 +112,7 @@ export const Navbar = () => {
           <a
             key={item.label}
             href={item.href}
-            className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors"
+            className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors cursor-pointer"
             onClick={(e) => handleScrollTo(e, item.href)}
           >
             {item.label}
@@ -104,7 +120,7 @@ export const Navbar = () => {
         ))}
         <a
           href="#contact"
-          className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl"
+          className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl cursor-pointer"
           onClick={(e) => handleScrollTo(e, '#contact')}
         >
           Partner with Us
