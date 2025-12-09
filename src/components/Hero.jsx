@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Users, Bot, Cpu, Terminal } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { MotionLogo } from './MotionLogo';
+import { SITE_CONTENT } from '../constants/content';
 
 export const Hero = () => {
   const containerRef = useRef(null);
@@ -44,13 +45,13 @@ export const Hero = () => {
 
           <Reveal delay={0.1}>
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-medium tracking-tighter md:tracking-tight text-mowka-text-primary mt-6 md:mt-12 mb-4 md:mb-6 leading-[1.05] md:leading-[1.05] font-serif">
-              Connecting The Right Talent<br />
+              {SITE_CONTENT.heroHeadline.start}<br />
               <span className="text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary animate-shine bg-[length:200%_auto] pr-2">
-                to The Right Team
+                {SITE_CONTENT.heroHeadline.highlight}
               </span>
             </h1>
             <p className="text-sm md:text-xl font-light text-mowka-text-secondary max-w-2xl mx-auto mt-4 px-4 leading-relaxed opacity-90">
-              We scout engineers who fit your unique environment, helping you find the right talent effortlessly.
+              {SITE_CONTENT.description}
             </p>
           </Reveal>
 

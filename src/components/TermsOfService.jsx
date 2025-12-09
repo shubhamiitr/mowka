@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from './SEO';
 import { Footer } from './Footer';
 
 export const TermsOfService = () => {
@@ -10,6 +11,10 @@ export const TermsOfService = () => {
 
     return (
         <section className="bg-mowka-bg-primary min-h-screen flex flex-col pt-24 md:pt-32">
+            <SEO
+                title="Terms of Service"
+                description="Review Mowka's Terms of Service for using our platform and talent partnership services."
+            />
             <div className="max-w-4xl mx-auto px-6 flex-grow pb-12">
                 <h1 className="text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8">Terms of Service</h1>
 
