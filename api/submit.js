@@ -28,8 +28,8 @@ export default async function handler(req, res) {
     // Check environment variables
     if (!process.env.GOOGLE_SHEET_ID || !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
       console.error('Missing environment variables');
-      return res.status(500).json({ 
-        error: 'Server configuration error. Please contact support.' 
+      return res.status(500).json({
+        error: 'Server configuration error. Please contact support.'
       });
     }
 
@@ -43,9 +43,9 @@ export default async function handler(req, res) {
     });
 
     const sheets = google.sheets({ version: 'v4', auth });
-    
+
     // Append data to sheet
-    const response = await sheets.spreadsheets.values.append({
+    await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: 'Sheet1!A:C',
       valueInputOption: 'USER_ENTERED',
@@ -60,30 +60,30 @@ export default async function handler(req, res) {
       },
     });
 
-    return res.status(200).json({ 
-      success: true, 
+    return res.status(200).json({
+      success: true,
       message: 'Submission successful',
     });
 
   } catch (error) {
     console.error('Error submitting to Google Sheets:', error);
-    
+
     // More specific error messages
     if (error.code === 403) {
-      return res.status(500).json({ 
-        error: 'Permission denied. Please ensure the sheet is shared with the service account.' 
+      return res.status(500).json({
+        error: 'Permission denied. Please ensure the sheet is shared with the service account.'
       });
     }
-    
+
     if (error.code === 404) {
-      return res.status(500).json({ 
-        error: 'Sheet not found. Please check the Sheet ID.' 
+      return res.status(500).json({
+        error: 'Sheet not found. Please check the Sheet ID.'
       });
     }
-    
-    return res.status(500).json({ 
+
+    return res.status(500).json({
       error: 'Failed to submit. Please try again or contact shubham@mowka.in',
-      details: error.message 
+      details: error.message
     });
   }
 }
