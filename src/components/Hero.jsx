@@ -28,7 +28,7 @@ export const Hero = () => {
                 {SITE_CONTENT.heroHeadline.highlight}
               </span>
             </h1>
-            <p className="text-sm md:text-xl font-light text-mowka-text-secondary max-w-2xl mx-auto mt-4 px-4 leading-relaxed opacity-90">
+            <p className="text-sm md:text-xl font-light text-mowka-text-secondary max-w-3xl mx-auto mt-4 px-4 leading-relaxed opacity-90">
               {SITE_CONTENT.description}
             </p>
           </Reveal>
