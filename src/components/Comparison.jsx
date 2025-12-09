@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 export const Comparison = () => {
@@ -31,20 +31,35 @@ export const Comparison = () => {
 
                                     <div className="space-y-3 md:space-y-6 flex-1">
                                         <div className="pb-3 md:pb-6 border-b border-mowka-border-light">
-                                            <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary mb-1 md:mb-2">Noise Over Signal</h4>
-                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed">
+                                            <div className="flex items-start gap-2 md:gap-3 mb-1 md:mb-2">
+                                                <div className="p-1 bg-red-50 rounded-full mt-0.5">
+                                                    <X className="w-3 h-3 text-red-800" />
+                                                </div>
+                                                <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary">Noise Over Signal</h4>
+                                            </div>
+                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed pl-8 md:pl-9">
                                                 50+ profiles to filter. You waste hours on candidates who don't match your bar.
                                             </p>
                                         </div>
                                         <div className="pb-3 md:pb-6 border-b border-mowka-border-light">
-                                            <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary mb-1 md:mb-2">Keyword Matching</h4>
-                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed">
+                                            <div className="flex items-start gap-2 md:gap-3 mb-1 md:mb-2">
+                                                <div className="p-1 bg-red-50 rounded-full mt-0.5">
+                                                    <X className="w-3 h-3 text-red-800" />
+                                                </div>
+                                                <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary">Keyword Matching</h4>
+                                            </div>
+                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed pl-8 md:pl-9">
                                                 Matches "React" to "React". Misses context: Pace, Ownership, Ambiguity.
                                             </p>
                                         </div>
                                         <div>
-                                            <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary mb-1 md:mb-2">Flat Pricing Model</h4>
-                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed">
+                                            <div className="flex items-start gap-2 md:gap-3 mb-1 md:mb-2">
+                                                <div className="p-1 bg-red-50 rounded-full mt-0.5">
+                                                    <X className="w-3 h-3 text-red-800" />
+                                                </div>
+                                                <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary">Flat Pricing Model</h4>
+                                            </div>
+                                            <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed pl-8 md:pl-9">
                                                 15-20% fee regardless of role. Junior Engineer costs same as Architect.
                                             </p>
                                         </div>

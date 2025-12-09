@@ -64,7 +64,7 @@ export const ValueProp = () => {
 
                             {/* Card 3 */}
                             <Reveal delay={0.5}>
-                                <div className="bg-white p-3 md:p-10 rounded-xl md:rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                <div className="bg-mowka-bg-tertiary p-3 md:p-10 rounded-xl md:rounded-2xl border border-mowka-border-light shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
                                     <div className="flex items-center gap-3 md:block mb-2 md:mb-8">
                                         <div className="w-8 h-8 md:w-14 md:h-14 bg-indigo-50 rounded-lg md:rounded-2xl flex items-center justify-center shrink-0">
                                             <Heart className="w-4 h-4 md:w-7 md:h-7 text-indigo-900" />
