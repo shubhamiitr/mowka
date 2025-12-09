@@ -6,7 +6,7 @@ const SEO = ({ title, description }) => {
 
     useEffect(() => {
         if (title) {
-            document.title = `${title} | Mowka`;
+            document.title = `Mowka | ${title}`;
         }
 
         if (description) {

@@ -11,7 +11,7 @@ export const Home = () => {
     return (
         <>
             <SEO
-                title="Home"
+                title={SITE_CONTENT.tagline}
                 description={SITE_CONTENT.description}
             />
             <Hero />
