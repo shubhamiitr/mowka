@@ -23,9 +23,9 @@ export const Founder = () => {
                                         <img
                                             src="/profile.jpeg"
                                             alt="Shubham Kansal"
+                                            loading="lazy"
                                             className="object-cover w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-105 filter grayscale-[10%] group-hover:grayscale-0"
                                         />
-                                        {/* Gradient overlay removed for cleaner look */}
                                     </div>
                                 </Reveal>
                             </div>
@@ -37,7 +37,7 @@ export const Founder = () => {
 
                                     {/* Mobile Avatar (Centered) */}
                                     <div className="md:hidden shrink-0 relative w-24 h-28 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-1 ring-gray-100 transform -rotate-1 mx-auto">
-                                        <img src="/profile.jpeg" alt="Shubham Kansal" className="object-cover w-full h-full" />
+                                        <img src="/profile.jpeg" alt="Shubham Kansal" loading="lazy" className="object-cover w-full h-full" />
                                     </div>
 
                                     {/* Headline Group */}

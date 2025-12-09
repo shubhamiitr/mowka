@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
+import { NotFound } from './components/NotFound';
 
 import Lenis from 'lenis';
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
