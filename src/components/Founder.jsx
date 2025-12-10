@@ -21,7 +21,7 @@ export const Founder = () => {
                                 <Reveal delay={0.1}>
                                     <div className="relative aspect-[3/4] rounded-[2px] overflow-hidden shadow-2xl bg-gray-200 group w-full max-w-sm border-4 border-white ring-1 ring-gray-100">
                                         <img
-                                            src="/profile.jpeg"
+                                            src="/profile.webp"
                                             alt="Shubham Kansal"
                                             loading="lazy"
                                             className="object-cover w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-105 filter grayscale-[10%] group-hover:grayscale-0"
@@ -37,7 +37,7 @@ export const Founder = () => {
 
                                     {/* Mobile Avatar (Centered) */}
                                     <div className="md:hidden shrink-0 relative w-24 h-28 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-1 ring-gray-100 transform -rotate-1 mx-auto">
-                                        <img src="/profile.jpeg" alt="Shubham Kansal" loading="lazy" className="object-cover w-full h-full" />
+                                        <img src="/profile.webp" alt="Shubham Kansal" loading="lazy" className="object-cover w-full h-full" />
                                     </div>
 
                                     {/* Headline Group */}
