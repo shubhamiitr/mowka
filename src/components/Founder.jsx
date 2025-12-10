@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import { Reveal } from './Reveal';
 
 export const Founder = () => {
@@ -53,7 +54,7 @@ export const Founder = () => {
                                 </div>
 
                                 <Reveal delay={0.25}>
-                                    <div className="space-y-4 md:space-y-4 type-body mb-10 md:mb-14 md:mt-6 text-left hyphens-auto max-w-2xl">
+                                    <div className="space-y-4 md:space-y-4 type-body mb-8 md:mb-6 md:mt-6 text-left hyphens-auto max-w-2xl">
                                         <p>
                                             At <a href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1 font-medium hover:text-mowka-link-hover transition-colors">Amazon Prime Video<ExternalLink className="w-3 h-3 inline opacity-70" /></a>, I built the patent-backed copyright system for the movie catalog and the engine that selects the cover image shown for each title. At Rephrase.ai, I led the infrastructure for the <a href="https://www.youtube.com/watch?v=R3FnhpelBR0" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1 font-medium hover:text-mowka-link-hover transition-colors">SRK x Cadbury campaign<ExternalLink className="w-3 h-3 inline opacity-70" /></a> and the systems that later became part of Adobe's first AI acquisition in India. I've also worked on product and engineering teams at <a href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1 font-medium hover:text-mowka-link-hover transition-colors">Apollo.io<ExternalLink className="w-3 h-3 inline opacity-70" /></a>, <a href="https://www.nirvanatech.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1 font-medium hover:text-mowka-link-hover transition-colors">Nirvana Insurance<ExternalLink className="w-3 h-3 inline opacity-70" /></a>, and <a href="https://theproducthighway.com/" target="_blank" rel="noopener noreferrer" className="text-mowka-link inline-flex items-center gap-1 font-medium hover:text-mowka-link-hover transition-colors">The Product Highway<ExternalLink className="w-3 h-3 inline opacity-70" /></a>.
                                         </p>
@@ -62,7 +63,7 @@ export const Founder = () => {
 
                                 {/* Metrics Grid */}
                                 <Reveal delay={0.3}>
-                                    <div className="grid grid-cols-3 gap-2 md:gap-8 border-t border-mowka-border-light pt-6 md:pt-8 mb-8 md:mb-8">
+                                    <div className="grid grid-cols-3 gap-2 md:gap-8 pt-0 mb-3 md:mb-8">
                                         <div>
                                             <span className="block text-xl md:text-2xl font-serif text-mowka-link leading-none mb-2">2000+</span>
                                             <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-mowka-text-quaternary font-semibold block">Interviews</span>
@@ -95,10 +96,12 @@ export const Founder = () => {
                                 </Reveal>
 
                                 <Reveal delay={0.35}>
-                                    <div className="mt-8 md:mt-12 flex justify-center md:justify-start">
-                                        <a href="https://www.linkedin.com/in/kansalshubham/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-full font-medium hover:bg-[#0077B5] transition-colors text-sm shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
-                                            <FaLinkedin className="w-4 h-4" />
-                                            <span>View on LinkedIn</span>
+                                    <div className="mt-3 md:mt-8 flex justify-center md:justify-start gap-4">
+                                        <a href="mailto:shubham@mowka.in" className="p-3 bg-white border border-mowka-border-light rounded-full text-mowka-text-secondary hover:text-mowka-action-primary hover:border-mowka-action-primary hover:shadow-md transition-all duration-300 group" aria-label="Email">
+                                            <MdEmail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/kansalshubham/" target="_blank" rel="noopener noreferrer" className="p-3 bg-white border border-mowka-border-light rounded-full text-mowka-text-secondary hover:text-[#0A66C2] hover:border-[#0A66C2] hover:shadow-md transition-all duration-300 group" aria-label="LinkedIn">
+                                            <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                         </a>
                                     </div>
                                 </Reveal>
