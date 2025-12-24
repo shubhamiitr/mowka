@@ -13,7 +13,7 @@ export const Footer = () => {
             <img src="https://flagcdn.com/in.svg" alt="India" className="w-4 h-auto rounded-sm opacity-80 hover:opacity-100 transition-opacity cursor-help" title="Proudly built in India" />
             <span className="opacity-0 w-0 overflow-hidden group-hover:w-auto group-hover:opacity-100 transition-all duration-300">India</span>
           </div>
-          <span>Copyright © {new Date().getFullYear()} Mowka. All rights reserved.</span>
+          <span>Copyright © {new Date().getFullYear()} Mowka Enterprises Private Limited. All rights reserved.</span>
         </div>
 
         {/* Center: Legal Links */}

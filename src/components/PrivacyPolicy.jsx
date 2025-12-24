@@ -22,7 +22,7 @@ export const PrivacyPolicy = () => {
                     <p className="text-sm text-mowka-text-tertiary mb-8">Last Updated: {new Date().toLocaleDateString()}</p>
 
                     <p>
-                        Mowka ("we," "us," or "our") is committed to protecting the privacy of our partners and talent network.
+                        Mowka Enterprises Private Limited ("Mowka", "we," "us," or "our") is committed to protecting the privacy of our partners and talent network.
                         This policy outlines how we handle information as your trusted talent partner.
                     </p>
 

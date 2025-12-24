@@ -22,7 +22,7 @@ export const TermsOfService = () => {
                     <p className="text-sm text-mowka-text-tertiary mb-8">Last Updated: {new Date().toLocaleDateString()}</p>
 
                     <p>
-                        Welcome to Mowka. By accessing our platform or engaging with our talent partnership services, you agree to these Terms of Service.
+                        Welcome to Mowka Enterprises Private Limited ("Mowka"). By accessing our platform or engaging with our talent partnership services, you agree to these Terms of Service.
                     </p>
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">1. Services</h3>
