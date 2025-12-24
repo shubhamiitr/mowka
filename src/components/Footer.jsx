@@ -4,30 +4,29 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <footer className="w-full py-3 bg-mowka-bg-secondary border-t border-mowka-border-light/50 font-sans">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-4 items-center">
+    <footer className="w-full py-5 md:py-6 bg-mowka-bg-secondary/90 backdrop-blur-md border-t border-mowka-border-light/50 font-sans relative">
+      <div className="w-full px-4 md:px-12 flex flex-col md:flex-row justify-between gap-y-3 md:gap-4 items-center">
 
         {/* Left: Copyright + Flag */}
-        <div className="col-span-2 md:col-span-1 flex items-center justify-center md:justify-start gap-3 order-1 text-xs font-medium text-mowka-text-secondary tracking-wide">
-          <div className="flex items-center gap-2">
-            <img src="https://flagcdn.com/in.svg" alt="India" className="w-4 h-auto rounded-sm opacity-80 hover:opacity-100 transition-opacity cursor-help" title="Proudly built in India" />
-            <span className="opacity-0 w-0 overflow-hidden group-hover:w-auto group-hover:opacity-100 transition-all duration-300">India</span>
-          </div>
-          <span>Copyright © {new Date().getFullYear()} Mowka Enterprises Private Limited. All rights reserved.</span>
+        <div className="order-1 md:order-1 w-full md:w-auto text-center md:text-left">
+          <p className="text-xs font-medium text-mowka-text-secondary tracking-wide opacity-80 leading-relaxed md:leading-normal">
+            <img src="https://flagcdn.com/in.svg" alt="India" className="inline-block w-3.5 h-auto rounded-[1px] mr-2 -mt-0.5 align-middle" title="Proudly built in India" />
+            <span className="align-middle">Copyright © {new Date().getFullYear()} <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
+          </p>
         </div>
 
         {/* Center: Legal Links */}
-        <div className="col-span-1 flex justify-start md:justify-center items-center gap-6 md:gap-8 order-2 text-xs font-medium text-mowka-text-secondary tracking-wide">
-          <Link to="/privacy" className="hover:text-mowka-text-primary transition-all hover:-translate-y-0.5">Privacy</Link>
-          <Link to="/terms" className="hover:text-mowka-text-primary transition-all hover:-translate-y-0.5">Terms</Link>
+        <div className="flex justify-center items-center gap-8 order-2 md:order-2 text-xs font-medium text-mowka-text-secondary tracking-wide w-full md:w-auto md:absolute md:left-1/2 md:-translate-x-1/2">
+          <Link to="/privacy" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Privacy</Link>
+          <Link to="/terms" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Terms</Link>
         </div>
 
         {/* Right: Socials */}
-        <div className="col-span-1 flex justify-end items-center gap-6 text-xs font-medium text-mowka-text-secondary tracking-wide order-3">
-          <a href="mailto:shubham@mowka.in" className="transition-all hover:scale-110 hover:-translate-y-0.5 opacity-60 hover:opacity-100" aria-label="Email">
+        <div className="flex justify-center md:justify-end items-center gap-6 text-xs font-medium text-mowka-text-secondary tracking-wide order-3 md:order-3 w-full md:w-auto">
+          <a href="mailto:shubham@mowka.in" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Email">
             <MdEmail className="w-4 h-4 text-mowka-text-secondary" />
           </a>
-          <a href="https://www.linkedin.com/company/mowka/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 hover:-translate-y-0.5 opacity-60 hover:opacity-100" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/mowka/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="LinkedIn">
             <FaLinkedin className="w-4 h-4 text-mowka-text-secondary" />
           </a>
         </div>
