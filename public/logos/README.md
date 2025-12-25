@@ -18,9 +18,8 @@
 ## Brand Assets (In `/public/` root)
 
 ### Favicon (Browser Tab Icon)
-- `/public/favicon.png` - 32x32px (browser tab icon)
-- `/public/favicon-16x16.png` - 16x16px variant
-- `/public/favicon-32x32.png` - 32x32px variant
+- `/public/logos/android-chrome-192x192.png` - 192x192px (New browsers)
+- `/public/logos/android-chrome-512x512.png` - 512x512px (New browsers)
 - `/public/favicon.ico` - ICO format for older browsers
 
 ### Open Graph Image (Social Sharing)
@@ -57,9 +56,6 @@ Favicon is automatically loaded by browsers from `/public/favicon.png` or via:
 
 ```
 /public/
-├── favicon.png (32x32)
-├── favicon-16x16.png
-├── favicon-32x32.png
 ├── favicon.ico
 ├── og-image.png (needs resize to 1200x630)
 ├── og-image.svg

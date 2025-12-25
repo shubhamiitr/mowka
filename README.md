@@ -104,7 +104,7 @@ mowka/
 
 ## Assets Used
 
-- **Favicon:** `/public/favicon.png` (32x32px)
+- **Favicon:** `/public/logos/android-chrome-192x192.png` (192x192px)
 - **Logo:** `/public/logos/logo-horizontal.svg` (website header)
 - **OG Image:** `/public/og-image.png` (social sharing preview)
 
