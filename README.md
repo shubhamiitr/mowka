@@ -74,7 +74,7 @@ npm run preview
 ```
 mowka/
 ├── public/
-│   ├── favicon.png
+│   ├── favicon-192x192.png
 │   ├── og-image.png
 │   └── logos/
 │       ├── logo-horizontal.svg (website header)
@@ -104,7 +104,7 @@ mowka/
 
 ## Assets Used
 
-- **Favicon:** `/public/logos/android-chrome-192x192.png` (192x192px)
+- **Favicon:** `/public/favicon-192x192.png` (192x192px)
 - **Logo:** `/public/logos/logo-horizontal.svg` (website header)
 - **OG Image:** `/public/og-image.png` (social sharing preview)
 
