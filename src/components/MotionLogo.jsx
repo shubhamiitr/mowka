@@ -1,4 +1,8 @@
+
+"use client";
+
 import { motion } from 'framer-motion';
+import React from 'react';
 
 export const MotionLogo = () => {
     // Exact Mowka Logo Configuration
@@ -40,7 +44,22 @@ export const MotionLogo = () => {
         return allDots;
     };
 
+    const [isMounted, setIsMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const dots = generateDots();
+
+    if (!isMounted) {
+        return (
+            <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">
+                {/* Render static or empty placeholder to match dimensions */}
+                <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible"></svg>
+            </div>
+        );
+    }
 
     return (
         <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">

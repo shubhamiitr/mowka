@@ -1,5 +1,6 @@
+"use client";
+
 import { useEffect } from 'react';
-import SEO from './SEO';
 import { Footer } from './Footer';
 
 export const PrivacyPolicy = () => {
@@ -11,15 +12,11 @@ export const PrivacyPolicy = () => {
 
     return (
         <section className="bg-mowka-bg-primary min-h-screen flex flex-col pt-24 md:pt-32">
-            <SEO
-                title="Privacy Policy"
-                description="Read Mowka's Privacy Policy to understand how we collect, use, and protect your information."
-            />
             <div className="max-w-4xl mx-auto px-6 flex-grow pb-12">
                 <h1 className="text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8">Privacy Policy</h1>
 
                 <div className="prose prose-lg text-mowka-text-secondary">
-                    <p className="text-sm text-mowka-text-tertiary mb-8">Last Updated: {new Date().toLocaleDateString()}</p>
+                    <p className="text-sm text-mowka-text-tertiary mb-8">Last Updated: December 2025</p>
 
                     <p>
                         Mowka Enterprises Private Limited ("Mowka", "we," "us," or "our") is committed to protecting the privacy of our partners and talent network.

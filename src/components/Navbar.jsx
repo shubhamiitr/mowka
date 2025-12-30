@@ -1,17 +1,23 @@
+"use client";
+
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+// import { Link, useLocation, useNavigate } from 'react-router-dom'; // REMOVED
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
   { label: 'Our Approach', href: '#process' },
   { label: 'Founder', href: '#founder' },
+  { label: 'Contact', href: '#contact', mobileOnly: true }, // Added for unified handling if needed
 ];
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname(); // Replaces useLocation
+  const router = useRouter();     // Replaces useNavigate
 
   const handleScrollTo = (e, href) => {
     e.preventDefault();
@@ -19,15 +25,15 @@ export const Navbar = () => {
 
     const targetId = href.replace('#', '');
 
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (pathname !== '/') {
+      router.push('/');
       // Wait for navigation then scroll
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 100);
+      }, 500); // Increased timeout slightly for Next.js transition
     } else {
       const element = document.getElementById(targetId);
       if (element) {
@@ -44,20 +50,23 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
           <Link
-            to="/"
+            href="/"
             className="flex items-center gap-3 z-50 relative group"
             onClick={(e) => {
-              if (location.pathname === '/') {
+              if (pathname === '/') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
               setMobileMenuOpen(false);
             }}
           >
-            <img
+            <Image
               src="/logos/logo-horizontal.png"
               alt="Mowka Logo"
+              width={160}
+              height={40}
               className="h-8 md:h-10 w-auto object-contain"
+              priority
             />
             <span className="text-xl md:text-2xl font-bold tracking-tight font-serif text-mowka-text-primary">Mowka</span>
           </Link>

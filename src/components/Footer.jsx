@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -10,15 +11,23 @@ export const Footer = () => {
         {/* Left: Copyright + Flag */}
         <div className="order-1 md:order-1 w-full md:w-auto text-center md:text-left">
           <p className="text-xs font-medium text-mowka-text-secondary tracking-wide opacity-80 leading-relaxed md:leading-normal">
-            <img src="https://flagcdn.com/in.svg" alt="India" className="inline-block w-3.5 h-auto rounded-[1px] mr-2 -mt-0.5 align-middle" title="Proudly built in India" />
-            <span className="align-middle">Copyright © {new Date().getFullYear()} <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
+            <Image
+              src="https://flagcdn.com/in.svg"
+              alt="India"
+              width={14}
+              height={10}
+              className="inline-block w-3.5 h-auto rounded-[1px] mr-2 -mt-0.5 align-middle"
+              title="Proudly built in India"
+              unoptimized
+            />
+            <span className="align-middle">Copyright © 2025 <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
           </p>
         </div>
 
         {/* Center: Legal Links */}
         <div className="flex justify-center items-center gap-8 order-2 md:order-2 text-xs font-medium text-mowka-text-secondary tracking-wide w-full md:w-auto md:absolute md:left-1/2 md:-translate-x-1/2">
-          <Link to="/privacy" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Privacy</Link>
-          <Link to="/terms" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Terms</Link>
+          <Link href="/privacy" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Privacy</Link>
+          <Link href="/terms" className="hover:text-mowka-text-primary transition-all hover:opacity-100 opacity-80">Terms</Link>
         </div>
 
         {/* Right: Socials */}

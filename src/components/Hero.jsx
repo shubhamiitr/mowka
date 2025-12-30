@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from 'react';
 import { Reveal } from './Reveal';
 import { MotionLogo } from './MotionLogo';
@@ -21,17 +23,17 @@ export const Hero = () => {
             <MotionLogo />
           </div>
 
-          <Reveal delay={0.1}>
+          <div>
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-medium tracking-tighter md:tracking-tight text-mowka-text-primary mt-6 md:mt-12 mb-4 md:mb-6 leading-[1.05] md:leading-[1.05] font-serif">
               {SITE_CONTENT.heroHeadline.start}<br />
               <span className="text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary animate-shine bg-[length:200%_auto] pr-2">
                 {SITE_CONTENT.heroHeadline.highlight}
               </span>
             </h1>
-            <p className="text-sm md:text-xl font-light text-mowka-text-secondary max-w-3xl mx-auto mt-4 px-4 leading-relaxed opacity-90">
+            <p className="text-sm md:text-xl font-light text-mowka-text-secondary max-w-3xl mx-auto mt-4 px-4 leading-relaxed opacity-90 animate-fade-in-up">
               {SITE_CONTENT.description}
             </p>
-          </Reveal>
+          </div>
 
 
           <Reveal delay={0.7}>

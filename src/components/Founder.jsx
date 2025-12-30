@@ -1,3 +1,6 @@
+"use client";
+
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
@@ -14,17 +17,19 @@ export const Founder = () => {
             <div className="w-full flex flex-col relative z-10">
                 <div className="w-full flex flex-col justify-center px-4 md:px-12">
                     <div className="max-w-7xl mx-auto w-full">
-                        <div className="grid md:grid-cols-12 gap-6 lg:gap-20 items-center max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-20 items-center max-w-6xl mx-auto">
 
                             {/* IMAGE */}
                             <div className="hidden md:block md:col-span-4 order-1 shrink-0 mb-4 md:mb-0">
                                 <Reveal delay={0.1}>
                                     <div className="relative aspect-[3/4] rounded-[2px] overflow-hidden shadow-2xl bg-gray-200 group w-full max-w-sm border-4 border-white ring-1 ring-gray-100">
-                                        <img
+                                        <Image
                                             src="/profile.webp"
                                             alt="Shubham Kansal"
-                                            loading="lazy"
+                                            width={500}
+                                            height={667}
                                             className="object-cover w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-105 filter grayscale-[10%] group-hover:grayscale-0"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     </div>
                                 </Reveal>
@@ -37,7 +42,14 @@ export const Founder = () => {
 
                                     {/* Mobile Avatar (Centered) */}
                                     <div className="md:hidden shrink-0 relative w-24 h-28 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-1 ring-gray-100 transform -rotate-1 mx-auto">
-                                        <img src="/profile.webp" alt="Shubham Kansal" loading="lazy" className="object-cover w-full h-full" />
+                                        <Image
+                                            src="/profile.webp"
+                                            alt="Shubham Kansal"
+                                            width={96}
+                                            height={112}
+                                            className="object-cover w-full h-full"
+                                            sizes="100px"
+                                        />
                                     </div>
 
                                     {/* Headline Group */}

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { ArrowRight, Send } from 'lucide-react';
 import PhoneInput from 'react-phone-input-2';
@@ -119,7 +121,7 @@ export const Contact = () => {
                                 {!submitted ? (
                                     <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                                         <div>
-                                            <label htmlFor="email" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-quaternary">Work Email</label>
+                                            <label htmlFor="email" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-secondary">Work Email</label>
                                             <input
                                                 type="email"
                                                 id="email"
@@ -132,7 +134,7 @@ export const Contact = () => {
                                             />
                                         </div>
                                         <div>
-                                            <label htmlFor="phone" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-quaternary">Mobile Number</label>
+                                            <label htmlFor="phone" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-secondary">Mobile Number</label>
                                             <PhoneInput
                                                 country={'in'}
                                                 value={phone}
