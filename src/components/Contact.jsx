@@ -93,7 +93,7 @@ export const Contact = () => {
     };
 
     return (
-        <section id="contact" className="bg-mowka-bg-primary flex flex-col relative min-h-[100dvh] justify-between scroll-mt-20">
+        <section id="contact" className="bg-mowka-bg-primary flex flex-col relative min-h-0 md:min-h-[100dvh] justify-between scroll-mt-20">
             <div className="w-full flex-grow flex flex-col justify-center relative z-10 py-12 md:py-0">
                 <div className="w-full flex flex-col justify-center px-4 md:px-6">
                     <div className="max-w-3xl mx-auto w-full">

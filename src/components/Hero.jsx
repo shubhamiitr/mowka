@@ -12,7 +12,7 @@ export const Hero = () => {
     <section
       id="home"
       ref={containerRef}
-      className="relative w-full min-h-[85vh] flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden pt-28 pb-10 md:pt-28 md:pb-16"
+      className="relative w-full h-auto md:min-h-[85vh] flex flex-col justify-start md:justify-center items-center bg-mowka-bg-primary overflow-hidden pt-28 pb-10 md:pt-28 md:pb-16"
     >
       {/* Cinematic Aurora Background - Removed for color consistency */}
 
