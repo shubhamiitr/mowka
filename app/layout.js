@@ -58,19 +58,17 @@ const jsonLd = [
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Mowka",
+        "alternateName": ["Mowka Enterprises", "Mowka Talent Partner"],
         "url": "https://mowka.in/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://mowka.in/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
+        "description": "We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.",
+        "inLanguage": "en-US"
     },
     {
         "@context": "https://schema.org",
         "@type": "Corporation",
         "name": "Mowka",
         "legalName": "Mowka Enterprises Private Limited",
-        "alternateName": "Mowka",
+        "alternateName": "Mowka Talent Partner",
         "url": "https://mowka.in/",
         "logo": "https://mowka.in/logo-full.png",
         "description": "We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly.",
