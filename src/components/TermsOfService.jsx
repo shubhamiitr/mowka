@@ -52,7 +52,7 @@ export const TermsOfService = () => {
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">5. Governing Law</h3>
                     <p>
-                        These Terms are governed by the laws of India. Any disputes are subject to the exclusive jurisdiction of the courts in Bengaluru, India.
+                        These Terms are governed by the laws of India. Any disputes are subject to the exclusive jurisdiction of the courts in Kota, Rajasthan, India.
                     </p>
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">6. Updates</h3>
