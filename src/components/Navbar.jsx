@@ -61,7 +61,7 @@ export const Navbar = () => {
             }}
           >
             <Image
-              src="/logos/logo-horizontal.png"
+              src="/logo-transparent-192x192.png"
               alt="Mowka Logo"
               width={40}
               height={40}

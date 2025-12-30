@@ -35,13 +35,13 @@ export const metadata = {
     },
     icons: {
         icon: [
-            { url: '/favicon.ico' },
-            { url: '/favicon.svg', type: 'image/svg+xml' },
-            { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+            { url: '/logo.ico' },
+            { url: '/logo.svg', type: 'image/svg+xml' },
+            { url: '/logo-192x192.png', sizes: '192x192', type: 'image/png' },
         ],
-        apple: '/logos/apple-touch-icon.png',
+        apple: '/apple-touch-icon.png',
     },
-    manifest: '/logos/site.webmanifest',
+    manifest: '/site.webmanifest',
     alternates: {
         canonical: '/',
     },
@@ -72,7 +72,7 @@ const jsonLd = [
         "legalName": "Mowka Enterprises Private Limited",
         "alternateName": "Mowka",
         "url": "https://mowka.in/",
-        "logo": "https://mowka.in/logos/logo-horizontal.png",
+        "logo": "https://mowka.in/logo-full.png",
         "description": "We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly.",
         "slogan": "Grow With Confidence",
         "foundingDate": "2025",
