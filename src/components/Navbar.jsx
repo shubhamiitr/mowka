@@ -63,7 +63,7 @@ export const Navbar = () => {
             <Image
               src="/logos/logo-horizontal.png"
               alt="Mowka Logo"
-              width={160}
+              width={40}
               height={40}
               className="h-8 md:h-10 w-auto object-contain"
               priority
