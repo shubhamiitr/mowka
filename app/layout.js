@@ -36,7 +36,6 @@ export const metadata = {
     icons: {
         icon: [
             { url: '/logo.ico' },
-            { url: '/logo.svg', type: 'image/svg+xml' },
             { url: '/logo-192x192.png', sizes: '192x192', type: 'image/png' },
         ],
         apple: '/apple-touch-icon.png',
@@ -129,7 +128,7 @@ const jsonLd = {
             "@id": "https://mowka.in/#founder",
             "name": "Shubham Kansal",
             "jobTitle": "Founder & CEO",
-            "image": "https://mowka.in/profile.webp",
+            "image": "https://mowka.in/founder.png",
             "url": "https://www.linkedin.com/in/kansalshubham/",
             "description": "Engineering leader with 10+ years of experience. Former architect at Amazon Prime Video and infrastructure lead at Rephrase.ai (acquired by Adobe). Conducted 2000+ interviews and specializes in high-signal technical sourcing.",
             "award": "US Patent 11645249B1 - System for automated metadata and copyright management",

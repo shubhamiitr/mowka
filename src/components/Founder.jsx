@@ -24,7 +24,7 @@ export const Founder = () => {
                                 <Reveal delay={0.1}>
                                     <div className="relative aspect-[3/4] rounded-[2px] overflow-hidden shadow-2xl bg-gray-200 group w-full max-w-sm border-4 border-white ring-1 ring-gray-100">
                                         <Image
-                                            src="/profile.webp"
+                                            src="/founder.jpg"
                                             alt="Shubham Kansal"
                                             width={500}
                                             height={667}
@@ -43,7 +43,7 @@ export const Founder = () => {
                                     {/* Mobile Avatar (Centered) */}
                                     <div className="md:hidden shrink-0 relative w-24 h-28 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-1 ring-gray-100 transform -rotate-1 mx-auto">
                                         <Image
-                                            src="/profile.webp"
+                                            src="/founder.jpg"
                                             alt="Shubham Kansal"
                                             width={96}
                                             height={112}
