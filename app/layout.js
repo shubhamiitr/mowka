@@ -222,10 +222,20 @@ const jsonLd = {
             "@type": "JobPosting",
             "@id": "https://mowka.in/#job-ai-engineer",
             "title": "AI Engineer",
-            "description": "ML folks who love voice, diffusion models, and scaling things to the moon: Ringg AI wants YOU!\n\nWe’re building India’s most powerful custom SLMs and real-time Speech-to-Speech voice agents that already handle millions of calls across banking, healthcare, and new economy brands.\n\nWhat’s the challenge?\n- Build or contribute to diffusion-based audio models (not just HuggingFace copy-paste).\n- Optimize inference to handle 10,000+ requests per second.\n- Squeeze every millisecond out of pipelines using TorchScript, ONNX, TensorRT, and DeepSpeed.\n\nYou will work with a smart, hungry, no-BS team building things that real people use.",
+            "description": "Join Ringg AI to architect the infrastructure for India's most powerful custom SLMs and real-time Speech-to-Speech voice agents. You will move beyond simple API wrappers to build and scale custom diffusion-based audio models capable of 10,000+ RPS, optimizing every millisecond of the pipeline using PyTorch, TensorRT, and DeepSpeed.",
             "datePosted": "2025-12-31",
             "validThrough": "2026-03-31",
             "employmentType": "FULL_TIME",
+            "baseSalary": {
+                "@type": "MonetaryAmount",
+                "currency": "INR",
+                "value": {
+                    "@type": "QuantitativeValue",
+                    "value": 8000000,
+                    "unitText": "YEAR"
+                }
+            },
+            "jobBenefits": "₹80 lakh cash + ESOPs, hybrid environment, high-ownership team.",
             "hiringOrganization": {
                 "@type": "Organization",
                 "name": "RinggAI",
@@ -260,6 +270,16 @@ const jsonLd = {
             "datePosted": "2025-12-31",
             "validThrough": "2026-03-31",
             "employmentType": "FULL_TIME",
+            "baseSalary": {
+                "@type": "MonetaryAmount",
+                "currency": "INR",
+                "value": {
+                    "@type": "QuantitativeValue",
+                    "value": 1200000,
+                    "unitText": "YEAR"
+                }
+            },
+            "jobBenefits": "₹12 lakh cash + ESOPs, customer-facing role, high-ownership team.",
             "hiringOrganization": {
                 "@type": "Organization",
                 "name": "RinggAI",
