@@ -317,8 +317,8 @@ export default function RootLayout({ children }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
                 {/* Google Analytics */}
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-5VNYMY69PY" strategy="afterInteractive" />
-                <Script id="google-analytics" strategy="afterInteractive">
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-5VNYMY69PY" strategy="lazyOnload" />
+                <Script id="google-analytics" strategy="lazyOnload">
                     {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
