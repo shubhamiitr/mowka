@@ -33,6 +33,20 @@ const nextConfig = {
             }
         ];
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'api.producthunt.com',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'flagcdn.com',
+                pathname: '**',
+            }
+        ],
+    },
 };
 
 export default nextConfig;

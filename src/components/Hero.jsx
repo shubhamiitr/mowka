@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { Reveal } from './Reveal';
 import { MotionLogo } from './MotionLogo';
 import { SITE_CONTENT } from '../constants/content';
+import Image from 'next/image';
 
 export const Hero = () => {
   const containerRef = useRef(null);
@@ -19,12 +20,12 @@ export const Hero = () => {
       < div className="max-w-7xl w-full px-4 md:px-6 relative z-10 flex flex-col justify-center h-full" >
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto w-full">
 
-          <div className="mb-4 md:mb-8">
+          <div className="mb-2 md:mb-6">
             <MotionLogo />
           </div>
 
           <div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-medium tracking-tighter md:tracking-tight text-mowka-text-primary mt-6 md:mt-12 mb-4 md:mb-6 leading-[1.05] md:leading-[1.05] font-serif">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-medium tracking-tighter md:tracking-tight text-mowka-text-primary mt-4 md:mt-8 mb-4 md:mb-6 leading-[1.05] md:leading-[1.05] font-serif">
               {SITE_CONTENT.heroHeadline.start}<br />
               <span className="text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary animate-shine bg-[length:200%_auto] pr-2">
                 {SITE_CONTENT.heroHeadline.highlight}
@@ -35,9 +36,8 @@ export const Hero = () => {
             </p>
           </div>
 
-
           <Reveal delay={0.7}>
-            <div className="flex gap-12 md:gap-24 w-full justify-center items-center mt-6 md:mt-10 opacity-80">
+            <div className="flex gap-12 md:gap-24 w-full justify-center items-center mt-2 md:mt-4 opacity-80">
               <div className="flex flex-col items-center gap-1 group cursor-default">
                 <span className="text-xl md:text-3xl font-serif text-mowka-text-primary tracking-tight">10:1</span>
                 <span className="text-[8px] md:text-[10px] font-semibold uppercase tracking-widest text-mowka-text-quaternary">Profile-to-Offer Ratio</span>
@@ -49,6 +49,18 @@ export const Hero = () => {
               </div>
             </div>
           </Reveal>
+
+          <div className="mt-4 md:mt-6 flex justify-center animate-fade-in-up">
+            <a href="https://www.producthunt.com/products/mowka?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-mowka" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1056618&theme=light&t=1767191983103"
+                alt="Mowka - Grow with Confidence | Product Hunt"
+                width={220}
+                height={45}
+                unoptimized
+              />
+            </a>
+          </div>
         </div>
       </div >
     </section >
