@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 
 export const metadata = {
     metadataBase: new URL('https://mowka.in'),
-    title: 'Mowka | Grow With Confidence',
-    description: 'We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly.',
+    title: 'Mowka | Technical Sourcing & Engineering Recruitment Partner',
+    description: 'Mowka is a technical sourcing agency led by experienced engineering leaders. We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.',
     openGraph: {
         type: 'website',
         url: 'https://mowka.in',

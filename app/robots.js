@@ -2,8 +2,8 @@ export default function robots() {
     return {
         rules: {
             userAgent: '*',
-            allow: '/',
+            allow: ['/', '/llms.txt'],
         },
-        sitemap: 'https://mowka.in/sitemap.xml',
+        sitemap: ['https://mowka.in/sitemap.xml'],
     };
 }
