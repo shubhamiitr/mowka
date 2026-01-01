@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from 'react';
-import { ArrowRight, Send } from 'lucide-react';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+import { ArrowRight, Send, AlertCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import './PhoneInputStyles.css';
 import { Footer } from './Footer';
 import { Reveal } from './Reveal';
@@ -13,6 +14,7 @@ export const Contact = () => {
     const [phone, setPhone] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
+    const [errorField, setErrorField] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
     // Email validation - must be work email (not free providers)
@@ -21,43 +23,28 @@ export const Contact = () => {
         const freeProviders = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com'];
 
         if (!emailRegex.test(email)) {
-            return 'Please enter a valid email address';
+            return 'Please enter a valid work email address';
         }
 
         const domain = email.split('@')[1]?.toLowerCase();
         if (freeProviders.includes(domain)) {
-            return 'Please use your work email address';
+            return 'Please enter your work email address';
         }
 
         return null;
     };
 
-    // Phone validation - check if phone number is valid
-    const validatePhone = (phone) => {
-        // Remove all non-digit characters except +
-        const digits = phone.replace(/[^\d+]/g, '');
-
-        if (digits.length < 10) {
-            return 'Please enter a valid phone number';
-        }
-
-        return null;
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setErrorField(null);
 
         // Validate inputs
         const emailError = validateEmail(email);
         if (emailError) {
             setError(emailError);
-            return;
-        }
-
-        const phoneError = validatePhone(phone);
-        if (phoneError) {
-            setError(phoneError);
+            setErrorField('email');
             return;
         }
 
@@ -119,66 +106,58 @@ export const Contact = () => {
                             <div className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-mowka-border-light shadow-xl">
 
                                 {!submitted ? (
-                                    <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+                                    <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6" noValidate>
                                         <div>
                                             <label htmlFor="email" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-secondary">Work Email</label>
                                             <input
                                                 type="email"
                                                 id="email"
-                                                required
                                                 disabled={isLoading}
                                                 placeholder="name@company.com"
-                                                className="w-full px-0 py-2 md:py-3 bg-transparent border-b border-mowka-border-light focus:border-mowka-teal-vibrant outline-none transition-all font-medium text-base md:text-lg text-mowka-text-primary placeholder:text-mowka-text-tertiary rounded-none focus:ring-0 disabled:opacity-50"
+                                                className="w-full px-0 py-2 md:py-3 bg-transparent border-b outline-none transition-all font-medium text-base md:text-lg rounded-none focus:ring-0 disabled:opacity-50 border-mowka-border-light focus:border-mowka-teal-vibrant text-mowka-text-primary placeholder:text-mowka-text-tertiary"
                                                 value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
+                                                onChange={(e) => {
+                                                    setEmail(e.target.value);
+                                                    if (errorField === 'email') setErrorField(null);
+                                                }}
                                             />
                                         </div>
-                                        <div>
+                                        <div className="relative" data-lenis-prevent>
                                             <label htmlFor="phone" className="block text-[10px] md:text-xs font-bold mb-2 md:mb-3 uppercase tracking-wide text-mowka-text-secondary">Mobile Number</label>
                                             <PhoneInput
-                                                country={'in'}
+                                                defaultCountry="in"
                                                 value={phone}
-                                                onChange={setPhone}
+                                                onChange={(phone) => {
+                                                    setPhone(phone);
+                                                    if (errorField === 'phone') setErrorField(null);
+                                                }}
                                                 disabled={isLoading}
-                                                placeholder="+91 98765 43210"
+                                                forceDialCode={true}
                                                 inputProps={{
                                                     required: true,
-                                                    id: 'phone',
+                                                    name: 'phone',
+                                                    'data-lpignore': 'true',
                                                 }}
-                                                containerClass="w-full"
-                                                inputClass="w-full"
-                                                buttonClass="border-mowka-border-light"
-                                                containerStyle={{
-                                                    width: '100%',
-                                                }}
-                                                inputStyle={{
-                                                    width: '100%',
-                                                    height: 'auto',
-                                                    padding: '10px 14px 10px 58px',
-                                                    fontSize: '1.125rem',
-                                                    fontWeight: '500',
-                                                    border: 'none',
-                                                    borderBottom: '1px solid #d2d2d7',
-                                                    borderRadius: '0',
-                                                    backgroundColor: 'transparent',
-                                                    outline: 'none',
-                                                    color: '#1d1d1f',
-                                                }}
-                                                buttonStyle={{
-                                                    border: 'none',
-                                                    borderBottom: '1px solid #d2d2d7',
-                                                    borderRadius: '0',
-                                                    backgroundColor: 'transparent',
-                                                }}
-                                                dropdownStyle={{
-                                                    borderRadius: '8px',
-                                                    boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                                                }}
+                                                className="phone-input-custom"
                                             />
                                         </div>
-                                        {error && (
-                                            <p className="text-red-500 text-sm text-center">{error}</p>
-                                        )}
+                                        <div className="relative min-h-[24px]">
+                                            <AnimatePresence mode="wait">
+                                                {error && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: -5 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        exit={{ opacity: 0, y: -5 }}
+                                                        className="pt-2"
+                                                    >
+                                                        <div className="bg-red-50/80 backdrop-blur-sm border border-red-100 rounded-xl p-3 flex items-start gap-3">
+                                                            <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                                                            <p className="text-sm text-red-600 font-medium leading-tight pt-0.5">{error}</p>
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
                                         <button
                                             type="submit"
                                             disabled={isLoading}

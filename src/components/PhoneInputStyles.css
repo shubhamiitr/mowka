@@ -1,55 +1,77 @@
-/* Custom styles for react-phone-input-2 to match Mowka design */
+/* Custom styling for react-international-phone to match Ultra-Premium design */
 
-.react-tel-input .form-control:focus {
-  border-bottom: 1px solid #3a868f !important;
-  box-shadow: none !important;
+/* 
+ * 1. ROOT CONTAINER & BORDER LINE 
+ * Styles applied to the root container via `className="phone-input-custom"`
+ */
+.phone-input-custom {
+    border-bottom: 1px solid theme('colors.mowka.border-light') !important;
+    background-color: transparent !important;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
 }
 
-.react-tel-input .flag-dropdown:hover,
-.react-tel-input .flag-dropdown:focus {
-  background-color: transparent !important;
+@media (min-width: 768px) {
+    .phone-input-custom {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
 }
 
-.react-tel-input .selected-flag:hover,
-.react-tel-input .selected-flag:focus {
-  background-color: transparent !important;
+/* 
+ * 2. FLAG ALIGNMENT 
+ */
+.phone-input-custom .react-international-phone-country-selector-button {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 12px 0 0 !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    cursor: pointer !important;
 }
 
-.react-tel-input .country-list {
-  max-height: 300px;
-  overflow-y: auto;
+/* 
+ * 3. INPUT TEXT ALIGNMENT 
+ */
+.phone-input-custom .react-international-phone-input {
+    border: none !important;
+    background: transparent !important;
+    color: theme('colors.mowka.text-primary') !important;
+    width: 100% !important;
+    font-family: inherit !important;
+    padding: 0 !important;
+    height: auto !important;
+    line-height: normal !important;
 }
 
-.react-tel-input .country-list .country:hover {
-  background-color: #f8fafc;
+@media (min-width: 768px) {
+    .phone-input-custom .react-international-phone-input {
+        font-size: 1.125rem !important;
+    }
 }
 
-.react-tel-input .country-list .country.highlight {
-  background-color: #173054 !important;
-  color: white;
+.phone-input-custom .react-international-phone-input:focus {
+    outline: none !important;
 }
 
-/* Disabled state */
-.react-tel-input .form-control:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+/* 4. DROPDOWN SCROLLING & STYLE */
+.phone-input-custom .react-international-phone-country-selector-dropdown {
+    background: theme('colors.mowka.bg-primary') !important;
+    border: 1px solid theme('colors.mowka.border-light') !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    outline: none !important;
 }
 
-/* Better scrollbar for country list */
-.react-tel-input .country-list::-webkit-scrollbar {
-  width: 6px;
-}
+/* Scrollbar Style */
 
-.react-tel-input .country-list::-webkit-scrollbar-track {
-  background: #f1f5f9;
+.phone-input-custom .react-international-phone-country-selector-dropdown::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 4px 0;
 }
-
-.react-tel-input .country-list::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-
-.react-tel-input .country-list::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-

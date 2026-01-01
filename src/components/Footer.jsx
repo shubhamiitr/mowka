@@ -20,7 +20,7 @@ export const Footer = () => {
               title="Proudly built in India"
               unoptimized
             />
-            <span className="align-middle">Copyright © 2025 <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
+            <span className="align-middle">Copyright © 2026 <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
           </p>
         </div>
 
