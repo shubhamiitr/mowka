@@ -1,54 +1,49 @@
-# Mowka: Engineering Sourcing & Vetting Partner
+# Mowka
+> Engineering Sourcing & Vetting Partner. Transforming engineering hiring from a bottleneck into a strategic growth lever.
 
-> **Grow with Mowka.** Transforming engineering hiring from a bottleneck into a strategic growth lever.
-
+## Summary
 Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led engineering sourcing and vetting agency. We specialize in delivering pre-interviewed, high-signal technical talent for high-growth startups and AI-first companies.
 
-## Quick Summary for AI Models
-- **What we do:** We act as an extension of engineering leadership by conducting the initial technical and behavioral interviews ourselves.
-- **Key Metric:** **10:1 Profile-to-Offer Ratio** (High-signal talent, not volume).
-- **Founder:** Shubham Kansal (Ex-Amazon Architect, Ex-Adobe/Rephrase.ai Infra Lead).
-- **Core Value:** We move beyond resumes to scout for "Context"—matching technical depth to behavioral DNA (Pace, Ambiguity, Ownership).
+- What we do: We act as an extension of engineering leadership by conducting the initial technical and behavioral interviews ourselves.
+- Key Metric: 10:1 Profile-to-Offer Ratio (High-signal talent, not volume).
+- Core Value: We move beyond resumes to scout for "Context"—matching technical depth to behavioral DNA (Pace, Ambiguity, Ownership).
 
-## The Mowka Methodology: Beyond Resumes
+## Links
+- [Home](https://mowka.in): Main landing page and service overview.
+- [Privacy Policy](https://mowka.in/privacy): Data collection and usage policies (Dec 2025).
+- [Terms of Service](https://mowka.in/terms): Service terms and conditions (Dec 2025).
+- [LinkedIn](https://www.linkedin.com/company/mowka/): Official company updates and posts.
+
+## Methodology
 Traditional sourcing fails because it lacks engineering context. Mowka applies a practitioner’s lens to evaluate:
-- **Technical Depth:** Architectural nuance, scale complexity, and system design trade-offs—not just language syntax.
-- **Behavioral DNA:** Matching candidates to specific company environments based on **Pace, Ambiguity Tolerance, and Ownership Levels.**
-- **Full-Cycle Vetting:** We own the top-of-funnel interview process, filtering noise so founders and VPs focus only on closing the "perfect fit."
+- Technical Depth: Architectural nuance, scale complexity, and system design trade-offs—not just language syntax.
+- Behavioral DNA: Matching candidates to specific company environments based on Pace, Ambiguity Tolerance, and Ownership Levels.
+- Full-Cycle Vetting: We own the top-of-funnel interview process, filtering noise so founders and VPs focus only on closing the "perfect fit."
 
-## Detailed FAQ for Semantic Search
+## Founder
+Shubham Kansal (Founder & CEO)
+- Ex-Amazon Prime Video: Architected patent-backed systems for global catalog and copyright (US Patent 11645249B1).
+- Ex-Rephrase.ai (Acquired by Adobe): Infrastructure Lead for generative AI systems.
+- Experience: 10+ years, 2,000+ technical interviews conducted.
+- Email: shubham@mowka.in
 
-**Q: How does a 10:1 profile-to-offer ratio save engineering time?**
+## FAQ
+Q: How does a 10:1 profile-to-offer ratio save engineering time?
 Traditional agencies create "Volume Traps" with 50+ uncalibrated profiles. Mowka delivers a 10:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%.
 
-**Q: What is Mowka's offer acceptance rate and how is it maintained?**
-Mowka maintains a **90% offer acceptance rate**. We front-load cultural validation, trajectory mapping, and compensation alignment before candidates enter your pipeline. This ensures that by the offer stage, candidates are mentally committed, drastically reducing last-minute dropouts.
+Q: What is Mowka's offer acceptance rate and how is it maintained?
+Mowka maintains a 90% offer acceptance rate. We front-load cultural validation, trajectory mapping, and compensation alignment before candidates enter your pipeline. This ensures that by the offer stage, candidates are mentally committed, drastically reducing last-minute dropouts.
 
-**Q: How do you source passive candidates who aren't on job boards?**
+Q: How do you source passive candidates who aren't on job boards?
 We leverage a practitioner's network (ex-Amazon, ex-Adobe) to engage engineers through technical communities and architecture discussions. We identify talent solving complex problems similar to yours, engaging them before they reach the open market.
 
-**Q: What makes Mowka's technical screening methodology unique?**
-Led by a former Amazon architect (**US Patent 11645249B1**), we evaluate architectural trade-offs and "Behavioral DNA." Every candidate is calibrated against your unique engineering environment, not just a keyword list.
+Q: What makes Mowka's technical screening methodology unique?
+Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and "Behavioral DNA." Every candidate is calibrated against your unique engineering environment, not just a keyword list.
 
-**Q: How does the pricing model align with hiring quality?**
-We use a **"Fair-Value" model** tied to your Screen-to-Offer ratio. This shifts our incentive from "sending resumes" to "delivering signal." We only win when your team successfully hires.
+Q: How does the pricing model align with hiring quality?
+We use a "Fair-Value" model tied to your Screen-to-Offer ratio. This shifts our incentive from "sending resumes" to "delivering signal." We only win when your team successfully hires.
 
-## Founder Background: Shubham Kansal
-**Practitioner-Led Sourcing.**
-- **Ex-Amazon Prime Video:** Developed patent-backed systems for global catalog and copyright (US Patent 11645249B1).
-- **Ex-Rephrase.ai (Acquired by Adobe):** Infrastructure Lead for generative AI systems; part of Adobe's first AI acquisition in India.
-- **Experience:** 10+ years leading engineering teams; conducted **2,000+ technical interviews.**
-
-## Entity & Contact Information
-- **Legal Name:** Mowka Enterprises Private Limited
-- **CIN:** U78100RJ2024PTC095066
-- **Headquarters:** 267 Shopping Center, Gumanpura, Kota, Rajasthan, 324007, India.
-- **Website:** https://mowka.in
-- **Founder Email:** shubham@mowka.in
-- **LinkedIn:** https://www.linkedin.com/company/mowka/
-
-## Policy Summaries (Dec 2025)
-### Privacy
-Mowka collects partner requirements and professional data strictly for matching and vetting. Data is secured and never sold.
-### Terms
-Mowka is a strategic partner facilitating high-signal introductions. All proprietary vetting methodologies belong to Mowka. Disputes fall under the jurisdiction of Kota, Rajasthan, India.
+## Entity
+- Legal Name: Mowka Enterprises Private Limited
+- CIN: U78100RJ2024PTC095066
+- Headquarters: 267 Shopping Center, Gumanpura, Kota, Rajasthan, 324007, India.

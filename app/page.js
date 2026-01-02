@@ -6,6 +6,9 @@ export const metadata = {
     description: 'Mowka is a technical sourcing agency led by experienced engineering leaders. We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.',
     alternates: {
         canonical: '/',
+        types: {
+            'text/markdown': '/llms.txt',
+        },
     },
     openGraph: {
         type: 'website',
@@ -90,7 +93,8 @@ const jsonLd = {
             "sameAs": [
                 "https://www.linkedin.com/company/mowka/",
                 "https://www.linkedin.com/in/kansalshubham/",
-                "https://www.instagram.com/mowka.in/"
+                "https://www.instagram.com/mowka.in/",
+                "https://mowka.in/llms.txt"
             ]
         },
         {
