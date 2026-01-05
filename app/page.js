@@ -94,6 +94,8 @@ const jsonLd = {
                 "https://www.linkedin.com/company/mowka/",
                 "https://www.linkedin.com/in/kansalshubham/",
                 "https://www.instagram.com/mowka.in/",
+                "https://www.facebook.com/mowka.in/",
+                "https://wa.me/919468658967",
                 "https://mowka.in/llms.txt"
             ]
         },

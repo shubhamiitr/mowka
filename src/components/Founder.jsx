@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Reveal } from './Reveal';
 
@@ -114,6 +114,9 @@ export const Founder = () => {
                                         </a>
                                         <a href="https://www.linkedin.com/in/kansalshubham/" target="_blank" rel="noopener noreferrer" className="p-3 bg-white border border-mowka-border-light rounded-full text-mowka-text-secondary hover:text-[#0A66C2] hover:border-[#0A66C2] hover:shadow-md transition-all duration-300 group" aria-label="LinkedIn">
                                             <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                        </a>
+                                        <a href="https://wa.me/919468658967" target="_blank" rel="noopener noreferrer" className="p-3 bg-white border border-mowka-border-light rounded-full text-mowka-text-secondary hover:text-[#25D366] hover:border-[#25D366] hover:shadow-md transition-all duration-300 group" aria-label="WhatsApp">
+                                            <FaWhatsapp className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                         </a>
                                     </div>
                                 </Reveal>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { MdEmail } from 'react-icons/md';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 export const Footer = () => {
@@ -37,6 +37,15 @@ export const Footer = () => {
           </a>
           <a href="https://www.linkedin.com/company/mowka/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="LinkedIn">
             <FaLinkedin className="w-4 h-4 text-mowka-text-secondary" />
+          </a>
+          <a href="https://www.facebook.com/mowka.in" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Facebook">
+            <FaFacebook className="w-4 h-4 text-mowka-text-secondary" />
+          </a>
+          <a href="https://www.instagram.com/mowka.in" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Instagram">
+            <FaInstagram className="w-4 h-4 text-mowka-text-secondary" />
+          </a>
+          <a href="https://wa.me/919468658967" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="WhatsApp">
+            <FaWhatsapp className="w-4 h-4 text-mowka-text-secondary" />
           </a>
         </div>
 
