@@ -1,7 +1,10 @@
+import jobsData from '../src/data/jobs.json';
+
 export default function sitemap() {
     const baseUrl = 'https://mowka.in';
 
-    return [
+    // Static pages
+    const staticPages = [
         {
             url: baseUrl,
             lastModified: new Date(),
@@ -21,4 +24,14 @@ export default function sitemap() {
             priority: 0.5,
         },
     ];
+
+    // Job pages
+    const jobPages = jobsData.map(job => ({
+        url: `${baseUrl}/jobs/${job.slug}`,
+        lastModified: new Date(job.datePosted),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }));
+
+    return [...staticPages, ...jobPages];
 }

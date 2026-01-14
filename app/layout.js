@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
           `}
                 </Script>
             </head >
-            <body className="bg-mowka-light text-mowka-navy antialiased selection:bg-mowka-teal selection:text-white overflow-x-hidden">
+            <body className="bg-mowka-bg-primary text-mowka-text-primary antialiased overflow-x-hidden">
                 <ClientLayout>
                     <div className="bg-mowka-bg-primary min-h-screen">
                         <Navbar />

@@ -11,6 +11,7 @@ const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
   { label: 'Our Approach', href: '#process' },
   { label: 'Founder', href: '#founder' },
+  { label: 'Jobs', href: '/jobs' },
   { label: 'Contact', href: '#contact', mobileOnly: true }, // Added for unified handling if needed
 ];
 
@@ -74,14 +75,24 @@ export const Navbar = () => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleScrollTo(e, item.href)}
-                className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleScrollTo(e, item.href)}
+                  className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
             <a
               href="#contact"
@@ -109,14 +120,25 @@ export const Navbar = () => {
           }`}
       >
         {navItems.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors cursor-pointer"
-            onClick={(e) => handleScrollTo(e, item.href)}
-          >
-            {item.label}
-          </a>
+          item.href.startsWith('/') ? (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors cursor-pointer"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors cursor-pointer"
+              onClick={(e) => handleScrollTo(e, item.href)}
+            >
+              {item.label}
+            </a>
+          )
         ))}
         <a
           href="#contact"
