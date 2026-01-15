@@ -10,7 +10,7 @@ export const JobDetail = ({ job }) => {
         if (job.jobLocation.type === 'remote') {
             return `Remote · ${job.jobLocation.country}`;
         }
-        return `${job.jobLocation.city} · Hybrid`;
+        return `${job.jobLocation.city} · Onsite`;
     };
 
     return (

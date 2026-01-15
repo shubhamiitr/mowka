@@ -32,7 +32,7 @@ function formatLocation(jobLocation) {
     if (jobLocation.type === 'remote') {
         return `Remote · ${jobLocation.country}`;
     }
-    return `${jobLocation.city} · Hybrid`;
+    return `${jobLocation.city} · Onsite`;
 }
 
 export default function JobsPage() {
