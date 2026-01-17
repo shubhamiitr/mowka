@@ -7,21 +7,27 @@ export default function sitemap() {
     const staticPages = [
         {
             url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
+            lastModified: new Date('2026-01-01'),
+            changeFrequency: 'yearly',
             priority: 1,
         },
         {
             url: `${baseUrl}/privacy`,
-            lastModified: new Date(),
+            lastModified: new Date('2025-12-01'),
             changeFrequency: 'yearly',
             priority: 0.5,
         },
         {
             url: `${baseUrl}/terms`,
-            lastModified: new Date(),
+            lastModified: new Date('2025-12-01'),
             changeFrequency: 'yearly',
             priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/jobs`,
+            lastModified: new Date('2026-01-14'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
         },
     ];
 
