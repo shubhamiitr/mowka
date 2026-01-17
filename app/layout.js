@@ -20,8 +20,8 @@ export const metadata = {
     metadataBase: new URL('https://mowka.in'),
     icons: {
         icon: [
-            { url: '/logo.ico' },
-            { url: '/logo-192x192.png', sizes: '192x192', type: 'image/png' },
+            { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
+            { url: '/favicon.ico', sizes: 'any' },
         ],
         apple: '/apple-touch-icon.png',
     },
