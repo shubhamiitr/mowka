@@ -71,20 +71,44 @@ export default async function JobPage({ params }) {
         notFound();
     }
 
+    // Construct full HTML description
+    const fullDescription = `
+        <p>${job.description.summary}</p>
+        <p>${job.description.about}</p>
+        <h3>Responsibilities</h3>
+        <ul>
+            ${job.description.responsibilities.map(r => `<li>${r}</li>`).join('')}
+        </ul>
+        <h3>Requirements</h3>
+        <ul>
+            ${job.description.requirements.map(r => `<li>${r}</li>`).join('')}
+        </ul>
+        <h3>Benefits</h3>
+        <ul>
+            ${job.description.benefits.map(b => `<li>${b}</li>`).join('')}
+        </ul>
+    `;
+
     // Generate JSON-LD schema for JobPosting
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "JobPosting",
         "@id": `https://mowka.in/jobs/${job.slug}#jobposting`,
         "title": job.title,
-        "description": job.description.summary,
+        "description": fullDescription,
+        "identifier": {
+            "@type": "PropertyValue",
+            "name": job.company,
+            "value": job.id.split('-').pop().toUpperCase() + '-' + Math.floor(Math.random() * 1000) // Simple unique ID generation or use ID
+        },
         "datePosted": job.datePosted,
         "validThrough": job.validThrough,
         "employmentType": job.employmentType,
         "hiringOrganization": {
             "@type": "Organization",
-            "name": "Mowka",
-            "url": "https://mowka.in",
+            "name": job.company,
+            "sameAs": job.companyUrl,
+            "logo": "https://mowka.in/favicon.png" // Fallback or needs to be dynamic if possible
         },
         "jobLocation": job.jobLocation.type === 'remote' ? {
             "@type": "Place",
@@ -96,7 +120,10 @@ export default async function JobPage({ params }) {
             "@type": "Place",
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": job.jobLocation.streetAddress,
                 "addressLocality": job.jobLocation.city,
+                "addressRegion": job.jobLocation.addressRegion,
+                "postalCode": job.jobLocation.postalCode,
                 "addressCountry": job.jobLocation.country,
             }
         },
@@ -112,7 +139,7 @@ export default async function JobPage({ params }) {
                 "@type": "QuantitativeValue",
                 "minValue": job.salary.min,
                 "maxValue": job.salary.max,
-                "unitText": job.salary.period,
+                "unitText": "YEAR", // Explicitly set as standard
             }
         },
         "jobBenefits": job.description.benefits ? job.description.benefits.join(', ') : undefined,

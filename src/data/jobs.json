@@ -9,7 +9,10 @@
         "jobLocation": {
             "type": "onsite",
             "country": "India",
-            "city": "Bangalore"
+            "city": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560034",
+            "streetAddress": "Prestige Atlanta, 80 Feet Rd, Koramangala 1A Block, Koramangala 3 Block, Koramangala"
         },
         "remote": false,
         "salary": {
@@ -66,7 +69,9 @@
         "jobLocation": {
             "type": "onsite",
             "country": "India",
-            "city": "Bangalore"
+            "city": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "streetAddress": "Koramangala"
         },
         "remote": false,
         "salary": {
@@ -127,7 +132,10 @@
         "jobLocation": {
             "type": "onsite",
             "country": "India",
-            "city": "Gurugram"
+            "city": "Gurugram",
+            "addressRegion": "Haryana",
+            "postalCode": "122018",
+            "streetAddress": "1st Floor, Bestech Business Tower, Unit No. 102, Badshahpur Sohna Rd, Sector 48"
         },
         "remote": false,
         "salary": {
@@ -188,7 +196,10 @@
         "jobLocation": {
             "type": "onsite",
             "country": "India",
-            "city": "Gurugram"
+            "city": "Gurugram",
+            "addressRegion": "Haryana",
+            "postalCode": "122018",
+            "streetAddress": "1st Floor, Bestech Business Tower, Unit No. 102, Badshahpur Sohna Rd, Sector 48"
         },
         "remote": false,
         "salary": {
@@ -248,7 +259,10 @@
         "jobLocation": {
             "type": "onsite",
             "country": "India",
-            "city": "Gurugram"
+            "city": "Gurugram",
+            "addressRegion": "Haryana",
+            "postalCode": "122018",
+            "streetAddress": "1st Floor, Bestech Business Tower, Unit No. 102, Badshahpur Sohna Rd, Sector 48"
         },
         "remote": false,
         "salary": {
