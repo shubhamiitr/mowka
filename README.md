@@ -92,3 +92,11 @@ This project includes a `next.config.js` with strict security headers:
 ## 📄 License
 
 Proprietary Software. All rights reserved by Mowka Enterprises Private Limited.
+
+## Indexing Jobs
+To notify Google about job updates instantly:
+1. Ensure `mowka-480418-2b30ea4764c7.json` is in the root directory.
+2. Run:
+```bash
+npm run index-jobs
+```

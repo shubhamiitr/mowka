@@ -24,3 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 
+
+# Google Service Account Key
+mowka-480418-2b30ea4764c7.json
