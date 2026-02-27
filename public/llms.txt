@@ -1,11 +1,11 @@
 # Mowka
-> Engineering Sourcing & Vetting Partner. Transforming engineering hiring from a bottleneck into a strategic growth lever.
+> Premium Talent Sourcing & Vetting Partner. Transforming hiring from a bottleneck into a strategic growth lever for top startups.
 
 ## Summary
-Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led engineering sourcing and vetting agency. We specialize in delivering pre-interviewed, high-signal technical talent for high-growth startups and AI-first companies.
+Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led talent sourcing and vetting agency. We specialize in delivering pre-interviewed, referral-grade talent (engineering, product, research, leadership) for top-tier startups and AI-first companies.
 
-- What we do: We act as an extension of engineering leadership by conducting the initial technical and behavioral interviews ourselves.
-- Key Metric: 10:1 Profile-to-Offer Ratio (High-signal talent, not volume).
+- What we do: We act as an extension of your leadership team by conducting the initial behavioral and technical/craft interviews ourselves.
+- Key Metric: 5:1 Profile-to-Offer Ratio (High-signal talent, not volume).
 - Core Value: We move beyond resumes to scout for "Context"—matching technical depth to behavioral DNA (Pace, Ambiguity, Ownership).
 
 ## Links
@@ -18,7 +18,7 @@ Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led enginee
 - [WhatsApp](https://wa.me/919468658967): Direct concierge support.
 
 ## Methodology
-Traditional sourcing fails because it lacks engineering context. Mowka applies a practitioner’s lens to evaluate:
+Traditional sourcing fails because it lacks context. Mowka applies a former leader's lens to evaluate:
 - Technical Depth: Architectural nuance, scale complexity, and system design trade-offs—not just language syntax.
 - Behavioral DNA: Matching candidates to specific company environments based on Pace, Ambiguity Tolerance, and Ownership Levels.
 - Full-Cycle Vetting: We own the top-of-funnel interview process, filtering noise so founders and VPs focus only on closing the "perfect fit."
@@ -31,17 +31,17 @@ Shubham Kansal (Founder & CEO)
 - Email: shubham@mowka.in
 
 ## FAQ
-Q: How does a 10:1 profile-to-offer ratio save engineering time?
-Traditional agencies create "Volume Traps" with 50+ uncalibrated profiles. Mowka delivers a 10:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%.
+Q: How does a 5:1 profile-to-offer ratio save core team time?
+Traditional agencies create "Volume Traps" with 50+ uncalibrated profiles. Mowka delivers a 5:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%.
 
 Q: What is Mowka's offer acceptance rate and how is it maintained?
 Mowka maintains a 90% offer acceptance rate. We front-load cultural validation, trajectory mapping, and compensation alignment before candidates enter your pipeline. This ensures that by the offer stage, candidates are mentally committed, drastically reducing last-minute dropouts.
 
 Q: How do you source passive candidates who aren't on job boards?
-We leverage a practitioner's network (ex-Amazon, ex-Adobe) to engage engineers through technical communities and architecture discussions. We identify talent solving complex problems similar to yours, engaging them before they reach the open market.
+We leverage a practitioner's network (ex-Amazon, ex-Adobe) to engage top talent through technical communities, product discussions, and private channels. We identify professionals solving complex problems similar to yours, engaging them before they reach the open market.
 
 Q: What makes Mowka's technical screening methodology unique?
-Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and "Behavioral DNA." Every candidate is calibrated against your unique engineering environment, not just a keyword list.
+Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and "Behavioral DNA." Every candidate is calibrated against your unique environment, not just a keyword list.
 
 Q: How does the pricing model align with hiring quality?
 We use a "Fair-Value" model tied to your Screen-to-Offer ratio. This shifts our incentive from "sending resumes" to "delivering signal." We only win when your team successfully hires.

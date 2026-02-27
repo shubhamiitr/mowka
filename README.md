@@ -1,6 +1,6 @@
 # Mowka
 
-A modern, high-performance website for **Mowka** — a premium talent solutions firm connecting organizations with elite engineering talent. Built with **Next.js 16 (App Router)** for superior SEO, performance, and security.
+A modern, high-performance website for **Mowka** — a premium talent partner scouting referral-grade candidates (engineering, product, research, leadership) for top startups globally. Built with **Next.js 16 (App Router)** for superior SEO, performance, and security.
 
 ## 🚀 Technologies
 

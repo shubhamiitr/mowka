@@ -24,7 +24,7 @@ export const TermsOfService = () => {
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">1. Services</h3>
                     <p>
-                        Mowka provides premier technical talent solutions. We operate as a strategic partner connecting forward-thinking companies ("Partners") with elite engineering professionals ("Talent").
+                        Mowka provides premier talent solutions. We operate as a strategic partner connecting top startups ("Partners") with referral-grade professionals ("Talent").
                     </p>
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">2. Usage Expectations</h3>

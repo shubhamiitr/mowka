@@ -2,8 +2,8 @@ export const SITE_CONTENT = {
     appName: "Mowka",
     tagline: "Grow With Confidence",
     heroHeadline: {
-        start: "Connecting The Right Talent",
-        highlight: "to The Right Team"
+        start: "Scouting Referral-Grade Talent",
+        highlight: "for Top Startups"
     },
-    description: "We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly."
+    description: "We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly."
 };

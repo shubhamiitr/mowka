@@ -97,7 +97,7 @@ export const Contact = () => {
                             </Reveal>
                             <Reveal delay={0.2}>
                                 <p className="text-sm md:text-lg text-mowka-text-secondary max-w-2xl mx-auto leading-relaxed font-light">
-                                    Turn your engineering hiring from a bottleneck into a competitive advantage.
+                                    Turn your hiring from a bottleneck into a competitive advantage.
                                 </p>
                             </Reveal>
                         </div>

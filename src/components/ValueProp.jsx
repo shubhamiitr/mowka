@@ -23,7 +23,7 @@ export const ValueProp = () => {
                             </Reveal>
                             <Reveal delay={0.2}>
                                 <p className="text-xs md:text-xl text-mowka-text-secondary leading-relaxed font-light max-w-3xl mx-auto px-2 hidden md:block">
-                                    Traditional sourcing fails because it lacks context. We apply deep engineering leadership experience to understand the <strong className="text-mowka-text-primary font-medium">code</strong> AND the <strong className="text-mowka-text-primary font-medium">culture</strong>.
+                                    Traditional sourcing fails because it lacks context. Led by former product and engineering leaders, we understand the <strong className="text-mowka-text-primary font-medium">craft</strong> AND the <strong className="text-mowka-text-primary font-medium">culture</strong>.
                                 </p>
                             </Reveal>
                         </div>
@@ -41,7 +41,7 @@ export const ValueProp = () => {
                                         <h3 className="text-base md:text-2xl font-serif text-mowka-text-primary md:mt-4">Technical Depth</h3>
                                     </div>
                                     <p className="text-mowka-text-secondary text-xs md:text-base font-light leading-relaxed">
-                                        We don't just match keywords. As engineering leaders, we understand the architectural nuance—Scale, Complexity, and Trade-offs.
+                                        We don't just match keywords. As former leaders, we understand the nuance—Scale, Complexity, and Trade-offs across engineering, product and research roles.
                                     </p>
                                 </div>
                             </Reveal>

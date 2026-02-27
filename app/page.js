@@ -2,8 +2,8 @@
 import { Home } from '../src/components/Home';
 
 export const metadata = {
-    title: 'Mowka | Technical Sourcing & Engineering Recruitment Partner',
-    description: 'Mowka is a technical sourcing agency led by experienced engineering leaders. We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.',
+    title: 'Mowka | Premium Talent Partner for Top Startups',
+    description: 'Mowka is a practitioner-led talent sourcing agency. We scout referral-grade talent (Engineering, Research, Product, Executive) who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.',
     alternates: {
         canonical: '/',
         types: {
@@ -14,13 +14,13 @@ export const metadata = {
         type: 'website',
         url: 'https://mowka.in',
         title: 'Mowka | Grow With Confidence',
-        description: 'We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly.',
+        description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
         images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mowka | Grow With Confidence',
-        description: 'We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you find the right talent effortlessly.',
+        description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
         images: ['/og-image.png'],
     },
 };
@@ -34,7 +34,7 @@ const jsonLd = {
             "name": "Mowka",
             "alternateName": ["Mowka Enterprises", "Mowka Talent Partner"],
             "url": "https://mowka.in/",
-            "description": "We scout engineers who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.",
+            "description": "We scout referral-grade talent (Engineering, Research, Product, Leaders) who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.",
             "inLanguage": "en-US",
             "publisher": { "@id": "https://mowka.in/#organization" }
         },
@@ -63,7 +63,7 @@ const jsonLd = {
                 "width": "512",
                 "height": "512"
             },
-            "description": "A high-precision technical sourcing partner led by engineering practitioners. We maintain a 10:1 profile-to-offer ratio by matching candidates to unique environments based on pace, ambiguity tolerance, and ownership expectations.",
+            "description": "A high-precision talent sourcing partner for top startups. We maintain a 5:1 profile-to-offer ratio by matching referral-grade candidates to unique environments based on pace, ambiguity tolerance, and ownership expectations.",
             "slogan": "Beyond Resumes. We Scout for Context.",
             "foundingDate": "2024",
             "identifier": {
@@ -132,7 +132,7 @@ const jsonLd = {
                 "@type": "Place",
                 "name": "Worldwide"
             },
-            "description": "Practitioner-led sourcing methodology that maintains a 10:1 profile-to-offer ratio by matching candidates based on behavioral DNA (pace, ambiguity tolerance, ownership) and technical depth (scale, complexity, trade-offs).",
+            "description": "Practitioner-led sourcing methodology that maintains a 5:1 profile-to-offer ratio by matching candidates based on behavioral DNA (pace, ambiguity tolerance, ownership) and technical depth (scale, complexity, trade-offs).",
             "offers": {
                 "@type": "Offer",
                 "name": "Fair-Value Pricing",
@@ -145,10 +145,10 @@ const jsonLd = {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "How does a 10:1 profile-to-offer ratio save engineering time?",
+                    "name": "How does a 5:1 profile-to-offer ratio save core team time?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Traditional agencies create 'Volume Traps' with 50+ uncalibrated profiles. Mowka delivers a 10:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%."
+                        "text": "Traditional agencies create 'Volume Traps' with 50+ uncalibrated profiles. Mowka delivers a 5:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%."
                     }
                 },
                 {
@@ -164,7 +164,7 @@ const jsonLd = {
                     "name": "How do you source passive candidates who aren't on job boards?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "We leverage a practitioner's network (ex-Amazon, ex-Adobe) to engage engineers through technical communities and architecture discussions. Rather than spamming LinkedIn, we identify talent solving complex problems similar to yours, engaging them before they ever reach the open market."
+                        "text": "We leverage a practitioner's network to engage top talent through technical communities, product discussions, and private channels. Rather than spamming LinkedIn, we identify professionals solving complex problems similar to yours, engaging them before they ever reach the open market."
                     }
                 },
                 {
@@ -172,7 +172,7 @@ const jsonLd = {
                     "name": "What makes Mowka's technical screening methodology unique?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs, scale complexity, and 'Behavioral DNA'—matching ambiguity tolerance and ownership levels to your specific startup stage. Every candidate is calibrated against your unique engineering environment, not just a keyword list."
+                        "text": "Led by former product and engineering leaders, we evaluate architectural trade-offs, scale complexity, and 'Behavioral DNA'—matching ambiguity tolerance and ownership levels to your specific top-tier startup stage. Every candidate is calibrated against your unique environment, not just a keyword list."
                     }
                 },
                 {
@@ -188,7 +188,7 @@ const jsonLd = {
                     "name": "How is Mowka different from a traditional executive search firm?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Executive search optimizes for seniority; we optimize for 'Environmental Fit.' We understand the difference between a FAANG engineer who needs structure and an IC who thrives in 0-to-1 chaos. With 2000+ interviews conducted, we match the human to the intensity of your workspace."
+                        "text": "Traditional search optimizes for volume or seniority; we optimize for 'Environmental Fit.' We understand the difference between someone who needs structure and an operator who thrives in 0-to-1 chaos. With 2000+ interviews conducted, we match the human to the intensity of your workspace."
                     }
                 }
             ]

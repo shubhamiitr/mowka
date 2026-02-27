@@ -11,7 +11,6 @@ const navItems = [
   { label: 'Philosophy', href: '#philosophy' },
   { label: 'Our Approach', href: '#process' },
   { label: 'Founder', href: '#founder' },
-  { label: 'Jobs', href: '/jobs' },
   { label: 'Contact', href: '#contact', mobileOnly: true }, // Added for unified handling if needed
 ];
 

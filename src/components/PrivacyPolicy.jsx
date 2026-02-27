@@ -24,7 +24,7 @@ export const PrivacyPolicy = () => {
                     </p>
 
                     <p>
-                        We operate as a global-first organization with roots in India, connecting world-class engineering teams.
+                        We operate as a global-first organization with roots in India.
                     </p>
 
                     <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">1. Information We Collect</h3>
@@ -41,7 +41,7 @@ export const PrivacyPolicy = () => {
                         Your data is used exclusively to:
                     </p>
                     <ul className="list-disc pl-5 space-y-2">
-                        <li>Curate and match exceptional engineering talent with strategic opportunities.</li>
+                        <li>Curate and match referral-grade talent with strategic opportunities at top startups.</li>
                         <li>Facilitate seamless interview and onboarding processes.</li>
                         <li>Refine our matching methodology and platform experience.</li>
                         <li>Comply with applicable regulations in India and operating jurisdictions.</li>

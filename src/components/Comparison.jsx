@@ -15,7 +15,7 @@ export const Comparison = () => {
                                 <span className="text-mowka-label font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">The Signal Advantage</span>
                             </Reveal>
                             <Reveal delay={0.1}>
-                                <h2 className="text-3xl md:text-5xl font-medium font-serif mb-3 md:mb-4 text-mowka-text-primary">Agency Noise vs<br className="md:hidden" /> Engineering Precision.</h2>
+                                <h2 className="text-3xl md:text-5xl font-medium font-serif mb-3 md:mb-4 text-mowka-text-primary">Agency Noise vs<br className="md:hidden" /> Practitioner Precision.</h2>
                             </Reveal>
                         </div>
 
@@ -60,7 +60,7 @@ export const Comparison = () => {
                                                 <h4 className="text-sm md:text-base font-semibold text-mowka-text-primary">Flat Pricing Model</h4>
                                             </div>
                                             <p className="text-xs md:text-sm text-mowka-text-tertiary font-light leading-relaxed pl-8 md:pl-9">
-                                                15-20% fee regardless of role. Junior Engineer costs same as Architect.
+                                                15-20% fee regardless of role. Junior hire costs same as an Executive.
                                             </p>
                                         </div>
                                     </div>
