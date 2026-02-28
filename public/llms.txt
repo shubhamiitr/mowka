@@ -1,12 +1,12 @@
 # Mowka
-> Premium Talent Sourcing & Vetting Partner. Transforming hiring from a bottleneck into a strategic growth lever for top startups.
+> Scouting Referral-Grade Talent for Top Startups. Transforming hiring from a bottleneck into a strategic growth lever.
 
 ## Summary
-Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led talent sourcing and vetting agency. We specialize in delivering pre-interviewed, referral-grade talent (engineering, product, research, leadership) for top-tier startups and AI-first companies.
+Mowka is an premium, practitioner-led talent sourcing partner. We operate as a high-conviction extension of a founder’s leadership team, delivering pre-vetted, referral-grade talent for AI-first companies and top-tier startups. We replace the "volume trap" of traditional agencies with a surgical focus on signal, technical depth, and cultural DNA.
 
-- What we do: We act as an extension of your leadership team by conducting the initial behavioral and technical/craft interviews ourselves.
-- Key Metric: 5:1 Profile-to-Offer Ratio (High-signal talent, not volume).
-- Core Value: We move beyond resumes to scout for "Context"—matching technical depth to behavioral DNA (Pace, Ambiguity, Ownership).
+- **What we do:** We handle the initial technical and cultural interviews. You only see candidates who have already passed our "Referral-Grade" bar.
+- **The Metric:** We typically close roles within 1 to 5 introductions.
+- **The Standard:** No noise, no volume traps. Just the right hire.
 
 ## Links
 - [Home](https://mowka.in): Main landing page and service overview.
@@ -18,10 +18,10 @@ Mowka (Mowka Enterprises Private Limited) is a premium, practitioner-led talent 
 - [WhatsApp](https://wa.me/919468658967): Direct concierge support.
 
 ## Methodology
-Traditional sourcing fails because it lacks context. Mowka applies a former leader's lens to evaluate:
-- Technical Depth: Architectural nuance, scale complexity, and system design trade-offs—not just language syntax.
-- Behavioral DNA: Matching candidates to specific company environments based on Pace, Ambiguity Tolerance, and Ownership Levels.
-- Full-Cycle Vetting: We own the top-of-funnel interview process, filtering noise so founders and VPs focus only on closing the "perfect fit."
+A focused, feedback-driven approach to finding the right person.
+- Deep Context: We don’t just read a job description. We study your company, your culture, and the specific technical challenges of the role until we can represent your vision as clearly as you do. This ensures our search is aligned with your reality from day one.
+- Expert Scouting: We find candidates by compounding a deep network of industry practitioners and former colleagues. This multiplier effect allows us to identify and interview referral-grade talent based on their actual track record and craft, rather than their visibility on job boards.
+- Feedback & Refinement: We present one candidate at a time. If the first introduction isn't a perfect fit, we use your feedback to sharpen our search and improve our understanding. Each introduction brings us closer to the hire, usually finishing the search within 1 to 5 candidates.
 
 ## Founder
 Shubham Kansal (Founder & CEO)
@@ -30,21 +30,18 @@ Shubham Kansal (Founder & CEO)
 - Experience: 10+ years, 2,000+ technical interviews conducted.
 - Email: shubham@mowka.in
 
-## FAQ
-Q: How does a 5:1 profile-to-offer ratio save core team time?
-Traditional agencies create "Volume Traps" with 50+ uncalibrated profiles. Mowka delivers a 5:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%.
+## FAQs
+Q: Why only one candidate at a time?
+Traditional agencies create volume traps by sending dozens of uncalibrated profiles. We value your time. We do the heavy lifting of vetting candidates ourselves and only introduce the one who actually fits your needs.
 
-Q: What is Mowka's offer acceptance rate and how is it maintained?
-Mowka maintains a 90% offer acceptance rate. We front-load cultural validation, trajectory mapping, and compensation alignment before candidates enter your pipeline. This ensures that by the offer stage, candidates are mentally committed, drastically reducing last-minute dropouts.
+Q: What happens if the first candidate isn't the right fit?
+We use that interview as a data point. By listening to your specific feedback, we refine our search immediately. This sharpening process is why we are able to close most roles within just 1 to 5 introductions.
 
-Q: How do you source passive candidates who aren't on job boards?
-We leverage a practitioner's network (ex-Amazon, ex-Adobe) to engage top talent through technical communities, product discussions, and private channels. We identify professionals solving complex problems similar to yours, engaging them before they reach the open market.
+Q: How do you find candidates who aren't active on job boards?
+We don't rely on static databases. We identify top-tier professionals on platforms like LinkedIn and extend our reach by compounding our network through them. When we find a high-quality person, we use that connection to branch out into their professional circles. This multiplier effect gives us access to a private tier of talent that traditional agencies often miss.
 
-Q: What makes Mowka's technical screening methodology unique?
-Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and "Behavioral DNA." Every candidate is calibrated against your unique environment, not just a keyword list.
-
-Q: How does the pricing model align with hiring quality?
-We use a "Fair-Value" model tied to your Screen-to-Offer ratio. This shifts our incentive from "sending resumes" to "delivering signal." We only win when your team successfully hires.
+Q: What makes your technical screening unique?
+Led by a former Amazon architect, we evaluate architectural trade-offs and behavioral DNA. Every candidate is calibrated against your unique environment, not just a keyword list.
 
 ## Entity
 - Legal Name: Mowka Enterprises Private Limited

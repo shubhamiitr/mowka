@@ -8,8 +8,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Philosophy', href: '#philosophy' },
-  { label: 'Our Approach', href: '#process' },
+  { label: 'Our Process', href: '#process' },
   { label: 'Founder', href: '#founder' },
   { label: 'Contact', href: '#contact', mobileOnly: true }, // Added for unified handling if needed
 ];

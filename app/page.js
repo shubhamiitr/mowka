@@ -63,7 +63,7 @@ const jsonLd = {
                 "width": "512",
                 "height": "512"
             },
-            "description": "A high-precision talent sourcing partner for top startups. We maintain a 5:1 profile-to-offer ratio by matching referral-grade candidates to unique environments based on pace, ambiguity tolerance, and ownership expectations.",
+            "description": "A high-precision talent sourcing partner for top startups. We maintain a 5:1 applicant-to-hire ratio by matching referral-grade candidates to unique environments based on pace, ambiguity tolerance, and ownership expectations.",
             "slogan": "Beyond Resumes. We Scout for Context.",
             "foundingDate": "2024",
             "identifier": {
@@ -132,7 +132,7 @@ const jsonLd = {
                 "@type": "Place",
                 "name": "Worldwide"
             },
-            "description": "Practitioner-led sourcing methodology that maintains a 5:1 profile-to-offer ratio by matching candidates based on behavioral DNA (pace, ambiguity tolerance, ownership) and technical depth (scale, complexity, trade-offs).",
+            "description": "Practitioner-led sourcing methodology that maintains a 5:1 applicant-to-hire ratio by matching candidates based on behavioral DNA (pace, ambiguity tolerance, ownership) and technical depth (scale, complexity, trade-offs).",
             "offers": {
                 "@type": "Offer",
                 "name": "Fair-Value Pricing",
@@ -145,7 +145,7 @@ const jsonLd = {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "How does a 5:1 profile-to-offer ratio save core team time?",
+                    "name": "How does a 5:1 applicant-to-hire ratio save core team time?",
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Traditional agencies create 'Volume Traps' with 50+ uncalibrated profiles. Mowka delivers a 5:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%."
@@ -153,18 +153,10 @@ const jsonLd = {
                 },
                 {
                     "@type": "Question",
-                    "name": "What is Mowka's offer acceptance rate and how is it maintained?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Mowka maintains a 90% offer acceptance rate. We front-load cultural validation, trajectory mapping, and compensation alignment before candidates enter your pipeline. This ensures that by the offer stage, candidates are mentally committed, drastically reducing last-minute dropouts or counter-offer risks."
-                    }
-                },
-                {
-                    "@type": "Question",
                     "name": "How do you source passive candidates who aren't on job boards?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "We leverage a practitioner's network to engage top talent through technical communities, product discussions, and private channels. Rather than spamming LinkedIn, we identify professionals solving complex problems similar to yours, engaging them before they ever reach the open market."
+                        "text": "We leverage a practitioner's network to engage top talent through technical communities, product discussions, and private channels. We identify professionals solving complex problems similar to yours, engaging them before they reach the open market."
                     }
                 },
                 {
@@ -172,23 +164,15 @@ const jsonLd = {
                     "name": "What makes Mowka's technical screening methodology unique?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Led by former product and engineering leaders, we evaluate architectural trade-offs, scale complexity, and 'Behavioral DNA'—matching ambiguity tolerance and ownership levels to your specific top-tier startup stage. Every candidate is calibrated against your unique environment, not just a keyword list."
+                        "text": "Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and 'Behavioral DNA.' Every candidate is calibrated against your unique environment, not just a keyword list."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "How does your pricing model align with hiring quality?",
+                    "name": "How does the pricing model align with hiring quality?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "We replace flat fees with a 'Fair-Value' model tied to your Screen-to-Offer ratio. This shifts our incentive from 'sending resumes' to 'delivering signal.' We only win when your team successfully hires, ensuring our pre-screening reduces your overall cost-per-hire."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How is Mowka different from a traditional executive search firm?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Traditional search optimizes for volume or seniority; we optimize for 'Environmental Fit.' We understand the difference between someone who needs structure and an operator who thrives in 0-to-1 chaos. With 2000+ interviews conducted, we match the human to the intensity of your workspace."
+                        "text": "We use a 'Fair-Value' model tied to your Screen-to-Offer ratio. This shifts our incentive from 'sending resumes' to 'delivering signal.' We only win when your team successfully hires."
                     }
                 }
             ]

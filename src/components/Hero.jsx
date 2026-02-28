@@ -40,7 +40,7 @@ export const Hero = () => {
             <div className="flex gap-12 md:gap-24 w-full justify-center items-center mt-2 md:mt-4 opacity-80">
               <div className="flex flex-col items-center gap-1 group cursor-default">
                 <span className="text-xl md:text-3xl font-serif text-mowka-text-primary tracking-tight">5:1</span>
-                <span className="text-[8px] md:text-[10px] font-semibold uppercase tracking-widest text-mowka-text-quaternary">Profile-to-Offer Ratio</span>
+                <span className="text-[8px] md:text-[10px] font-semibold uppercase tracking-widest text-mowka-text-quaternary">Applicant-to-Hire Ratio</span>
               </div>
 
               <div className="flex flex-col items-center gap-1 group cursor-default">
