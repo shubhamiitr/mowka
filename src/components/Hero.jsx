@@ -54,7 +54,7 @@ export const Hero = () => {
             <a href="https://www.producthunt.com/products/mowka?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-mowka" target="_blank" rel="noopener noreferrer">
               <Image
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1056618&theme=light&t=1767191983103"
-                alt="Mowka - Grow with Confidence | Product Hunt"
+                alt="Mowka - Hire with Confidence | Product Hunt"
                 width={220}
                 height={45}
                 unoptimized

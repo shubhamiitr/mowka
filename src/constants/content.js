@@ -1,6 +1,6 @@
 export const SITE_CONTENT = {
     appName: "Mowka",
-    tagline: "Grow With Confidence",
+    tagline: "Hire With Confidence",
     heroHeadline: {
         start: "Scouting Referral-Grade Talent",
         highlight: "for Top Startups"

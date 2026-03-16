@@ -13,13 +13,13 @@ export const metadata = {
     openGraph: {
         type: 'website',
         url: 'https://mowka.in',
-        title: 'Mowka | Grow With Confidence',
+        title: 'Mowka | Hire With Confidence',
         description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
         images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mowka | Grow With Confidence',
+        title: 'Mowka | Hire With Confidence',
         description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
         images: ['/og-image.png'],
     },
