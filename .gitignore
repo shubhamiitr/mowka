@@ -25,9 +25,18 @@ dist-ssr
 *.sw?
 
 
-# Google Service Account Key
-mowka-480418-2b30ea4764c7.json
+# Environment files
+.env
+.env.local
+.env.production
+
+# Google service account keys
+mowka-*.json
+*-service-account*.json
 
 # Pricing PDF
 pricing.html
 
+.gstack/
+.local-secrets/
+.claude/

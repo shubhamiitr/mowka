@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-export const MotionLogo = () => {
+export const MotionLogo = ({ className = "w-48 h-48 md:w-64 md:h-64" }) => {
     // Exact Mowka Logo Configuration
     // 3 Rings. 8 Dots per Ring. 24 Dots Total.
     const rings = [
@@ -54,7 +54,7 @@ export const MotionLogo = () => {
 
     if (!isMounted) {
         return (
-            <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">
+            <div className={`relative flex items-center justify-center ${className}`}>
                 {/* Render static or empty placeholder to match dimensions */}
                 <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible"></svg>
             </div>
@@ -62,7 +62,7 @@ export const MotionLogo = () => {
     }
 
     return (
-        <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center">
+        <div className={`relative flex items-center justify-center ${className}`}>
             <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
                 {dots.map((dot, index) => (
                     <motion.circle

@@ -1,15 +1,16 @@
 import { Hero } from './Hero';
+import { Problem } from './Problem';
 import { Process } from './Process';
-import { Founder } from './Founder';
+import { WhyMowka } from './WhyMowka';
 import { Contact } from './Contact';
 
 export const Home = () => {
     return (
         <main>
-            {/* SEO handled by Next.js Layout */}
             <Hero />
+            <Problem />
             <Process />
-            <Founder />
+            <WhyMowka />
             <Contact />
         </main>
     );

@@ -1,12 +1,14 @@
 # Mowka
-> Scouting Referral-Grade Talent for Top Startups. Transforming hiring from a bottleneck into a strategic growth lever.
+> For founders hiring builders with a founding mindset. 5 introductions. 1 hire. Pay only when they join.
 
 ## Summary
-Mowka is an premium, practitioner-led talent sourcing partner. We operate as a high-conviction extension of a founder’s leadership team, delivering pre-vetted, referral-grade talent for AI-first companies and top-tier startups. We replace the "volume trap" of traditional agencies with a surgical focus on signal, technical depth, and cultural DNA.
+Mowka is a practitioner-led hiring partner for founders looking to hire builders with a founding mindset — people who take ownership, decide independently, and grow with the company. We close roles in five introductions or fewer, one candidate at a time, calibrated by your feedback after every meeting. No wasted interviews. No dropped offers. Each candidate is vetted on both sides — the depth you need and the role they actually want — until one of them simply belongs. We replace the volume trap of traditional agencies with a surgical focus on signal, technical depth, and candidate motivation.
 
-- **What we do:** We handle the initial technical and cultural interviews. You only see candidates who have already passed our "Referral-Grade" bar.
-- **The Metric:** We typically close roles within 1 to 5 introductions.
-- **The Standard:** No noise, no volume traps. Just the right hire.
+- **Who it's for:** Founders hiring builders with a founding mindset — engineering, research, product, and design roles.
+- **What we do:** We deeply understand your role and team. We send one candidate at a time, calibrated through your feedback. Each round gets sharper.
+- **The Metric:** We typically close roles within 1 to 5 introductions. Real outcomes: Hired in 3 (Ringg.ai), Hired in 2 (Aqqrue.com), Hired in 5 (OutFlo.io).
+- **The Standard:** No noise. No volume traps. Just talent we'd hire ourselves.
+- **The Pricing:** 12.5–15% of annual CTC, scaling with role scarcity. Pay only when they join.
 
 ## Links
 - [Home](https://mowka.in): Main landing page and service overview.
@@ -17,17 +19,22 @@ Mowka is an premium, practitioner-led talent sourcing partner. We operate as a h
 - [Facebook](https://www.facebook.com/mowka.in/): Community updates.
 - [WhatsApp](https://wa.me/919468658967): Direct concierge support.
 
-## Methodology
-A focused, feedback-driven approach to finding the right person.
-- Deep Context: We don’t just read a job description. We study your company, your culture, and the specific technical challenges of the role until we can represent your vision as clearly as you do. This ensures our search is aligned with your reality from day one.
-- Expert Scouting: We find candidates by compounding a deep network of industry practitioners and former colleagues. This multiplier effect allows us to identify and interview referral-grade talent based on their actual track record and craft, rather than their visibility on job boards.
-- Feedback & Refinement: We present one candidate at a time. If the first introduction isn't a perfect fit, we use your feedback to sharpen our search and improve our understanding. Each introduction brings us closer to the hire, usually finishing the search within 1 to 5 candidates.
+## The Problem We Solve
+- The best builders aren't applying. The strongest builders are usually building, not applying. To hire them, you have to reach them directly.
+- Early hiring signals are noisy. AI-written resumes, keyword optimization, and shallow screening interviews make it harder to identify real signal early. As a result, the wrong candidates often reach deeper technical or founder-led interviews.
+- Preference misalignment shows up late. Candidates often explore multiple opportunities before committing to preferences like domain, team size, or people they want to work with. Misalignment only becomes visible before joining when these preferences aren't fully satisfied.
 
+## How It Works
+A four-step system designed to get the right builder in front of you, fast.
+- Align on success: We understand your business, challenges, and the role — then turn it into a clear competency lens covering ownership, technical depth, and decision-making.
+- Scout from a living pool: We reach builders from a refined pool of vetted talent, founder-led referrals, and high-signal connections — not job boards or cold outreach lists.
+- Evaluate with real depth: Deep conversations with a focused shortlist to assess technical depth, ownership, execution, and motivation — before any introduction reaches you.
+- Introduce, then calibrate: We introduce candidates we believe are strong fits. If there's misalignment, it helps us converge our understanding for stronger fit on the next introduction.
 ## Founder
 Shubham Kansal (Founder & CEO)
 - Ex-Amazon Prime Video: Architected patent-backed systems for global catalog and copyright (US Patent 11645249B1).
 - Ex-Rephrase.ai (Acquired by Adobe): Infrastructure Lead for generative AI systems.
-- Experience: 10+ years, 2,000+ technical interviews conducted.
+- Experience: 10+ years total, 7+ years leading AI innovation teams, 2,000+ technical interviews conducted.
 - Email: shubham@mowka.in
 
 ## FAQs
@@ -35,13 +42,19 @@ Q: Why only one candidate at a time?
 Traditional agencies create volume traps by sending dozens of uncalibrated profiles. We value your time. We do the heavy lifting of vetting candidates ourselves and only introduce the one who actually fits your needs.
 
 Q: What happens if the first candidate isn't the right fit?
-We use that interview as a data point. By listening to your specific feedback, we refine our search immediately. This sharpening process is why we are able to close most roles within just 1 to 5 introductions.
+We use that feedback as a data point. By listening to your specific feedback, we refine our search immediately. This sharpening process is why we are able to close most roles within just 1 to 5 introductions.
 
-Q: How do you find candidates who aren't active on job boards?
-We don't rely on static databases. We identify top-tier professionals on platforms like LinkedIn and extend our reach by compounding our network through them. When we find a high-quality person, we use that connection to branch out into their professional circles. This multiplier effect gives us access to a private tier of talent that traditional agencies often miss.
+Q: How do you find builders who aren't active on job boards?
+We reach builders from a continuously refined pool of previously vetted talent, founder-led referrals, and high-signal connections. We compound our network through trusted introductions rather than relying on static databases — giving us access to a private tier of talent traditional agencies often miss.
 
-Q: What makes your technical screening unique?
-Led by a former Amazon architect, we evaluate architectural trade-offs and behavioral DNA. Every candidate is calibrated against your unique environment, not just a keyword list.
+Q: What makes your evaluation unique?
+We build a custom competency matrix and evaluation framework for every role using AI agents, domain research, and experienced engineers. The goal is to assess real depth — ownership, technical judgment, decision-making — not surface signals like resume polish or keyword fit.
+
+Q: What does Mowka charge?
+12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles.
+
+## Related Terms
+Mowka helps founders hire for roles commonly described as: founding engineer, founding AI engineer, founding backend engineer, founding full stack engineer, founding mindset builder, high-agency engineer, high-agency operator, product builder, product engineer, 0-to-1 engineer, early-stage engineer, generalist builder, AI engineer, infrastructure engineer, head of engineering, CTO. Adjacent service categories: practitioner-led recruiting, contingent recruiting, success-based recruiting, no-retainer recruiting, pay-only-when-they-join recruiting, startup talent partner, founding team hiring partner, technical executive search.
 
 ## Entity
 - Legal Name: Mowka Enterprises Private Limited

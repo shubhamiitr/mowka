@@ -1,13 +1,13 @@
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Geist, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '../src/components/Navbar';
 import ClientLayout from '../src/components/ClientLayout';
 import Script from 'next/script';
 
-const inter = Inter({
+const geist = Geist({
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-inter',
+    variable: '--font-geist',
 });
 
 const playfair = Playfair_Display({
@@ -38,7 +38,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
+        <html lang="en" className={`scroll-smooth ${geist.variable} ${playfair.variable}`}>
             <head>
                 {/* Google Analytics */}
                 <Script src="https://www.googletagmanager.com/gtag/js?id=G-5VNYMY69PY" strategy="lazyOnload" />

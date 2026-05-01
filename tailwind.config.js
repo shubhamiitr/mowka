@@ -7,17 +7,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-geist)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-playfair)', 'serif'],
       },
       colors: {
         mowka: {
-          // Apple-inspired Backgrounds - Warm off-whites
+          // Backgrounds - Warm off-whites
           'bg-primary': '#ffffff',      // Main background - all sections
           'bg-secondary': '#f4f4f6',    // Subtle premium grey for Header/Footer (Light & Airy)
           'bg-tertiary': '#fbfbfd',     // Pure white cards
 
-          // Apple-inspired Text - Soft blacks, never harsh
+          // Text - Soft blacks, never harsh
           'text-primary': '#1d1d1f',    // Headings - soft black
           'text-secondary': '#424245',  // Body text - medium gray
           'text-tertiary': '#6e6e73',   // Secondary text
@@ -37,9 +37,8 @@ export default {
           // Teal - Keep for accents only
           'teal-vibrant': '#2d6d75',    // Teal accent - darker for better contrast
 
-          // Borders - Apple-style subtle separators
+          // Borders - Subtle separators
           'border-light': '#d2d2d7',    // Light borders
-          'border-medium': '#b4b4b9',   // Medium borders
         }
       },
       animation: {

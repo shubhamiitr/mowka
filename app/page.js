@@ -1,9 +1,11 @@
 
 import { Home } from '../src/components/Home';
+import { METADATA } from '../src/constants/content';
 
 export const metadata = {
-    title: 'Mowka | Premium Talent Partner for Top Startups',
-    description: 'Mowka is a practitioner-led talent sourcing agency. We scout referral-grade talent (Engineering, Research, Product, Executive) who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.',
+    title: METADATA.home.title,
+    description: METADATA.home.description,
+    keywords: METADATA.home.keywords,
     alternates: {
         canonical: '/',
         types: {
@@ -13,14 +15,14 @@ export const metadata = {
     openGraph: {
         type: 'website',
         url: 'https://mowka.in',
-        title: 'Mowka | Hire With Confidence',
-        description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
+        title: METADATA.home.ogTitle,
+        description: METADATA.home.ogDescription,
         images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mowka | Hire With Confidence',
-        description: 'We scout referral-grade talent who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style — so you build world-class teams effortlessly.',
+        title: METADATA.home.ogTitle,
+        description: METADATA.home.ogDescription,
         images: ['/og-image.png'],
     },
 };
@@ -34,7 +36,7 @@ const jsonLd = {
             "name": "Mowka",
             "alternateName": ["Mowka Enterprises", "Mowka Talent Partner"],
             "url": "https://mowka.in/",
-            "description": "We scout referral-grade talent (Engineering, Research, Product, Leaders) who thrive in your unique environment, matching your pace, ambiguity, workload intensity, ownership expectations, and collaboration style.",
+            "description": "For founders hiring builders with a founding mindset. 5 introductions, 1 hire, pay only when they join. Practitioner-led hiring with one candidate at a time, calibrated by your feedback. 12.5–15% of CTC depending on role scarcity.",
             "inLanguage": "en-US",
             "publisher": { "@id": "https://mowka.in/#organization" }
         },
@@ -63,8 +65,8 @@ const jsonLd = {
                 "width": "512",
                 "height": "512"
             },
-            "description": "A high-precision talent sourcing partner for top startups. We maintain a 5:1 applicant-to-hire ratio by matching referral-grade candidates to unique environments based on pace, ambiguity tolerance, and ownership expectations.",
-            "slogan": "Beyond Resumes. We Scout for Context.",
+            "description": "Practitioner-led hiring for founders looking for builders with a founding mindset. Each candidate vetted on both sides, sharpened by your feedback after every meeting. We typically close in five introductions or fewer. Pay only when they join. Engineering, research, product, and design roles.",
+            "slogan": "5 Introductions. 1 Hire. Pay Only When They Join.",
             "foundingDate": "2024",
             "identifier": {
                 "@type": "PropertyValue",
@@ -84,7 +86,29 @@ const jsonLd = {
                 "name": "Worldwide"
             },
             "founder": { "@id": "https://mowka.in/#founder" },
-            "knowsAbout": ["Technical Recruitment", "AI Infrastructure", "Executive Search", "Software Engineering", "Startup Hiring", "Context-Driven Sourcing"],
+            "knowsAbout": [
+                "Technical Recruitment",
+                "Founding Engineer Hiring",
+                "Founding Mindset Hiring",
+                "High-Agency Builder Hiring",
+                "Operator Hiring",
+                "Product Builder Hiring",
+                "0 to 1 Engineer Hiring",
+                "AI Engineer Hiring",
+                "Founding AI Engineer",
+                "Founding Backend Engineer",
+                "Founding Full Stack Engineer",
+                "CTO Search",
+                "Head of Engineering Search",
+                "Early Stage Startup Hiring",
+                "Practitioner-Led Recruiting",
+                "Pay-Only-When-They-Join Recruiting",
+                "Contingent Recruiting",
+                "Executive Search",
+                "Software Engineering",
+                "AI Infrastructure",
+                "Startup Hiring"
+            ],
             "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "shubham@mowka.in",
@@ -106,37 +130,39 @@ const jsonLd = {
             "jobTitle": "Founder & CEO",
             "image": "https://mowka.in/founder.png",
             "url": "https://www.linkedin.com/in/kansalshubham/",
-            "description": "Engineering leader with 10+ years of experience. Former architect at Amazon Prime Video and infrastructure lead at Rephrase.ai (acquired by Adobe). Conducted 2000+ interviews and specializes in high-signal technical sourcing.",
+            "description": "AI innovation leader with 10+ years of experience and 7+ years leading AI innovation teams. Former architect at Amazon Prime Video and infrastructure lead at Rephrase.ai (acquired by Adobe). Conducted 2000+ interviews.",
             "award": "US Patent 11645249B1 - System for automated metadata and copyright management",
             "alumniOf": [
                 { "@type": "Organization", "name": "Amazon Prime Video" },
-                { "@type": "Organization", "name": "Rephrase.ai" },
-                { "@type": "Organization", "name": "Apollo.io" },
-                { "@type": "Organization", "name": "Nirvana Insurance" }
+                { "@type": "Organization", "name": "Rephrase.ai" }
             ],
             "knowsAbout": [
+                "AI Innovation Leadership",
+                "Founding Engineer Hiring",
+                "High-Agency Builder Evaluation",
                 "Software Engineering",
                 "Distributed Systems",
                 "AI Talent Sourcing",
                 "Technical Leadership",
-                "System Design"
+                "System Design",
+                "Generative AI Infrastructure"
             ]
         },
         {
             "@type": "Service",
             "@id": "https://mowka.in/#service",
-            "name": "Context-Driven Technical Sourcing",
+            "name": "Practitioner-Led Technical Sourcing",
             "serviceType": "Technical Recruitment",
             "provider": { "@id": "https://mowka.in/#organization" },
             "areaServed": {
                 "@type": "Place",
                 "name": "Worldwide"
             },
-            "description": "Practitioner-led sourcing methodology that maintains a 5:1 applicant-to-hire ratio by matching candidates based on behavioral DNA (pace, ambiguity tolerance, ownership) and technical depth (scale, complexity, trade-offs).",
+            "description": "Practitioner-led search for founders hiring builders with a founding mindset. One candidate at a time, calibrated through founder feedback. Roles typically close in five introductions or fewer. 12.5–15% of CTC depending on role scarcity. Pay only when they join. Engineering, research, product, design.",
             "offers": {
                 "@type": "Offer",
-                "name": "Fair-Value Pricing",
-                "description": "Pricing reflects role complexity and is aligned with client Screen-to-Offer ratios, incentivizing signal over volume."
+                "name": "Pay After They Join",
+                "description": "12.5–15% of annual CTC, scaling with role scarcity, payable only after your hire starts. No retainer."
             }
         },
         {
@@ -145,34 +171,34 @@ const jsonLd = {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "How does a 5:1 applicant-to-hire ratio save core team time?",
+                    "name": "How is Mowka different from a recruiting agency?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Traditional agencies create 'Volume Traps' with 50+ uncalibrated profiles. Mowka delivers a 5:1 ratio by pre-screening for technical bar, pace, and ownership. This allows founders to stop filtering noise and focus on closing high-signal talent, effectively cutting interview hours by 70%."
+                        "text": "Mowka is led by a practitioner who built and hired at Amazon Prime Video and Rephrase.ai (acquired by Adobe). We send one candidate at a time, calibrated through your feedback, rather than flooding you with resumes. Most roles close in five introductions or fewer. No wasted interviews. No dropped offers."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "How do you source passive candidates who aren't on job boards?",
+                    "name": "How does the calibration process work?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "We leverage a practitioner's network to engage top talent through technical communities, product discussions, and private channels. We identify professionals solving complex problems similar to yours, engaging them before they reach the open market."
+                        "text": "We deeply understand your role, company, and ideal candidate profile. We send one candidate. If they're not the fit, your feedback sharpens our understanding. Each round gets closer to the right person."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "What makes Mowka's technical screening methodology unique?",
+                    "name": "What does Mowka charge?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Led by a former Amazon architect (US Patent 11645249B1), we evaluate architectural trade-offs and 'Behavioral DNA.' Every candidate is calibrated against your unique environment, not just a keyword list."
+                        "text": "12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "How does the pricing model align with hiring quality?",
+                    "name": "What types of roles does Mowka fill?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "We use a 'Fair-Value' model tied to your Screen-to-Offer ratio. This shifts our incentive from 'sending resumes' to 'delivering signal.' We only win when your team successfully hires."
+                        "text": "Tech and product roles, from founding engineers to CTOs, research leads to product directors. We work best with early-stage to growth-stage startups building in AI, SaaS, fintech, and deep tech."
                     }
                 }
             ]

@@ -1,6 +1,8 @@
 # Mowka
 
-A modern, high-performance website for **Mowka** — a premium talent partner scouting referral-grade candidates (engineering, product, research, leadership) for top startups globally. Built with **Next.js 16 (App Router)** for superior SEO, performance, and security.
+A modern, high-performance website for **Mowka** — practitioner-led hiring for founders looking for builders with a founding mindset. **5 introductions. 1 hire. Pay only when they join.** No wasted interviews, no dropped offers. Each candidate vetted on both sides, sharpened by founder feedback after every meeting. 12.5–15% of CTC, scaling with role scarcity.
+
+Built with **Next.js 16 (App Router)** for superior SEO, performance, and security.
 
 ## 🚀 Technologies
 
@@ -93,10 +95,16 @@ This project includes a `next.config.js` with strict security headers:
 
 Proprietary Software. All rights reserved by Mowka Enterprises Private Limited.
 
-## Indexing Jobs
-To notify Google about job updates instantly:
-1. Ensure `mowka-480418-2b30ea4764c7.json` is in the root directory.
-2. Run:
-```bash
-npm run index-jobs
-```
+## Page Structure (Founder Home)
+
+The home page (`app/page.js`) is the founder-facing flow. Five sections:
+
+1. **Hero** — "For founders hiring builders with a founding mindset" with proof strip (Ringg.ai / Aqqrue.com / OutFlo.io with `Hired in N introductions` outcomes)
+2. **Problem** — three pains: best builders aren't applying, noisy early signals, late-stage preference misalignment
+3. **How It Works** — four-step system (align on success → build evaluation framework → scout from a living pool → sharpen each conversation)
+4. **Why Mowka** — Shubham's hiring credibility (Amazon Prime Video, Rephrase.ai → Adobe, US Patent, 2000+ interviews)
+5. **Contact** — "Bring us your toughest role" — pay only when they join, 12.5–15% scaling with role scarcity
+
+## Pricing
+
+12.5–15% of annual CTC, scaling with the scarcity of the role. Payable only after the hire's start date. No retainer, no upfront fees. One role at a time, tech and product roles, founding engineer to CTO.

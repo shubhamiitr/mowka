@@ -5,8 +5,8 @@ export default function sitemap() {
     const staticPages = [
         {
             url: baseUrl,
-            lastModified: new Date('2026-01-01'),
-            changeFrequency: 'yearly',
+            lastModified: new Date('2026-05-01'),
+            changeFrequency: 'monthly',
             priority: 1,
         },
         {
