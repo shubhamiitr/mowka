@@ -1,6 +1,6 @@
 # Mowka
 
-A modern, high-performance website for **Mowka** — practitioner-led hiring for founders looking for builders with a founding mindset. **5 introductions. 1 hire. Pay only when they join.** No wasted interviews, no dropped offers. Each candidate vetted on both sides, sharpened by founder feedback after every meeting. 12.5–15% of CTC, scaling with role scarcity.
+A modern, high-performance website for **Mowka** — practitioner-led hiring for founders looking for builders with a founding mindset. **Hire with confidence.** 5 introductions, 1 hire, pay only when they join. No wasted interviews, no dropped offers. Each candidate vetted on both sides, sharpened by founder feedback after every meeting. 12.5–15% of CTC, scaling with role scarcity.
 
 Built with **Next.js 16 (App Router)** for superior SEO, performance, and security.
 

@@ -1,6 +1,6 @@
 export const SITE_CONTENT = {
     appName: "Mowka",
-    tagline: "5 Introductions. 1 Hire. Pay Only When They Join.",
+    tagline: "Hire with confidence.",
     calendlyUrl: "https://calendly.com/kansalshubham/meet",
 };
 
@@ -73,14 +73,8 @@ export const HOME_PAGE = {
     trust: {
         label: "Why Mowka",
         headline: "From hiring at Amazon, Rephrase.ai & Apollo.io",
-        credentials: [
-            "ex-Amazon",
-            "ex-Rephrase.ai (Adobe)",
-            "US Patent",
-            "2,000+ interviews",
-        ],
         body:
-            "The best companies are built when founders consistently hire the right people with a founding mindset and keep their teams lean and high-agency. That only works when hiring doesn't become a bottleneck — which is why trusted networks and referrals have always been the most reliable way to identify the right builders. Mowka exists to extend that same trusted system, so hiring the right people doesn't slow down the creation of great companies.",
+            "The best companies are built when founders consistently hire the right people with a founding mindset and keep their teams lean and high-agency. That only works when hiring doesn't become a bottleneck — which is why trusted networks and referrals have always been the most reliable way to identify the right builders. After 2,000+ interviews, this is what I still believe — and what I’ve built Mowka around.",
     },
     contact: {
         label: "Let's Talk",

@@ -35,25 +35,10 @@ export const WhyMowka = () => {
                             />
                         </div>
                         <h3 className="type-h3 mb-1 md:mb-1.5">Shubham Kansal</h3>
-                        <p className="text-sm md:text-base text-mowka-text-tertiary font-light mb-3 md:mb-4">
+                        <p className="text-sm md:text-base text-mowka-text-tertiary font-light mb-4 md:mb-5">
                             Founder, Mowka
                         </p>
-                        <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 mb-6 md:mb-7 text-xs md:text-sm font-medium text-mowka-text-secondary">
-                            {HOME_PAGE.trust.credentials.map((credential, index) => (
-                                <span key={credential} className="flex items-center gap-2">
-                                    {credential}
-                                    {index < HOME_PAGE.trust.credentials.length - 1 && (
-                                        <span className="text-mowka-text-quaternary">·</span>
-                                    )}
-                                </span>
-                            ))}
-                        </div>
-                        <blockquote className="max-w-xl mx-auto mb-8 md:mb-10">
-                            <p className="font-serif italic text-base md:text-lg leading-relaxed text-mowka-text-secondary">
-                                {HOME_PAGE.trust.body}
-                            </p>
-                        </blockquote>
-                        <div className="flex gap-3 justify-center">
+                        <div className="flex gap-3 justify-center mb-8 md:mb-10">
                             <a
                                 href="mailto:shubham@mowka.in"
                                 aria-label="Email"
@@ -80,6 +65,11 @@ export const WhyMowka = () => {
                                 <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform" />
                             </a>
                         </div>
+                        <blockquote className="max-w-xl mx-auto">
+                            <p className="font-serif italic text-base md:text-lg leading-relaxed text-mowka-text-secondary">
+                                {HOME_PAGE.trust.body}
+                            </p>
+                        </blockquote>
                     </div>
                 </Reveal>
             </div>

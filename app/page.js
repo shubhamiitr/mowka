@@ -66,7 +66,7 @@ const jsonLd = {
                 "height": "512"
             },
             "description": "Practitioner-led hiring for founders looking for builders with a founding mindset. Each candidate vetted on both sides, sharpened by your feedback after every meeting. We typically close in five introductions or fewer. Pay only when they join. Engineering, research, product, and design roles.",
-            "slogan": "5 Introductions. 1 Hire. Pay Only When They Join.",
+            "slogan": "Hire with confidence.",
             "foundingDate": "2024",
             "identifier": {
                 "@type": "PropertyValue",
