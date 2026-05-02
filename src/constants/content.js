@@ -1,6 +1,6 @@
 export const SITE_CONTENT = {
     appName: "Mowka",
-    tagline: "Hire with confidence.",
+    tagline: "Hire with confidence",
     calendlyUrl: "https://calendly.com/kansalshubham/meet",
 };
 
@@ -93,10 +93,10 @@ export const NAV_ITEMS = [
 
 export const METADATA = {
     home: {
-        title: "Mowka | Hire Builders with a Founding Mindset",
+        title: "Mowka | Hire with confidence",
         description:
             "For founders hiring builders with a founding mindset — high-agency operators, product builders, and 0-to-1 engineers who take ownership, decide independently, and grow with the company. 5 introductions, 1 hire, pay only when they join. 12.5–15% of CTC.",
-        ogTitle: "Mowka | Hire Builders with a Founding Mindset",
+        ogTitle: "Mowka | Hire with confidence",
         ogDescription:
             "Curated introductions to high-agency builders, operators, and founding engineers. No retainer. No wasted interviews. Pay only when they join.",
         keywords: [
@@ -127,7 +127,8 @@ export const METADATA = {
             "success based recruiting",
             "contingent recruiting startup",
             "hire builders",
-            "hire founding engineers India",
+            "hire with confidence",
+            "hire founding engineers",
             "startup talent partner",
             "Mowka",
         ],
