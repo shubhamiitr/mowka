@@ -20,7 +20,7 @@ export const Contact = () => {
                         </h2>
                     </Reveal>
                     <Reveal delay={0.2}>
-                        <p className="type-body-lead max-w-xl mx-auto mb-16 md:mb-20">
+                        <p className="type-body max-w-xl mx-auto mb-16 md:mb-20">
                             {HOME_PAGE.contact.subhead}
                         </p>
                     </Reveal>

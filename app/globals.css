@@ -62,12 +62,12 @@ section {
 
   /* Sub-Section Headings / Card Titles */
   .type-h3 {
-    @apply text-xl md:text-2xl font-serif font-medium text-mowka-text-primary leading-tight tracking-tight;
+    @apply text-lg md:text-xl lg:text-2xl font-serif font-medium text-mowka-text-primary leading-tight tracking-tight;
   }
 
   /* Standardized Card Style */
   .type-card {
-    @apply relative bg-mowka-bg-tertiary p-8 lg:p-10 rounded-3xl border border-mowka-border-light hover:-translate-y-2 transition-all duration-500 flex flex-col h-full;
+    @apply relative bg-mowka-bg-tertiary p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border border-mowka-border-light hover:-translate-y-2 transition-all duration-500 flex flex-col h-full;
 
     box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
   }
@@ -82,24 +82,19 @@ section {
     @apply opacity-100;
   }
 
-  /* Lead Paragraphs (e.g. "Traditional sourcing fails...") */
-  .type-body-lead {
-    @apply text-base md:text-xl font-light leading-relaxed text-mowka-text-secondary;
-  }
-
-  /* Standard Body Text (Bio, Cards) */
+  /* Body */
   .type-body {
     @apply text-sm md:text-base font-light leading-relaxed text-mowka-text-secondary;
   }
 
-  /* Small Text (Card details, captions) */
+  /* Caption */
   .type-caption {
     @apply text-xs md:text-sm font-light leading-relaxed text-mowka-text-tertiary;
   }
 
   /* Icon Pill - tinted square holding an icon or step number */
   .type-icon-pill {
-    @apply inline-flex items-center justify-center w-12 h-12 rounded-xl bg-mowka-link/10 text-mowka-link mb-4 md:mb-5;
+    @apply inline-flex items-center justify-center w-6 h-6 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-md bg-mowka-link/10 text-mowka-link mb-3 md:mb-5;
   }
 
   /* Pill Badge - small inline pill for metrics/labels */

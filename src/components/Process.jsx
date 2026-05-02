@@ -18,11 +18,11 @@ export const Process = () => {
                     </Reveal>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 w-full">
                     {HOME_PAGE.process.steps.map((step, index) => (
                         <Reveal key={index} delay={index * 0.1} className="relative w-full h-full">
                             <div className="type-card group">
-                                <div className="type-icon-pill font-serif text-xl font-semibold">
+                                <div className="type-icon-pill font-serif sm:text-base md:text-lg lg:text-xl font-semibold">
                                     {step.step || String(index + 1).padStart(2, '0')}
                                 </div>
                                 <h3 className="type-h3 mb-3 md:mb-4">

@@ -36,7 +36,7 @@ export const Hero = () => {
                                 {HOME_PAGE.hero.headline.highlight}
                             </span>
                         </h1>
-                        <p className="type-body-lead max-w-3xl mx-auto mt-6 md:mt-8 opacity-90 animate-fade-in-up">
+                        <p className="type-body max-w-3xl mx-auto mt-6 md:mt-8 opacity-90 animate-fade-in-up">
                             {HOME_PAGE.hero.subhead}
                         </p>
                     </div>
