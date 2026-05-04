@@ -101,7 +101,7 @@ The home page (`app/page.js`) is the founder-facing flow. Five sections:
 
 1. **Hero** — "For founders hiring builders with a founding mindset" with proof strip (Ringg.ai / Aqqrue.com / OutFlo.io with `Hired in N introductions` outcomes)
 2. **Problem** — three pains: best builders aren't applying, noisy early signals, late-stage preference misalignment
-3. **How It Works** — four-step system (align on success → build evaluation framework → scout from a living pool → sharpen each conversation)
+3. **How It Works** — four-step system (align on success → scout through a compounding network → converge on role fit → sharpen each conversation)
 4. **Why Mowka** — Shubham's hiring credibility (Amazon Prime Video, Rephrase.ai → Adobe, US Patent, 2000+ interviews)
 5. **Contact** — "Bring us your toughest role" — pay only when they join, 12.5–15% scaling with role scarcity
 

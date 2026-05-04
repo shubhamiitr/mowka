@@ -26,10 +26,10 @@ Mowka is a practitioner-led hiring partner for founders looking to hire builders
 
 ## How It Works
 A four-step system designed to get the right builder in front of you, fast.
-- Align on success: We understand your business, challenges, and the role — then turn it into a clear competency lens covering ownership, technical depth, and decision-making.
-- Scout from a living pool: We reach builders from a refined pool of vetted talent, founder-led referrals, and high-signal connections — not job boards or cold outreach lists.
-- Evaluate with real depth: Deep conversations with a focused shortlist to assess technical depth, ownership, execution, and motivation — before any introduction reaches you.
-- Introduce, then calibrate: We introduce candidates we believe are strong fits. If there's misalignment, it helps us converge our understanding for stronger fit on the next introduction.
+- Align on success: We understand your business, challenges, the role, and what a right match looks like, and translate it into a clear evaluation lens.
+- Scout through a compounding network: We engage with builders through targeted outreach and referrals from Mowka’s builder network, assessing their technical depth, ownership mindset and motivations until a small set of strong builders emerges.
+- Converge on role fit: We share the opportunity with shortlisted builders to understand their genuine interest and alignment. We proceed only when their response signals strong mutual conviction.
+- Introduce, then calibrate: We introduce the builder we believe is the strongest match. If they are not selected, feedback helps us refine our understanding of what right match looks like.
 
 ## Founder
 Shubham Kansal (Founder & CEO)

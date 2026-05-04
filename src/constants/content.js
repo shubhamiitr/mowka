@@ -48,25 +48,25 @@ export const HOME_PAGE = {
                 step: "01",
                 title: "Align on success",
                 description:
-                    "We understand your business, challenges, and the role — then turn it into a clear competency lens covering ownership, technical depth, and decision-making.",
+                    "We understand your business, challenges, the role, and what a right match looks like, and translate it into a clear evaluation lens.",
             },
             {
                 step: "02",
-                title: "Scout from a living pool",
+                title: "Scout through a compounding network",
                 description:
-                    "We reach builders from a refined pool of vetted talent, founder-led referrals, and high-signal connections — not job boards or cold outreach lists.",
+                    "We engage with builders through targeted outreach and referrals from Mowka’s builder network, assessing their technical depth, ownership mindset and motivations until a small set of strong builders emerges.",
             },
             {
                 step: "03",
-                title: "Evaluate with real depth",
+                title: "Converge on role fit",
                 description:
-                    "Deep conversations with a focused shortlist to assess technical depth, ownership, execution, and motivation — before any introduction reaches you.",
+                    "We share the opportunity with shortlisted builders to understand their genuine interest and alignment. We proceed only when their response signals strong mutual conviction.",
             },
             {
                 step: "04",
                 title: "Introduce, then calibrate",
                 description:
-                    "We introduce candidates we believe are strong fits. If there's misalignment, it helps us converge our understanding for stronger fit.",
+                    "We introduce the builder we believe is the strongest match. If they are not selected, feedback helps us refine our understanding of what right match looks like",
             }
         ],
     },
