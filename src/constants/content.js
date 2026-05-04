@@ -93,7 +93,7 @@ export const NAV_ITEMS = [
 
 export const METADATA = {
     home: {
-        title: "Hire with confidence | Mowka",
+        title: "Mowka | Hire with confidence",
         description:
             "Stop wasting time on hiring noise. Mowka helps founders hire the right builder through 5 curated introductions.",
         ogTitle:
