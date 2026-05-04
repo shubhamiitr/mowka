@@ -93,12 +93,13 @@ export const NAV_ITEMS = [
 
 export const METADATA = {
     home: {
-        title: "Mowka | Hire with confidence",
+        title: "Hire with confidence | Mowka",
         description:
-            "For founders hiring builders with a founding mindset — high-agency operators, product builders, and 0-to-1 engineers who take ownership, decide independently, and grow with the company. 5 introductions, 1 hire, pay only when they join. 12.5–15% of CTC.",
-        ogTitle: "Mowka | Hire with confidence",
+            "Stop wasting time on hiring noise. Mowka helps founders hire the right builder through 5 curated introductions.",
+        ogTitle:
+            "For founders hiring builders with a founding mindset",
         ogDescription:
-            "Curated introductions to high-agency builders, operators, and founding engineers. No retainer. No wasted interviews. Pay only when they join.",
+            "Stop wasting time on hiring noise. Mowka helps founders hire the right builder through 5 curated introductions.",
         keywords: [
             "founding engineer",
             "founding engineer hiring",

@@ -30,6 +30,7 @@ A four-step system designed to get the right builder in front of you, fast.
 - Scout from a living pool: We reach builders from a refined pool of vetted talent, founder-led referrals, and high-signal connections — not job boards or cold outreach lists.
 - Evaluate with real depth: Deep conversations with a focused shortlist to assess technical depth, ownership, execution, and motivation — before any introduction reaches you.
 - Introduce, then calibrate: We introduce candidates we believe are strong fits. If there's misalignment, it helps us converge our understanding for stronger fit on the next introduction.
+
 ## Founder
 Shubham Kansal (Founder & CEO)
 - Ex-Amazon Prime Video: Architected patent-backed systems for global catalog and copyright (US Patent 11645249B1).
