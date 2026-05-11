@@ -1,7 +1,7 @@
 export const SITE_CONTENT = {
     appName: "Mowka",
     tagline: "Hire with confidence",
-    calendlyUrl: "https://calendly.com/kansalshubham/meet",
+    calendlyUrl: "https://calendar.app.google/ASa3XGmwCDTN3YhX8",
 };
 
 export const HOME_PAGE = {
