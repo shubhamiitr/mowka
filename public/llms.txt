@@ -12,8 +12,8 @@ Mowka is a practitioner-led hiring partner for founders looking to hire builders
 
 ## Links
 - [Home](https://mowka.in): Main landing page and service overview.
-- [Privacy Policy](https://mowka.in/privacy): Data collection and usage policies (Dec 2025).
-- [Terms of Service](https://mowka.in/terms): Service terms and conditions (Dec 2025).
+- [Privacy Policy](https://mowka.in/privacy): Data collection and usage policies (May 2026).
+- [Terms of Service](https://mowka.in/terms): Service terms and conditions (May 2026).
 - [LinkedIn](https://www.linkedin.com/company/mowka/): Official company updates and posts.
 - [Instagram](https://www.instagram.com/mowka.in/): Visual stories and culture.
 - [Facebook](https://www.facebook.com/mowka.in/): Community updates.
@@ -22,7 +22,7 @@ Mowka is a practitioner-led hiring partner for founders looking to hire builders
 ## The Problem We Solve
 - The best builders aren't applying. The strongest builders are usually building, not applying. To hire them, you have to reach them directly.
 - Early hiring signals are noisy. AI-written resumes, keyword optimization, and shallow screening interviews make it harder to identify real signal early. As a result, the wrong candidates often reach deeper technical or founder-led interviews.
-- Preference misalignment shows up late. Candidates often explore multiple opportunities before committing to preferences like domain, team size, or people they want to work with. Misalignment only becomes visible before joining when these preferences aren't fully satisfied.
+- Preference misalignment shows up late. Candidates often explore multiple opportunities before committing to preferences like domain, team size, or people they want to work with. Misalignment only becomes visible before joining when these preferences aren’t fully satisfied.
 
 ## How It Works
 A four-step system designed to get the right builder in front of you, fast.
@@ -39,11 +39,14 @@ Shubham Kansal (Founder & CEO)
 - Email: shubham@mowka.in
 
 ## FAQs
+Q: How is Mowka different from a recruiting agency?
+Mowka is led by a practitioner who built and hired at Amazon Prime Video and Rephrase.ai (acquired by Adobe). We send one candidate at a time, calibrated through your feedback, rather than flooding you with resumes. Most roles close in five introductions or fewer. No wasted interviews. No dropped offers.
+
 Q: Why only one candidate at a time?
 Traditional agencies create volume traps by sending dozens of uncalibrated profiles. We value your time. We do the heavy lifting of vetting candidates ourselves and only introduce the one who actually fits your needs.
 
-Q: What happens if the first candidate isn't the right fit?
-We use that feedback as a data point. By listening to your specific feedback, we refine our search immediately. This sharpening process is why we are able to close most roles within just 1 to 5 introductions.
+Q: How does the calibration process work?
+We deeply understand your role, company, and ideal candidate profile. We send one candidate. If they're not the fit, your feedback sharpens our understanding. Each round gets closer to the right person.
 
 Q: How do you find builders who aren't active on job boards?
 We reach builders from a continuously refined pool of previously vetted talent, founder-led referrals, and high-signal connections. We compound our network through trusted introductions rather than relying on static databases — giving us access to a private tier of talent traditional agencies often miss.
@@ -54,10 +57,13 @@ We build a custom competency matrix and evaluation framework for every role usin
 Q: What does Mowka charge?
 12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles.
 
+Q: What types of roles does Mowka fill?
+Tech and product roles, from founding engineers to CTOs, research leads to product directors. We work best with early-stage to growth-stage startups building in AI, SaaS, fintech, and deep tech.
+
 ## Related Terms
 Mowka helps founders hire for roles commonly described as: founding engineer, founding AI engineer, founding backend engineer, founding full stack engineer, founding mindset builder, high-agency engineer, high-agency operator, product builder, product engineer, 0-to-1 engineer, early-stage engineer, generalist builder, AI engineer, infrastructure engineer, head of engineering, CTO. Adjacent service categories: practitioner-led recruiting, contingent recruiting, success-based recruiting, no-retainer recruiting, pay-only-when-they-join recruiting, startup talent partner, founding team hiring partner, technical executive search.
 
 ## Entity
 - Legal Name: Mowka Enterprises Private Limited
-- CIN: U78100RJ2024PTC095066
+- CIN: U63990RJ2025PTC110155
 - Headquarters: 267 Shopping Center, Gumanpura, Kota, Rajasthan, 324007, India.

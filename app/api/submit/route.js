@@ -1,4 +1,5 @@
 import { getSupabaseAdmin } from '../../../src/lib/supabase-server';
+import { COMPANY_INFO } from '../../../src/constants/content';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
@@ -20,7 +21,7 @@ export async function POST(req) {
         if (error) {
             console.error('Supabase insert error:', error);
             return NextResponse.json(
-                { error: 'Something went wrong. Please email shubham@mowka.in' },
+                { error: `Something went wrong. Please email ${COMPANY_INFO.email}` },
                 { status: 500 }
             );
         }
@@ -29,7 +30,7 @@ export async function POST(req) {
     } catch (error) {
         console.error('Error submitting contact:', error);
         return NextResponse.json(
-            { error: 'Failed to submit. Please try again or contact shubham@mowka.in' },
+            { error: `Failed to submit. Please try again or contact ${COMPANY_INFO.email}` },
             { status: 500 }
         );
     }

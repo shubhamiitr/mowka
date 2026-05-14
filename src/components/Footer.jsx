@@ -2,8 +2,11 @@ import Image from 'next/image';
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
+import { COMPANY_INFO } from '../constants/content';
 
 export const Footer = () => {
+  const company = COMPANY_INFO;
+
   return (
     <footer className="w-full py-5 md:py-6 bg-mowka-bg-secondary/90 backdrop-blur-md border-t border-mowka-border-light/50 font-sans relative">
       <div className="w-full px-4 md:px-12 flex flex-col md:flex-row justify-between gap-y-3 md:gap-4 items-center">
@@ -20,7 +23,7 @@ export const Footer = () => {
               title="Proudly built in India"
               unoptimized
             />
-            <span className="align-middle">Copyright © 2026 <span className="whitespace-nowrap">Mowka Enterprises Private Limited.</span> All rights reserved.</span>
+            <span className="align-middle">Copyright © 2026 <span className="whitespace-nowrap">{company.legalName}.</span> All rights reserved.</span>
           </p>
         </div>
 
@@ -31,21 +34,21 @@ export const Footer = () => {
         </div>
 
         {/* Right: Socials */}
-        <div className="flex justify-center md:justify-end items-center gap-6 text-xs font-medium text-mowka-text-secondary tracking-wide order-3 md:order-3 w-full md:w-auto">
-          <a href="mailto:shubham@mowka.in" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Email">
-            <MdEmail className="w-4 h-4 text-mowka-text-secondary" />
+        <div className="flex justify-center md:justify-end items-center gap-6 text-xs font-medium tracking-wide order-3 md:order-3 w-full md:w-auto">
+          <a href={`mailto:${company.email}`} className="transition-transform duration-200 hover:-translate-y-1 text-mowka-action-primary" aria-label="Email">
+            <MdEmail className="w-4 h-4" />
           </a>
-          <a href="https://www.linkedin.com/company/mowka/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="LinkedIn">
-            <FaLinkedin className="w-4 h-4 text-mowka-text-secondary" />
+          <a href={company.socials.linkedin} target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:-translate-y-1 text-[#0A66C2]" aria-label="LinkedIn">
+            <FaLinkedin className="w-4 h-4" />
           </a>
-          <a href="https://www.facebook.com/mowka.in" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Facebook">
-            <FaFacebook className="w-4 h-4 text-mowka-text-secondary" />
+          <a href={company.socials.facebook} target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:-translate-y-1 text-[#1877F2]" aria-label="Facebook">
+            <FaFacebook className="w-4 h-4" />
           </a>
-          <a href="https://www.instagram.com/mowka.in" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="Instagram">
-            <FaInstagram className="w-4 h-4 text-mowka-text-secondary" />
+          <a href={company.socials.instagram} target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:-translate-y-1 text-[#E4405F]" aria-label="Instagram">
+            <FaInstagram className="w-4 h-4" />
           </a>
-          <a href="https://wa.me/919468658967" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-110 opacity-80 hover:opacity-100" aria-label="WhatsApp">
-            <FaWhatsapp className="w-4 h-4 text-mowka-text-secondary" />
+          <a href={company.whatsappLink} target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:-translate-y-1 text-[#25D366]" aria-label="WhatsApp">
+            <FaWhatsapp className="w-4 h-4" />
           </a>
         </div>
 

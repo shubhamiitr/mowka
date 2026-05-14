@@ -2,68 +2,89 @@
 
 import { useEffect } from 'react';
 import { Footer } from './Footer';
+import { COMPANY_INFO, METADATA } from '../constants/content';
 
 export const PrivacyPolicy = () => {
+    const company = COMPANY_INFO;
+    const meta = METADATA.privacy;
 
-    // Scroll to top on mount
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <section className="bg-mowka-bg-primary min-h-screen flex flex-col pt-24 md:pt-32">
-            <div className="max-w-4xl mx-auto px-6 flex-grow pb-12">
-                <h1 className="text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8">Privacy Policy</h1>
+        <section className="layout-doc-page">
+            <div className="layout-doc-container">
+                <h1 className="type-h1-doc">{meta.heading}</h1>
 
-                <div className="prose prose-lg text-mowka-text-secondary">
-                    <p className="text-sm text-mowka-text-tertiary mb-8">Last Updated: December 2025</p>
+                <div className="type-prose">
+                    <p className="type-doc-meta">Last Updated: {meta.lastUpdated}</p>
 
                     <p>
-                        Mowka Enterprises Private Limited ("Mowka", "we," "us," or "our") is committed to protecting the privacy of our partners and talent network.
-                        This policy outlines how we handle information as your trusted talent partner.
+                        This explains what Mowka collects, why, who we share it with, and what control you have. It applies to founders and hiring teams (<strong>Partners</strong>), builders we engage on roles (<strong>Builders</strong>), and visitors to mowka.in.
                     </p>
 
                     <p>
-                        We operate as a global-first organization with roots in India.
+                        Mowka is operated by {company.legalName}, registered at {company.registeredAddress} (CIN: {company.cin}). Information may be processed in India and in countries where our service providers operate. Using the site or our services means you accept this policy.
                     </p>
 
-                    <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">1. Information We Collect</h3>
+                    <h3 className="type-h3-doc">1. What we collect</h3>
                     <p>
-                        We collect only what is necessary to build successful partnerships:
+                        <strong>From Partners:</strong> company details, role specifics (scope, compensation, success criteria), team contacts, and feedback after each round.
                     </p>
-                    <ul className="list-disc pl-5 space-y-2">
-                        <li><strong>For Partners:</strong> Company context, technical requirements, and team structure details to ensure precise matching.</li>
-                        <li><strong>For Talent:</strong> Professional history, technical portfolios, and assessment data to highlight your expertise.</li>
+                    <p>
+                        <strong>From Builders:</strong> name, contact details, location, professional history, resume, work samples, what you want next, and notes from our conversations.
+                    </p>
+                    <p>
+                        <strong>From visitors:</strong> standard analytics (IP address, device, browser, pages visited) and anything you submit through a form.
+                    </p>
+
+                    <h3 className="type-h3-doc">2. How we use it</h3>
+                    <p>
+                        Only to do the work you've engaged us for — understand roles, identify and evaluate Builders, coordinate interviews, capture feedback, keep our network current, and comply with law. We do not sell personal information.
+                    </p>
+
+                    <h3 className="type-h3-doc">3. Who we share it with</h3>
+                    <ul className="list-doc">
+                        <li><strong>Partners:</strong> a Builder's profile, after the Builder has agreed to the introduction.</li>
+                        <li><strong>Builders:</strong> role and Partner context, so they can decide whether to engage.</li>
+                        <li><strong>Service providers:</strong> tools we use to operate Mowka (email, scheduling, CRM, cloud storage, analytics), bound by confidentiality.</li>
+                        <li><strong>Legal:</strong> when required by law or to protect Mowka, our community, or the public.</li>
                     </ul>
 
-                    <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">2. How We Use Information</h3>
+                    <h3 className="type-h3-doc">4. Retention</h3>
                     <p>
-                        Your data is used exclusively to:
-                    </p>
-                    <ul className="list-disc pl-5 space-y-2">
-                        <li>Curate and match referral-grade talent with strategic opportunities at top startups.</li>
-                        <li>Facilitate seamless interview and onboarding processes.</li>
-                        <li>Refine our matching methodology and platform experience.</li>
-                        <li>Comply with applicable regulations in India and operating jurisdictions.</li>
-                    </ul>
-
-                    <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">3. Data Sharing</h3>
-                    <p>
-                        We never sell personal data. Information is shared strictly for partnership success:
-                    </p>
-                    <ul className="list-disc pl-5 space-y-2">
-                        <li><strong>With Partners:</strong> Curated talent profiles are shared with hiring teams for evaluation.</li>
-                        <li><strong>With Infrastructure:</strong> Trusted third-party tools (ATS, CRM) that support our operations under strict confidentiality.</li>
-                    </ul>
-
-                    <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">4. Security</h3>
-                    <p>
-                        We employ industry-standard security practices to safeguard all data. While no digital transmission is absolute, we utilize secure, compliant cloud infrastructure to maximize protection.
+                        We keep information for as long as it's useful to working with you, or as required by law. Builders can ask to be removed from active consideration at any time.
                     </p>
 
-                    <h3 className="text-xl font-semibold text-mowka-text-primary mt-8 mb-4">5. Contact</h3>
+                    <h3 className="type-h3-doc">5. Security</h3>
                     <p>
-                        For privacy inquiries, please reach out to us at: <a href="mailto:shubham@mowka.in" className="text-mowka-link hover:underline">shubham@mowka.in</a>.
+                        Encrypted storage, access controls, and limited internal access. No system is fully secure, but we work to keep risk low.
+                    </p>
+
+                    <h3 className="type-h3-doc">6. Your rights</h3>
+                    <p>
+                        You can ask us to show, correct, delete, or stop using your information, or withdraw consent. Email <a href={`mailto:${company.email}`} className="text-mowka-link hover:underline">{company.email}</a>. We may verify your identity before acting.
+                    </p>
+
+                    <h3 className="type-h3-doc">7. Cookies</h3>
+                    <p>
+                        We use cookies and analytics to understand how the site is used. You can disable cookies in your browser; some features may not work as well.
+                    </p>
+
+                    <h3 className="type-h3-doc">8. Age</h3>
+                    <p>
+                        Mowka is for working professionals and hiring teams. We do not knowingly collect information from anyone under 18.
+                    </p>
+
+                    <h3 className="type-h3-doc">9. Changes</h3>
+                    <p>
+                        We'll update this policy as needed. The "Last Updated" date above reflects the most recent revision.
+                    </p>
+
+                    <h3 className="type-h3-doc">10. Contact</h3>
+                    <p>
+                        <a href={`mailto:${company.email}`} className="text-mowka-link hover:underline">{company.email}</a>
                     </p>
 
                     <div className="mb-12"></div>

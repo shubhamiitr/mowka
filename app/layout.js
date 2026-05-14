@@ -3,6 +3,7 @@ import './globals.css';
 import { Navbar } from '../src/components/Navbar';
 import ClientLayout from '../src/components/ClientLayout';
 import Script from 'next/script';
+import { SITE_CONTENT } from '../src/constants/content';
 
 const geist = Geist({
     subsets: ['latin'],
@@ -17,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-    metadataBase: new URL('https://mowka.in'),
+    metadataBase: new URL(SITE_CONTENT.siteUrl),
     icons: {
         icon: [
             { url: '/favicon.png', sizes: '192x192', type: 'image/png' },

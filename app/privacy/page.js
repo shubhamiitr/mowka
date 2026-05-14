@@ -1,9 +1,9 @@
-
 import { PrivacyPolicy } from '../../src/components/PrivacyPolicy';
+import { METADATA } from '../../src/constants/content';
 
 export const metadata = {
-    title: 'Privacy Policy | Mowka',
-    description: 'Read our Privacy Policy to understand how Mowka collects, uses, and protects your personal information.',
+    title: METADATA.privacy.title,
+    description: METADATA.privacy.description,
     alternates: {
         canonical: '/privacy',
     },

@@ -119,6 +119,51 @@ section {
   .layout-header {
     @apply text-center max-w-3xl mx-auto mb-10 md:mb-14 flex flex-col items-center;
   }
+
+  /* Doc Pages (Privacy / Terms / long-form legal) */
+  .layout-doc-page {
+    @apply bg-mowka-bg-primary min-h-screen flex flex-col pt-24 md:pt-32;
+  }
+
+  .layout-doc-container {
+    @apply max-w-4xl mx-auto px-6 flex-grow pb-12;
+  }
+
+  .type-h1-doc {
+    @apply text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8;
+  }
+
+  .type-h3-doc {
+    @apply text-xl font-semibold text-mowka-text-primary mt-12 mb-4;
+  }
+
+  .type-h4-doc {
+    @apply text-base font-semibold text-mowka-text-primary mt-8 mb-3;
+  }
+
+  .type-prose {
+    @apply text-mowka-text-secondary leading-relaxed;
+  }
+
+  .type-prose p {
+    @apply mb-5;
+  }
+
+  .type-prose ul {
+    @apply mb-6;
+  }
+
+  .type-prose a {
+    @apply underline underline-offset-2 decoration-mowka-link/40 hover:decoration-mowka-link;
+  }
+
+  .type-doc-meta {
+    @apply text-sm text-mowka-text-tertiary mb-8;
+  }
+
+  .list-doc {
+    @apply list-disc pl-5 space-y-2;
+  }
 }
 
 
