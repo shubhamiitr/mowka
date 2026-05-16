@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { Loader2, CheckCircle2, ArrowRight, Linkedin } from 'lucide-react';
 import { Reveal } from '../Reveal';
@@ -38,6 +39,16 @@ export const BuilderHero = () => {
         };
         checkExistingProfile();
     }, [isLinkedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    // Auto-close success modal after 2 seconds (only for fresh submissions)
+    useEffect(() => {
+        if (step === 'done') {
+            const timer = setTimeout(() => {
+                setStep('hero');
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [step]);
 
     const handleDismiss = () => {
         signOut({ redirect: false });
@@ -157,26 +168,33 @@ export const BuilderHero = () => {
 
                         {isDone && (
                             <div className="flex flex-col items-center text-center py-16 px-10 gap-6">
-                                <div className="relative w-20 h-20 rounded-full bg-mowka-teal-vibrant/10 flex items-center justify-center">
-                                    <CheckCircle2 className="w-10 h-10 text-mowka-teal-vibrant" strokeWidth={1} />
-                                    {step === 'done' && (
-                                        <div className="absolute inset-0 rounded-full bg-mowka-teal-vibrant/20 animate-ping" />
-                                    )}
-                                </div>
+                                {session?.user?.image && (
+                                    <div className="relative w-16 h-16 rounded-full overflow-hidden ring-4 ring-white shadow-xl shadow-black/10 flex-shrink-0">
+                                        <Image
+                                            src={session.user.image}
+                                            alt={session.user.name || 'Profile'}
+                                            fill
+                                            className="object-cover"
+                                            unoptimized
+                                        />
+                                        {step === 'done' && (
+                                            <div className="absolute inset-0 rounded-full ring-4 ring-mowka-teal-vibrant/40 animate-pulse" />
+                                        )}
+                                    </div>
+                                )}
                                 <div className="flex flex-col gap-3">
-                                    <p className="font-serif text-3xl font-medium text-mowka-text-primary text-balance">
-                                        {step === 'already-shared' ? "Welcome back" : "You're in"}
-                                    </p>
-                                    <p className="text-base text-mowka-text-tertiary text-balance max-w-[280px] leading-relaxed">
+                                    <p className="text-base text-mowka-text-tertiary text-balance leading-relaxed">
                                         {step === 'already-shared' ? success.existingProfileTitle : success.title}
                                     </p>
                                 </div>
-                                <button
-                                    onClick={() => setStep('hero')}
-                                    className="mt-4 px-10 py-3 rounded-md border border-mowka-border-light text-sm font-semibold text-mowka-text-secondary hover:text-mowka-text-primary hover:bg-mowka-bg-secondary hover:border-mowka-text-tertiary transition-all duration-300 active:scale-[0.98]"
-                                >
-                                    {ui.closeButton}
-                                </button>
+                                {step === 'already-shared' && (
+                                    <button
+                                        onClick={() => setStep('hero')}
+                                        className="mt-4 btn-primary w-full"
+                                    >
+                                        {ui.closeButton}
+                                    </button>
+                                )}
                             </div>
                         )}
                     </div>
