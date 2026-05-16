@@ -24,21 +24,27 @@ export const BuilderHero = () => {
     const [portfolio, setPortfolio] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
 
-    useEffect(() => {
-        const checkExistingProfile = async () => {
-            if (isLinkedIn && step === 'hero') {
-                setStep('verifying');
-                try {
-                    const res = await fetch(`/api/builder/check?id=${session.user.linkedinId}`);
-                    const data = await res.json();
-                    setStep(data.exists ? 'already-shared' : 'collecting-details');
-                } catch {
-                    setStep('collecting-details');
-                }
-            }
-        };
-        checkExistingProfile();
-    }, [isLinkedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+    // Run the check logic
+    const runVerification = async () => {
+        if (!session?.user?.linkedinId) return;
+        setStep('verifying');
+        try {
+            const res = await fetch(`/api/builder/check?id=${session.user.linkedinId}`);
+            const data = await res.json();
+            setStep(data.exists ? 'already-shared' : 'collecting-details');
+        } catch {
+            setStep('collecting-details');
+        }
+    };
+
+    // Manual trigger from button
+    const handleContinue = () => {
+        if (isLinkedIn) {
+            runVerification();
+        } else {
+            signIn('linkedin', { callbackUrl: '/builder' });
+        }
+    };
 
     // Auto-close success modal after 2 seconds (only for fresh submissions)
     useEffect(() => {
@@ -119,7 +125,7 @@ export const BuilderHero = () => {
                     </div>
                     <Reveal delay={0.35}>
                         <button
-                            onClick={() => signIn('linkedin', { callbackUrl: '/builder' })}
+                            onClick={handleContinue}
                             className="mt-8 md:mt-10 btn-primary group"
                         >
                             <Linkedin className="w-4 h-4" />
@@ -150,9 +156,9 @@ export const BuilderHero = () => {
                         {step === 'collecting-details' && (
                             <BuilderForm
                                 session={session}
-                                phone={phone}                 setPhone={setPhone}
+                                phone={phone} setPhone={setPhone}
                                 preferredTime={preferredTime} setPreferredTime={setPreferredTime}
-                                portfolio={portfolio}         setPortfolio={setPortfolio}
+                                portfolio={portfolio} setPortfolio={setPortfolio}
                                 errorMsg={errorMsg}
                                 onSubmit={handleSubmit}
                                 onDismiss={handleDismiss}
