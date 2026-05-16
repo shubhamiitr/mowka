@@ -107,29 +107,15 @@ const jsonLd = {
             "@id": `${BASE}/#founder`,
             "name": FOUNDER.name,
             "jobTitle": FOUNDER.jobTitle,
+            "description": `${FOUNDER.jobTitle} of ${SITE_CONTENT.appName}. ${FOUNDER.education}. Previously at ${FOUNDER.positions.map(p => p.company).join(', ')}. ${FOUNDER.award}.`,
             "image": FOUNDER.imageAbsolute,
             "url": FOUNDER.linkedin,
-            "description": FOUNDER.bio,
             "award": FOUNDER.award,
-            "alumniOf": FOUNDER.alumni.map((name) => ({ "@type": "Organization", "name": name })),
+            "alumniOf": [
+                { "@type": "CollegeOrUniversity", "name": FOUNDER.education },
+                ...FOUNDER.positions.map((p) => ({ "@type": "Organization", "name": p.company })),
+            ],
             "knowsAbout": FOUNDER.knowsAbout
-        },
-        {
-            "@type": "Service",
-            "@id": `${BASE}/#service`,
-            "name": SERVICE.name,
-            "serviceType": SERVICE.serviceType,
-            "provider": { "@id": `${BASE}/#organization` },
-            "areaServed": {
-                "@type": "Place",
-                "name": "Worldwide"
-            },
-            "description": SERVICE.description,
-            "offers": {
-                "@type": "Offer",
-                "name": PRICING.offerName,
-                "description": PRICING.offerDescription
-            }
         },
         {
             "@type": "FAQPage",

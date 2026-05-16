@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect } from 'react';
-import { Footer } from './Footer';
-import { COMPANY_INFO, METADATA } from '../constants/content';
+import { Footer } from '../Footer';
+import { COMPANY_INFO } from '../../constants/content';
 
 export const TermsOfService = () => {
     const company = COMPANY_INFO;
-    const meta = METADATA.terms;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -15,10 +14,10 @@ export const TermsOfService = () => {
     return (
         <section className="layout-doc-page">
             <div className="layout-doc-container">
-                <h1 className="type-h1-doc">{meta.heading}</h1>
+                <h1 className="type-h1-doc">Terms of Service</h1>
 
                 <div className="type-prose">
-                    <p className="type-doc-meta">Last Updated: {meta.lastUpdated}</p>
+                    <p className="type-doc-meta">Last Updated: May 2026</p>
 
                     <p>
                         These terms govern your use of mowka.in and our hiring services. They apply to founders and hiring teams (<strong>Partners</strong>), builders we engage on roles (<strong>Builders</strong>), and visitors to the site.

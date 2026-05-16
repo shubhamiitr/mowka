@@ -46,6 +46,7 @@ export default {
         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'fade-in-up': 'fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
         'shimmer': 'shimmer 3s linear infinite',
+        'shine': 'shine 3s linear infinite',
         'spotlight': 'spotlight 2s ease .75s 1 forwards',
       },
       backgroundSize: {
@@ -63,6 +64,10 @@ export default {
         shimmer: {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '100% 50%' }
+        },
+        shine: {
+          '0%': { backgroundPosition: '200% center' },
+          '100%': { backgroundPosition: '0% center' }
         },
         spotlight: {
           '0%': { opacity: 0, transform: 'scale(0.9)' },

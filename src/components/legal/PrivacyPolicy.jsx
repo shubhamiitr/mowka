@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect } from 'react';
-import { Footer } from './Footer';
-import { COMPANY_INFO, METADATA } from '../constants/content';
+import { Footer } from '../Footer';
+import { COMPANY_INFO } from '../../constants/content';
 
 export const PrivacyPolicy = () => {
     const company = COMPANY_INFO;
-    const meta = METADATA.privacy;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -15,10 +14,10 @@ export const PrivacyPolicy = () => {
     return (
         <section className="layout-doc-page">
             <div className="layout-doc-container">
-                <h1 className="type-h1-doc">{meta.heading}</h1>
+                <h1 className="type-h1-doc">Privacy Policy</h1>
 
                 <div className="type-prose">
-                    <p className="type-doc-meta">Last Updated: {meta.lastUpdated}</p>
+                    <p className="type-doc-meta">Last Updated: May 2026</p>
 
                     <p>
                         This explains what Mowka collects, why, who we share it with, and what control you have. It applies to founders and hiring teams (<strong>Partners</strong>), builders we engage on roles (<strong>Builders</strong>), and visitors to mowka.in.

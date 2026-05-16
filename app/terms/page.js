@@ -1,4 +1,4 @@
-import { TermsOfService } from '../../src/components/TermsOfService';
+import { TermsOfService } from '../../src/components/legal/TermsOfService';
 import { METADATA } from '../../src/constants/content';
 
 export const metadata = {

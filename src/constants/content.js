@@ -1,13 +1,12 @@
 // =============================================================================
 // Sources of truth for brand, legal, and content. Edit values here.
-// Static files (public/llms.txt, public/site.webmanifest) cannot import from
-// this module; they are auto-synced by scripts/sync-static.mjs (runs pre-commit
-// via .githooks/pre-commit, or manually: `npm run sync`).
+// IMPORTANT: If you change core messaging here, make sure to manually update 
+// `public/llms.txt` so that AI crawlers have the most up-to-date context!
 // =============================================================================
 
 export const SITE_CONTENT = {
     appName: "Mowka",
-    tagline: "Hire with confidence",
+    tagline: "Grow with confidence",
     siteUrl: "https://mowka.in",
     description:
         "For founders hiring builders with a founding mindset. 5 introductions, 1 hire, pay only when they join. Practitioner-led hiring with one candidate at a time, calibrated by your feedback. 12.5–15% of CTC depending on role scarcity.",
@@ -24,14 +23,11 @@ const ADDRESS = {
 
 export const COMPANY_INFO = {
     legalName: "Mowka Enterprises Private Limited",
-    alternateName: "Mowka Talent Partner",
     foundingDate: "2025",
     cin: "U63990RJ2025PTC110155",
     email: "shubham@mowka.in",
-    whatsappNumber: "+91 94686 58967",
     whatsappLink: "https://wa.me/919468658967",
     address: ADDRESS,
-    registeredAddress: `${ADDRESS.streetAddress}, ${ADDRESS.locality}, ${ADDRESS.region} ${ADDRESS.postalCode}`,
     description:
         "Practitioner-led hiring for founders looking for builders with a founding mindset. Each candidate vetted on both sides, sharpened by your feedback after every meeting. We typically close in five introductions or fewer. Pay only when they join. Engineering, research, product, and design roles.",
     socials: {
@@ -66,20 +62,11 @@ export const COMPANY_INFO = {
 
 // Pricing — single source of truth for all surfaces (JSON-LD, llms.txt, etc.).
 export const PRICING = {
-    range: "12.5–15%",
-    summary: "12.5–15% of annual CTC, scaling with role scarcity. Pay only when they join.",
     offerName: "Pay After They Join",
     offerDescription:
         "12.5–15% of annual CTC, scaling with role scarcity, payable only after your hire starts. No retainer.",
     faqAnswer:
         "12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles.",
-};
-
-export const SERVICE = {
-    name: "Practitioner-Led Technical Sourcing",
-    serviceType: "Technical Recruitment",
-    description:
-        "Practitioner-led search for founders hiring builders with a founding mindset. One candidate at a time, calibrated through founder feedback. Roles typically close in five introductions or fewer. 12.5–15% of CTC depending on role scarcity. Pay only when they join. Engineering, research, product, design.",
 };
 
 // FAQs — used by both schema.org FAQPage and llms.txt. Single canonical list.
@@ -121,10 +108,13 @@ export const FOUNDER = {
     image: "/founder.jpg",
     imageAbsolute: `${SITE_CONTENT.siteUrl}/founder.png`,
     linkedin: "https://www.linkedin.com/in/kansalshubham/",
-    bio:
-        "AI innovation leader with 10+ years of experience and 7+ years leading AI innovation teams. Former architect at Amazon Prime Video and infrastructure lead at Rephrase.ai (acquired by Adobe). Conducted 2000+ interviews.",
+    education: "IIT Roorkee",
     award: "US Patent 11645249B1 - System for automated metadata and copyright management",
-    alumni: ["Amazon Prime Video", "Rephrase.ai"],
+    positions: [
+        { company: "Rephrase.ai", note: "Acquired by Adobe" },
+        { company: "Amazon Prime Video" },
+        { company: "Apollo.io" }
+    ],
     knowsAbout: [
         "AI Innovation Leadership",
         "Founding Engineer Hiring",
@@ -225,62 +215,98 @@ export const NAV_ITEMS = [
     { label: "Why Mowka", href: "#trust" },
 ];
 
+export const BUILDER_PAGE = {
+    hero: {
+        headline: {
+            start: "If you thrive on moving fast, owning problems, and working with sharp people —",
+            highlight: "we'd love to get to know you",
+        },
+        subhead: "Get introduced to opportunities you'd move for and connect directly with founders.",
+        cta: "Continue",
+    },
+    success: {
+        title: "Thanks for sharing your info. We'll reach out soon to get to know you better.",
+        existingProfileTitle: "We already have received your info. We'll reach out soon to get to know you better.",
+    },
+    loading: {
+        checking: "Checking your profile…",
+        submitting: "Saving your info…",
+    },
+    form: {
+        intro: "Tell us a few things about you",
+        portfolioLabel: "Where can we find your background",
+        portfolioPlaceholder: "Resume link, personal website, or LinkedIn URL",
+        phoneLabel: "Mobile number",
+        timeLabel: "Best time to reach out",
+        cta: "Confirm",
+        phoneError: "Please enter a valid phone number.",
+        timeError: "Please select a time that works for you.",
+        portfolioError: "Please enter a valid resume link, personal website or LinkedIn URL",
+    },
+    ui: {
+        closeButton: "Close",
+    },
+    errors: {
+        authFailed: `We couldn't verify your LinkedIn profile right now. Please try again in some time or email us directly at ${COMPANY_INFO.email}`,
+        default: `Something went wrong on our end. Please try again in a moment or contact ${COMPANY_INFO.email}.`,
+    },
+};
+
+// SEO keyword lists — defined here so METADATA can spread them alongside COMPANY_INFO.knowsAbout.
+const HOME_SEO_KEYWORDS = [
+    "practitioner-led recruiting",
+    "pay only when they join",
+    "no retainer recruiting",
+    "success based recruiting",
+    "contingent recruiting startup",
+    "hire builders",
+    "hire founding engineers",
+    "startup talent partner",
+    "founder hiring",
+    "founding team hiring",
+];
+
+const BUILDER_SEO_KEYWORDS = [
+    "founding engineer jobs",
+    "founding AI engineer jobs",
+    "founding backend engineer jobs",
+    "founding full stack engineer",
+    "full stack engineer startup",
+    "AI engineer startup jobs",
+    "software engineer startup jobs",
+    "early stage startup jobs",
+    "startup jobs for engineers",
+    "YC startup jobs",
+    "first engineer startup",
+    "founding engineer head of engineering",
+    "high agency engineer jobs",
+    "startup engineer opportunities",
+];
+
 export const METADATA = {
     home: {
-        title: "Mowka | Hire with confidence",
-        description:
-            "Stop wasting time on hiring noise. Mowka helps founders hire the right builder through 5 curated introductions.",
-        ogTitle:
-            "For founders hiring builders with a founding mindset",
-        ogDescription:
-            "Stop wasting time on hiring noise. Mowka helps founders hire the right builder through 5 curated introductions.",
-        keywords: [
-            "founding engineer",
-            "founding engineer hiring",
-            "founding mindset",
-            "high agency engineer",
-            "high-agency builder",
-            "high-agency operator",
-            "operators",
-            "product builder",
-            "product engineer",
-            "0 to 1 engineer",
-            "early stage hiring",
-            "startup hiring",
-            "founder hiring",
-            "founding team hiring",
-            "technical recruitment",
-            "AI engineer hiring",
-            "founding AI engineer",
-            "founding backend engineer",
-            "founding full stack engineer",
-            "CTO hiring",
-            "head of engineering hiring",
-            "practitioner-led recruiting",
-            "pay only when they join",
-            "no retainer recruiting",
-            "success based recruiting",
-            "contingent recruiting startup",
-            "hire builders",
-            "hire with confidence",
-            "hire founding engineers",
-            "startup talent partner",
-            "Mowka",
-        ],
+        title: `${SITE_CONTENT.appName} | ${SITE_CONTENT.tagline}`,
+        description: HOME_PAGE.hero.subhead,
+        ogTitle: `${HOME_PAGE.hero.headline.start} ${HOME_PAGE.hero.headline.highlight}`,
+        ogDescription: HOME_PAGE.hero.subhead,
+        keywords: [...COMPANY_INFO.knowsAbout, ...HOME_SEO_KEYWORDS],
+    },
+    builder: {
+        title: `${SITE_CONTENT.appName} | ${SITE_CONTENT.tagline}`,
+        description: BUILDER_PAGE.hero.subhead,
+        ogTitle: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight}`,
+        ogDescription: BUILDER_PAGE.hero.subhead,
+        keywords: [...COMPANY_INFO.knowsAbout, ...BUILDER_SEO_KEYWORDS],
     },
     privacy: {
         title: "Privacy Policy | Mowka",
         description:
             "How Mowka collects, uses, shares, and protects information about Partners, Builders, and website visitors.",
-        heading: "Privacy Policy",
-        lastUpdated: "May 2026",
     },
     terms: {
         title: "Terms of Service | Mowka",
         description:
-            "Terms governing the use of Mowka's website and talent partnership services.",
-        heading: "Terms of Service",
-        lastUpdated: "May 2026",
+            "Terms governing the use of Mowka’s website and talent partnership services.",
     },
     notFound: {
         title: "Page Not Found | Mowka",

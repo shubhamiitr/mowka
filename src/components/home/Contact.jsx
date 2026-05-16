@@ -1,9 +1,9 @@
 "use client";
 
 import { ArrowRight } from 'lucide-react';
-import { Footer } from './Footer';
-import { Reveal } from './Reveal';
-import { HOME_PAGE, SITE_CONTENT } from '../constants/content';
+import { Footer } from '../Footer';
+import { Reveal } from '../Reveal';
+import { HOME_PAGE, SITE_CONTENT } from '../../constants/content';
 
 export const Contact = () => {
     return (

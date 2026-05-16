@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { usePathname } from 'next/navigation';
+import { SessionProvider } from 'next-auth/react';
 
 export default function ClientLayout({ children }) {
     const pathname = usePathname();
@@ -35,5 +36,5 @@ export default function ClientLayout({ children }) {
         };
     }, []);
 
-    return <>{children}</>;
+    return <SessionProvider>{children}</SessionProvider>;
 }

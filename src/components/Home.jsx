@@ -1,8 +1,8 @@
-import { Hero } from './Hero';
-import { Problem } from './Problem';
-import { Process } from './Process';
-import { WhyMowka } from './WhyMowka';
-import { Contact } from './Contact';
+import { Hero } from './home/Hero';
+import { Problem } from './home/Problem';
+import { Process } from './home/Process';
+import { WhyMowka } from './home/WhyMowka';
+import { Contact } from './home/Contact';
 
 export const Home = () => {
     return (

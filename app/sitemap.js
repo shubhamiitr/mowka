@@ -11,6 +11,12 @@ export default function sitemap() {
             priority: 1,
         },
         {
+            url: `${baseUrl}/builder`,
+            lastModified: new Date('2026-05-16'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/privacy`,
             lastModified: new Date('2026-05-12'),
             changeFrequency: 'yearly',

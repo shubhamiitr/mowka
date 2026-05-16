@@ -2,9 +2,9 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
-import { Reveal } from './Reveal';
-import { MotionLogo } from './MotionLogo';
-import { HOME_PAGE } from '../constants/content';
+import { Reveal } from '../Reveal';
+import { MotionLogo } from '../MotionLogo';
+import { HOME_PAGE } from '../../constants/content';
 import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
@@ -20,9 +20,9 @@ export const Hero = () => {
         <section
             id="home"
             ref={containerRef}
-            className="relative w-full h-auto md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center bg-mowka-bg-primary overflow-hidden pt-24 pb-12 md:pt-24 md:pb-16"
+            className="hero-section"
         >
-            <div className="max-w-6xl w-full px-4 md:px-8 relative z-10 flex flex-col justify-center h-full">
+            <div className="hero-container">
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto w-full">
 
                     <div className="mb-4 md:mb-6">
@@ -30,13 +30,13 @@ export const Hero = () => {
                     </div>
 
                     <div>
-                        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] mt-2 md:mt-4 mb-4 md:mb-6 leading-[1.1] tracking-tight font-serif font-medium text-mowka-text-primary max-w-max mx-auto lg:whitespace-nowrap selection:bg-mowka-action-primary selection:text-white">
+                        <h1 className="hero-headline">
                             {HOME_PAGE.hero.headline.start} <br />
-                            <span className="text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary animate-shine bg-[length:200%_auto] [&::selection]:text-white [&::selection]:bg-mowka-action-primary pr-4">
+                            <span className="headline-accent">
                                 {HOME_PAGE.hero.headline.highlight}
                             </span>
                         </h1>
-                        <p className="type-body max-w-3xl mx-auto mt-6 md:mt-8 opacity-90 animate-fade-in-up">
+                        <p className="hero-subhead mx-auto opacity-90 animate-fade-in-up">
                             {HOME_PAGE.hero.subhead}
                         </p>
                     </div>
@@ -45,7 +45,7 @@ export const Hero = () => {
                         <a
                             href="#contact"
                             onClick={handleCTA}
-                            className="mt-8 md:mt-10 inline-flex items-center gap-3 px-8 py-4 bg-mowka-action-primary text-white font-medium text-base rounded-md hover:bg-mowka-action-primary-hover transition-all group cursor-pointer"
+                            className="mt-8 md:mt-10 btn-primary"
                         >
                             {HOME_PAGE.hero.cta}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

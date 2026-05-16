@@ -40,3 +40,4 @@ pricing.html
 .gstack/
 .local-secrets/
 .claude/
+supabase/.temp/

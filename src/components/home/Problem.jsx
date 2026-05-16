@@ -1,8 +1,8 @@
 "use client";
 
-import { Reveal } from './Reveal';
+import { Reveal } from '../Reveal';
 import { EyeOff, RadioTower, Clock } from 'lucide-react';
-import { HOME_PAGE } from '../constants/content';
+import { HOME_PAGE } from '../../constants/content';
 
 const PAIN_ICONS = [EyeOff, RadioTower, Clock];
 

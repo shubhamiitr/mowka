@@ -1,4 +1,4 @@
-import { PrivacyPolicy } from '../../src/components/PrivacyPolicy';
+import { PrivacyPolicy } from '../../src/components/legal/PrivacyPolicy';
 import { METADATA } from '../../src/constants/content';
 
 export const metadata = {
