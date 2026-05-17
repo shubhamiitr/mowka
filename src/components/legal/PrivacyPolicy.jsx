@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from 'react';
+import { Navbar } from '../home/Navbar';
 import { Footer } from '../Footer';
 import { COMPANY_INFO } from '../../constants/content';
 
@@ -12,6 +13,8 @@ export const PrivacyPolicy = () => {
     }, []);
 
     return (
+        <>
+        <Navbar />
         <section className="layout-doc-page">
             <div className="layout-doc-container">
                 <h1 className="type-h1-doc">Privacy Policy</h1>
@@ -92,5 +95,6 @@ export const PrivacyPolicy = () => {
 
             <Footer />
         </section>
+        </>
     );
 };

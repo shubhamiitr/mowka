@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import { NAV_ITEMS } from '../constants/content';
+import { NAV_ITEMS } from '../../constants/content';
+import { Logo } from '../Logo';
 
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -38,28 +38,7 @@ export const Navbar = () => {
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-mowka-bg-secondary/90 backdrop-blur-md py-2 shadow-sm">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                    {/* Logo */}
-                    <Link
-                        href="/"
-                        className="flex items-center gap-3 z-50 relative group"
-                        onClick={(e) => {
-                            if (pathname === '/') {
-                                e.preventDefault();
-                                window.scrollTo({ top: 0, behavior: 'smooth' });
-                            }
-                            setMobileMenuOpen(false);
-                        }}
-                    >
-                        <Image
-                            src="/logo-transparent-192x192.png"
-                            alt="Mowka Logo"
-                            width={40}
-                            height={40}
-                            className="h-8 md:h-10 w-auto object-contain"
-                            priority
-                        />
-                        <span className="text-xl md:text-2xl font-bold tracking-tight font-serif text-mowka-text-primary">Mowka</span>
-                    </Link>
+                    <Logo onClick={() => setMobileMenuOpen(false)} />
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center space-x-8">

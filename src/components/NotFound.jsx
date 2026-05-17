@@ -1,10 +1,12 @@
 "use client";
 
+import { Navbar } from './home/Navbar';
 import { Footer } from './Footer';
 
 export const NotFound = () => {
     return (
         <>
+            <Navbar />
             <div className="min-h-screen flex flex-col bg-mowka-bg-primary relative overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute inset-0 z-0">

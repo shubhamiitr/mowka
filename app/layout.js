@@ -1,6 +1,5 @@
 import { Geist, Playfair_Display } from 'next/font/google';
 import './globals.css';
-import { Navbar } from '../src/components/Navbar';
 import ClientLayout from '../src/components/ClientLayout';
 import Script from 'next/script';
 import { SITE_CONTENT } from '../src/constants/content';
@@ -55,7 +54,6 @@ export default function RootLayout({ children }) {
             <body className="bg-mowka-bg-primary text-mowka-text-primary antialiased overflow-x-hidden">
                 <ClientLayout>
                     <div className="bg-mowka-bg-primary min-h-screen">
-                        <Navbar />
                         {children}
                     </div>
                 </ClientLayout>
