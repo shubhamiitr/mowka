@@ -41,7 +41,7 @@ export const Navbar = () => {
                     <Logo onClick={() => setMobileMenuOpen(false)} />
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-12">
                         {NAV_ITEMS.map((item) => (
                             <a
                                 key={item.label}
