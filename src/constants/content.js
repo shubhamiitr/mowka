@@ -9,7 +9,7 @@ export const SITE_CONTENT = {
     tagline: "Grow with confidence",
     siteUrl: "https://mowka.in",
     description:
-        "For founders hiring builders with a founding mindset. 5 introductions, 1 hire, pay only when they join. Practitioner-led hiring with one candidate at a time, calibrated by your feedback. 12.5–15% of CTC depending on role scarcity.",
+        "For founders hiring builders with a founding mindset. Practitioner-led hiring with one calibrated introduction at a time. Most roles close in five introductions or fewer. Pay only when they join.",
     calendlyUrl: "https://calendar.app.google/ASa3XGmwCDTN3YhX8",
 };
 
@@ -28,8 +28,7 @@ export const COMPANY_INFO = {
     email: "shubham@mowka.in",
     whatsappLink: "https://wa.me/919468658967",
     address: ADDRESS,
-    description:
-        "Practitioner-led hiring for founders looking for builders with a founding mindset. Each candidate vetted on both sides, sharpened by your feedback after every meeting. We typically close in five introductions or fewer. Pay only when they join. Engineering, research, product, and design roles.",
+    description: SITE_CONTENT.description,
     socials: {
         linkedin: "https://www.linkedin.com/company/mowka/",
         instagram: "https://www.instagram.com/mowka.in/",
@@ -39,7 +38,6 @@ export const COMPANY_INFO = {
         "Technical Recruitment",
         "Founding Engineer Hiring",
         "Founding Mindset Hiring",
-        "High-Agency Builder Hiring",
         "Operator Hiring",
         "Product Builder Hiring",
         "0 to 1 Engineer Hiring",
@@ -49,7 +47,10 @@ export const COMPANY_INFO = {
         "Founding Full Stack Engineer",
         "CTO Search",
         "Head of Engineering Search",
-        "Early Stage Startup Hiring",
+        "Lean Team Hiring",
+        "Talent Density",
+        "Builder Hiring",
+        "Conviction-Driven Hiring",
         "Practitioner-Led Recruiting",
         "Pay-Only-When-They-Join Recruiting",
         "Contingent Recruiting",
@@ -97,7 +98,7 @@ export const FAQS = [
     },
     {
         q: "What types of roles does Mowka fill?",
-        a: "Tech and product roles, from founding engineers to CTOs, research leads to product directors. We work best with early-stage to growth-stage startups building in AI, SaaS, fintech, and deep tech.",
+        a: "Tech and product roles, from founding engineers to CTOs, research leads to product directors. We work best with founder-led and lean teams where hiring quality matters more than hiring volume — especially in AI-powered SaaS products or services.",
     },
 ];
 
@@ -118,7 +119,6 @@ export const FOUNDER = {
     knowsAbout: [
         "AI Innovation Leadership",
         "Founding Engineer Hiring",
-        "High-Agency Builder Evaluation",
         "Software Engineering",
         "Distributed Systems",
         "AI Talent Sourcing",
@@ -135,7 +135,7 @@ export const HOME_PAGE = {
             highlight: "with a founding mindset"
         },
         subhead:
-            "Stop wasting time on hiring noise. Get the right builder in 5 curated introductions.",
+            "Stop wasting time on sourcing and interview noise. We help you find the right builder in five introductions or fewer.",
         cta: "Let's Talk",
         proofStrip: [
             { company: "Ringg.ai", role: "Senior Audio Research Engineer", outcome: "Hired in 3 intros", logo: "/logos/ringg.svg" },
@@ -150,7 +150,7 @@ export const HOME_PAGE = {
             {
                 title: "The best builders aren't applying",
                 description:
-                    "The strongest builders are usually building, not applying. To hire them, you have to reach them directly.",
+                    "Strong builders are typically busy building, not actively applying to jobs. Reaching them requires trust, relevance, and high-context conversations.",
             },
             {
                 title: "Early hiring signals are noisy",
@@ -198,7 +198,7 @@ export const HOME_PAGE = {
         label: "Why Mowka",
         headline: "From hiring at Amazon, Rephrase.ai & Apollo.io",
         body:
-            "The best companies are built when founders consistently hire the right people with a founding mindset and keep their teams lean and high-agency. That only works when hiring doesn't become a bottleneck — which is why trusted networks and referrals have always been the most reliable way to identify the right builders. After 2,000+ interviews, this is what I still believe — and what I’ve built Mowka around.",
+            "The best companies stay lean because they consistently hire people with strong ownership, judgment, and a founding mindset. That only works when hiring doesn't become a bottleneck — which is why trusted networks, calibrated introductions, and deep evaluation outperform volume-driven recruiting systems. After 2,000+ interviews, this is still what I believe — and what I’ve built Mowka around.",
     },
     contact: {
         label: "Let's Talk",
@@ -218,10 +218,10 @@ export const NAV_ITEMS = [
 export const BUILDER_PAGE = {
     hero: {
         headline: {
-            start: "If you thrive on moving fast, owning problems, and working with sharp people —",
+            start: "If you care deeply about what you build, who you build with, and how fast you can grow",
             highlight: "we'd love to get to know you",
         },
-        subhead: "Get introduced to opportunities you'd move for and connect directly with founders.",
+        subhead: "Get introduced to teams you'd genuinely want to build with — and connect directly with founders and high-context leaders.",
         cta: "Continue",
     },
     success: {
@@ -274,12 +274,12 @@ const BUILDER_SEO_KEYWORDS = [
     "full stack engineer startup",
     "AI engineer startup jobs",
     "software engineer startup jobs",
-    "early stage startup jobs",
+    "top startup jobs",
     "startup jobs for engineers",
     "YC startup jobs",
     "first engineer startup",
     "founding engineer head of engineering",
-    "high agency engineer jobs",
+    "high-agency engineer jobs",
     "startup engineer opportunities",
 ];
 
