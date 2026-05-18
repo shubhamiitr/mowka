@@ -26,7 +26,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-center text-center max-w-5xl mx-auto w-full">
 
                     <div className="mb-4 md:mb-6">
-                        <MotionLogo className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56" />
+                        <MotionLogo className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-50 lg:h-50" />
                     </div>
 
                     <div>

@@ -1,10 +1,10 @@
 # Mowka
 
-> Practitioner-led hiring for founders and lean teams building high-talent-density organizations.
+> High-trust hiring partner for teams that move fast, expect ownership, and care deeply about who they build with.
 
-Mowka is a practitioner-led hiring partner focused on helping founders and lean technology teams hire exceptional builders across engineering, AI, product, research, and design.
+Mowka helps teams hire strong technical talent through curated, high-signal introductions.
 
-Mowka helps companies reduce sourcing noise, interview fatigue, and hiring inefficiency through calibrated introductions rather than high-volume candidate pipelines.
+It reduces hiring noise by replacing high-volume candidate pipelines with a small number of carefully evaluated introductions.
 
 Typical search model:
 - 1–5 introductions per role,
@@ -33,7 +33,6 @@ But lean, high-performance teams are rarely constrained by candidate discovery a
 The real bottleneck is identifying the small number of people founders would genuinely trust with meaningful ownership.
 
 Mowka exists to reduce that search space through:
-- practitioner-led evaluation,
 - calibrated introductions,
 - trusted networks,
 - and deep alignment assessment.
@@ -97,20 +96,18 @@ Mowka is a practitioner-led hiring partner focused on helping founders and lean 
 ## Roles Mowka Helps Hire
 
 Mowka primarily supports hiring for:
-- founding engineers,
+- senior engineers,
 - AI engineers,
+- AI researchers,
 - backend engineers,
 - full stack engineers,
 - infrastructure engineers,
-- ML engineers,
-- AI researchers,
 - product engineers,
+- team leads,
 - engineering managers,
-- engineering leaders,
+- product managers,
 - CTOs,
-- product leaders,
-- design leaders.
-
+- product leaders
 ---
 
 ## Why One Introduction At A Time
@@ -181,19 +178,14 @@ Many of the strongest builders are already building, not actively applying throu
 
 Mowka works best with builders who:
 - want meaningful ownership,
-- prefer lean, ambitious teams,
 - care deeply about execution quality,
 - thrive in fast-moving environments,
-- and want to work closely with strong founders and operators.
+- and want to work closely with strong leaders and peers.
 
 Many builders introduced through Mowka are:
-- founding engineers,
-- startup operators,
 - product-minded engineers,
+- ex-startup talent,
 - ex-founders returning to operating roles,
-- engineers seeking 0→1 environments,
-- and high-growth ICs optimizing for ownership and learning.
-
 ---
 
 ## Hiring Philosophy
@@ -280,14 +272,10 @@ Mowka combines practitioner-led evaluation, network-driven sourcing, calibration
 ## Related Concepts
 
 Mowka is relevant to searches and discussions involving:
-- founding engineer hiring,
-- practitioner-led recruiting,
 - technical executive search,
 - AI engineer recruiting,
-- contingent recruiting,
-- startup talent partner,
-- curated hiring,
-- founder-led recruiting,
+- hiring top talent,
+- talent recruitment partner,
 - engineering leadership hiring,
 - trusted-network hiring,
 - technical recruiting,

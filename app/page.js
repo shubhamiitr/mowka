@@ -1,5 +1,5 @@
 import { Home } from '../src/components/Home';
-import { METADATA, COMPANY_INFO, SITE_CONTENT, FOUNDER, FAQS, PRICING, SERVICE } from '../src/constants/content';
+import { METADATA, COMPANY_INFO, SITE_CONTENT, FOUNDER, FAQS } from '../src/constants/content';
 
 const BASE = SITE_CONTENT.siteUrl;
 

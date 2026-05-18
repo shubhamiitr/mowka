@@ -9,7 +9,7 @@ export const SITE_CONTENT = {
     tagline: "Grow with confidence",
     siteUrl: "https://mowka.in",
     description:
-        "For founders hiring builders with a founding mindset. Practitioner-led hiring with one calibrated introduction at a time. Most roles close in five introductions or fewer. Pay only when they join.",
+        "Mowka is a high-trust hiring partner for teams that only want to spend time on technical candidates worth serious consideration, especially where each hire meaningfully impacts product and execution.",
     calendlyUrl: "https://calendar.app.google/ASa3XGmwCDTN3YhX8",
 };
 
@@ -61,45 +61,31 @@ export const COMPANY_INFO = {
     ],
 };
 
-// Pricing — single source of truth for all surfaces (JSON-LD, llms.txt, etc.).
-export const PRICING = {
-    offerName: "Pay After They Join",
-    offerDescription:
-        "12.5–15% of annual CTC, scaling with role scarcity, payable only after your hire starts. No retainer.",
-    faqAnswer:
-        "12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles.",
-};
-
-// FAQs — used by both schema.org FAQPage and llms.txt. Single canonical list.
 export const FAQS = [
     {
-        q: "How is Mowka different from a recruiting agency?",
-        a: "Mowka is led by a practitioner who built and hired at Amazon Prime Video and Rephrase.ai (acquired by Adobe). We send one candidate at a time, calibrated through your feedback, rather than flooding you with resumes. Most roles close in five introductions or fewer. No wasted interviews. No dropped offers.",
+        q: "How is Mowka different from recruiting agencies?",
+        a: "Most agencies optimize for volume and send large batches of unvetted candidates. Mowka focuses on signal. We understand the role deeply, evaluate technical talent before introduction, and share only the strongest matches so team leaders spend time only on high-quality conversations.",
     },
     {
-        q: "Why only one candidate at a time?",
-        a: "Traditional agencies create volume traps by sending dozens of uncalibrated profiles. We value your time. We do the heavy lifting of vetting candidates ourselves and only introduce the one who actually fits your needs.",
+        q: "Why do you send only a few candidates?",
+        a: "High-quality hiring is not a volume problem. It is a signal problem. We prioritize depth of evaluation over breadth of outreach, which means fewer introductions but significantly higher relevance.",
     },
     {
-        q: "How does the calibration process work?",
-        a: "We deeply understand your role, company, and ideal candidate profile. We send one candidate. If they're not the fit, your feedback sharpens our understanding. Each round gets closer to the right person.",
+        q: "How do you find talent not visible on job boards?",
+        a: "We build and continuously refine a high-signal network of engineers through prior evaluations, trusted connections, and targeted outreach. This allows access to strong technical talent who are not actively applying but are open to the right opportunities.",
     },
     {
-        q: "How do you find builders who aren't active on job boards?",
-        a: "We reach builders from a continuously refined pool of previously vetted talent, founder-led referrals, and high-signal connections. We compound our network through trusted introductions rather than relying on static databases — giving us access to a private tier of talent traditional agencies often miss.",
+        q: "What makes your evaluation different?",
+        a: "We do role-specific evaluation focused on real-world signals like technical judgment, problem ownership, and execution depth. The goal is to understand capability in context, not just match keywords or titles.",
     },
     {
-        q: "What makes your evaluation unique?",
-        a: "We build a custom competency matrix and evaluation framework for every role using AI agents, domain research, and experienced engineers. The goal is to assess real depth — ownership, technical judgment, decision-making — not surface signals like resume polish or keyword fit.",
+        q: "What types of roles do you work on?",
+        a: "We focus on high-stakes technical and product roles where hiring quality matters more than volume, including founding engineers, senior engineers, tech leads, and engineering leadership roles.",
     },
     {
         q: "What does Mowka charge?",
-        a: PRICING.faqAnswer,
-    },
-    {
-        q: "What types of roles does Mowka fill?",
-        a: "Tech and product roles, from founding engineers to CTOs, research leads to product directors. We work best with founder-led and lean teams where hiring quality matters more than hiring volume — especially in AI-powered SaaS products or services.",
-    },
+        a: "12.5–15% of annual CTC, scaling with the scarcity of the role, payable only after your hire starts. No retainer, no upfront fees. We work on one role at a time for tech and product roles.",
+    }
 ];
 
 export const FOUNDER = {
@@ -117,25 +103,24 @@ export const FOUNDER = {
         { company: "Apollo.io" }
     ],
     knowsAbout: [
-        "AI Innovation Leadership",
-        "Founding Engineer Hiring",
-        "Software Engineering",
+        "Hiring",
+        "Talent Strategy",
+        "Top-Talent Scouting",
+        "Building AI-powered products",
         "Distributed Systems",
-        "AI Talent Sourcing",
-        "Technical Leadership",
         "System Design",
-        "Generative AI Infrastructure",
+        "Leading teams and products"
     ],
 };
 
 export const HOME_PAGE = {
     hero: {
         headline: {
-            start: "For founders hiring builders",
-            highlight: "with a founding mindset"
+            start: "For leaders hiring technical talent",
+            highlight: "they can trust to own important problems"
         },
         subhead:
-            "Stop wasting time on sourcing and interview noise. We help you find the right builder in five introductions or fewer.",
+            "Stop wasting time on sourcing and interview noise. We help you find the right talent in five introductions or fewer.",
         cta: "Let's Talk",
         proofStrip: [
             { company: "Ringg.ai", role: "Senior Audio Research Engineer", outcome: "Hired in 3 intros", logo: "/logos/ringg.svg" },
@@ -145,22 +130,22 @@ export const HOME_PAGE = {
     },
     problem: {
         label: "The problem",
-        headline: "Why hiring top builders keeps breaking",
+        headline: "Why hiring strong technical talent keeps breaking",
         pains: [
             {
-                title: "The best builders aren't applying",
+                title: "Strong engineers are not visible through standard hiring signals",
                 description:
-                    "Strong builders are typically busy building, not actively applying to jobs. Reaching them requires trust, relevance, and high-context conversations.",
+                    "Most strong engineers do not signal availability publicly and are rarely reachable through open applications or keyword-based inbound channels.",
             },
             {
-                title: "Early hiring signals are noisy",
+                title: "Early signals are broken",
                 description:
-                    "AI-written resumes, keyword optimization, and shallow screening interviews make it harder to identify real signal early. As a result, the wrong candidates often reach deeper technical or founder-led interviews.",
+                    "AI tools and keyword-optimized resumes make early screening unreliable, causing strong engineers to be missed and weak signals to pass through.",
             },
             {
-                title: "Preference misalignment shows up late",
+                title: "Referrals don’t scale enough",
                 description:
-                    "Candidates often explore multiple opportunities before committing to preferences like domain, team size, or people they want to work with. Misalignment only becomes visible before joining when these preferences aren’t fully satisfied.",
+                    "Referrals remain the highest-quality channel, but their capacity is limited and not enough to meet consistent hiring needs.",
             }
         ],
     },
@@ -172,25 +157,25 @@ export const HOME_PAGE = {
                 step: "01",
                 title: "Align on success",
                 description:
-                    "We understand your business, challenges, the role, and what a right match looks like, and translate it into a clear evaluation lens.",
+                    "We understand your team, goals, and the technical skills, ownership, and context required for the role."
             },
             {
                 step: "02",
                 title: "Scout through a compounding network",
                 description:
-                    "We engage with builders through targeted outreach and referrals from Mowka’s builder network, assessing their technical depth, ownership mindset and motivations until a small set of strong builders emerges.",
+                    "We reach technical talent through targeted outreach and referrals in our compounding network, evaluating technical depth, ownership, judgment, and motivation.",
             },
             {
                 step: "03",
-                title: "Converge on role fit",
+                title: "Check alignment before introduction",
                 description:
-                    "We share the opportunity with shortlisted builders to understand their genuine interest and alignment. We proceed only when their response signals strong mutual conviction.",
+                    "We confirm genuine interest, role clarity, and mutual fit before making any introduction to ensure signal stays high.",
             },
             {
                 step: "04",
                 title: "Introduce, then calibrate",
                 description:
-                    "We introduce the builder we believe is the strongest match. If they are not selected, feedback helps us refine our understanding of what right match looks like.",
+                    "We introduce only technical talent we believe is the strongest fit If they are not selected, your feedback sharpens our understanding of the role."
             }
         ],
     },
@@ -198,13 +183,13 @@ export const HOME_PAGE = {
         label: "Why Mowka",
         headline: "From hiring at Amazon, Rephrase.ai & Apollo.io",
         body:
-            "The best companies stay lean because they consistently hire people with strong ownership, judgment, and a founding mindset. That only works when hiring doesn't become a bottleneck — which is why trusted networks, calibrated introductions, and deep evaluation outperform volume-driven recruiting systems. After 2,000+ interviews, this is still what I believe — and what I’ve built Mowka around.",
+            "Every successful company I have worked with shares the same foundation — they hired the best people available and kept raising the bar. Building the right team is one of the hardest responsibilities for team leaders and I have seen that consistently across companies. I built Mowka so hiring does not become a bottleneck in that process.",
     },
     contact: {
         label: "Let's Talk",
         headline: "Bring us your toughest role",
         subhead:
-            "No upfront cost. No retainer. Pay only when the builder joins.",
+            "No upfront cost. No retainer. 12.5–15% of CTC, paid only when they join.",
         cta: "Discuss your role",
     },
 };
@@ -254,33 +239,28 @@ export const BUILDER_PAGE = {
 
 // SEO keyword lists — defined here so METADATA can spread them alongside COMPANY_INFO.knowsAbout.
 const HOME_SEO_KEYWORDS = [
-    "practitioner-led recruiting",
-    "pay only when they join",
-    "no retainer recruiting",
-    "success based recruiting",
-    "contingent recruiting startup",
-    "hire builders",
-    "hire founding engineers",
-    "startup talent partner",
-    "founder hiring",
-    "founding team hiring",
+    "startup technical hiring",
+    "founding engineer hiring",
+    "hire AI engineers startup",
+    "hire ML engineers startup",
+    "startup recruiter engineers",
+    "technical hiring partner",
+    "hire product engineers",
+    "engineering recruitment startup",
+    "startup hiring agency alternative"
 ];
 
 const BUILDER_SEO_KEYWORDS = [
     "founding engineer jobs",
-    "founding AI engineer jobs",
-    "founding backend engineer jobs",
-    "founding full stack engineer",
-    "full stack engineer startup",
+    "full stack engineer startup jobs",
+    "early stage startup jobs",
+    "tech lead startup jobs",
+    "high growth startup jobs",
     "AI engineer startup jobs",
-    "software engineer startup jobs",
+    "CTO jobs",
+    "product engineer startup jobs",
     "top startup jobs",
-    "startup jobs for engineers",
     "YC startup jobs",
-    "first engineer startup",
-    "founding engineer head of engineering",
-    "high-agency engineer jobs",
-    "startup engineer opportunities",
 ];
 
 export const METADATA = {
@@ -299,17 +279,17 @@ export const METADATA = {
         keywords: [...COMPANY_INFO.knowsAbout, ...BUILDER_SEO_KEYWORDS],
     },
     privacy: {
-        title: "Privacy Policy | ${SITE_CONTENT.appName}",
+        title: `Privacy Policy | ${SITE_CONTENT.appName}`,
         description:
             "How Mowka collects, uses, shares, and protects information about Partners, Builders, and website visitors.",
     },
     terms: {
-        title: "Terms of Service | ${SITE_CONTENT.appName}",
+        title: `Terms of Service | ${SITE_CONTENT.appName}`,
         description:
             "Terms governing the use of Mowka’s website and talent partnership services.",
     },
     notFound: {
-        title: "Page Not Found | ${SITE_CONTENT.appName}",
+        title: `Page Not Found | ${SITE_CONTENT.appName}`,
         description: "The page you are looking for does not exist.",
     },
 };
