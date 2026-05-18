@@ -107,7 +107,7 @@ export const FOUNDER = {
     role: "Founder, Mowka",
     jobTitle: "Founder & CEO",
     image: "/founder.jpg",
-    imageAbsolute: `${SITE_CONTENT.siteUrl}/founder.png`,
+    imageAbsolute: `${SITE_CONTENT.siteUrl}/founder.jpg`,
     linkedin: "https://www.linkedin.com/in/kansalshubham/",
     education: "IIT Roorkee",
     award: "US Patent 11645249B1 - System for automated metadata and copyright management",
@@ -221,7 +221,7 @@ export const BUILDER_PAGE = {
             start: "If you care deeply about what you build, who you build with, and how fast you can grow",
             highlight: "we'd love to get to know you",
         },
-        subhead: "Get introduced to teams you'd genuinely want to build with — and connect directly with founders and high-context leaders.",
+        subhead: "Get introduced to opportunities you'd move for and connect directly with founders and high-context leaders.",
         cta: "Continue",
     },
     success: {
@@ -285,31 +285,31 @@ const BUILDER_SEO_KEYWORDS = [
 
 export const METADATA = {
     home: {
-        title: `${SITE_CONTENT.appName} | ${SITE_CONTENT.tagline}`,
+        title: `Hire with confidence | ${SITE_CONTENT.appName}`,
         description: HOME_PAGE.hero.subhead,
         ogTitle: `${HOME_PAGE.hero.headline.start} ${HOME_PAGE.hero.headline.highlight}`,
         ogDescription: HOME_PAGE.hero.subhead,
         keywords: [...COMPANY_INFO.knowsAbout, ...HOME_SEO_KEYWORDS],
     },
     builder: {
-        title: `${SITE_CONTENT.appName} | ${SITE_CONTENT.tagline}`,
+        title: `Join with confidence | ${SITE_CONTENT.appName}`,
         description: BUILDER_PAGE.hero.subhead,
         ogTitle: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight}`,
         ogDescription: BUILDER_PAGE.hero.subhead,
         keywords: [...COMPANY_INFO.knowsAbout, ...BUILDER_SEO_KEYWORDS],
     },
     privacy: {
-        title: "Privacy Policy | Mowka",
+        title: "Privacy Policy | ${SITE_CONTENT.appName}",
         description:
             "How Mowka collects, uses, shares, and protects information about Partners, Builders, and website visitors.",
     },
     terms: {
-        title: "Terms of Service | Mowka",
+        title: "Terms of Service | ${SITE_CONTENT.appName}",
         description:
             "Terms governing the use of Mowka’s website and talent partnership services.",
     },
     notFound: {
-        title: "Page Not Found | Mowka",
+        title: "Page Not Found | ${SITE_CONTENT.appName}",
         description: "The page you are looking for does not exist.",
     },
 };

@@ -35,7 +35,7 @@ const jsonLd = {
             "@type": "WebSite",
             "@id": `${BASE}/#website`,
             "name": SITE_CONTENT.appName,
-            "alternateName": ["Mowka Enterprises", COMPANY_INFO.alternateName],
+            "alternateName": [COMPANY_INFO.legalName],
             "url": `${BASE}/`,
             "description": SITE_CONTENT.description,
             "inLanguage": "en-US",
@@ -58,7 +58,6 @@ const jsonLd = {
             "@id": `${BASE}/#organization`,
             "name": SITE_CONTENT.appName,
             "legalName": COMPANY_INFO.legalName,
-            "alternateName": COMPANY_INFO.alternateName,
             "url": `${BASE}/`,
             "logo": {
                 "@type": "ImageObject",
@@ -99,7 +98,6 @@ const jsonLd = {
                 COMPANY_INFO.socials.instagram,
                 COMPANY_INFO.socials.facebook,
                 COMPANY_INFO.whatsappLink,
-                `${BASE}/llms.txt`
             ]
         },
         {
