@@ -23,10 +23,10 @@ export const Hero = () => {
             className="hero-section"
         >
             <div className="hero-container">
-                <div className="flex flex-col items-center text-center max-w-5xl mx-auto w-full">
+                <div className="flex flex-col items-center text-center max-w-7xl mx-auto w-full">
 
                     <div className="mb-4 md:mb-6">
-                        <MotionLogo className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-50 lg:h-50" />
+                        <MotionLogo className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56" />
                     </div>
 
                     <div>
