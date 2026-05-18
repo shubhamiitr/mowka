@@ -1,7 +1,5 @@
 # Mowka
 
-Practitioner-led hiring for founders. Built with Next.js 16 (App Router).
-
 ## Setup
 
 ```bash

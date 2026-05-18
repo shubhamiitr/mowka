@@ -5,16 +5,16 @@ import Image from 'next/image';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { Loader2, CheckCircle2, ArrowRight, Linkedin } from 'lucide-react';
 import { Reveal } from '../Reveal';
-import { BUILDER_PAGE } from '../../constants/content';
-import { BuilderForm, validateForm } from './BuilderForm';
+import { TALENT_PAGE } from '../../constants/content';
+import { TalentForm, validateForm } from './TalentForm';
 
-const { hero, success, loading, ui, errors } = BUILDER_PAGE;
+const { hero, success, loading, ui, errors } = TALENT_PAGE;
 
 
 // State machine:
 //   hero → verifying → (collecting-details | already-shared)
 //   collecting-details → submitting → done
-export const BuilderHero = () => {
+export const TalentHero = () => {
     const { data: session, status: authStatus } = useSession();
     const isLinkedIn = authStatus === 'authenticated' && !!session?.user?.linkedinId;
 
@@ -24,12 +24,11 @@ export const BuilderHero = () => {
     const [portfolio, setPortfolio] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
 
-    // Run the check logic
     const runVerification = async () => {
         if (!session?.user?.linkedinId) return;
         setStep('verifying');
         try {
-            const res = await fetch(`/api/builder/check?id=${session.user.linkedinId}`);
+            const res = await fetch(`/api/talent/check?id=${session.user.linkedinId}`);
             const data = await res.json();
             setStep(data.exists ? 'already-shared' : 'collecting-details');
         } catch {
@@ -37,16 +36,14 @@ export const BuilderHero = () => {
         }
     };
 
-    // Manual trigger from button
     const handleContinue = () => {
         if (isLinkedIn) {
             runVerification();
         } else {
-            signIn('linkedin', { callbackUrl: '/builder' });
+            signIn('linkedin', { callbackUrl: '/talent' });
         }
     };
 
-    // Auto-close success modal after 2 seconds (only for fresh submissions)
     useEffect(() => {
         if (step === 'done') {
             const timer = setTimeout(() => {
@@ -74,7 +71,7 @@ export const BuilderHero = () => {
 
         setStep('submitting');
         try {
-            const res = await fetch('/api/builder/connect', {
+            const res = await fetch('/api/talent/connect', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -110,7 +107,6 @@ export const BuilderHero = () => {
                 style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(45,109,117,0.05) 0%, transparent 65%)' }}
             />
 
-            {/* Hero intro — headline, subhead, LinkedIn CTA */}
             <div className="hero-container">
                 <div className="flex flex-col items-center text-center max-w-8xl mx-auto w-full">
                     <div>
@@ -136,7 +132,6 @@ export const BuilderHero = () => {
                 </div>
             </div>
 
-            {/* Modal — shown for every step except 'hero' */}
             {step !== 'hero' && (
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
@@ -154,7 +149,7 @@ export const BuilderHero = () => {
                         )}
 
                         {step === 'collecting-details' && (
-                            <BuilderForm
+                            <TalentForm
                                 session={session}
                                 phone={phone} setPhone={setPhone}
                                 preferredTime={preferredTime} setPreferredTime={setPreferredTime}

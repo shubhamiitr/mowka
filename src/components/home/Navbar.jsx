@@ -54,11 +54,11 @@ export const Navbar = () => {
                         ))}
 
                         <Link
-                            href="/builder"
+                            href="/talent"
                             onClick={() => setMobileMenuOpen(false)}
                             className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
                         >
-                            For Builders
+                            For Talent
                         </Link>
 
                         <a
@@ -98,11 +98,11 @@ export const Navbar = () => {
                 ))}
 
                 <Link
-                    href="/builder"
+                    href="/talent"
                     onClick={() => setMobileMenuOpen(false)}
                     className="text-3xl font-serif text-mowka-text-primary hover:text-mowka-link transition-colors"
                 >
-                    For Builders
+                    For Talent
                 </Link>
 
                 <a

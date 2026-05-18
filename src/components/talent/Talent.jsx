@@ -1,12 +1,12 @@
 import { Navbar } from './Navbar';
-import { BuilderHero } from './BuilderHero';
+import { TalentHero } from './TalentHero';
 import { Footer } from '../Footer';
 
-export const Builder = () => {
+export const Talent = () => {
     return (
         <main className="min-h-screen flex flex-col">
             <Navbar />
-            <BuilderHero />
+            <TalentHero />
             <Footer />
         </main>
     );

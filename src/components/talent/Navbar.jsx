@@ -20,7 +20,7 @@ export const Navbar = () => {
                         href="/"
                         className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide inline-flex items-center gap-1.5"
                     >
-                        For Founders
+                        For Companies
                     </Link>
 
                     <a

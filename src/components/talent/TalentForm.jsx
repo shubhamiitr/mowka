@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { ArrowRight, X } from 'lucide-react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { BUILDER_PAGE } from '../../constants/content';
+import { TALENT_PAGE } from '../../constants/content';
 
-const { form } = BUILDER_PAGE;
+const { form } = TALENT_PAGE;
 
 const TIME_OPTIONS = [
     { value: 'before-work', label: '☕️ Before work', color: 'bg-amber-500' },
@@ -37,7 +37,7 @@ export function validateForm({ phone, preferredTime, portfolio }) {
 }
 
 
-export function BuilderForm({
+export function TalentForm({
     session,
     phone, setPhone,
     preferredTime, setPreferredTime,

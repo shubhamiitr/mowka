@@ -37,8 +37,8 @@ export const authOptions = {
         },
     },
     pages: {
-        signIn: '/builder',
-        error: '/builder',
+        signIn: '/talent',
+        error: '/talent',
     },
     secret: process.env.NEXTAUTH_SECRET,
 };

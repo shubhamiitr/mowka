@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../../src/lib/supabase-server';
-import { BUILDER_PAGE } from '../../../../src/constants/content';
+import { TALENT_PAGE } from '../../../../src/constants/content';
 
 export async function POST(req) {
     try {
@@ -8,7 +8,7 @@ export async function POST(req) {
         const { fullName, email, linkedinId, avatarUrl, phone, preferredTime, portfolioUrl } = body;
 
         if (!linkedinId) {
-            return NextResponse.json({ error: BUILDER_PAGE.errors.authFailed }, { status: 400 });
+            return NextResponse.json({ error: TALENT_PAGE.errors.authFailed }, { status: 400 });
         }
 
         const supabase = getSupabaseAdmin();
@@ -39,9 +39,9 @@ export async function POST(req) {
         return NextResponse.json({ success: true });
 
     } catch (err) {
-        console.error('[/api/builder/connect]', err.message);
+        console.error('[/api/talent/connect]', err.message);
         return NextResponse.json(
-            { error: BUILDER_PAGE.errors.default },
+            { error: TALENT_PAGE.errors.default },
             { status: 500 }
         );
     }

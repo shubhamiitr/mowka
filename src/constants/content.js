@@ -200,7 +200,7 @@ export const NAV_ITEMS = [
     { label: "Why Mowka", href: "#trust" },
 ];
 
-export const BUILDER_PAGE = {
+export const TALENT_PAGE = {
     hero: {
         headline: {
             start: "If you thrive on moving fast, owning problems, and working with sharp people - ",
@@ -250,7 +250,7 @@ const HOME_SEO_KEYWORDS = [
     "startup hiring agency alternative"
 ];
 
-const BUILDER_SEO_KEYWORDS = [
+const TALENT_SEO_KEYWORDS = [
     "founding engineer jobs",
     "full stack engineer startup jobs",
     "early stage startup jobs",
@@ -271,12 +271,12 @@ export const METADATA = {
         ogDescription: HOME_PAGE.hero.subhead,
         keywords: [...COMPANY_INFO.knowsAbout, ...HOME_SEO_KEYWORDS],
     },
-    builder: {
+    talent: {
         title: `Join with confidence | ${SITE_CONTENT.appName}`,
-        description: BUILDER_PAGE.hero.subhead,
-        ogTitle: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight}`,
-        ogDescription: BUILDER_PAGE.hero.subhead,
-        keywords: [...COMPANY_INFO.knowsAbout, ...BUILDER_SEO_KEYWORDS],
+        description: TALENT_PAGE.hero.subhead,
+        ogTitle: `${TALENT_PAGE.hero.headline.start} ${TALENT_PAGE.hero.headline.highlight}`,
+        ogDescription: TALENT_PAGE.hero.subhead,
+        keywords: [...COMPANY_INFO.knowsAbout, ...TALENT_SEO_KEYWORDS],
     },
     privacy: {
         title: `Privacy Policy | ${SITE_CONTENT.appName}`,

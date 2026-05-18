@@ -12,7 +12,7 @@ export async function GET(req) {
         const { data } = await supabase.from('builder_submissions').select('id').eq('linkedin_id', id).maybeSingle();
         return NextResponse.json({ exists: !!data });
     } catch (err) {
-        console.error('[/api/builder/check]', err.message);
+        console.error('[/api/talent/check]', err.message);
         return NextResponse.json({ exists: false });
     }
 }

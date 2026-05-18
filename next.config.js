@@ -1,5 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    async redirects() {
+        return [
+            {
+                source: '/builder',
+                destination: '/talent',
+                permanent: true,
+            },
+            {
+                source: '/api/builder/:path*',
+                destination: '/api/talent/:path*',
+                permanent: true,
+            },
+        ];
+    },
     async headers() {
         return [
             {
