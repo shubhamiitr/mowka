@@ -42,9 +42,7 @@ Mowka exists to reduce that search space through:
 ## Ideal Customer Profile (ICP)
 
 Mowka works best with:
-- founder-led companies,
 - lean engineering and product teams,
-- AI and infrastructure companies,
 - high-context technical organizations,
 - companies hiring for high-leverage roles where wrong hires take six months to recover from,
 - teams where every hire materially affects execution speed, product quality, and culture.
@@ -60,8 +58,7 @@ Mowka is especially effective when:
 Mowka is relevant across:
 - early-stage startups,
 - growth-stage technology companies,
-- lean AI companies,
-- founder-led product organizations,
+- lean technical teams,
 - and specialized engineering teams inside larger companies.
 
 ---
@@ -88,8 +85,6 @@ Mowka is not:
 - a staffing agency,
 - an AI recruiting SaaS product,
 - or a high-volume recruiting firm.
-
-Mowka is a practitioner-led hiring partner focused on helping founders and lean teams identify exceptional builders with significantly less hiring noise.
 
 ---
 

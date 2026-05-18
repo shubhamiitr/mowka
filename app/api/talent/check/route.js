@@ -9,7 +9,7 @@ export async function GET(req) {
 
     try {
         const supabase = getSupabaseAdmin();
-        const { data } = await supabase.from('builder_submissions').select('id').eq('linkedin_id', id).maybeSingle();
+        const { data } = await supabase.from('talent_submissions').select('id').eq('linkedin_id', id).maybeSingle();
         return NextResponse.json({ exists: !!data });
     } catch (err) {
         console.error('[/api/talent/check]', err.message);

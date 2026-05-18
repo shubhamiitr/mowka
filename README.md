@@ -18,29 +18,41 @@ npm run build      # production build
 
 ## Content
 
-Most site copy lives in `src/constants/content.js`. 
+Most site copy lives in `src/constants/content.js`.
 **Important:** `public/llms.txt` is manually maintained. If you change core positioning in `content.js`, remember to update `llms.txt` so AI crawlers have the latest context.
 
 ## Structure
 
 ```
 app/                  # Next.js App Router pages and API routes
+  api/
+    talent/           # Talent intake API (check + connect)
+    auth/             # NextAuth LinkedIn OAuth
+  talent/             # /talent page
+  faq/                # /faq page
+  privacy/            # /privacy page
+  terms/              # /terms page
 src/
   components/
     home/             # Home page sections (Hero, Problem, Process, WhyMowka, Contact)
-    builder/          # Builder intro page (Builder)
+    talent/           # Talent intro page (Talent, TalentHero, TalentForm)
     legal/            # PrivacyPolicy, TermsOfService
-    *.jsx             # Shared: Navbar, Footer, ClientLayout, Reveal, MotionLogo, NotFound
+    *.jsx             # Shared: Footer, ClientLayout, Reveal, MotionLogo, Logo, NotFound
   constants/
-    content.js        # Single source of truth for UI content
+    content.js        # Single source of truth for all UI content and metadata
   lib/
     auth.js           # NextAuth config (LinkedIn OAuth)
     supabase-server.js
 supabase/
-  migrations/        # Builder submissions table
+  migrations/         # Talent submissions table
 ```
+
+## Audiences
+
+- **Companies** — hiring teams and leaders using Mowka to find technical talent (`/`)
+- **Talent** — engineers and technical professionals joining the Mowka network (`/talent`)
 
 ## Auth & Database
 
-- **Auth**: LinkedIn OAuth via NextAuth v4. Builders authenticate on `/builder` using LinkedIn's OpenID Connect provider.
-- **Database**: Supabase stores builder submissions (`builder_submissions` table).
+- **Auth**: LinkedIn OAuth via NextAuth v4. Talent authenticate on `/talent` using LinkedIn's OpenID Connect provider.
+- **Database**: Supabase stores talent submissions (`talent_submissions` table).

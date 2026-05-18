@@ -36,27 +36,13 @@ export const COMPANY_INFO = {
     },
     knowsAbout: [
         "Technical Recruitment",
-        "Founding Engineer Hiring",
-        "Founding Mindset Hiring",
-        "Operator Hiring",
-        "Product Builder Hiring",
-        "0 to 1 Engineer Hiring",
         "AI Engineer Hiring",
+        "Product Builder Hiring",
         "Founding AI Engineer",
         "Founding Backend Engineer",
         "Founding Full Stack Engineer",
         "CTO Search",
         "Head of Engineering Search",
-        "Lean Team Hiring",
-        "Talent Density",
-        "Builder Hiring",
-        "Conviction-Driven Hiring",
-        "Practitioner-Led Recruiting",
-        "Pay-Only-When-They-Join Recruiting",
-        "Contingent Recruiting",
-        "Executive Search",
-        "Software Engineering",
-        "AI Infrastructure",
         "Startup Hiring",
     ],
 };
@@ -281,7 +267,7 @@ export const METADATA = {
     privacy: {
         title: `Privacy Policy | ${SITE_CONTENT.appName}`,
         description:
-            "How Mowka collects, uses, shares, and protects information about Partners, Builders, and website visitors.",
+            "How Mowka collects, uses, shares, and protects information about Companies, Talent, and website visitors.",
     },
     terms: {
         title: `Terms of Service | ${SITE_CONTENT.appName}`,

@@ -14,12 +14,12 @@ export async function POST(req) {
         const supabase = getSupabaseAdmin();
 
         // Deduplication check using unique linkedinId
-        const { data } = await supabase.from('builder_submissions').select('id').eq('linkedin_id', linkedinId).maybeSingle();
+        const { data } = await supabase.from('talent_submissions').select('id').eq('linkedin_id', linkedinId).maybeSingle();
         if (data) {
             return NextResponse.json({ alreadyExists: true }, { status: 200 });
         }
 
-        const { error } = await supabase.from('builder_submissions').insert({
+        const { error } = await supabase.from('talent_submissions').insert({
             full_name: fullName.trim(),
             email: email?.trim() || null,
             phone: phone?.trim() || null,

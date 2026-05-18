@@ -41,3 +41,6 @@ pricing.html
 .local-secrets/
 .claude/
 supabase/.temp/
+
+*.md 
+!Readme.md

@@ -23,7 +23,7 @@ export const TermsOfService = () => {
                         <p className="type-doc-meta">Last Updated: May 2026</p>
 
                         <p>
-                            These terms govern your use of mowka.in and our hiring services. They apply to companies and hiring teams (<strong>Partners</strong>), talent we engage on roles (<strong>Talent</strong>), and visitors to the site.
+                            These terms govern your use of mowka.in and our hiring services. They apply to companies and hiring teams (<strong>Companies</strong>), talent we engage on roles (<strong>Talent</strong>), and visitors to the site.
                         </p>
 
                         <p>
@@ -32,7 +32,7 @@ export const TermsOfService = () => {
 
                         <h3 className="type-h3-doc">1. What Mowka does</h3>
                         <p>
-                            Mowka is a high-trust hiring partner for teams that only want to spend time on technical candidates worth serious consideration, especially where each hire meaningfully impacts product and execution. We operate globally but our initial focus is India and we have a strong community presence in Kota, Rajasthan. We introduce one calibrated Builder at a time and sharpen the search based on Partner feedback.
+                            Mowka is a high-trust hiring partner for teams that only want to spend time on technical candidates worth serious consideration, especially where each hire meaningfully impacts product and execution. We operate globally but our initial focus is India and we have a strong community presence in Kota, Rajasthan. We introduce one calibrated Talent at a time and sharpen the search based on Company feedback.
                         </p>
 
                         <h3 className="type-h3-doc">2. Eligibility</h3>
@@ -40,7 +40,7 @@ export const TermsOfService = () => {
                             You must be 18 or older and able to enter a contract where you live. Information you share must be accurate and yours.
                         </p>
 
-                        <h3 className="type-h3-doc">3. Partner commitments</h3>
+                        <h3 className="type-h3-doc">3. Company commitments</h3>
                         <ul className="list-doc">
                             <li>Provide accurate context about the company, role, compensation, and team.</li>
                             <li>Treat introduced Talent professionally and share feedback after each round.</li>
@@ -63,7 +63,7 @@ export const TermsOfService = () => {
 
                         <h3 className="type-h3-doc">6. Confidentiality</h3>
                         <p>
-                            Information shared between Partners, Talent, and Mowka — strategy, compensation, plans — is confidential and used only to support the engagement.
+                            Information shared between Company, Talent, and Mowka — strategy, compensation, plans — is confidential and used only to support the engagement.
                         </p>
 
                         <h3 className="type-h3-doc">7. Intellectual property</h3>

@@ -23,7 +23,7 @@ export const PrivacyPolicy = () => {
                         <p className="type-doc-meta">Last Updated: May 2026</p>
 
                         <p>
-                            This explains what Mowka collects, why, who we share it with, and what control you have. It applies to founders and hiring teams (<strong>Partners</strong>), builders we engage on roles (<strong>Builders</strong>), and visitors to mowka.in.
+                            This explains what Mowka collects, why, who we share it with, and what control you have. It applies to companies and hiring teams (<strong>Companies</strong>), talent we engage on roles (<strong>Talent</strong>), and visitors to mowka.in.
                         </p>
 
                         <p>
@@ -56,7 +56,7 @@ export const PrivacyPolicy = () => {
 
                         <h3 className="type-h3-doc">4. Retention</h3>
                         <p>
-                            We keep information for as long as it's useful to working with you, or as required by law. Builders can ask to be removed from active consideration at any time.
+                            We keep information for as long as it's useful to working with you, or as required by law. Talent can ask to be removed from active consideration at any time.
                         </p>
 
                         <h3 className="type-h3-doc">5. Security</h3>
