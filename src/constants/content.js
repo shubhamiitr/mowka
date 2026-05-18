@@ -218,7 +218,7 @@ export const NAV_ITEMS = [
 export const BUILDER_PAGE = {
     hero: {
         headline: {
-            start: "If you care deeply about what you build, who you build with, and how fast you can grow",
+            start: "If you thrive on moving fast, owning problems, and working with sharp people - ",
             highlight: "we'd love to get to know you",
         },
         subhead: "Get introduced to opportunities you'd move for and connect directly with founders and high-context leaders.",
