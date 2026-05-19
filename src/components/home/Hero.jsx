@@ -35,7 +35,7 @@ export const Hero = () => {
                     </div>
 
                     <Reveal delay={0.4}>
-                        <a href="#contact" onClick={handleCTA} className="mt-8 md:mt-10 btn-primary">
+                        <a href="#contact" onClick={handleCTA} className="mt-8 md:mt-10 btn-primary group">
                             {HOME_PAGE.hero.cta}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </a>

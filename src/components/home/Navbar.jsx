@@ -64,10 +64,10 @@ export const Navbar = () => {
                         <a
                             href="#contact"
                             onClick={handleCTA}
-                            className="text-sm font-medium text-white bg-mowka-action-primary hover:bg-mowka-action-primary-hover px-5 py-2 rounded-md transition-all duration-300 cursor-pointer inline-flex items-center gap-1.5"
+                            className="text-sm font-medium text-white bg-mowka-action-primary hover:bg-mowka-action-primary-hover px-5 py-2 rounded-md transition-all duration-300 cursor-pointer inline-flex items-center gap-1.5 group"
                         >
                             Let&apos;s Talk
-                            <ArrowRight className="w-3.5 h-3.5" />
+                            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>
 
@@ -108,10 +108,10 @@ export const Navbar = () => {
                 <a
                     href="#contact"
                     onClick={handleCTA}
-                    className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl cursor-pointer inline-flex items-center gap-3"
+                    className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl cursor-pointer inline-flex items-center gap-3 group"
                 >
                     Let&apos;s Talk
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
             </div>
         </>
