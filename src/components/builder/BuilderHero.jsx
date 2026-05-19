@@ -3,12 +3,12 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { Reveal } from '../ui/Reveal';
-import { TALENT_PAGE } from '../../constants/content';
-import { TalentForm, validateForm } from './TalentForm';
+import { BUILDER_PAGE } from '../../constants/content';
+import { BuilderForm, validateForm } from './BuilderForm';
 
-const { hero, success, loading, errors } = TALENT_PAGE;
+const { hero, success, loading, errors } = BUILDER_PAGE;
 
-export const TalentHero = () => {
+export const BuilderHero = () => {
     const [step, setStep] = useState('hero'); // hero | form | submitting | done
     const [phone, setPhone] = useState('');
     const [preferredTime, setPreferredTime] = useState('');
@@ -39,7 +39,7 @@ export const TalentHero = () => {
 
         setStep('submitting');
         try {
-            const res = await fetch('/api/talent/connect', {
+            const res = await fetch('/api/builder/connect', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -102,7 +102,7 @@ export const TalentHero = () => {
                 >
                     <div className="bg-white rounded-[2rem] shadow-2xl border border-black/[0.04] w-full max-h-[92vh] overflow-y-auto max-w-md">
                         {step === 'form' && (
-                            <TalentForm
+                            <BuilderForm
                                 phone={phone} setPhone={setPhone}
                                 preferredTime={preferredTime} setPreferredTime={setPreferredTime}
                                 portfolio={portfolio} setPortfolio={setPortfolio}
@@ -132,4 +132,3 @@ export const TalentHero = () => {
         </section>
     );
 };
-

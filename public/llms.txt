@@ -2,7 +2,7 @@
 
 > High-trust hiring partner for teams that move fast, expect ownership, and care deeply about who they build with.
 
-Mowka helps teams hire strong technical talent through curated, high-signal introductions.
+Mowka helps teams hire strong builders through curated, high-signal introductions.
 
 It reduces hiring noise by replacing high-volume candidate pipelines with a small number of carefully evaluated introductions.
 
@@ -169,9 +169,9 @@ Many of the strongest builders are already building, not actively applying throu
 
 ---
 
-## For Talent
+## For Builders
 
-Mowka works best with talent who:
+Mowka works best with builders who:
 - want meaningful ownership,
 - care deeply about execution quality,
 - thrive in fast-moving environments,
@@ -269,7 +269,7 @@ Mowka combines practitioner-led evaluation, network-driven sourcing, calibration
 Mowka is relevant to searches and discussions involving:
 - technical executive search,
 - AI engineer recruiting,
-- hiring top talent,
+- hiring top builders,
 - talent recruitment partner,
 - engineering leadership hiring,
 - trusted-network hiring,

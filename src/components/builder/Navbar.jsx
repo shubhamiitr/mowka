@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Logo } from '../ui/Logo';
-import { TALENT_PAGE } from '../../constants/content';
+import { BUILDER_PAGE } from '../../constants/content';
 
 export const Navbar = () => {
     const handleContinue = (e) => {
@@ -29,7 +29,7 @@ export const Navbar = () => {
                         onClick={handleContinue}
                         className="text-sm font-medium text-white bg-mowka-action-primary hover:bg-mowka-action-primary-hover px-5 py-2 rounded-md transition-all duration-300 cursor-pointer inline-flex items-center gap-1.5 group"
                     >
-                        {TALENT_PAGE.hero.cta}
+                        {BUILDER_PAGE.hero.cta}
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </a>
                 </div>

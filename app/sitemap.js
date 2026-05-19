@@ -11,7 +11,7 @@ export default function sitemap() {
             priority: 1,
         },
         {
-            url: `${baseUrl}/talent`,
+            url: `${baseUrl}/builder`,
             lastModified: new Date('2026-05-16'),
             changeFrequency: 'monthly',
             priority: 0.9,

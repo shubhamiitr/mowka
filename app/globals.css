@@ -165,7 +165,7 @@ section {
     @apply list-disc pl-5 space-y-2;
   }
 
-  /* Form field primitives — used by /talent and any future forms */
+  /* Form field primitives — used by /builder and any future forms */
   .form-label {
     @apply text-sm text-mowka-text-primary tracking-tight;
   }
@@ -174,7 +174,6 @@ section {
     @apply w-full bg-transparent px-0 py-2 text-base font-light text-mowka-text-primary placeholder:text-mowka-text-tertiary focus:outline-none border-0 border-b border-mowka-border-light hover:border-mowka-text-quaternary focus:border-mowka-teal-vibrant transition-colors duration-200;
   }
 
-  /* Shared gradient headline accent — used by Hero and Builder pages */
   .headline-accent {
     @apply text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary [&::selection]:text-white [&::selection]:bg-mowka-action-primary pr-4;
   }
@@ -183,7 +182,6 @@ section {
     @apply inline-flex items-center justify-center gap-3 px-7 py-4 bg-mowka-action-primary text-white font-medium text-base rounded-md hover:bg-mowka-action-primary-hover transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99];
   }
 
-  /* Shared full-screen hero section — used by home/Hero and talent/Talent */
   .hero-section {
     @apply relative w-full flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20 min-h-[calc(100vh-80px)];
   }

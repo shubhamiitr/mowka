@@ -1,85 +1,92 @@
 # Mowka
 
-## Setup
+High-trust hiring partner for teams that move fast and care deeply about who they build with.
+
+---
+
+## Getting started
 
 ```bash
 npm install
-cp .env.example .env.local   # then fill in values (see below)
+cp .env.example .env.local
 npm run dev                   # http://localhost:3000
-```
-
-## Key commands
-
-```bash
-npm run dev        # dev server (Turbopack)
-npm run build      # production build
 ```
 
 ## Environment variables
 
-Copy `.env.example` to `.env.local` and fill in:
-
 | Variable | Where to get it |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project → Settings → API |
-| `SUPABASE_SECRET_KEY` | Supabase project → Settings → API → service_role key |
-| `DATABASE_URL` | Supabase project → Settings → Database → Connection string |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → Settings → API |
+| `SUPABASE_SECRET_KEY` | Supabase → Settings → API → service_role key |
 
-## Production deployment
+## Common commands
 
-`.env.local` is not used in production. Set these environment variables directly in your hosting platform (Vercel → Project Settings → Environment Variables):
-
-| Variable | Production value |
+| Command | What it does |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_SECRET_KEY` | service_role key |
-| `DATABASE_URL` | Direct connection string |
+| `npm run dev` | Start dev server (Turbopack) |
+| `npm run build` | Production build |
 
-## Content
+---
 
-Most site copy lives in `src/constants/content.js`.
-**Important:** `public/llms.txt` is manually maintained. If you change core positioning in `content.js`, remember to update `llms.txt` so AI crawlers have the latest context.
+## Pages
 
-## Structure
+| Route | Description |
+|---|---|
+| `/` | Home — for companies hiring builders |
+| `/builder` | Builder intake — for engineers joining the network |
+| `/privacy` | Privacy policy |
+| `/terms` | Terms of service |
 
-```
-app/                  # Next.js App Router pages and API routes
-  api/
-    talent/           # Talent intake API (connect)
-    company/          # Company lead capture API (connect)
-  talent/             # /talent page
-  privacy/            # /privacy page
-  terms/              # /terms page
-src/
-  components/
-    ui/               # Shared primitives: FlowModal, ModalSpinner, Footer, Logo, MotionLogo, Reveal
-    home/             # Home page sections: Hero, Problem, Process, WhyMowka, Contact
-    talent/           # Talent page: Talent, TalentHero, TalentForm
-    legal/            # PrivacyPolicy, TermsOfService
-    ClientLayout.jsx  # App-level smooth scroll wrapper
-    Home.jsx          # Home page composition
-    NotFound.jsx      # 404 page
-  constants/
-    content.js        # Single source of truth for all UI content and metadata
-  lib/
-    supabase-server.js
-```
+---
 
-## Audiences
+## Changing content
 
-- **Companies** — hiring teams using Mowka to find technical talent (`/`)
-- **Talent** — engineers joining the Mowka network (`/talent`)
+Almost all copy lives in `src/constants/content.js` — headlines, subheads, FAQs, CTAs, metadata.
+
+After changing core positioning, update `public/llms.txt` manually so AI crawlers stay current.
+
+## Changing the booking widget
+
+Cal.com event type: https://app.cal.com/event-types/5740517?tabName=setup
+
+The embed link is set in `content.js` → `SITE_CONTENT.calLink`.
+
+---
 
 ## Database
 
-Supabase (no auth required — forms submit directly):
+Managed via Supabase UI or Claude Code. RLS enabled on both tables — only server-side API routes can write (service_role key bypasses RLS).
 
-- `talent_submissions` — talent intake: portfolio URL, phone, preferred contact time
-- `company_leads` — company leads: website and role/JD link
+| Table | Stores |
+|---|---|
+| `builder_submissions` | Builder intake: phone, portfolio URL, preferred contact time |
+| `company_leads` | Company leads: website, role/JD link |
 
-## Cal.com
+---
 
-Booking widget on the home page uses Cal.com.
+## Project structure
 
-- Event type setup: https://app.cal.com/event-types/5740517?tabName=setup
-- Embed link: `hire-with-mowka/30min` (set in `src/constants/content.js` → `SITE_CONTENT.calLink`)
+```
+app/
+  api/
+    builder/connect     Builder intake API
+    company/connect     Company lead capture API
+  builder/              /builder page
+  privacy/              /privacy page
+  terms/                /terms page
+
+src/
+  components/
+    home/               Hero, Problem, Process, WhyMowka, Contact
+    builder/            Builder, BuilderHero, BuilderForm
+    ui/                 Shared: Footer, Logo, Reveal, MotionLogo
+    legal/              PrivacyPolicy, TermsOfService
+    Home.jsx            Home page composition
+    ClientLayout.jsx    Smooth scroll wrapper
+
+  constants/
+    content.js          All copy, metadata, and config
+
+  lib/
+    supabase-server.js  Supabase admin client
+```

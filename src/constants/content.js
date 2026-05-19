@@ -50,7 +50,7 @@ export const COMPANY_INFO = {
 export const FAQS = [
     {
         q: "How is Mowka different from recruiting agencies?",
-        a: "Most agencies optimize for volume and send large batches of unvetted candidates. Mowka focuses on signal. We understand the role deeply, evaluate technical talent before introduction, and share only the strongest matches so team leaders spend time only on high-quality conversations.",
+        a: "Agencies send volume. We protect your time. Every builder we introduce has been evaluated for technical depth, ownership, and fit before you ever speak to them — so you only have conversations worth having.",
     },
     {
         q: "Why do you send only a few candidates?",
@@ -58,7 +58,7 @@ export const FAQS = [
     },
     {
         q: "How do you find talent not visible on job boards?",
-        a: "We build and continuously refine a high-signal network of engineers through prior evaluations, trusted connections, and targeted outreach. This allows access to strong technical talent who are not actively applying but are open to the right opportunities.",
+        a: "We build and continuously refine a high-signal network of engineers through prior evaluations, trusted connections, and targeted outreach. This allows access to strong builder who are not actively applying but are open to the right opportunities.",
     },
     {
         q: "What makes your evaluation different?",
@@ -102,11 +102,11 @@ export const FOUNDER = {
 export const HOME_PAGE = {
     hero: {
         headline: {
-            start: "For leaders hiring technical talent",
+            start: "For leaders hiring builders",
             highlight: "they can trust to own important problems"
         },
         subhead:
-            "Stop wasting time on sourcing and interview noise. We help you find the right talent in five introductions or fewer.",
+            "Stop wasting time on sourcing and interview noise. We help you find the right builder in five introductions or fewer.",
         cta: "Let's Talk",
         proofStrip: [
             { company: "Ringg.ai", role: "Senior Audio Research Engineer", outcome: "Hired in 3 intros", logo: "/logos/ringg.svg" },
@@ -116,12 +116,12 @@ export const HOME_PAGE = {
     },
     problem: {
         label: "The problem",
-        headline: "Why hiring strong technical talent keeps breaking",
+        headline: "Why hiring strong builders keeps breaking",
         pains: [
             {
-                title: "Strong engineers are not visible through standard hiring signals",
+                title: "Strong builders are not visible through standard hiring signals",
                 description:
-                    "Most strong engineers do not signal availability publicly and are rarely reachable through open applications or keyword-based inbound channels.",
+                    "Most strong builders do not signal availability publicly and are rarely reachable through open applications or keyword-based inbound channels.",
             },
             {
                 title: "Early signals are broken",
@@ -149,7 +149,7 @@ export const HOME_PAGE = {
                 step: "02",
                 title: "Scout through a compounding network",
                 description:
-                    "We reach technical talent through targeted outreach and referrals in our compounding network, evaluating technical depth, ownership, judgment, and motivation.",
+                    "We reach builders through targeted outreach and referrals in our compounding network, evaluating technical depth, ownership, judgment, and motivation.",
             },
             {
                 step: "03",
@@ -161,7 +161,7 @@ export const HOME_PAGE = {
                 step: "04",
                 title: "Introduce, then calibrate",
                 description:
-                    "We introduce only technical talent we believe is the strongest fit If they are not selected, your feedback sharpens our understanding of the role."
+                    "We introduce only builder we believe is the strongest fit If they are not selected, your feedback sharpens our understanding of the role."
             }
         ],
     },
@@ -198,7 +198,7 @@ export const NAV_ITEMS = [
     { label: "Why Mowka", href: "#trust" },
 ];
 
-export const TALENT_PAGE = {
+export const BUILDER_PAGE = {
     hero: {
         headline: {
             start: "If you thrive on moving fast, owning problems, and working with sharp people - ",
@@ -247,7 +247,7 @@ const HOME_SEO_KEYWORDS = [
     "startup hiring agency alternative"
 ];
 
-const TALENT_SEO_KEYWORDS = [
+const BUILDER_SEO_KEYWORDS = [
     "founding engineer jobs",
     "full stack engineer startup jobs",
     "early stage startup jobs",
@@ -268,22 +268,22 @@ export const METADATA = {
         ogDescription: HOME_PAGE.hero.subhead,
         keywords: [...COMPANY_INFO.knowsAbout, ...HOME_SEO_KEYWORDS],
     },
-    talent: {
+    builder: {
         title: `Join with confidence | ${SITE_CONTENT.appName}`,
-        description: TALENT_PAGE.hero.subhead,
-        ogTitle: `${TALENT_PAGE.hero.headline.start} ${TALENT_PAGE.hero.headline.highlight}`,
-        ogDescription: TALENT_PAGE.hero.subhead,
-        keywords: [...COMPANY_INFO.knowsAbout, ...TALENT_SEO_KEYWORDS],
+        description: BUILDER_PAGE.hero.subhead,
+        ogTitle: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight}`,
+        ogDescription: BUILDER_PAGE.hero.subhead,
+        keywords: [...COMPANY_INFO.knowsAbout, ...BUILDER_SEO_KEYWORDS],
     },
     privacy: {
         title: `Privacy Policy | ${SITE_CONTENT.appName}`,
         description:
-            "How Mowka collects, uses, shares, and protects information about Companies, Talent, and website visitors.",
+            "How Mowka collects, uses, shares, and protects information about Companies, Builders, and website visitors.",
     },
     terms: {
         title: `Terms of Service | ${SITE_CONTENT.appName}`,
         description:
-            "Terms governing the use of Mowka’s website and talent partnership services.",
+            "Terms governing the use of Mowka’s website and hiring services.",
     },
     notFound: {
         title: `Page Not Found | ${SITE_CONTENT.appName}`,

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../../src/lib/supabase-server';
-import { TALENT_PAGE } from '../../../../src/constants/content';
+import { BUILDER_PAGE } from '../../../../src/constants/content';
 
 export async function POST(req) {
     try {
@@ -8,12 +8,12 @@ export async function POST(req) {
         const { phone, preferredTime, portfolioUrl } = body;
 
         if (!phone && !portfolioUrl) {
-            return NextResponse.json({ error: TALENT_PAGE.errors.default }, { status: 400 });
+            return NextResponse.json({ error: BUILDER_PAGE.errors.default }, { status: 400 });
         }
 
         const supabase = getSupabaseAdmin();
 
-        const { error } = await supabase.from('talent_submissions').insert({
+        const { error } = await supabase.from('builder_submissions').insert({
             phone: phone?.trim() || null,
             preferred_time: preferredTime || null,
             portfolio_url: portfolioUrl?.trim() || null,
@@ -24,9 +24,9 @@ export async function POST(req) {
         return NextResponse.json({ success: true });
 
     } catch (err) {
-        console.error('[/api/talent/connect]', err.message);
+        console.error('[/api/builder/connect]', err.message);
         return NextResponse.json(
-            { error: TALENT_PAGE.errors.default },
+            { error: BUILDER_PAGE.errors.default },
             { status: 500 }
         );
     }
