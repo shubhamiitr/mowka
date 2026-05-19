@@ -1,15 +1,12 @@
 "use client";
 
-import { useRef } from 'react';
 import Image from 'next/image';
-import { Reveal } from '../Reveal';
-import { MotionLogo } from '../MotionLogo';
+import { Reveal } from '../ui/Reveal';
+import { MotionLogo } from '../ui/MotionLogo';
 import { HOME_PAGE } from '../../constants/content';
 import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
-    const containerRef = useRef(null);
-
     const handleCTA = (e) => {
         e.preventDefault();
         const el = document.getElementById('contact');
@@ -17,11 +14,7 @@ export const Hero = () => {
     };
 
     return (
-        <section
-            id="home"
-            ref={containerRef}
-            className="hero-section"
-        >
+        <section id="home" className="hero-section">
             <div className="hero-container">
                 <div className="flex flex-col items-center text-center max-w-7xl mx-auto w-full">
 
@@ -42,11 +35,7 @@ export const Hero = () => {
                     </div>
 
                     <Reveal delay={0.4}>
-                        <a
-                            href="#contact"
-                            onClick={handleCTA}
-                            className="mt-8 md:mt-10 btn-primary"
-                        >
+                        <a href="#contact" onClick={handleCTA} className="mt-8 md:mt-10 btn-primary">
                             {HOME_PAGE.hero.cta}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </a>

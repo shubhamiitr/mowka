@@ -1,9 +1,9 @@
 "use client";
 
-import Image from 'next/image';
 import { ArrowRight, X } from 'lucide-react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
+import { parsePhoneNumberFromString } from 'libphonenumber-js/min';
 import { TALENT_PAGE } from '../../constants/content';
 
 const { form } = TALENT_PAGE;
@@ -14,31 +14,19 @@ const TIME_OPTIONS = [
     { value: 'after-work', label: '🌙 After work', color: 'bg-indigo-600' },
 ];
 
-// PhoneInput renders its own DOM — !important overrides keep its inputs
-// visually consistent with the rest of the form.
 const PHONE_INPUT_CLASS = "flex-grow !bg-transparent !border-0 !border-b !border-mowka-border-light group-hover:!border-mowka-text-quaternary focus:!border-mowka-teal-vibrant !rounded-none !shadow-none !text-base !font-light !text-mowka-text-primary !px-3 !py-2 !transition-colors !duration-200 placeholder:!text-mowka-text-tertiary !outline-none";
 const PHONE_BUTTON_CLASS = "!border-0 !border-b !border-mowka-border-light group-hover:!border-mowka-text-quaternary !rounded-none !bg-transparent !pl-0 !pr-2 !transition-colors !duration-200";
 
-
-// Validation — we trust PhoneInput for per-country formatting, so we only
-// check the user actually typed digits. Portfolio is a shape check; deeper
-// reachability validation would need a server-side fetch (CORS blocks it
-// in the browser).
 export function validateForm({ phone, preferredTime, portfolio }) {
-    const phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 4) return form.phoneError;
-
+    const phoneNumber = parsePhoneNumberFromString(phone);
+    if (!phoneNumber || !phoneNumber.isValid()) return form.phoneError;
     if (!preferredTime) return form.timeError;
-
     const link = portfolio.trim();
     if (!link || !link.includes('.')) return form.portfolioError;
-
     return null;
 }
 
-
 export function TalentForm({
-    session,
     phone, setPhone,
     preferredTime, setPreferredTime,
     portfolio, setPortfolio,
@@ -47,28 +35,11 @@ export function TalentForm({
     return (
         <div className="w-full p-8 md:p-10">
 
-            {/* Header: avatar + greeting + close button */}
             <div className="flex items-start justify-between mb-8">
-                <div className="flex items-center gap-4">
-                    {session?.user?.image && (
-                        <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-white shadow-lg shadow-black/5 flex-shrink-0">
-                            <Image
-                                src={session.user.image}
-                                alt={session.user.name || 'Profile'}
-                                fill
-                                className="object-cover"
-                                unoptimized
-                            />
-                        </div>
-                    )}
-                    <div>
-                        <p className="font-serif text-md font-medium text-mowka-text-primary leading-tight">
-                            Hi {session?.user?.name?.split(' ')[0]},
-                        </p>
-                        <p className="font-sans text-sm text-mowka-text-secondary mt-1 leading-snug">
-                            {form.intro}
-                        </p>
-                    </div>
+                <div>
+                    <p className="font-serif text-md font-medium text-mowka-text-primary leading-tight">
+                        {form.intro}
+                    </p>
                 </div>
                 <button
                     type="button"
@@ -131,7 +102,7 @@ export function TalentForm({
                 </div>
 
                 {errorMsg && (
-                    <p className="text-sm text-red-500 -mt-6 font-medium text-center">{errorMsg}</p>
+                    <p className="text-sm text-red-500 -mt-2 font-medium text-center">{errorMsg}</p>
                 )}
 
                 <button type="submit" className="btn-primary w-full py-4 mt-4 group">

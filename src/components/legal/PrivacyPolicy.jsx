@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { Navbar } from '../home/Navbar';
-import { Footer } from '../Footer';
+import { Footer } from '../ui/Footer';
 import { COMPANY_INFO } from '../../constants/content';
 
 export const PrivacyPolicy = () => {

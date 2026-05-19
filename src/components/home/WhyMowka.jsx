@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { FaLinkedin } from 'react-icons/fa';
-import { Reveal } from '../Reveal';
+import { Reveal } from '../ui/Reveal';
 import { HOME_PAGE, FOUNDER } from '../../constants/content';
 
 export const WhyMowka = () => {

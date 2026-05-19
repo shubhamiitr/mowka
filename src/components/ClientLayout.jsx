@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { usePathname } from 'next/navigation';
-import { SessionProvider } from 'next-auth/react';
 
 export default function ClientLayout({ children }) {
     const pathname = usePathname();
@@ -15,7 +14,7 @@ export default function ClientLayout({ children }) {
     useEffect(() => {
         const lenis = new Lenis({
             duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple-like ease
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             gestureDirection: 'vertical',
             smooth: true,
@@ -36,5 +35,5 @@ export default function ClientLayout({ children }) {
         };
     }, []);
 
-    return <SessionProvider>{children}</SessionProvider>;
+    return <>{children}</>;
 }

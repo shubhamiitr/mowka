@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { NAV_ITEMS } from '../../constants/content';
-import { Logo } from '../Logo';
+import { Logo } from '../ui/Logo';
 
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -107,8 +107,8 @@ export const Navbar = () => {
 
                 <a
                     href="#contact"
-                    className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl cursor-pointer inline-flex items-center gap-3"
                     onClick={handleCTA}
+                    className="px-10 py-4 bg-mowka-action-primary text-white text-xl font-medium rounded-full shadow-xl cursor-pointer inline-flex items-center gap-3"
                 >
                     Let&apos;s Talk
                     <ArrowRight className="w-5 h-5" />

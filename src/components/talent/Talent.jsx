@@ -1,6 +1,6 @@
 import { Navbar } from './Navbar';
 import { TalentHero } from './TalentHero';
-import { Footer } from '../Footer';
+import { Footer } from '../ui/Footer';
 
 export const Talent = () => {
     return (

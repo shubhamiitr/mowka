@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from './home/Navbar';
-import { Footer } from './Footer';
+import { Footer } from './ui/Footer';
 
 export const NotFound = () => {
     return (

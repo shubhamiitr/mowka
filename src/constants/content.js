@@ -10,7 +10,7 @@ export const SITE_CONTENT = {
     siteUrl: "https://mowka.in",
     description:
         "Mowka is a high-trust hiring partner for teams that only want to spend time on technical candidates worth serious consideration, especially where each hire meaningfully impacts product and execution.",
-    calendlyUrl: "https://calendar.app.google/ASa3XGmwCDTN3YhX8",
+    calLink: "hire-with-mowka/30min",
 };
 
 const ADDRESS = {
@@ -174,9 +174,21 @@ export const HOME_PAGE = {
     contact: {
         label: "Let's Talk",
         headline: "Bring us your toughest role",
-        subhead:
-            "No upfront cost. No retainer. 12.5–15% of CTC, paid only when they join.",
+        subhead: "No upfront cost. No retainer. 12.5–15% of CTC, paid only when they join.",
         cta: "Discuss your role",
+        form: {
+            websiteLabel: "Company website",
+            websitePlaceholder: "acme.com",
+            roleLabel: "Role / JD link",
+            rolePlaceholder: "Link to job description or Notion doc",
+            cta: "Save details",
+            successNote: "Details saved — now pick a time on the right.",
+            websiteError: "Please enter your company website.",
+            roleError: "Please add a link to the role.",
+        },
+        errors: {
+            default: `Something went wrong. Please try again or email ${COMPANY_INFO.email}.`,
+        },
     },
 };
 
@@ -193,7 +205,7 @@ export const TALENT_PAGE = {
             highlight: "we'd love to get to know you",
         },
         subhead: "Get introduced to opportunities you'd move for and connect directly with founders and high-context leaders.",
-        cta: "Continue",
+        cta: "Let's Talk",
     },
     success: {
         title: "Thanks for sharing your info. We'll reach out soon to get to know you better.",
@@ -218,7 +230,6 @@ export const TALENT_PAGE = {
         closeButton: "Close",
     },
     errors: {
-        authFailed: `We couldn't verify your LinkedIn profile right now. Please try again in some time or email us directly at ${COMPANY_INFO.email}`,
         default: `Something went wrong on our end. Please try again in a moment or contact ${COMPANY_INFO.email}.`,
     },
 };

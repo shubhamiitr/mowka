@@ -4,10 +4,9 @@
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
+cp .env.example .env.local   # then fill in values (see below)
+npm run dev                   # http://localhost:3000
 ```
-
-Copy `.env.example` to `.env.local` and fill in the required values before running.
 
 ## Key commands
 
@@ -15,6 +14,26 @@ Copy `.env.example` to `.env.local` and fill in the required values before runni
 npm run dev        # dev server (Turbopack)
 npm run build      # production build
 ```
+
+## Environment variables
+
+Copy `.env.example` to `.env.local` and fill in:
+
+| Variable | Where to get it |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project → Settings → API |
+| `SUPABASE_SECRET_KEY` | Supabase project → Settings → API → service_role key |
+| `DATABASE_URL` | Supabase project → Settings → Database → Connection string |
+
+## Production deployment
+
+`.env.local` is not used in production. Set these environment variables directly in your hosting platform (Vercel → Project Settings → Environment Variables):
+
+| Variable | Production value |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `SUPABASE_SECRET_KEY` | service_role key |
+| `DATABASE_URL` | Direct connection string |
 
 ## Content
 
@@ -26,33 +45,41 @@ Most site copy lives in `src/constants/content.js`.
 ```
 app/                  # Next.js App Router pages and API routes
   api/
-    talent/           # Talent intake API (check + connect)
-    auth/             # NextAuth LinkedIn OAuth
+    talent/           # Talent intake API (connect)
+    company/          # Company lead capture API (connect)
   talent/             # /talent page
-  faq/                # /faq page
   privacy/            # /privacy page
   terms/              # /terms page
 src/
   components/
-    home/             # Home page sections (Hero, Problem, Process, WhyMowka, Contact)
-    talent/           # Talent intro page (Talent, TalentHero, TalentForm)
+    ui/               # Shared primitives: FlowModal, ModalSpinner, Footer, Logo, MotionLogo, Reveal
+    home/             # Home page sections: Hero, Problem, Process, WhyMowka, Contact
+    talent/           # Talent page: Talent, TalentHero, TalentForm
     legal/            # PrivacyPolicy, TermsOfService
-    *.jsx             # Shared: Footer, ClientLayout, Reveal, MotionLogo, Logo, NotFound
+    ClientLayout.jsx  # App-level smooth scroll wrapper
+    Home.jsx          # Home page composition
+    NotFound.jsx      # 404 page
   constants/
     content.js        # Single source of truth for all UI content and metadata
   lib/
-    auth.js           # NextAuth config (LinkedIn OAuth)
     supabase-server.js
-supabase/
-  migrations/         # Talent submissions table
 ```
 
 ## Audiences
 
-- **Companies** — hiring teams and leaders using Mowka to find technical talent (`/`)
-- **Talent** — engineers and technical professionals joining the Mowka network (`/talent`)
+- **Companies** — hiring teams using Mowka to find technical talent (`/`)
+- **Talent** — engineers joining the Mowka network (`/talent`)
 
-## Auth & Database
+## Database
 
-- **Auth**: LinkedIn OAuth via NextAuth v4. Talent authenticate on `/talent` using LinkedIn's OpenID Connect provider.
-- **Database**: Supabase stores talent submissions (`talent_submissions` table).
+Supabase (no auth required — forms submit directly):
+
+- `talent_submissions` — talent intake: portfolio URL, phone, preferred contact time
+- `company_leads` — company leads: website and role/JD link
+
+## Cal.com
+
+Booking widget on the home page uses Cal.com.
+
+- Event type setup: https://app.cal.com/event-types/5740517?tabName=setup
+- Embed link: `hire-with-mowka/30min` (set in `src/constants/content.js` → `SITE_CONTENT.calLink`)

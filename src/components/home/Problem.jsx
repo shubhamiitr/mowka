@@ -1,6 +1,6 @@
 "use client";
 
-import { Reveal } from '../Reveal';
+import { Reveal } from '../ui/Reveal';
 import { EyeOff, RadioTower, Clock } from 'lucide-react';
 import { HOME_PAGE } from '../../constants/content';
 

@@ -1,60 +1,28 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { useSession, signIn, signOut } from 'next-auth/react';
-import { Loader2, CheckCircle2, ArrowRight, Linkedin } from 'lucide-react';
-import { Reveal } from '../Reveal';
+import { ArrowRight, Loader2 } from 'lucide-react';
+import { Reveal } from '../ui/Reveal';
 import { TALENT_PAGE } from '../../constants/content';
 import { TalentForm, validateForm } from './TalentForm';
 
-const { hero, success, loading, ui, errors } = TALENT_PAGE;
+const { hero, success, loading, errors } = TALENT_PAGE;
 
-
-// State machine:
-//   hero → verifying → (collecting-details | already-shared)
-//   collecting-details → submitting → done
 export const TalentHero = () => {
-    const { data: session, status: authStatus } = useSession();
-    const isLinkedIn = authStatus === 'authenticated' && !!session?.user?.linkedinId;
-
-    const [step, setStep] = useState('hero');
+    const [step, setStep] = useState('hero'); // hero | form | submitting | done
     const [phone, setPhone] = useState('');
     const [preferredTime, setPreferredTime] = useState('');
     const [portfolio, setPortfolio] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
 
-    const runVerification = async () => {
-        if (!session?.user?.linkedinId) return;
-        setStep('verifying');
-        try {
-            const res = await fetch(`/api/talent/check?id=${session.user.linkedinId}`);
-            const data = await res.json();
-            setStep(data.exists ? 'already-shared' : 'collecting-details');
-        } catch {
-            setStep('collecting-details');
-        }
-    };
-
-    const handleContinue = () => {
-        if (isLinkedIn) {
-            runVerification();
-        } else {
-            signIn('linkedin', { callbackUrl: '/talent' });
-        }
-    };
-
     useEffect(() => {
         if (step === 'done') {
-            const timer = setTimeout(() => {
-                setStep('hero');
-            }, 2000);
+            const timer = setTimeout(() => setStep('hero'), 2000);
             return () => clearTimeout(timer);
         }
     }, [step]);
 
     const handleDismiss = () => {
-        signOut({ redirect: false });
         setStep('hero');
         setPhone('');
         setPreferredTime('');
@@ -75,10 +43,6 @@ export const TalentHero = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    fullName: session.user.name,
-                    email: session.user.email,
-                    linkedinId: session.user.linkedinId,
-                    avatarUrl: session.user.image,
                     phone: phone.trim(),
                     preferredTime,
                     portfolioUrl: portfolio.trim(),
@@ -86,16 +50,12 @@ export const TalentHero = () => {
             });
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || errors.default);
-            setStep(data.alreadyExists ? 'already-shared' : 'done');
+            setStep('done');
         } catch (err) {
             setErrorMsg(err.message || errors.default);
-            setStep('collecting-details');
-        } finally {
-            signOut({ redirect: false });
+            setStep('form');
         }
     };
-
-    const isDone = step === 'done' || step === 'already-shared';
 
     return (
         <section className="hero-section flex-grow">
@@ -121,10 +81,9 @@ export const TalentHero = () => {
                     </div>
                     <Reveal delay={0.35}>
                         <button
-                            onClick={handleContinue}
+                            onClick={() => setStep('form')}
                             className="mt-8 md:mt-10 btn-primary group"
                         >
-                            <Linkedin className="w-4 h-4" />
                             {hero.cta}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -136,21 +95,14 @@ export const TalentHero = () => {
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
                     onClick={(e) => {
-                        if (e.target === e.currentTarget && step === 'collecting-details') handleDismiss();
+                        if (e.target === e.currentTarget && step === 'form') {
+                            handleDismiss();
+                        }
                     }}
                 >
-                    <div className="bg-white rounded-[2rem] shadow-2xl border border-black/[0.04] max-w-md w-full max-h-[92vh] overflow-y-auto">
-
-                        {step === 'verifying' && (
-                            <div className="flex flex-col items-center py-16 gap-4 px-10">
-                                <Loader2 className="w-7 h-7 animate-spin text-mowka-action-primary" />
-                                <p className="text-sm text-mowka-text-tertiary">{loading.checking}</p>
-                            </div>
-                        )}
-
-                        {step === 'collecting-details' && (
+                    <div className="bg-white rounded-[2rem] shadow-2xl border border-black/[0.04] w-full max-h-[92vh] overflow-y-auto max-w-md">
+                        {step === 'form' && (
                             <TalentForm
-                                session={session}
                                 phone={phone} setPhone={setPhone}
                                 preferredTime={preferredTime} setPreferredTime={setPreferredTime}
                                 portfolio={portfolio} setPortfolio={setPortfolio}
@@ -163,39 +115,15 @@ export const TalentHero = () => {
                         {step === 'submitting' && (
                             <div className="flex flex-col items-center py-16 gap-4 px-10">
                                 <Loader2 className="w-7 h-7 animate-spin text-mowka-action-primary" />
-                                <p className="text-sm text-mowka-text-tertiary">{loading.submitting}</p>
+                                {loading.submitting && <p className="text-sm text-mowka-text-tertiary">{loading.submitting}</p>}
                             </div>
                         )}
 
-                        {isDone && (
+                        {step === 'done' && (
                             <div className="flex flex-col items-center text-center py-16 px-10 gap-6">
-                                {session?.user?.image && (
-                                    <div className="relative w-16 h-16 rounded-full overflow-hidden ring-4 ring-white shadow-xl shadow-black/10 flex-shrink-0">
-                                        <Image
-                                            src={session.user.image}
-                                            alt={session.user.name || 'Profile'}
-                                            fill
-                                            className="object-cover"
-                                            unoptimized
-                                        />
-                                        {step === 'done' && (
-                                            <div className="absolute inset-0 rounded-full ring-4 ring-mowka-teal-vibrant/40 animate-pulse" />
-                                        )}
-                                    </div>
-                                )}
-                                <div className="flex flex-col gap-3">
-                                    <p className="text-base text-mowka-text-tertiary text-balance leading-relaxed">
-                                        {step === 'already-shared' ? success.existingProfileTitle : success.title}
-                                    </p>
-                                </div>
-                                {step === 'already-shared' && (
-                                    <button
-                                        onClick={() => setStep('hero')}
-                                        className="mt-4 btn-primary w-full"
-                                    >
-                                        {ui.closeButton}
-                                    </button>
-                                )}
+                                <p className="text-base text-mowka-text-tertiary text-balance leading-relaxed">
+                                    {success.title}
+                                </p>
                             </div>
                         )}
                     </div>
@@ -204,3 +132,4 @@ export const TalentHero = () => {
         </section>
     );
 };
+

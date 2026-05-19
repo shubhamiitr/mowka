@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
-import { COMPANY_INFO } from '../constants/content';
+import { COMPANY_INFO } from '../../constants/content';
 
 export const Footer = () => {
   const company = COMPANY_INFO;

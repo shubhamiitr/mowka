@@ -1,5 +1,5 @@
 "use client";
-import { Reveal } from '../Reveal';
+import { Reveal } from '../ui/Reveal';
 import { HOME_PAGE } from '../../constants/content';
 
 export const Process = () => {
