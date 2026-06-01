@@ -1,13 +1,17 @@
 import { Navbar } from './Navbar';
 import { BuilderHero } from './BuilderHero';
-import { Footer } from '../ui/Footer';
+// import { BuilderSituations } from './BuilderSituations';
+// import { BuilderHowWeWork } from './BuilderHowWeWork';
+// import { BuilderFaq } from './BuilderFaq';
+// import { BuilderContact } from './BuilderContact';
 
-export const Builder = () => {
-    return (
-        <main className="min-h-screen flex flex-col">
-            <Navbar />
-            <BuilderHero />
-            <Footer />
-        </main>
-    );
-};
+export const Builder = () => (
+    <main className="layout-page">
+        <Navbar />
+        <BuilderHero />
+        {/* <BuilderSituations /> */}
+        {/* <BuilderHowWeWork /> */}
+        {/* <BuilderFaq /> */}
+        {/* <BuilderContact /> */}
+    </main>
+);

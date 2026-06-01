@@ -105,7 +105,7 @@ export function BuilderForm({
                     <p className="text-sm text-red-500 -mt-2 font-medium text-center">{errorMsg}</p>
                 )}
 
-                <button type="submit" className="btn-primary w-full py-4 mt-4 group">
+                <button type="submit" className="btn btn-primary w-full mt-4 group">
                     {form.cta}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

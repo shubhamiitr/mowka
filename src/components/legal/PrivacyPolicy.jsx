@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect } from 'react';
-import { Navbar } from '../home/Navbar';
-import { Footer } from '../ui/Footer';
-import { COMPANY_INFO } from '../../constants/content';
+import { useEffect } from "react";
+import { Navbar } from "../home/Navbar";
+import { Footer } from "../ui/Footer";
+import { BRAND } from "../../constants/content";
 
 export const PrivacyPolicy = () => {
-    const company = COMPANY_INFO;
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -15,78 +13,79 @@ export const PrivacyPolicy = () => {
     return (
         <>
             <Navbar />
-            <section className="layout-doc-page">
-                <div className="layout-doc-container">
-                    <h1 className="type-h1-doc">Privacy Policy</h1>
+
+            <section className="layout-page-doc">
+                <div className="layout-container-doc">
+                    <h1 className="type-doc-heading">Privacy Policy</h1>
 
                     <div className="type-prose">
                         <p className="type-doc-meta">Last Updated: May 2026</p>
 
                         <p>
-                            This explains what Mowka collects, why, who we share it with, and what control you have. It applies to companies and hiring teams (<strong>Companies</strong>), builders we engage on roles (<strong>Builders</strong>), and visitors to mowka.in.
+                            This Privacy Policy explains how Mowka collects, uses, and protects personal information when you use our website and hiring services.
+                            It applies to founders and hiring leaders (“Founders”), professionals and engineers (“Builders”), and website visitors.
                         </p>
 
+                        <h3 className="type-doc-section-title">1. Information we collect</h3>
+
+                        <p><strong>From Founders:</strong> Company details, hiring requirements, role information, communication history, and feedback.</p>
+
+                        <p><strong>From Builders:</strong> Name, contact details, resume, professional background, preferences, and interview-related notes.</p>
+
+                        <p><strong>From visitors:</strong> Device information, IP address, browser type, pages visited, and analytics data.</p>
+
+                        <p><strong>From communications:</strong> Information shared via forms, email, scheduling tools, or direct conversations.</p>
+
+                        <h3 className="type-doc-section-title">2. How we use information</h3>
+
                         <p>
-                            Mowka is operated by {company.legalName}, registered at {company.registeredAddress} (CIN: {company.cin}). Information may be processed in India and in countries where our service providers operate. Using the site or our services means you accept this policy.
+                            We use information to operate our hiring services, evaluate and introduce Builders, facilitate communication between Founders and Builders,
+                            improve our services, and comply with legal obligations. We do not sell personal data.
                         </p>
 
-                        <h3 className="type-h3-doc">1. What we collect</h3>
-                        <p>
-                            <strong>From Companies:</strong> company details, role specifics (scope, compensation, success criteria), team contacts, and feedback after each round.
-                        </p>
-                        <p>
-                            <strong>From Builders:</strong> name, contact details, location, professional history, resume, work samples, what you want next, and notes from our conversations.
-                        </p>
-                        <p>
-                            <strong>From visitors:</strong> standard analytics (IP address, device, browser, pages visited) and anything you submit through a form.
-                        </p>
+                        <h3 className="type-doc-section-title">3. Information sharing</h3>
 
-                        <h3 className="type-h3-doc">2. How we use it</h3>
-                        <p>
-                            Only to do the work you've engaged us for — understand roles, identify and evaluate Builders, coordinate interviews, capture feedback, keep our network current, and comply with law. We do not sell personal information.
-                        </p>
-
-                        <h3 className="type-h3-doc">3. Who we share it with</h3>
                         <ul className="list-doc">
-                            <li><strong>Companies:</strong> a Builder's profile, after the Builder has agreed to the introduction.</li>
-                            <li><strong>Builders:</strong> role and Company context, so they can decide whether to engage.</li>
-                            <li><strong>Service providers:</strong> tools we use to operate Mowka (email, scheduling, CRM, cloud storage, analytics), bound by confidentiality.</li>
-                            <li><strong>Legal:</strong> when required by law or to protect Mowka, our community, or the public.</li>
+                            <li><strong>Between parties:</strong> A Builder’s profile is shared with Founders only after the Builder agrees to the introduction.</li>
+                            <li><strong>Service providers:</strong> We use third-party tools for communication, scheduling, CRM, and analytics under confidentiality agreements.</li>
+                            <li><strong>Legal:</strong> We may disclose information when required by law or to protect rights, safety, or compliance obligations.</li>
                         </ul>
 
-                        <h3 className="type-h3-doc">4. Retention</h3>
+                        <h3 className="type-doc-section-title">4. Data retention</h3>
                         <p>
-                            We keep information for as long as it's useful to working with you, or as required by law. Builders can ask to be removed from active consideration at any time.
+                            We retain data only as long as necessary to provide services or meet legal obligations.
+                            Builders may request removal from our active database at any time.
                         </p>
 
-                        <h3 className="type-h3-doc">5. Security</h3>
+                        <h3 className="type-doc-section-title">5. Security</h3>
                         <p>
-                            Encrypted storage, access controls, and limited internal access. No system is fully secure, but we work to keep risk low.
+                            We use reasonable technical and organizational safeguards to protect data. No system is completely secure.
                         </p>
 
-                        <h3 className="type-h3-doc">6. Your rights</h3>
+                        <h3 className="type-doc-section-title">6. Your rights</h3>
                         <p>
-                            You can ask us to show, correct, delete, or stop using your information, or withdraw consent. Email <a href={`mailto:${company.email}`} className="text-mowka-link hover:underline">{company.email}</a>. We may verify your identity before acting.
+                            You may request access, correction, or deletion of your data by contacting{" "}
+                            <a href={`mailto:${BRAND.email}`} className="text-mowka-link hover:underline">
+                                {BRAND.email}
+                            </a>.
                         </p>
 
-                        <h3 className="type-h3-doc">7. Cookies</h3>
+                        <h3 className="type-doc-section-title">7. Cookies</h3>
                         <p>
-                            We use cookies and analytics to understand how the site is used. You can disable cookies in your browser; some features may not work as well.
+                            We use cookies and analytics tools to understand usage and improve performance.
+                            You may disable cookies in your browser settings.
                         </p>
 
-                        <h3 className="type-h3-doc">8. Age</h3>
+                        <h3 className="type-doc-section-title">8. Changes</h3>
                         <p>
-                            Mowka is for working professionals and hiring teams. We do not knowingly collect information from anyone under 18.
+                            We may update this Privacy Policy from time to time. Updates will be reflected by the “Last Updated” date.
                         </p>
 
-                        <h3 className="type-h3-doc">9. Changes</h3>
+                        <h3 className="type-doc-section-title">9. Contact</h3>
                         <p>
-                            We'll update this policy as needed. The "Last Updated" date above reflects the most recent revision.
-                        </p>
-
-                        <h3 className="type-h3-doc">10. Contact</h3>
-                        <p>
-                            <a href={`mailto:${company.email}`} className="text-mowka-link hover:underline">{company.email}</a>
+                            <a href={`mailto:${BRAND.email}`} className="text-mowka-link hover:underline">
+                                {BRAND.email}
+                            </a>
                         </p>
 
                         <div className="mb-12"></div>

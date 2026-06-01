@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lenis Recommended CSS */
+/* ─── Lenis smooth scroll ──────────────────────────────────────────────────── */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -24,7 +24,7 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Global Styles */
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
@@ -47,97 +47,225 @@ section {
   flex-direction: column;
 }
 
-/* Global Typography System */
+::selection {
+  background-color: theme('colors.mowka.action-primary');
+  color: theme('colors.mowka.bg-primary');
+}
+
+/* ─── Components ────────────────────────────────────────────────────────────── */
 @layer components {
 
-  /* Section Labels */
-  .type-label {
-    @apply font-semibold tracking-widest uppercase text-xs md:text-sm text-mowka-label;
+  /* ── Layout ─────────────────────────────────────────────────────────────── */
+
+  .layout-page {
+    @apply bg-mowka-bg-primary min-h-screen flex flex-col;
   }
 
-  /* Main Section Headings */
-  .type-h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-mowka-text-primary leading-[1.15] tracking-tight;
+  .layout-page-doc {
+    @apply layout-page pt-24 md:pt-32;
   }
 
-  /* Sub-Section Headings / Card Titles */
-  .type-h3 {
-    @apply text-lg md:text-xl lg:text-2xl font-serif font-medium text-mowka-text-primary leading-tight tracking-tight;
-  }
-
-  /* Standardized Card Style */
-  .type-card {
-    @apply relative bg-mowka-bg-tertiary p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl border border-mowka-border-light hover:-translate-y-2 transition-all duration-500 flex flex-col h-full;
-
-    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
-  }
-
-  .type-card::after {
-    content: '';
-    @apply absolute -inset-[1px] rounded-[inherit] border border-mowka-link opacity-0 transition-opacity duration-500 pointer-events-none;
-    box-shadow: 0 20px 40px -10px rgba(45, 109, 117, 0.2);
-  }
-
-  .type-card:hover::after {
-    @apply opacity-100;
-  }
-
-  /* Body */
-  .type-body {
-    @apply text-sm md:text-base font-light leading-relaxed text-mowka-text-secondary;
-  }
-
-  /* Caption */
-  .type-caption {
-    @apply text-xs md:text-sm font-light leading-relaxed text-mowka-text-tertiary;
-  }
-
-  /* Icon Pill - tinted square holding an icon or step number */
-  .type-icon-pill {
-    @apply inline-flex items-center justify-center w-6 h-6 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-md bg-mowka-link/10 text-mowka-link mb-3 md:mb-5;
-  }
-
-  /* Pill Badge - small inline pill for metrics/labels */
-  .type-badge {
-    @apply inline-flex items-center px-2.5 py-1 rounded-full bg-mowka-link/10 text-mowka-link text-[10px] sm:text-[11px] md:text-[12px] font-bold tracking-[0.08em] uppercase;
-  }
-
-  /* Social Button - circular bordered icon button (email, LinkedIn, WhatsApp) */
-  .type-social-btn {
-    @apply p-2.5 bg-mowka-bg-primary border border-mowka-border-light rounded-full text-mowka-text-secondary hover:shadow-md transition-all duration-300;
-  }
-
-  /* Layout Utilities */
   .layout-section {
-    @apply bg-mowka-bg-primary flex flex-col relative pt-10 md:pt-14 pb-16 md:pb-20 scroll-mt-16 overflow-hidden;
+    @apply bg-mowka-bg-primary flex flex-col relative py-10 md:py-14 scroll-mt-16 overflow-hidden;
   }
 
   .layout-container {
     @apply w-full relative z-10 px-4 md:px-8 max-w-6xl mx-auto;
   }
 
-  .layout-header {
+  .layout-container-doc {
+    @apply layout-container max-w-4xl flex-grow pb-12;
+  }
+
+  /* Header block inside a section: type-label → type-section-heading → type-section-subhead */
+  .layout-section-header {
     @apply text-center max-w-3xl mx-auto mb-10 md:mb-14 flex flex-col items-center;
   }
 
-  /* Doc Pages (Privacy / Terms / long-form legal) */
-  .layout-doc-page {
-    @apply bg-mowka-bg-primary min-h-screen flex flex-col pt-24 md:pt-32;
+  /* Timeline layout — wrapper + connecting bar for step sequences */
+  .layout-timeline {
+    @apply relative flex flex-col gap-6 md:gap-8 w-full max-w-5xl mx-auto;
   }
 
-  .layout-doc-container {
-    @apply max-w-4xl mx-auto px-6 flex-grow pb-12;
+  .layout-timeline-bar {
+    @apply absolute left-8 top-8 md:top-10 bottom-8 md:bottom-10 w-[2px] bg-mowka-teal-vibrant/20 pointer-events-none;
   }
 
-  .type-h1-doc {
+
+  /* ── Hero ───────────────────────────────────────────────────────────────── */
+
+  .hero-section {
+    @apply relative w-full flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden pt-40 md:pt-48 pb-24 md:pb-32 min-h-[calc(100vh-80px)];
+  }
+
+  .hero-container {
+    @apply w-full px-5 md:px-8 mx-auto flex flex-col items-center text-center;
+  }
+
+  .hero-headline {
+    @apply font-serif font-medium text-mowka-text-primary leading-[1.1] lg:leading-[1.15] tracking-tight text-4xl sm:text-5xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] mt-2 md:mt-4 selection:bg-mowka-action-primary selection:text-white;
+  }
+
+  .hero-subhead {
+    @apply text-base md:text-lg font-light leading-relaxed text-mowka-text-secondary text-balance mt-2 md:mt-4;
+  }
+
+  .headline-accent {
+    @apply text-transparent italic bg-clip-text bg-gradient-to-r from-[#133c41] via-mowka-teal-vibrant to-[#133c41] [&::selection]:text-white [&::selection]:bg-mowka-action-primary pr-4;
+  }
+
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+
+  .type-label {
+    @apply font-semibold tracking-widest uppercase text-xs md:text-sm text-mowka-label;
+  }
+
+  .type-section-heading {
+    @apply text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-mowka-text-primary leading-[1.15] tracking-tight text-balance;
+  }
+
+  .type-section-subhead {
+    @apply text-base md:text-[17px] font-light leading-relaxed text-mowka-text-secondary text-balance mt-1 md:mt-2 max-w-xl;
+  }
+
+  .type-body {
+    @apply text-sm md:text-[15px] font-light leading-relaxed text-mowka-text-secondary;
+  }
+
+  .type-quote {
+    @apply font-serif font-light text-sm md:text-[17px] leading-relaxed text-mowka-text-primary;
+  }
+
+  .type-caption {
+    @apply text-xs md:text-sm font-light leading-relaxed text-mowka-text-secondary;
+  }
+
+  .type-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full border border-mowka-border-light bg-mowka-bg-tertiary text-xs sm:text-sm font-semibold text-mowka-text-secondary tracking-tight transition-all duration-300;
+  }
+
+  .type-badge:hover,
+  .group:hover .type-badge {
+    @apply border-mowka-link;
+  }
+
+
+  /* ── Cards ──────────────────────────────────────────────────────────────── */
+
+  /* Base card */
+  .type-card {
+    @apply relative bg-mowka-bg-primary pt-5 px-5 pb-3 md:pt-6 md:px-6 md:pb-4 lg:pt-7 lg:px-7 lg:pb-5 rounded-xl md:rounded-2xl border border-mowka-border-light hover:-translate-y-2 transition-all duration-500 flex flex-col h-full;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  }
+
+  /* Timeline card — step card used inside layout-timeline */
+  .type-timeline-card {
+    @apply type-card hover:-translate-y-1 w-full h-auto pt-4 px-5 pb-3 md:pt-5 md:px-5 md:pb-3 lg:pt-5 lg:px-6 lg:pb-4;
+  }
+
+  /* Accordion card — expandable card (FAQs, and any expand/collapse card) */
+  .type-accordion-card {
+    @apply type-card h-auto p-0;
+  }
+
+  .type-accordion-card-trigger {
+    @apply w-full flex items-center justify-between p-4 md:p-5 text-left;
+  }
+
+  .type-accordion-card-trigger .type-card-title {
+    @apply mb-0;
+  }
+
+  .type-accordion-card-toggle {
+    @apply w-8 h-8 rounded-full border border-mowka-border-light flex items-center justify-center shrink-0 transition-all duration-300 bg-mowka-bg-primary/40 text-mowka-text-secondary;
+  }
+
+  .type-accordion-card-icon {
+    @apply w-4 h-4 transition-transform duration-300;
+  }
+
+  .type-accordion-card.is-open .type-accordion-card-icon {
+    @apply rotate-45 text-mowka-link;
+  }
+
+  .type-accordion-card-panel {
+    @apply px-5 pb-5 -mt-4;
+  }
+
+  /* Card sub-elements */
+  .type-card-title {
+    @apply font-serif text-base md:text-lg font-medium leading-snug text-mowka-text-primary mb-2;
+  }
+
+  .type-icon-pill {
+    @apply inline-flex items-center justify-center font-serif font-medium w-10 h-10 rounded-xl bg-mowka-teal-vibrant/10 text-mowka-teal-vibrant mb-3 [&>svg]:w-4 [&>svg]:h-4 [&>svg]:[stroke-width:1.5];
+  }
+
+  /* Shared hover overlay — all card variants */
+  .type-card::after,
+  .type-timeline-card::after,
+  .type-accordion-card::after {
+    content: '';
+    @apply absolute -inset-[1px] rounded-[inherit] border border-mowka-teal-vibrant/40 opacity-0 transition-opacity duration-500 pointer-events-none;
+    box-shadow: 0 20px 40px -10px rgba(45, 109, 117, 0.2);
+  }
+
+  .type-card:hover::after,
+  .type-timeline-card:hover::after,
+  .type-accordion-card:hover::after,
+  .type-accordion-card.is-open::after {
+    @apply opacity-100;
+  }
+
+
+  /* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+  /* Base — full-size by default; pair with a variant */
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-7 py-4 text-base font-medium rounded-md cursor-pointer transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99];
+  }
+
+  /* Compact — navbar only */
+  .btn-compact {
+    @apply px-5 py-2.5 text-sm gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-mowka-action-primary text-white hover:bg-mowka-action-primary-hover shadow-sm hover:shadow;
+  }
+
+  .btn-secondary {
+    @apply btn-primary bg-mowka-action-primary/10 text-mowka-action-primary hover:text-white border border-transparent;
+  }
+
+  .type-social-btn {
+    @apply w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+
+  /* ── Forms ───────────────────────────────────────────────────────────────── */
+
+  .form-label {
+    @apply text-sm text-mowka-text-primary tracking-tight;
+  }
+
+  .form-field-input {
+    @apply w-full bg-transparent px-0 py-2 text-base font-light text-mowka-text-primary placeholder:text-mowka-text-tertiary focus:outline-none border-0 border-b border-mowka-border-light hover:border-mowka-text-quaternary focus:border-mowka-teal-vibrant transition-colors duration-200;
+  }
+
+
+  /* ── Doc / Legal ─────────────────────────────────────────────────────────── */
+
+  .type-doc-heading {
     @apply text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8;
   }
 
-  .type-h3-doc {
+  .type-doc-section-title {
     @apply text-xl font-semibold text-mowka-text-primary mt-12 mb-4;
   }
 
-  .type-h4-doc {
+  .type-doc-subsection-title {
     @apply text-base font-semibold text-mowka-text-primary mt-8 mb-3;
   }
 
@@ -165,46 +293,4 @@ section {
     @apply list-disc pl-5 space-y-2;
   }
 
-  /* Form field primitives — used by /builder and any future forms */
-  .form-label {
-    @apply text-sm text-mowka-text-primary tracking-tight;
-  }
-
-  .form-field-input {
-    @apply w-full bg-transparent px-0 py-2 text-base font-light text-mowka-text-primary placeholder:text-mowka-text-tertiary focus:outline-none border-0 border-b border-mowka-border-light hover:border-mowka-text-quaternary focus:border-mowka-teal-vibrant transition-colors duration-200;
-  }
-
-  .headline-accent {
-    @apply text-transparent italic bg-clip-text bg-gradient-to-r from-mowka-action-primary via-mowka-teal-vibrant to-mowka-action-primary [&::selection]:text-white [&::selection]:bg-mowka-action-primary pr-4;
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 px-7 py-4 bg-mowka-action-primary text-white font-medium text-base rounded-md hover:bg-mowka-action-primary-hover transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99];
-  }
-
-  .hero-section {
-    @apply relative w-full flex flex-col justify-center items-center bg-mowka-bg-primary overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20 min-h-[calc(100vh-80px)];
-  }
-
-  .hero-container {
-    @apply w-full px-5 md:px-8 mx-auto flex flex-col items-center text-center;
-  }
-
-  .hero-headline {
-    @apply font-serif font-medium text-mowka-text-primary leading-[1.1] lg:leading-[1.15] tracking-tight text-4xl sm:text-5xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] mt-2 md:mt-4 mb-4 md:mb-6 text-balance selection:bg-mowka-action-primary selection:text-white;
-  }
-
-  .hero-subhead {
-    @apply text-base md:text-lg font-light leading-relaxed text-mowka-text-secondary text-balance mt-5 md:mt-7;
-  }
-}
-
-
-
-/* Premium Selection - Apple-style soft colors */
-::selection {
-  background-color: theme('colors.mowka.action-primary');
-  /* Button primary color (mowka-btn-primary) */
-  color: theme('colors.mowka.bg-primary');
-  /* White text for contrast */
 }

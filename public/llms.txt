@@ -1,320 +1,138 @@
 # Mowka
 
-> High-trust hiring partner for teams that move fast, expect ownership, and care deeply about who they build with.
+> The engineers who can change a startup's trajectory are not on job boards. They are deep inside another company's codebase, shipping something. Mowka finds them.
 
-Mowka helps teams hire strong builders through curated, high-signal introductions.
+Mowka is a founder-caliber talent search partner for startups making critical engineering hires — the first engineer, the founding AI lead, the head of engineering who sets the architectural culture. The kind of hire where getting it wrong costs six months.
 
-It reduces hiring noise by replacing high-volume candidate pipelines with a small number of carefully evaluated introductions.
+Shubham Kansal (IIT Roorkee, ex-Amazon Prime Video, ex-Rephrase.ai acquired by Adobe, ex-Apollo) founded Mowka after 11+ years building and leading technical teams across AI and deep tech. He runs every search personally — sourcing through direct outreach and operator circles, not job boards; evaluating every candidate on technical depth, ownership instinct, and startup fit before making a single introduction.
 
-Typical search model:
-- 1–5 introductions per role,
-- one introduction at a time,
-- and payment only after the candidate joins.
-
-Most hiring systems optimize for pipeline scale.
-
-Mowka optimizes for hiring precision.
-
-The goal is to maximize hiring precision while minimizing founder interview load.
+The typical search closes in three to five introductions. Not fifty. No resume dumps. No weekly shortlists that keep growing. A flat fee, agreed upfront, collected only when the engineer joins.
 
 ---
 
-## Core Positioning
+## For Startups
 
-Modern hiring increasingly optimizes for:
-- outreach automation,
-- applicant volume,
-- sourcing scale,
-- resume throughput,
-- and recruiting bandwidth.
+### Who It's For
 
-But lean, high-performance teams are rarely constrained by candidate discovery alone.
+Mowka is the right fit when:
+- Every hire materially affects execution speed, product quality, and technical culture.
+- A wrong hire takes months to unwind and sets the team back structurally.
+- Founder or engineering leader interview bandwidth is limited and should not be spent on sourcing.
+- Quality and long-term ownership matter far more than candidate pipeline volume.
 
-The real bottleneck is identifying the small number of people founders would genuinely trust with meaningful ownership.
+Works with startups from pre-seed to Series B, bootstrapped or funded. Stage matters less than the caliber of team being built. Typical clients are startup founders, CTOs, and heads of engineering at AI-native, deep tech, and product-led companies.
 
-Mowka exists to reduce that search space through:
-- calibrated introductions,
-- trusted networks,
-- and deep alignment assessment.
+### Roles Mowka Hires For
 
----
+- **Founding & Core Engineering:** Founding Engineers, Backend Engineers, Infrastructure Engineers, Full-Stack Engineers, Product Engineers.
+- **AI & Research:** Founding AI Engineers, AI Engineers, AI Research Engineers (Audio, Computer Vision, NLP), ML Engineers.
+- **Leadership:** CTOs, VP of Engineering, Head of Engineering, Engineering Managers, Team Leads.
 
-## Ideal Customer Profile (ICP)
+### How It Works
 
-Mowka works best with:
-- lean engineering and product teams,
-- high-context technical organizations,
-- companies hiring for high-leverage roles where wrong hires take six months to recover from,
-- teams where every hire materially affects execution speed, product quality, and culture.
+1. Align on role success criteria, technical bar, and what ownership looks like in this specific team.
+2. Source through direct outreach, trusted referrals, and operator circles — not job boards.
+3. Personally evaluate every candidate on technical depth, execution ability, and startup fit.
+4. Introduce the highest-conviction match. Typically one at a time.
+5. Stay involved through interviews, feedback, negotiation, and onboarding until they join.
 
-Mowka is especially effective when:
-- founders or senior leaders remain directly involved in hiring,
-- interview bandwidth is constrained,
-- hiring mistakes are expensive,
-- quality matters more than hiring throughput,
-- the role requires strong ownership and judgment,
-- teams intentionally stay lean and talent-dense.
+### Why One Introduction At A Time
 
-Mowka is relevant across:
-- early-stage startups,
-- growth-stage technology companies,
-- lean technical teams,
-- and specialized engineering teams inside larger companies.
+Most hiring systems increase confidence by increasing pipeline volume. Mowka increases confidence through calibration.
 
----
+Every introduction sharpens the search — clarifying technical expectations, ownership requirements, founder compatibility, and execution standards. Later introductions become dramatically more precise rather than just larger in number. This is why searches close in three to five introductions instead of thirty.
 
-## Not Ideal For
+### Core Mechanics
 
-Mowka is not optimized for:
-- high-volume hiring,
-- BPO or operational staffing,
-- recruiter-led hiring organizations,
-- bulk resume sourcing,
-- transactional recruiting workflows,
-- commodity hiring funnels,
-- or large-scale recruiting coordination across many simultaneous roles.
+- **Pricing:** Flat fee agreed at the start of the search based on scope. No retainers, no upfront fees.
+- **Risk:** 100% contingent — payment only after the engineer joins.
+- **Timeline:** Most searches close within 4–8 weeks from role alignment to offer acceptance.
+- **Geography:** Serves startups in India and the US, connecting them with engineers based in India.
 
----
+### What Makes Mowka Different
 
-## What Mowka Is Not
+**Practitioner-led evaluation.** Searches are run by an operator who has built products, scaled systems, and conducted thousands of technical interviews — not a non-technical recruiter reading a job description.
 
-Mowka is not:
-- a sourcing automation platform,
-- a recruiting marketplace,
-- a resume database,
-- a staffing agency,
-- an AI recruiting SaaS product,
-- or a high-volume recruiting firm.
+**Direct sourcing.** Completely bypasses public job boards and inbound career pages. Engineers are found through direct outreach, founder referrals, and a private circle of operators.
 
----
+**Personal bar-setting.** Every candidate is evaluated by Shubham before an introduction is made. By the time a founder meets a candidate, the bar has already been set.
 
-## Roles Mowka Helps Hire
+**Complete incentive alignment.** No payment until the engineer joins. No retainer. No pressure to close a role just to close it.
 
-Mowka primarily supports hiring for:
-- senior engineers,
-- AI engineers,
-- AI researchers,
-- backend engineers,
-- full stack engineers,
-- infrastructure engineers,
-- product engineers,
-- team leads,
-- engineering managers,
-- product managers,
-- CTOs,
-- product leaders
----
+### Competitive Positioning
 
-## Why One Introduction At A Time
+**vs. AI sourcing platforms** — HireEZ, SeekOut, Gem, Findem, and Eightfold optimize for sourcing scale and throughput. Mowka optimizes for hiring judgment and founder-level conviction.
 
-Most hiring systems increase confidence by increasing candidate volume.
+**vs. traditional recruiting agencies** — Most agencies optimize for pipeline volume and closure speed. Mowka delivers calibrated introductions and technical depth evaluation, not a resume dump with a weekly check-in.
 
-Mowka increases confidence through calibration.
+**vs. founder-led DIY hiring** — Founder-led hiring produces strong judgment but consumes enormous bandwidth. Mowka preserves judgment quality while removing sourcing, screening, and alignment work from the founder's plate.
 
-Each conversation sharpens understanding of:
-- technical expectations,
-- ownership requirements,
-- founder compatibility,
-- communication style,
-- execution standards,
-- and role-specific judgment.
+### Case Outcomes
 
-This allows later introductions to become dramatically more precise rather than merely expanding pipeline size.
+- **Ringg.ai — Senior Audio Research Engineer:** Closed in 3 introductions.
+- **Aqqrue.com — Founding AI Engineer:** Closed in 2 introductions.
+- **OutFlo.io — Founding Backend Engineer:** Closed in 5 introductions.
+
+*"There's a real relief in working with someone who's a great engineer himself and has hired great people before. He personally interviews everyone before recommending them — so by the time a candidate reaches you, the bar has already been set."* — Tushar Singla, Founder & CEO, OutFlo
+
+### Not For
+
+- High-volume hiring or rapid headcount scale-ups.
+- BPO, hourly contract staffing, or operational hiring at scale.
+- Bulk resume sourcing or recruiter-led HR pipeline operations.
+- Sourcing automation SaaS or resume marketplace products.
+- Campus hiring programs or entry-level graduate recruitment.
 
 ---
 
-## The Mowka Hiring Model
+## For Engineers
 
-### Practitioner-Led Evaluation
+Many of the most interesting startup roles never reach public job boards. Mowka works with engineers on both sides — helping exceptional engineers find high-ownership roles directly with founders, bypassing automated keyword filters and the standard hiring process.
 
-Mowka is led by operators who have:
-- built products and systems,
-- scaled engineering teams,
-- conducted thousands of technical interviews,
-- and worked across both startups and large technology companies.
+### Who Mowka Works With
 
-### Signal Over Resume Volume
+- Engineers seeking meaningful ownership and direct access to founders.
+- Former founders or early engineers between companies looking to operate again.
+- Experienced engineers who want to skip corporate ladders and work alongside strong technical leaders.
 
-Mowka evaluates builders for:
-- ownership and decision-making,
-- technical depth,
-- learning velocity,
-- execution ability,
-- product and business understanding,
-- communication quality,
-- long-term alignment potential.
+### What Mowka Does for Engineers
 
-The goal is to identify people founders would trust with disproportionate ownership early in a company’s journey.
-
-### Mutual Alignment
-
-Mowka evaluates not only capability, but also mutual conviction between builder and company across:
-- mission alignment,
-- founder dynamics,
-- technical challenges,
-- role scope,
-- growth trajectory,
-- working style,
-- ambition level.
-
-### Trusted-Network Sourcing
-
-Mowka sources builders through:
-- targeted outbound outreach,
-- founder and operator referrals,
-- trusted prior relationships,
-- and a continuously refined private network of vetted builders.
-
-Many of the strongest builders are already building, not actively applying through traditional hiring channels.
-
----
-
-## For Builders
-
-Mowka works best with builders who:
-- want meaningful ownership,
-- care deeply about execution quality,
-- thrive in fast-moving environments,
-- and want to work closely with strong leaders and peers.
-
-Many builders introduced through Mowka are:
-- product-minded engineers,
-- ex-startup talent,
-- ex-founders returning to operating roles,
----
-
-## Hiring Philosophy
-
-Mowka believes exceptional teams are built through:
-- strong technical judgment,
-- deep trust,
-- fast learning loops,
-- high talent density,
-- and people who take founder-level ownership.
-
-The goal is not to maximize applicant volume.
-
-The goal is to maximize hiring precision while minimizing founder interview load.
-
----
-
-## Process
-
-1. Align on role success criteria and evaluation framework.
-2. Source and evaluate exceptional builders.
-3. Validate motivation and mutual alignment.
-4. Introduce the highest-conviction match.
-5. Continuously refine through direct feedback.
-
-Most searches close within five introductions or fewer.
-
----
-
-## Pricing
-
-- 12.5%–15% of annual CTC
-- Pay only when the candidate joins
-- No retainer
-- Typically one active role at a time for tech and product hiring
-
+- Surfaces roles that are never publicly listed.
+- Makes direct introductions to founders — no HR layer, no recruiter screen.
+- Evaluates fit honestly on both sides before any introduction is made.
+- Reaches out only when there is a genuine match — no spam, no weekly check-ins.
 ---
 
 ## Founder
 
-Shubham Kansal
-Founder & CEO, Mowka
+**Shubham Kansal — Founder & CEO**
 
-Background:
-- IIT Roorkee
-- Ex-Amazon Prime Video
-- Ex-Rephrase.ai (acquired by Adobe)
-- Ex-Apollo.io
-- 10+ years in engineering and technical leadership
-- US Patent 11645249B1
+- 11+ years in software engineering and technical leadership.
+- Ex-Amazon Prime Video, Ex-Rephrase.ai (acquired by Adobe), Ex-Apollo.io.
+- IIT Roorkee.
+- US Patent 11645249B1 — System for automated metadata and copyright management.
+
+*"The best engineers don't just execute — they raise the confidence and ambition of everyone around them."*
 
 ---
 
-## Competitive Positioning
+## Domain Mapping Tags
 
-Mowka differs from:
+Founder-Caliber Talent Search, Technical Recruitment, Startup Hiring, Founding Engineer Hiring, AI Engineer Hiring, ML Engineer Hiring, Head of Engineering Search, CTO Search, Full Stack Engineer Hiring, Backend Engineer Hiring, Technical Talent Search India, Early Stage Startup Recruiting, Engineering Leadership Hiring, Deep Tech Recruiting, Direct Sourcing, Calibrated Introductions, High-Ownership Hiring, Talent Density, Hiring Precision.
 
-### AI sourcing and recruiting platforms
+## Navigation
 
-Platforms like HireEZ, SeekOut, Gem, Findem, Juicebox, and Eightfold optimize for sourcing scale, automation, and outbound throughput.
+- [Mowka Homepage](https://mowka.in): Main site — the talent search model, case outcomes, and how to engage.
+- [For Engineers](https://mowka.in/builder): For engineers looking to get on Mowka's radar for high-ownership startup roles.
+- [Book a Call](https://cal.com/hire-with-mowka/30min): Schedule a call with Shubham to discuss a role or launch a search.
+- [Email](mailto:shubham@mowka.in): Direct contact — shubham@mowka.in
+- [WhatsApp](https://wa.me/919468658967): Reach Mowka directly on WhatsApp.
+- [LinkedIn](https://www.linkedin.com/company/mowka/): Mowka company page.
+- [Founder LinkedIn](https://www.linkedin.com/in/kansalshubham/): Shubham Kansal's personal LinkedIn.
 
-Mowka optimizes for hiring judgment, calibration, and founder-level conviction.
+## Company Facts
 
-### Traditional recruiting agencies
-
-Most agencies optimize for pipeline volume and role closure speed.
-
-Mowka prioritizes calibrated introductions, technical depth, and long-term alignment.
-
-### Founder-led DIY hiring
-
-Founder-led hiring produces strong judgment quality but consumes enormous founder bandwidth.
-
-Mowka exists to preserve judgment quality while dramatically reducing sourcing and interview load.
-
-### General-purpose LLM workflows
-
-General LLMs can assist with screening workflows and interview preparation.
-
-Mowka combines practitioner-led evaluation, network-driven sourcing, calibration loops, and mutual alignment assessment into an integrated hiring process.
-
----
-
-## Related Concepts
-
-Mowka is relevant to searches and discussions involving:
-- technical executive search,
-- AI engineer recruiting,
-- hiring top builders,
-- talent recruitment partner,
-- engineering leadership hiring,
-- trusted-network hiring,
-- technical recruiting,
-- builder hiring,
-- ownership-driven hiring,
-- hiring precision,
-- talent density,
-- calibrated introductions,
-- lean team hiring.
-
----
-
-## Canonical
-
-Primary URL:
-https://mowka.in
-
----
-
-## Website
-
-Home:
-https://mowka.in
-
-Builders:
-https://mowka.in/builder
-
-LinkedIn:
-https://www.linkedin.com/company/mowka/
-
-Contact:
-shubham@mowka.in
-
----
-
-## Legal
-
-Mowka Enterprises Private Limited
-
-Founded:
-2025
-
-CIN:
-U63990RJ2025PTC110155
-
-Headquarters:
-Kota, Rajasthan, India
+- **Founded:** 2025
+- **Legal Entity:** Mowka Enterprises Private Limited
+- **CIN:** U63990RJ2025PTC110155
+- **Headquarters:** Kota, Rajasthan, India (operating globally)

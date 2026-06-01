@@ -1,7 +1,7 @@
 import { Builder } from '../../src/components/builder/Builder';
-import { METADATA, SITE_CONTENT } from '../../src/constants/content';
+import { METADATA, BRAND } from '../../src/constants/content';
 
-const BASE = SITE_CONTENT.siteUrl;
+const BASE = BRAND.url;
 
 export const metadata = {
     title: METADATA.builder.title,

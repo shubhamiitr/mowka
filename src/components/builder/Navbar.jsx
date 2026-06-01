@@ -16,12 +16,18 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <Logo />
 
-                <div className="hidden md:flex items-center space-x-12">
+                <div className="hidden md:flex items-center space-x-10">
+                    {/* <Link
+                        href="/jobs"
+                        className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide"
+                    >
+                        Open Roles
+                    </Link> */}
                     <Link
                         href="/"
                         className="text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide inline-flex items-center gap-1.5"
                     >
-                        For Companies
+                        For Founders
                     </Link>
 
                     <a

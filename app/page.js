@@ -1,7 +1,7 @@
 import { Home } from '../src/components/Home';
-import { METADATA, COMPANY_INFO, SITE_CONTENT, FOUNDER, FAQS } from '../src/constants/content';
+import { METADATA, BRAND, FOUNDER, HOME_PAGE } from '../src/constants/content';
 
-const BASE = SITE_CONTENT.siteUrl;
+const BASE = BRAND.url;
 
 export const metadata = {
     title: METADATA.home.title,
@@ -34,10 +34,9 @@ const jsonLd = {
         {
             "@type": "WebSite",
             "@id": `${BASE}/#website`,
-            "name": SITE_CONTENT.appName,
-            "alternateName": [COMPANY_INFO.legalName],
+            "name": BRAND.name,
             "url": `${BASE}/`,
-            "description": SITE_CONTENT.description,
+            "description": BRAND.descriptions.servicePov.long,
             "inLanguage": "en-US",
             "publisher": { "@id": `${BASE}/#organization` }
         },
@@ -54,50 +53,48 @@ const jsonLd = {
             ]
         },
         {
-            "@type": "EmploymentAgency",
+            "@type": "Organization",
             "@id": `${BASE}/#organization`,
-            "name": SITE_CONTENT.appName,
-            "legalName": COMPANY_INFO.legalName,
+            "name": BRAND.name,
+            "legalName": BRAND.legalName,
             "url": `${BASE}/`,
             "logo": {
                 "@type": "ImageObject",
                 "url": `${BASE}/logo-full.png`,
-                "width": "512",
-                "height": "512"
+                "width": 512,
+                "height": 512
             },
-            "description": COMPANY_INFO.description,
-            "slogan": `${SITE_CONTENT.tagline}.`,
-            "foundingDate": COMPANY_INFO.foundingDate,
+            "description": BRAND.descriptions.companyPov.short,
+            "slogan": BRAND.tagline,
+            "foundingDate": BRAND.foundingDate,
             "identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "CIN",
-                "value": COMPANY_INFO.cin
+                "value": BRAND.cin
             },
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": COMPANY_INFO.address.streetAddress,
-                "addressLocality": COMPANY_INFO.address.locality,
-                "addressRegion": COMPANY_INFO.address.region,
-                "postalCode": COMPANY_INFO.address.postalCode,
-                "addressCountry": COMPANY_INFO.address.country
+                "addressLocality": BRAND.address.locality,
+                "addressRegion": BRAND.address.region,
+                "addressCountry": BRAND.address.country
             },
-            "areaServed": {
-                "@type": "Place",
-                "name": "Worldwide"
-            },
+            "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "Country", "name": "United States" }
+            ],
             "founder": { "@id": `${BASE}/#founder` },
-            "knowsAbout": COMPANY_INFO.knowsAbout,
+            "knowsAbout": BRAND.knowsAbout,
             "contactPoint": {
                 "@type": "ContactPoint",
-                "email": COMPANY_INFO.email,
-                "contactType": "customer support"
+                "email": BRAND.email,
+                "contactType": "customer service"
             },
             "sameAs": [
-                COMPANY_INFO.socials.linkedin,
+                BRAND.socials.linkedin,
+                BRAND.socials.wellfound,
+                BRAND.socials.producthunt,
+                BRAND.socials.peerlist,
                 FOUNDER.linkedin,
-                COMPANY_INFO.socials.instagram,
-                COMPANY_INFO.socials.facebook,
-                COMPANY_INFO.whatsappLink,
             ]
         },
         {
@@ -105,20 +102,22 @@ const jsonLd = {
             "@id": `${BASE}/#founder`,
             "name": FOUNDER.name,
             "jobTitle": FOUNDER.jobTitle,
-            "description": `${FOUNDER.jobTitle} of ${SITE_CONTENT.appName}. ${FOUNDER.education}. Previously at ${FOUNDER.positions.map(p => p.company).join(', ')}. ${FOUNDER.award}.`,
+            "description": `${FOUNDER.jobTitle} of ${BRAND.name}. ${FOUNDER.education}. Previously at ${FOUNDER.positions.map(p => p.company).join(', ')}. ${FOUNDER.award}.`,
             "image": FOUNDER.imageAbsolute,
             "url": FOUNDER.linkedin,
             "award": FOUNDER.award,
+            "worksFor": { "@id": `${BASE}/#organization` },
             "alumniOf": [
                 { "@type": "CollegeOrUniversity", "name": FOUNDER.education },
                 ...FOUNDER.positions.map((p) => ({ "@type": "Organization", "name": p.company })),
             ],
-            "knowsAbout": FOUNDER.knowsAbout
+            "knowsAbout": FOUNDER.knowsAbout,
+            "sameAs": [FOUNDER.linkedin]
         },
         {
             "@type": "FAQPage",
             "@id": `${BASE}/#faq`,
-            "mainEntity": FAQS.map(({ q, a }) => ({
+            "mainEntity": HOME_PAGE.faqs.map(({ q, a }) => ({
                 "@type": "Question",
                 "name": q,
                 "acceptedAnswer": { "@type": "Answer", "text": a }

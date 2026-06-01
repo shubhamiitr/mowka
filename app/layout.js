@@ -2,7 +2,7 @@ import { Geist, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import ClientLayout from '../src/components/ClientLayout';
 import Script from 'next/script';
-import { SITE_CONTENT } from '../src/constants/content';
+import { BRAND } from '../src/constants/content';
 
 const geist = Geist({
     subsets: ['latin'],
@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-    metadataBase: new URL(SITE_CONTENT.siteUrl),
+    metadataBase: new URL(BRAND.url),
     icons: {
         icon: [
             { url: '/favicon.png', sizes: '192x192', type: 'image/png' },

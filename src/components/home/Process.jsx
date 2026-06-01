@@ -1,38 +1,25 @@
 "use client";
-import { Reveal } from '../ui/Reveal';
 import { HOME_PAGE } from '../../constants/content';
 
 export const Process = () => {
+    const { headline, steps } = HOME_PAGE.process;
+
     return (
         <section id="process" className="layout-section">
-            <div className="layout-container flex flex-col items-center">
-
-                <div className="layout-header">
-                    <Reveal>
-                        <span className="type-label mb-3 md:mb-4 block">
-                            {HOME_PAGE.process.label}
-                        </span>
-                        <h2 className="type-h2 text-balance">
-                            {HOME_PAGE.process.headline}
-                        </h2>
-                    </Reveal>
+            <div className="layout-container">
+                <div className="layout-section-header">
+                    <h2 className="type-section-heading">
+                        {headline}
+                    </h2>
                 </div>
+                <div className="layout-timeline">
+                    <div className="layout-timeline-bar" aria-hidden="true" />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 w-full">
-                    {HOME_PAGE.process.steps.map((step, index) => (
-                        <Reveal key={index} delay={index * 0.1} className="relative w-full h-full">
-                            <div className="type-card group">
-                                <div className="type-icon-pill font-serif sm:text-base md:text-lg lg:text-xl font-semibold">
-                                    {step.step || String(index + 1).padStart(2, '0')}
-                                </div>
-                                <h3 className="type-h3 mb-3 md:mb-4">
-                                    {step.title}
-                                </h3>
-                                <p className="type-body flex-1">
-                                    {step.description}
-                                </p>
-                            </div>
-                        </Reveal>
+                    {steps.map((step, index) => (
+                        <div key={index} className="type-timeline-card">
+                            <h3 className="type-card-title">{index + 1}. {step.title}</h3>
+                            <p className="type-body">{step.description}</p>
+                        </div>
                     ))}
                 </div>
             </div>

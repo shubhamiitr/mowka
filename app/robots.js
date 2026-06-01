@@ -1,4 +1,4 @@
-import { SITE_CONTENT } from '../src/constants/content';
+import { BRAND } from '../src/constants/content';
 
 export default function robots() {
     return {
@@ -6,6 +6,6 @@ export default function robots() {
             userAgent: '*',
             allow: ['/', '/llms.txt'],
         },
-        sitemap: [`${SITE_CONTENT.siteUrl}/sitemap.xml`],
+        sitemap: [`${BRAND.url}/sitemap.xml`],
     };
 }

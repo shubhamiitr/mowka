@@ -14,8 +14,8 @@ export default {
         mowka: {
           // Backgrounds - Warm off-whites
           'bg-primary': '#ffffff',      // Main background - all sections
-          'bg-secondary': '#f4f4f6',    // Subtle premium grey for Header/Footer (Light & Airy)
-          'bg-tertiary': '#fbfbfd',     // Pure white cards
+          'bg-secondary': '#f0f5f6',    // Subtle premium slate-teal wash for alternating backgrounds
+          'bg-tertiary': '#fbfbfd',     // Very subtle warm white for badges
 
           // Text - Soft blacks, never harsh
           'text-primary': '#1d1d1f',    // Headings - soft black
@@ -24,8 +24,8 @@ export default {
           'text-quaternary': '#86868b', // Very light text
 
           // Primary Action Color (Buttons, CTAs, Cards)
-          'action-primary': '#173054',     // Primary button/card background (navy)
-          'action-primary-hover': '#233f6b', // Hover state for primary buttons
+          'action-primary': '#2d6d75',     // Primary button/card background (teal)
+          'action-primary-hover': '#1f4d54', // Hover state for primary buttons
 
           // Link Color - Uses brand teal for consistency
           'link': '#2d6d75',            // Links & metrics (same as teal-vibrant)
@@ -38,7 +38,7 @@ export default {
           'teal-vibrant': '#2d6d75',    // Teal accent - darker for better contrast
 
           // Borders - Subtle separators
-          'border-light': '#d2d2d7',    // Light borders
+          'border-light': '#dbe4e5',    // Light premium slate-teal borders
         }
       },
       animation: {

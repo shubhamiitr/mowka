@@ -1,28 +1,23 @@
 "use client";
 
 import Image from 'next/image';
-import { Reveal } from '../ui/Reveal';
-import { MotionLogo } from '../ui/MotionLogo';
+import { Check } from 'lucide-react';
+import { CalButton } from '../ui/CalButton';
 import { HOME_PAGE } from '../../constants/content';
-import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
-    const handleCTA = (e) => {
-        e.preventDefault();
-        const el = document.getElementById('contact');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
     return (
         <section id="home" className="hero-section">
             <div className="hero-container">
                 <div className="flex flex-col items-center text-center max-w-7xl mx-auto w-full">
 
-                    <div className="mb-4 md:mb-6">
-                        <MotionLogo className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56" />
-                    </div>
-
                     <div>
+                        <div className="flex items-center justify-center gap-3 md:gap-4 mb-4 md:mb-5 animate-fade-in-up">
+                            <span className="h-px w-6 md:w-10 bg-mowka-teal-vibrant/50" />
+                            <span className="type-label">{HOME_PAGE.hero.kicker}</span>
+                            <span className="h-px w-6 md:w-10 bg-mowka-teal-vibrant/50" />
+                        </div>
+
                         <h1 className="hero-headline">
                             {HOME_PAGE.hero.headline.start} <br />
                             <span className="headline-accent">
@@ -34,23 +29,20 @@ export const Hero = () => {
                         </p>
                     </div>
 
-                    <Reveal delay={0.4}>
-                        <a href="#contact" onClick={handleCTA} className="mt-8 md:mt-10 btn-primary group">
-                            {HOME_PAGE.hero.cta}
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
-                    </Reveal>
-
-                    <Reveal delay={0.55}>
-                        <div className="grid grid-cols-3 gap-x-2 sm:gap-x-6 md:gap-x-12 lg:gap-x-16 w-full max-w-4xl mx-auto mt-8 md:mt-10">
+                    <div className="my-16">
+                            <CalButton variant="primary" icon="arrow">
+                                {HOME_PAGE.hero.cta}
+                            </CalButton>
+                        </div>
+                    <div className="grid grid-cols-3 gap-x-3 sm:gap-x-8 md:gap-x-14 lg:gap-x-20 w-full max-w-4xl mx-auto">
                             {HOME_PAGE.hero.proofStrip.map((item, index) => (
                                 <div key={index} className="flex flex-col items-center text-center group cursor-default transition-all duration-300 hover:-translate-y-1.5">
                                     {item.logo && (
-                                        <div className="w-full max-w-[72px] sm:max-w-[96px] md:max-w-[112px] h-6 sm:h-8 md:h-10 flex items-center justify-center">
+                                        <div className="w-full max-w-[80px] sm:max-w-[104px] md:max-w-[120px] h-7 sm:h-9 md:h-10 flex items-center justify-center mb-2">
                                             <Image
                                                 src={item.logo}
                                                 alt={`${item.company} logo`}
-                                                width={112}
+                                                width={120}
                                                 height={40}
                                                 className="max-w-full max-h-full object-contain"
                                                 unoptimized
@@ -60,14 +52,14 @@ export const Hero = () => {
                                     <span className="text-[12px] sm:text-[13px] md:text-[14px] font-medium text-mowka-text-secondary leading-tight">
                                         {item.role}
                                     </span>
-                                    <span className="type-badge mt-1.5">
-                                        {item.outcome}
+                                    <span className="type-badge mt-2.5">
+                                        <Check className="w-3.5 h-3.5 text-mowka-text-secondary shrink-0 mr-1" strokeWidth={3} />
+                                        <span>{item.outcome}</span>
                                     </span>
                                 </div>
                             ))}
                         </div>
-                    </Reveal>
-                </div>
+                    </div>
             </div>
         </section>
     );
