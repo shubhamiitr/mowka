@@ -28,8 +28,7 @@ export const TermsOfService = () => {
 
                         <h3 className="type-doc-section-title">1. Service overview</h3>
                         <p>
-                            Mowka provides curated introductions of pre-evaluated Builders for technical and leadership roles.
-                            We focus on high-confidence, low-volume hiring rather than large-scale recruitment pipelines.
+                            {BRAND.descriptions.servicePov.short}
                         </p>
 
                         <h3 className="type-doc-section-title">2. Eligibility</h3>
