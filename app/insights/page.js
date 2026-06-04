@@ -1,8 +1,11 @@
 import Link from 'next/link';
-import { Navbar } from '../../src/components/home/Navbar';
+import { Navbar } from '../../src/components/ui/Navbar';
 import { Footer } from '../../src/components/ui/Footer';
 import { INSIGHTS } from '../../src/constants/insights';
-import { BRAND } from '../../src/constants/content';
+import { BRAND, NAV_CTA } from '../../src/constants/content';
+
+const NAV_LINKS = [{ label: 'Open Roles', href: '/jobs' }];
+const NAVBAR_CTA = { type: 'cal', label: NAV_CTA };
 
 const BASE = BRAND.url;
 
@@ -26,7 +29,7 @@ export default function InsightsPage() {
 
     return (
         <main className="layout-page">
-            <Navbar />
+            <Navbar links={NAV_LINKS} cta={NAVBAR_CTA} />
             <section className="layout-section pt-28 md:pt-36">
                 <div className="layout-container">
                     <div className="layout-section-header">
@@ -37,20 +40,12 @@ export default function InsightsPage() {
                     {featured && (
                         <Link
                             href={`/insights/${featured.slug}`}
-                            className="block max-w-3xl mx-auto group mb-12 md:mb-16"
+                            className="type-card group max-w-3xl mx-auto !text-center mb-12 md:mb-16"
                         >
-                            <div className="rounded-3xl border border-mowka-border-light bg-mowka-bg-primary p-8 md:p-12 text-center shadow-[0_2px_8px_rgba(0,0,0,0.03),0_24px_48px_-16px_rgba(23,48,84,0.10)]">
-                                <p className="text-[11px] uppercase tracking-widest text-mowka-text-quaternary mb-4">
-                                    Featured · {fmtDate(featured.date)} · {featured.readTime}
-                                </p>
-                                <h2 className="font-serif text-2xl md:text-4xl font-medium text-mowka-text-primary leading-tight mb-4 group-hover:text-mowka-link transition-colors">
-                                    {featured.title}
-                                </h2>
-                                <p className="type-body max-w-xl mx-auto">{featured.excerpt}</p>
-                                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-mowka-link mt-6">
-                                    Read article →
-                                </span>
-                            </div>
+                            <p className="type-meta mb-4">Featured · {fmtDate(featured.date)} · {featured.readTime}</p>
+                            <h2 className="type-article-heading mb-4">{featured.title}</h2>
+                            <p className="type-body max-w-xl mx-auto">{featured.excerpt}</p>
+                            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-mowka-link mt-6 mx-auto">Read article →</span>
                         </Link>
                     )}
 
@@ -58,14 +53,10 @@ export default function InsightsPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
                             {rest.map((a) => (
                                 <Link key={a.slug} href={`/insights/${a.slug}`} className="type-card group">
-                                    <p className="text-[11px] uppercase tracking-widest text-mowka-text-quaternary mb-3">
-                                        {fmtDate(a.date)} · {a.readTime}
-                                    </p>
-                                    <h3 className="type-card-title mb-3 group-hover:text-mowka-link transition-colors">{a.title}</h3>
+                                    <p className="type-meta mb-3">{fmtDate(a.date)} · {a.readTime}</p>
+                                    <h3 className="type-card-title mb-3">{a.title}</h3>
                                     <p className="type-body flex-1">{a.excerpt}</p>
-                                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-mowka-link mt-4">
-                                        Read more →
-                                    </span>
+                                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-mowka-link mt-4">Read more →</span>
                                 </Link>
                             ))}
                         </div>

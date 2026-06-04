@@ -1,20 +1,24 @@
 "use client";
 
 import { useState } from 'react';
-import { Loader2 } from 'lucide-react';
-import { BUILDER_PAGE } from '../../constants/content';
-import { BuilderForm, validateForm } from './BuilderForm';
+import { Loader2, X } from 'lucide-react';
+import { BUILDER_PAGE } from '../constants/content';
+import { BuilderForm, validateForm } from '../components/builder/BuilderForm';
+import { event } from '../lib/gtag';
 
 const { success, loading, errors } = BUILDER_PAGE;
 
-export function useBuilderConnect() {
+export function useBuilderConnect(source = 'unknown') {
     const [step, setStep] = useState('idle');
     const [phone, setPhone] = useState('');
     const [preferredTime, setPreferredTime] = useState('');
     const [portfolio, setPortfolio] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
 
-    const open = () => setStep('form');
+    const open = () => {
+        event('builder_form_open', { source });
+        setStep('form');
+    };
 
     const dismiss = () => {
         setStep('idle');
@@ -35,7 +39,9 @@ export function useBuilderConnect() {
             });
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || errors.default);
+            event('builder_form_submit', { source });
             setStep('done');
+            setTimeout(dismiss, 4000);
         } catch (err) {
             setErrorMsg(err.message || errors.default);
             setStep('form');
@@ -45,7 +51,7 @@ export function useBuilderConnect() {
     const modal = step === 'idle' ? null : (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-            onClick={(e) => { if (e.target === e.currentTarget && step === 'form') dismiss(); }}
+            onClick={(e) => { if (e.target === e.currentTarget) dismiss(); }}
         >
             <div className="bg-white rounded-[2rem] shadow-2xl border border-black/[0.04] w-full max-h-[92vh] overflow-y-auto max-w-md">
                 {step === 'form' && (
@@ -65,10 +71,15 @@ export function useBuilderConnect() {
                     </div>
                 )}
                 {step === 'done' && (
-                    <div className="flex flex-col items-center text-center py-16 px-10 gap-6">
-                        <p className="text-base text-mowka-text-secondary text-balance leading-relaxed max-w-xs">
-                            {success.title}
-                        </p>
+                    <div className="w-full p-8 md:p-10">
+                        <div className="flex justify-end mb-4">
+                            <button onClick={dismiss} aria-label="Close" className="p-1.5 rounded-full text-mowka-text-quaternary hover:text-mowka-text-tertiary hover:bg-mowka-bg-secondary transition-all">
+                                <X className="w-4 h-4" />
+                            </button>
+                        </div>
+                        <div className="flex flex-col items-center text-center gap-4 pb-6">
+                            <p className="font-serif text-xl font-medium text-mowka-text-primary leading-tight">{success.title}</p>
+                        </div>
                     </div>
                 )}
             </div>

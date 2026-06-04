@@ -8,8 +8,8 @@ const COLUMNS = [
         heading: 'Company',
         links: [
             { label: 'About', href: '/#about' },
-            { label: 'Our Process', href: '/#process' },
-            // { label: 'Insights', href: '/insights' },
+            { label: 'Our Process', href: '/#how-we-work' },
+            { label: 'Insights', href: '/insights' },
         ],
     },
     {
@@ -23,10 +23,12 @@ const COLUMNS = [
     {
         heading: 'For builders',
         links: [
+            { label: 'Open Roles', href: '/jobs' },
             { label: 'Let\'s Talk', href: '/builder' },
         ],
     },
 ];
+
 
 export const Footer = () => {
     const company = BRAND;
@@ -45,7 +47,7 @@ export const Footer = () => {
                                 href={company.socials.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex ml-1 items-center justify-center w-6 h-6 rounded bg-white/10 hover:bg-white/20 text-white hover:text-white transition-all duration-200 mt-0.5"
+                                className="inline-flex ml-1 items-center justify-center w-6 h-6 rounded bg-white/10 hover:bg-white/20 text-white hover:text-white transition-all duration-200"
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin className="w-3.5 h-3.5 shrink-0" />
@@ -60,7 +62,7 @@ export const Footer = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
                         {COLUMNS.map((col) => (
                             <div key={col.heading} className="min-w-[120px]">
-                                <p className="text-[13px] font-semibold uppercase tracking-wider text-white mb-5">
+                                <p className="text-[13px] font-semibold uppercase tracking-wider text-white mb-3">
                                     {col.heading}
                                 </p>
                                 <ul className="space-y-3.5">

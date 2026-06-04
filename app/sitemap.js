@@ -1,6 +1,6 @@
 import { BRAND } from '../src/constants/content';
 // import { INSIGHTS } from '../src/constants/insights';
-// import { openJobs } from '../src/constants/jobs';
+import { openJobs } from '../src/constants/jobs';
 
 export default function sitemap() {
     const baseUrl = BRAND.url;
@@ -12,37 +12,37 @@ export default function sitemap() {
     //     priority: 0.6,
     // }));
 
-    // const jobPages = openJobs().map((j) => ({
-    //     url: `${baseUrl}/jobs/${j.slug}`,
-    //     lastModified: new Date(j.postedDate),
-    //     changeFrequency: 'weekly',
-    //     priority: 0.7,
-    // }));
+    const jobPages = openJobs().map((j) => ({
+        url: `${baseUrl}/jobs/${j.slug}`,
+        lastModified: new Date(j.postedDate),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+    }));
 
     return [
         {
             url: baseUrl,
-            lastModified: new Date('2026-05-01'),
+            lastModified: new Date('2026-06-04'),
             changeFrequency: 'monthly',
             priority: 1,
         },
-        // {
-        //     url: `${baseUrl}/jobs`,
-        //     lastModified: new Date('2026-05-18'),
-        //     changeFrequency: 'weekly',
-        //     priority: 0.8,
-        // },
+        {
+            url: `${baseUrl}/jobs`,
+            lastModified: new Date('2026-05-18'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        ...jobPages,
         // {
         //     url: `${baseUrl}/insights`,
         //     lastModified: new Date('2026-05-22'),
         //     changeFrequency: 'weekly',
         //     priority: 0.7,
         // },
-        // ...jobPages,
         // ...insightPages,
         {
             url: `${baseUrl}/builder`,
-            lastModified: new Date('2026-05-16'),
+            lastModified: new Date('2026-06-04'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },

@@ -1,12 +1,19 @@
 "use client";
 
-import { Navbar } from './home/Navbar';
+import { Navbar } from './ui/Navbar';
 import { Footer } from './ui/Footer';
+
+const NAV_LINKS = [
+    { label: 'For Founders', href: '/' },
+    { label: 'For Builders', href: '/builder' },
+    { label: 'Insights', href: '/insights' },
+    { label: 'Open Roles', href: '/jobs' },
+];
 
 export const NotFound = () => {
     return (
         <>
-            <Navbar />
+            <Navbar links={NAV_LINKS} />
             <div className="layout-page relative overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute inset-0 z-0">

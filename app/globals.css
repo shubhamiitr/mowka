@@ -61,7 +61,7 @@ section {
     @apply bg-mowka-bg-primary min-h-screen flex flex-col;
   }
 
-  .layout-page-doc {
+  .layout-page-article {
     @apply layout-page pt-24 md:pt-32;
   }
 
@@ -73,16 +73,15 @@ section {
     @apply w-full relative z-10 px-4 md:px-8 max-w-6xl mx-auto;
   }
 
-  .layout-container-doc {
+  .layout-container-article {
     @apply layout-container max-w-4xl flex-grow pb-12;
   }
 
-  /* Header block inside a section: type-label → type-section-heading → type-section-subhead */
   .layout-section-header {
     @apply text-center max-w-3xl mx-auto mb-10 md:mb-14 flex flex-col items-center;
   }
 
-  /* Timeline layout — wrapper + connecting bar for step sequences */
+  /* Timeline layout */
   .layout-timeline {
     @apply relative flex flex-col gap-6 md:gap-8 w-full max-w-5xl mx-auto;
   }
@@ -126,7 +125,7 @@ section {
   }
 
   .type-section-subhead {
-    @apply text-base md:text-[17px] font-light leading-relaxed text-mowka-text-secondary text-balance mt-1 md:mt-2 max-w-xl;
+    @apply text-base md:text-lg leading-relaxed text-mowka-text-tertiary text-balance mt-1 md:mt-2;
   }
 
   .type-body {
@@ -134,7 +133,7 @@ section {
   }
 
   .type-quote {
-    @apply font-serif font-light text-sm md:text-[17px] leading-relaxed text-mowka-text-primary;
+    @apply type-body text-mowka-text-primary;
   }
 
   .type-caption {
@@ -193,7 +192,6 @@ section {
     @apply px-5 pb-5 -mt-4;
   }
 
-  /* Card sub-elements */
   .type-card-title {
     @apply font-serif text-base md:text-lg font-medium leading-snug text-mowka-text-primary mb-2;
   }
@@ -247,7 +245,7 @@ section {
   /* ── Forms ───────────────────────────────────────────────────────────────── */
 
   .form-label {
-    @apply text-sm text-mowka-text-primary tracking-tight;
+    @apply text-base font-normal text-mowka-text-primary tracking-tight;
   }
 
   .form-field-input {
@@ -255,42 +253,38 @@ section {
   }
 
 
-  /* ── Doc / Legal ─────────────────────────────────────────────────────────── */
+  /* ── Article ─────────────────────────────────────────────────────────────── */
 
-  .type-doc-heading {
-    @apply text-3xl md:text-5xl font-serif text-mowka-text-primary mb-8;
+  .type-article-heading {
+    @apply text-2xl md:text-3xl font-serif font-medium text-mowka-text-primary leading-tight tracking-tight;
   }
 
-  .type-doc-section-title {
-    @apply text-xl font-semibold text-mowka-text-primary mt-12 mb-4;
+  .type-article-subheading {
+    @apply text-base md:text-lg font-normal text-mowka-text-primary mt-2;
   }
 
-  .type-doc-subsection-title {
-    @apply text-base font-semibold text-mowka-text-primary mt-8 mb-3;
+  .type-article-section-title {
+    @apply text-lg md:text-xl font-serif font-medium text-mowka-text-primary mt-6 mb-2;
   }
 
-  .type-prose {
-    @apply text-mowka-text-secondary leading-relaxed;
+  .type-article-body {
+    @apply type-body font-light leading-relaxed text-mowka-text-secondary;
   }
 
-  .type-prose p {
-    @apply mb-5;
+  .type-article-list {
+    @apply list-disc pl-5 space-y-1;
   }
 
-  .type-prose ul {
-    @apply mb-6;
-  }
-
-  .type-prose a {
-    @apply underline underline-offset-2 decoration-mowka-link/40 hover:decoration-mowka-link;
-  }
-
-  .type-doc-meta {
+  .type-article-meta {
     @apply text-sm text-mowka-text-tertiary mb-8;
   }
 
-  .list-doc {
-    @apply list-disc pl-5 space-y-2;
+  .type-meta {
+    @apply text-xs md:text-sm text-mowka-text-quaternary tracking-wide;
+  }
+
+  .type-back-link {
+    @apply text-sm font-medium text-mowka-link hover:text-mowka-link-hover transition-colors;
   }
 
 }

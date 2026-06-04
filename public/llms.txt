@@ -31,7 +31,7 @@ Works with startups from pre-seed to Series B, bootstrapped or funded. Stage mat
 ### How It Works
 
 1. Align on role success criteria, technical bar, and what ownership looks like in this specific team.
-2. Source through direct outreach, trusted referrals, and operator circles — not job boards.
+2. Source through direct outreach, trusted referrals, and operator circles
 3. Personally evaluate every candidate on technical depth, execution ability, and startup fit.
 4. Introduce the highest-conviction match. Typically one at a time.
 5. Stay involved through interviews, feedback, negotiation, and onboarding until they join.
@@ -91,16 +91,27 @@ Many of the most interesting startup roles never reach public job boards. Mowka 
 
 ### Who Mowka Works With
 
-- Engineers seeking meaningful ownership and direct access to founders.
-- Former founders or early engineers between companies looking to operate again.
-- Experienced engineers who want to skip corporate ladders and work alongside strong technical leaders.
+Mowka works exclusively with engineers who have demonstrated founder-caliber ownership. Specifically:
 
-### What Mowka Does for Engineers
+- **Founded before** — former founders or co-founders who want to build again without the investor and admin burden.
+- **Earliest-stage operators** — founding engineers or early hires who've since worked in scaled teams and want that early-stage environment back.
+- **Big-company intrapreneurs** — engineers who launched a product or team from zero inside a large org and want more direct ownership and stake.
+- **Systems builders at scale** — engineers who've owned reliability and performance of high-scale production systems and want to build core systems from the ground up.
+- **Deep domain experts with product vision** — engineers with strong expertise in a domain who see broken systems others miss and want to turn that insight into products.
+- **Future founders** — engineers already shipping strong work independently who want to work alongside experienced founders before starting their own company.
 
-- Surfaces roles that are never publicly listed.
-- Makes direct introductions to founders — no HR layer, no recruiter screen.
-- Evaluates fit honestly on both sides before any introduction is made.
-- Reaches out only when there is a genuine match — no spam, no weekly check-ins.
+### How Mowka Works With Engineers
+
+1. Discuss the engineer's trajectory — what they've built, how they build today, and where they're heading next.
+2. Share opportunities only when there is a strong match — roles that clearly fit the engineer's level and direction.
+3. Introduce directly to founders — no HR layer, no recruiter screen, straight to the people they'd actually work with.
+
+### What Engineers Can Expect
+
+- No cost. Mowka is paid by the startups it works with, never by engineers.
+- No spam. Mowka reaches out only when something is genuinely worth the engineer's time.
+- Confidential. An engineer's profile is only shared with founders they explicitly approve.
+
 ---
 
 ## Founder
@@ -123,7 +134,13 @@ Founder-Caliber Talent Search, Technical Recruitment, Startup Hiring, Founding E
 ## Navigation
 
 - [Mowka Homepage](https://mowka.in): Main site — the talent search model, case outcomes, and how to engage.
+- [How We Work](https://mowka.in/#how-we-work): Step-by-step search process for founders.
+- [Why Partner With Us](https://mowka.in/#why-mowka): What makes Mowka different from agencies and AI sourcing tools.
+- [Roles We Fill](https://mowka.in/#roles): Engineering roles Mowka hires for.
+- [Contact / Book a Search](https://mowka.in/#contact): Start a search or get in touch.
 - [For Engineers](https://mowka.in/builder): For engineers looking to get on Mowka's radar for high-ownership startup roles.
+- [Engineers — Get in Touch](https://mowka.in/builder#contact): For engineers to share their profile with Mowka.
+- [Open Roles](https://mowka.in/jobs): Currently listed startup roles Mowka is hiring for.
 - [Book a Call](https://cal.com/hire-with-mowka/30min): Schedule a call with Shubham to discuss a role or launch a search.
 - [Email](mailto:shubham@mowka.in): Direct contact — shubham@mowka.in
 - [WhatsApp](https://wa.me/919468658967): Reach Mowka directly on WhatsApp.

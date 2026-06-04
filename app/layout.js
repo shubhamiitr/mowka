@@ -3,6 +3,7 @@ import './globals.css';
 import ClientLayout from '../src/components/ClientLayout';
 import Script from 'next/script';
 import { BRAND } from '../src/constants/content';
+import { RouteAnalytics } from '../src/components/analytics/RouteAnalytics';
 
 const geist = Geist({
     subsets: ['latin'],
@@ -40,18 +41,18 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`scroll-smooth ${geist.variable} ${playfair.variable}`}>
             <head>
-                {/* Google Analytics */}
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-5VNYMY69PY" strategy="lazyOnload" />
-                <Script id="google-analytics" strategy="lazyOnload">
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-5VNYMY69PY" strategy="afterInteractive" />
+                <Script id="google-analytics" strategy="afterInteractive">
                     {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-5VNYMY69PY');
+            gtag('config', 'G-5VNYMY69PY', { send_page_view: false });
           `}
                 </Script>
-            </head >
+            </head>
             <body className="bg-mowka-bg-primary text-mowka-text-primary antialiased overflow-x-hidden">
+                <RouteAnalytics />
                 <ClientLayout>
                     <div className="bg-mowka-bg-primary min-h-screen">
                         {children}

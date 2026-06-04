@@ -6,7 +6,7 @@ const { howWeWork } = BUILDER_PAGE;
 
 export const BuilderHowWeWork = () => (
     <section className="layout-section">
-        <div className="layout-container">
+        <div className="layout-container mx-auto max-w-4xl">
             <div className="layout-section-header">
                 <h2 className="type-section-heading">{howWeWork.headline}</h2>
             </div>

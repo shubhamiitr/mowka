@@ -30,7 +30,7 @@ export const Hero = () => {
                     </div>
 
                     <div className="my-16">
-                            <CalButton variant="primary" icon="arrow">
+                            <CalButton variant="primary" icon="arrow" source="home_hero">
                                 {HOME_PAGE.hero.cta}
                             </CalButton>
                         </div>

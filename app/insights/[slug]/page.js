@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Navbar } from '../../../src/components/home/Navbar';
+import { Navbar } from '../../../src/components/ui/Navbar';
 import { Footer } from '../../../src/components/ui/Footer';
 import { INSIGHTS, getInsight } from '../../../src/constants/insights';
-import { BRAND } from '../../../src/constants/content';
+import { BRAND, NAV_CTA } from '../../../src/constants/content';
+
+const NAV_LINKS = [{ label: 'Open Roles', href: '/jobs' }];
+const NAVBAR_CTA = { type: 'cal', label: NAV_CTA };
 
 const BASE = BRAND.url;
 
@@ -63,28 +66,32 @@ export default async function InsightPage({ params }) {
 
     return (
         <main className="layout-page">
-            <Navbar />
-            <article className="layout-container-doc pt-28 md:pt-36">
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+            <Navbar links={NAV_LINKS} cta={NAVBAR_CTA} />
+            <section className="layout-section pt-28 md:pt-36">
+                <div className="layout-container-article">
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-                <Link href="/insights" className="text-sm font-medium text-mowka-link hover:text-mowka-link-hover transition-colors">
-                    ← All insights
-                </Link>
+                    <Link href="/insights" className="type-back-link">← All insights</Link>
 
-                <p className="type-doc-meta mt-6">{fmtDate(a.date)} · {a.readTime} · {a.author}</p>
-                <h1 className="type-doc-heading">{a.title}</h1>
+                    <header className="mt-8 md:mt-10">
+                        <p className="type-article-meta">{fmtDate(a.date)} · {a.readTime} · {a.author}</p>
+                        <h1 className="type-article-heading mt-2">{a.title}</h1>
+                    </header>
 
-                <div className="type-prose">
-                    {a.body.map((p, i) => (
-                        <p key={i}>{p}</p>
-                    ))}
+                    <article className="type-article-body mt-8 space-y-4">
+                        {a.body.map((p, i) => (
+                            <p key={i}>{p}</p>
+                        ))}
+                    </article>
+
+                    <div className="mt-12 pt-8 border-t border-mowka-border-light">
+                        <Link href="/#contact" className="group btn btn-primary">
+                            <span>Hiring for a role like this? Let&apos;s talk</span>
+                        </Link>
+                    </div>
                 </div>
-
-                <div className="mt-12 pt-8 border-t border-mowka-border-light">
-                    <Link href="/#contact" className="btn-primary">Hiring for a role like this? Let&apos;s talk</Link>
-                </div>
-            </article>
+            </section>
             <Footer />
         </main>
     );

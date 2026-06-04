@@ -28,8 +28,8 @@ export const Contact = () => {
                         {subhead}
                     </p>
 
-                    <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <CalButton variant="primary" icon="arrow">
+                    <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <CalButton variant="primary" icon="arrow" source="home_contact">
                             {primaryCta}
                         </CalButton>
                         <a
@@ -41,11 +41,11 @@ export const Contact = () => {
                         </a>
                     </div>
 
-                    {reassurance && (
-                        <p className="text-xs font-semibold tracking-widest text-mowka-text-tertiary uppercase mt-4">
-                            {reassurance}
-                        </p>
-                    )}
+
+                    <p className="text-sm font-medium tracking-widest text-mowka-text-tertiary mt-4">
+                        {reassurance}
+                    </p>
+
                 </div>
             </section>
             <Footer />

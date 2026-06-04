@@ -33,22 +33,21 @@ export function BuilderForm({
     errorMsg, onSubmit, onDismiss,
 }) {
     return (
-        <div className="w-full p-8 md:p-10">
+        <div className="w-full p-8 md:p-10 relative">
 
-            <div className="flex items-start justify-between mb-8">
-                <div>
-                    <p className="font-serif text-md font-medium text-mowka-text-primary leading-tight">
-                        {form.intro}
-                    </p>
-                </div>
-                <button
-                    type="button"
-                    onClick={onDismiss}
-                    aria-label="Close"
-                    className="p-2 rounded-full text-mowka-text-quaternary hover:text-mowka-text-tertiary hover:bg-mowka-bg-secondary transition-all flex-shrink-0 -mt-1 -mr-2"
-                >
-                    <X className="w-5 h-5" />
-                </button>
+            <button
+                type="button"
+                onClick={onDismiss}
+                aria-label="Close"
+                className="absolute top-6 right-6 p-1.5 rounded-full text-mowka-text-quaternary hover:text-mowka-text-tertiary hover:bg-mowka-bg-secondary transition-all"
+            >
+                <X className="w-4 h-4" />
+            </button>
+
+            <div className="text-center mb-8">
+                <p className="font-serif text-lg font-medium text-mowka-text-primary leading-tight">
+                    {form.intro}
+                </p>
             </div>
 
             <form onSubmit={onSubmit} className="flex flex-col gap-5">
@@ -105,7 +104,7 @@ export function BuilderForm({
                     <p className="text-sm text-red-500 -mt-2 font-medium text-center">{errorMsg}</p>
                 )}
 
-                <button type="submit" className="btn btn-primary w-full mt-4 group">
+                <button type="submit" className="btn btn-primary w-full mt-4 group !py-3">
                     {form.cta}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

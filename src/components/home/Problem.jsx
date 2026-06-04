@@ -1,14 +1,12 @@
 "use client";
 
-import { Inbox, Users, Sparkles, UserX, RotateCcw, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { HOME_PAGE } from '../../constants/content';
-
-const PAIN_ICONS = [Inbox, Users, Sparkles, UserX, RotateCcw];
 
 export const Problem = () => {
     const scrollToProcess = (e) => {
         e.preventDefault();
-        const el = document.getElementById('process');
+        const el = document.getElementById('how-we-work');
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
@@ -22,7 +20,7 @@ export const Problem = () => {
                 </div>
                 <div className="flex flex-wrap justify-center gap-6 w-full">
                     {HOME_PAGE.problem.pains.map((pain, index) => {
-                        const Icon = PAIN_ICONS[index] ?? Inbox;
+                        const Icon = pain.icon;
                         return (
                             <div
                                 key={index}

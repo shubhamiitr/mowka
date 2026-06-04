@@ -1,9 +1,19 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { Navbar } from '../../../src/components/home/Navbar';
+import { redirect } from 'next/navigation';
+import { Navbar } from '../../../src/components/ui/Navbar';
 import { Footer } from '../../../src/components/ui/Footer';
-import { JOBS, getJob } from '../../../src/constants/jobs';
+import { JobMetaStrip } from '../../../src/components/ui/JobMetaStrip';
+import { JOBS, JOBS_PAGE, getJob, getJobMetaTitle, getJobMetaDescription } from '../../../src/constants/jobs';
+import { BuilderFormCta } from '../../../src/components/ui/BuilderFormCta';
 import { BRAND } from '../../../src/constants/content';
+
+const NAV_LINKS = [
+    { label: 'For Founders', href: '/' },
+    { label: 'For Builders', href: '/builder' },
+    // { label: 'Insights', href: '/insights' },
+    { label: 'Open Roles', href: '/jobs' },
+];
+const NAV_CTA = { type: 'builder-form', label: 'Interested' };
 
 const BASE = BRAND.url;
 
@@ -15,63 +25,96 @@ export async function generateMetadata({ params }) {
     const { slug } = await params;
     const j = getJob(slug);
     if (!j) return {};
-    const closed = j.status === 'closed';
     return {
-        title: `${j.title} — ${BRAND.name}`,
-        description: j.summary,
+        title: getJobMetaTitle(j),
+        description: getJobMetaDescription(j),
         alternates: { canonical: `${BASE}/jobs/${j.slug}` },
-        robots: closed ? { index: false, follow: true } : undefined,
+        robots: j.status === 'closed' ? { index: false, follow: true }
+            : j.status === 'draft' ? { index: false, follow: false }
+                : undefined,
+        openGraph: {
+            type: 'website',
+            url: `${BASE}/jobs/${j.slug}`,
+            title: getJobMetaTitle(j),
+            description: getJobMetaDescription(j),
+            images: [{ url: `${BASE}/og-image.png`, width: 1200, height: 630 }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: getJobMetaTitle(j),
+            description: getJobMetaDescription(j),
+            images: [`${BASE}/og-image.png`],
+        },
     };
 }
 
 const Section = ({ title, children }) => (
-    <section className="mt-10 first:mt-8">
-        <h2 className="font-serif text-xl md:text-2xl font-medium text-mowka-text-primary mb-4">{title}</h2>
+    <div>
+        <h2 className="type-article-section-title">{title}</h2>
         {children}
-    </section>
+    </div>
 );
 
 const BulletList = ({ items }) => (
-    <ul className="space-y-3 list-disc pl-5 marker:text-mowka-text-quaternary">
-        {items.map((it, i) => (
-            <li key={i} className="type-body">{it}</li>
-        ))}
+    <ul className="type-article-list">
+        {items.map((it, i) => <li key={i}>{it}</li>)}
     </ul>
 );
 
 export default async function JobPage({ params }) {
     const { slug } = await params;
     const j = getJob(slug);
-    if (!j) notFound();
+    if (!j) redirect('/jobs');
     const closed = j.status === 'closed';
-    const isRemote = /remote/i.test(j.location);
+    const isRemote = j.workPolicy === 'Remote';
 
     const description =
         `<p>${j.summary}</p>` +
-        (j.mission ? `<p><strong>The mission</strong></p><p>${j.mission}</p>` : '') +
-        (j.build?.length ? `<p><strong>What you'll build</strong></p><ul>${j.build.map((r) => `<li>${r}</li>`).join('')}</ul>` : '') +
-        (j.lookingFor?.length ? `<p><strong>What we're looking for</strong></p><ul>${j.lookingFor.map((r) => `<li>${r}</li>`).join('')}</ul>` : '');
+        `<p><strong>What you'll build</strong></p><ul>${j.whatYouWillBuild.map((r) => `<li>${r}</li>`).join('')}</ul>` +
+        `<p><strong>Who you are</strong></p><ul>${j.whatYouAre.map((r) => `<li>${r}</li>`).join('')}</ul>` +
+        `<p><strong>Why this</strong></p><ul>${j.whyTakeThis.map((r) => `<li>${r}</li>`).join('')}</ul>`;
 
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'JobPosting',
         title: j.title,
         description,
+        url: `${BASE}/jobs/${j.slug}`,
         datePosted: j.postedDate,
         validThrough: j.validThrough,
         employmentType: 'FULL_TIME',
+        directApply: false,
+        baseSalary: {
+            '@type': 'MonetaryAmount',
+            currency: 'INR',
+            value: {
+                '@type': 'QuantitativeValue',
+                minValue: j.salaryMin * 100000,
+                maxValue: j.salaryMax * 100000,
+                unitText: 'YEAR',
+            },
+        },
         identifier: { '@type': 'PropertyValue', name: BRAND.name, value: j.slug },
         hiringOrganization: {
             '@type': 'Organization',
             name: BRAND.name,
             sameAs: BASE,
-            logo: `${BASE}/logo-full.png`,
+            logo: { '@type': 'ImageObject', url: `${BASE}/logo-full.png` },
         },
-        ...(isRemote
-            ? { jobLocationType: 'TELECOMMUTE', applicantLocationRequirements: { '@type': 'Country', name: 'Worldwide' } }
-            : {}),
-        jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressCountry: 'IN' } },
-        industry: j.sector,
+        ...(isRemote ? {
+            jobLocationType: 'TELECOMMUTE',
+            applicantLocationRequirements: { '@type': 'Country', name: j.remoteCountry },
+        } : {}),
+        jobLocation: {
+            '@type': 'Place',
+            address: {
+                '@type': 'PostalAddress',
+                ...(isRemote ? {} : { addressLocality: j.location, addressRegion: j.region }),
+                addressCountry: 'IN',
+            },
+        },
+        industry: j.industry,
+        skills: j.skills.join(', '),
     };
 
     const breadcrumb = {
@@ -84,95 +127,53 @@ export default async function JobPage({ params }) {
         ],
     };
 
-    const compLine = j.equity ? `${j.salary} • ${j.equity}` : j.salary;
-    const highlights = [
-        { label: 'Location', value: j.location },
-        { label: 'Industry', value: j.sector },
-        { label: 'Compensation', value: compLine },
-        { label: 'Stage', value: j.stage },
-    ];
+    const compLine = `₹${j.salaryMin}L – ₹${j.salaryMax}L · ${j.equity} equity`;
 
     return (
         <main className="layout-page">
-            <Navbar />
-            <section className="pt-28 md:pt-36 pb-16 md:pb-24">
-                <div className="max-w-6xl mx-auto px-6 md:px-8">
+            <Navbar links={NAV_LINKS} cta={NAV_CTA} />
+            <section className="pt-28 md:pt-36 pb-20 md:pb-28">
+                <div className="max-w-3xl mx-auto px-6 md:px-8">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-                    <Link href="/jobs" className="text-sm font-medium text-mowka-link hover:text-mowka-link-hover transition-colors">
-                        ← All roles
-                    </Link>
+                    <Link href="/jobs" className="type-back-link">← {JOBS_PAGE.detail.backLink}</Link>
 
-                    {closed && (
-                        <div className="mt-6 rounded-xl border border-mowka-border-light bg-mowka-bg-secondary p-4 text-sm text-mowka-text-secondary">
-                            This role has been filled.{' '}
-                            <Link href="/jobs" className="text-mowka-link underline underline-offset-2">See current open roles →</Link>
-                        </div>
-                    )}
-
-                    <header className="mt-6 md:mt-8">
-                        <h1 className="font-serif text-3xl md:text-5xl font-medium text-mowka-text-primary tracking-tight leading-tight">
-                            {j.title}
-                        </h1>
-                        <p className="mt-2 text-xl md:text-2xl font-semibold text-mowka-text-secondary tracking-tight">
-                            {compLine}
-                        </p>
+                    <header className="mt-8 md:mt-10">
+                        {closed && (
+                            <span className="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1 rounded-full mb-3 bg-red-500/10 text-red-500">
+                                <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                                Closed
+                            </span>
+                        )}
+                        <h1 className="type-article-heading">{j.title}</h1>
+                        <p className="type-article-subheading">{compLine}</p>
+                        <JobMetaStrip job={j} className="mt-1" />
                     </header>
 
-                    <div className="mt-10 md:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12">
-                        <article className="lg:col-span-2">
-                            <p className="type-body text-base md:text-[17px]">
-                                {j.summary}
-                            </p>
+                    <article className="type-article-body mt-7">
+                        <Section title={JOBS_PAGE.detail.sections.overview}>
+                            <p>{j.summary}</p>
+                        </Section>
 
-                            {j.mission && (
-                                <Section title="The mission">
-                                    <p className="type-body">{j.mission}</p>
-                                </Section>
-                            )}
+                        <Section title={JOBS_PAGE.detail.sections.whatYouWillBuild}>
+                            <BulletList items={j.whatYouWillBuild} />
+                        </Section>
 
-                            {j.build?.length > 0 && (
-                                <Section title="What you&rsquo;ll build">
-                                    <BulletList items={j.build} />
-                                </Section>
-                            )}
+                        <Section title={JOBS_PAGE.detail.sections.whoYouAre}>
+                            <BulletList items={j.whatYouAre} />
+                        </Section>
 
-                            {j.lookingFor?.length > 0 && (
-                                <Section title="What we&rsquo;re looking for">
-                                    <BulletList items={j.lookingFor} />
-                                </Section>
-                            )}
+                        <Section title={JOBS_PAGE.detail.sections.whyTakeThis}>
+                            <BulletList items={j.whyTakeThis} />
+                        </Section>
 
-                            {j.goodToHave?.length > 0 && (
-                                <Section title="Good to have">
-                                    <BulletList items={j.goodToHave} />
-                                </Section>
-                            )}
-
-                            {j.whyJoin?.length > 0 && (
-                                <Section title="Why join">
-                                    <BulletList items={j.whyJoin} />
-                                </Section>
-                            )}
-                        </article>
-
-                        <aside className="lg:col-span-1">
-                            <div className="lg:sticky lg:top-32 rounded-2xl border border-mowka-border-light bg-mowka-bg-primary p-6 md:p-7">
-                                <p className="text-[11px] uppercase tracking-widest text-mowka-text-quaternary mb-4">
-                                    Role highlights
-                                </p>
-                                <dl className="space-y-4">
-                                    {highlights.map((h) => (
-                                        <div key={h.label}>
-                                            <dt className="text-xs uppercase tracking-wide text-mowka-text-quaternary">{h.label}</dt>
-                                            <dd className="mt-0.5 text-sm md:text-base text-mowka-text-primary font-medium">{h.value}</dd>
-                                        </div>
-                                    ))}
-                                </dl>
+                        {!closed && (
+                            <div className="mt-8">
+                                <BuilderFormCta label="Interested" compact={false} />
                             </div>
-                        </aside>
-                    </div>
+                        )}
+                    </article>
                 </div>
             </section>
             <Footer />

@@ -1,9 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import { Navbar } from "../home/Navbar";
+import { Navbar } from "../ui/Navbar";
 import { Footer } from "../ui/Footer";
 import { BRAND } from "../../constants/content";
+
+const NAV_LINKS = [
+    { label: 'For Founders', href: '/' },
+    { label: 'For Builders', href: '/builder' },
+];
 
 export const TermsOfService = () => {
     useEffect(() => {
@@ -12,13 +17,13 @@ export const TermsOfService = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar links={NAV_LINKS} />
 
-            <section className="layout-page-doc">
+            <section className="layout-page-article">
                 <div className="layout-container-doc">
                     <h1 className="type-doc-heading">Terms of Service</h1>
 
-                    <div className="type-prose">
+                    <div className="type-article-body">
                         <p className="type-doc-meta">Last Updated: May 2026</p>
 
                         <p>
@@ -37,14 +42,14 @@ export const TermsOfService = () => {
                         </p>
 
                         <h3 className="type-doc-section-title">3. Founder obligations</h3>
-                        <ul className="list-doc">
+                        <ul className="type-doc-list">
                             <li>Provide accurate hiring requirements, compensation, and role details.</li>
                             <li>Engage professionally with introduced Builders.</li>
                             <li>Share timely feedback during the hiring process.</li>
                         </ul>
 
                         <h3 className="type-doc-section-title">4. Builder obligations</h3>
-                        <ul className="list-doc">
+                        <ul className="type-doc-list">
                             <li>Provide accurate professional information.</li>
                             <li>Maintain confidentiality of company and role details.</li>
                             <li>Engage professionally throughout the process.</li>

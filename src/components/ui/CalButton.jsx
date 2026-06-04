@@ -2,6 +2,7 @@
 
 import { ArrowRight, Calendar } from 'lucide-react';
 import { BRAND } from '../../constants/content';
+import { event } from '../../lib/gtag';
 
 const ICONS = {
     arrow:    { Component: ArrowRight, position: 'right', size: 'w-3.5 h-3.5' },
@@ -16,15 +17,21 @@ export const CalButton = ({
     icon = 'arrow',
     className = '',
     onClick,
+    source = 'unknown',
 }) => {
     const iconCfg = ICONS[icon];
+
+    const handleClick = () => {
+        event('book_call_click', { source });
+        onClick?.();
+    };
 
     return (
         <button
             data-cal-link={BRAND.calLink}
             data-cal-namespace="30min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-            onClick={onClick}
+            onClick={handleClick}
             className={`group btn btn-${variant}${size === 'compact' ? ' btn-compact' : ''} ${className}`}
         >
             {iconCfg?.position === 'left' && (

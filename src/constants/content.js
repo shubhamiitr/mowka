@@ -1,8 +1,10 @@
 // =============================================================================
 // Sources of truth for brand, legal, and content. Edit values here.
-// IMPORTANT: If you change core messaging here, make sure to manually update 
+// IMPORTANT: If you change core messaging here, make sure to manually update
 // `public/llms.txt` so that AI crawlers have the most up-to-date context!
 // =============================================================================
+
+import { Layers, BrainCircuit, Server, Code2, AudioWaveform, Crown, Terminal, Watch, ShieldCheck, RefreshCw, Inbox, CircleX, UserX, AlertTriangle, Cpu, Settings, Compass, Ticket } from 'lucide-react';
 
 export const BRAND = {
     name: "Mowka",
@@ -84,6 +86,13 @@ export const FOUNDER = {
     ],
 };
 
+const HOW_WE_WORK_STEPS = [
+    { title: "Role alignment", description: "We understand your product, team, and the kind of builder who will succeed in the role." },
+    { title: "Target sourcing", description: "We identify builders through Mowka's vetted network and direct outreach, focusing on those who have already shipped in high-ownership environments." },
+    { title: "Curated shortlist", description: "We only introduce builders who meet your technical bar, demonstrate strong product mindset and ownership, and are aligned with intent for their next role." },
+    { title: "Offer closure", description: "We stay involved through interviews, feedback, negotiation, and onboarding until they join." },
+];
+
 export const HOME_PAGE = {
     hero: {
         kicker: BRAND.category,
@@ -104,22 +113,27 @@ export const HOME_PAGE = {
         headline: "Sound familiar?",
         pains: [
             {
-                title: "You ask for referrals. Dry well.",
+                icon: RefreshCw,
+                title: "You ask for referrals. Sames names.",
                 description: "You end up relying on the same small network of past batchmates and colleagues, and it rarely surfaces new, high-caliber builders."
             },
             {
+                icon: Inbox,
                 title: "You post the role. Floodgates open.",
-                description: "1000+ applications on LinkedIn - almost none who've actually built in high ownership and fast moving environments."
+                description: "1000+ applications on LinkedIn, and almost none who’ve actually built in high ownership and fast moving environments."
             },
             {
+                icon: CircleX,
                 title: "You interview them. Nothing clicks.",
                 description: "AI-written resumes and tools like Cheatly let candidates game early rounds, until you interview them deep enough to see the gap."
             },
             {
+                icon: UserX,
                 title: "You make an offer. They disappear.",
                 description: "Competing with FAANG-level compensation on a startup budget feels impossible."
             },
             {
+                icon: AlertTriangle,
                 title: "You bring someone in. It doesn’t work.",
                 description: "A few weeks in, you realize they need structure and handholding just to get work done."
             }
@@ -128,71 +142,65 @@ export const HOME_PAGE = {
             cta: "Let us show you how we fix this",
         },
     },
-    process: {
+    howWeWork: {
         headline: "How we work",
-        steps: [
-            {
-                title: "Role alignment",
-                description:
-                    "We understand your product, team, and the kind of builder who will succeed in the role."
-            },
-            {
-                title: "Target sourcing",
-                description:
-                    "We tap into our curated network and run targeted outreach — builders who have built and shipped in fast-moving teams."
-            },
-            {
-                title: "Curated shortlist",
-                description:
-                    "We evaluate technical depth, ownership, and intent before introducing anyone — usually 3 to 5 strong matches."
-            },
-            {
-                title: "Offer closure",
-                description:
-                    "We stay involved through interviews, feedback, negotiation, and onboarding until they join."
-            }
-        ]
+        steps: HOW_WE_WORK_STEPS,
     },
     whyPartner: {
         headline: "Why Founders partner with us",
         reasons: [
             {
-                title: "Built for founders",
-                description: "We’ve built and hired for fast-moving teams ourselves — we understand these challenges firsthand."
+                icon: Terminal,
+                title: "Built by tech leaders",
+                description: "We've spent years building teams ourselves in fast-moving companies. We know how costly a wrong hire can be."
             },
             {
-                title: "Only fit, no fluff",
-                description: "We aim to get you the right candidate within 3–5 introductions — no resume dumps or weekly shortlists.",
+                icon: Watch,
+                title: "Only curated introductions",
+                description: "We respect your time. We only introduce candidates who meet your bar on both technical and behavioral traits.",
             },
             {
-                title: "Founder-caliber evaluation",
-                description: "We focus on what actually matters — context, ownership, and execution in fast-moving teams.",
-            },
-            {
-                title: "Hires who stick around",
-                description: "We only introduce builders who own problems end-to-end and act as force multipliers for your team.",
-            },
-            {
+                icon: ShieldCheck,
                 title: "No offer ghosting",
-                description: "We align intent, expectations, and compensation upfront so candidates stay committed through the process.",
+                description: "We align on intent and expectations upfront so candidates stay committed through the process and stick around once they join.",
             },
-            {
-                title: "Honest always",
-                description: "We don’t oversell candidates or hide trade-offs — just honest conversations about what’s actually right for the role.",
-            },
-
         ],
     },
     rolesWeFill: {
         headline: "Roles we help you hire for",
         roles: [
-            { icon: "Layers", title: "Founding Engineer", description: "Owns entire product and makes architectural decisions that last." },
-            { icon: "BrainCircuit", title: "AI Engineer", description: "Builds agentic workflows, LLM integrations, and AI-powered production systems." },
-            { icon: "Server", title: "Backend & Infrastructure", description: "Builds scalable, resilient systems and owns the infrastructure behind them." },
-            { icon: "Code2", title: "Full-Stack Engineer", description: "Builds across the stack and owns product outcomes, not just tickets." },
-            { icon: "AudioWaveform", title: "AI Research Engineer", description: "Specialist in AI domain (audio, CV, NLP etc) — owns it from research to production." },
-            { icon: "Crown", title: "Head of Engineering", description: "Scales the team, owns architecture, and keeps engineering velocity high." },
+            {
+                icon: Layers,
+                title: "Founding Engineer",
+                description: "Owns entire product and makes architectural decisions that last."
+            },
+            {
+                icon: BrainCircuit,
+                title: "AI Engineer",
+                description: "Builds agentic workflows, LLM integrations, and AI-powered production systems."
+            },
+            {
+                icon: Server,
+                title: "Backend & Infrastructure",
+                description: "Builds scalable, resilient systems and owns the infrastructure behind them."
+            },
+            {
+                icon: Code2,
+                title: "Full-Stack Engineer",
+                description: "Builds across the stack and owns product outcomes, not just tickets."
+            },
+            {
+                icon: AudioWaveform,
+                title: "AI Research Engineer",
+                description: "Specialist in AI domain (audio, CV, NLP etc) — owns it from research to production."
+            },
+            {
+                icon: Crown,
+                title: "Head of Engineering",
+                description: "Scales the team, owns architecture, and keeps engineering velocity high."
+            },
         ],
+        note: "Feel free to reach out for any other roles not listed above.",
     },
     testimonials: {
         headline: "What founders say about working with us",
@@ -232,11 +240,11 @@ export const HOME_PAGE = {
         },
         {
             q: "How do you source candidates?",
-            a: "We combine a curated network, direct outreach, and trusted referrals to find builders who have already shipped in high-ownership environments."
+            a: HOW_WE_WORK_STEPS[1].description
         },
         {
             q: "How do you evaluate candidates?",
-            a: "We assess technical depth, ability to operate independently, problem-solving ability, and intent. We focus on role fit and whether they can thrive in your environment before introducing them."
+            a: HOW_WE_WORK_STEPS[2].description
         },
         {
             q: "What kind of startups do you work with?",
@@ -253,7 +261,7 @@ export const HOME_PAGE = {
     ],
     founder: {
         opening: "Over 11+ years in engineering, I’ve realized the best teams all operate the same way: every role is high-stakes, and each person owns their outcomes with genuine trust and autonomy.",
-        quote: "The best builders don’t just execute — they raise the confidence and ambition of everyone around them.",
+        quote: "The right builder doesn't just build products — they elevate the people, culture, and ambition around them.",
         body: [
             "But builders like that are usually deep in the trenches somewhere else, so they rarely come through recruiters, agencies, or inbound. Over 7+ years building and leading teams across AI and deep tech domains, I’ve learned that finding them takes real time, focus, and judgment — going direct, working trusted referrals, and looking past the résumé to someone’s journey, product thinking, and intent.",
             "After talking to 50+ founders and technical leaders, it was clear everyone faces the same challenge — that’s why I started Mowka, the first partner founders turn to for critical hires, so quality never has to slip as they scale.",
@@ -270,8 +278,9 @@ export const HOME_PAGE = {
 
 export const NAV_ITEMS = [
     { label: "About", href: "#about" },
-    { label: "How we work", href: "#process" },
-    // { label: "Insights", href: "/insights", page: true },
+    { label: "How we work", href: "#how-we-work" },
+    { label: "Open Roles", href: "/jobs", page: true },
+    { label: "Insights", href: "/insights", page: true },
     { label: "For Builders", href: "/builder", page: true },
 ];
 
@@ -279,80 +288,47 @@ export const NAV_CTA = "Book a Call";
 
 export const BUILDER_PAGE = {
     hero: {
-        kicker: "For builders",
         headline: {
-            start: "If you thrive on moving fast, owning problems, and working with sharp people -",
-            highlight: "we'd love to get to know you",
+            start: "Trusted referral",
+            highlight: "for exceptional builders",
         },
-        subhead: "Get introduced to opportunities you'd move for and connect directly with founders and high-context leaders.",
-        cta: "Let's talk",
+        subhead: "We understand where you're heading. We'll only reach out when a startup opportunity comes up that makes the switch worthwhile.",
+        cta: "Talk to us",
     },
-    situations: {
-        headline: "Do any of these scenarios sound familiar?",
-        items: [
-            {
-                "title": "AI is moving too fast for mature tech.",
-                "body": "The fundamental core architectural breakthroughs unlocked by AI are happening at fast-moving, nimble teams. You refuse to wait for slow enterprise adoption."
-            },
-            {
-                "title": "The company grew. The building stopped.",
-                "body": "You stayed through scaling, but maturity changed the nature of the work. Your days shifted from load-bearing engineering to endless alignment syncs and middle-management process."
-            },
-            {
-                "title": "You’ve built early. A cog won’t do.",
-                "body": "You’ve been a founder or early engineer before. Following an acquisition or shutdown, you miss rapid execution and refuse to be a small component in a slow system."
-            },
-            {
-                "title": "Future founder. Missing the playbook.",
-                "body": "You plan to launch your own company in a few years. You want to skip corporate ladders now and work alongside strong founders to learn how to scale a business."
-            },
-            {
-                "title": "Load-bearing impact. Fractional upside.",
-                "body": "You are architecting the mission-critical infrastructure driving massive enterprise value. Your equity package doesn't match that leverage, and you want true ownership."
-            },
-            {
-                "title": "Elite expectations. Chaotic execution.",
-                "body": "You joined a team expecting hard technical problems and an elite engineering bar. Instead, you found constant product pivots, loose architecture, and short-term patches."
-            },
-            {
-                "title": "The best teams don't use job boards.",
-                "body": "The high-caliber, high-growth teams you actually want to join rarely list key roles on public career pages. Their core engineering hires happen strictly through quiet founder networks."
-            },
-            {
-                "title": "The hiring theater rejects builders.",
-                "body": "You're done navigating generic automated keyword filters and rigid recruiter screens. You want to bypass the loops and talk system design directly with founders."
-            }
+    whoItsFor: {
+        headline: "Is this you?",
+        profiles: [
+            { icon: Crown, highlight: "You've built and led a startup before", body: "You've founded or co-founded a startup. You understand the risks, rewards, and full scope of ownership. You're ready to build something meaningful again." },
+            { icon: Terminal, highlight: "You've been a founding engineer or early hire", body: "You've operated at the early startup stage. You've since worked in scaled teams and want that same level of impact and ownership again." },
+            { icon: Cpu, highlight: "You've owned new products inside large orgs", body: "You've launched 0→1 products in big startups and companies. Now you want to build and ship faster with fewer coordination layers." },
+            { icon: Compass, highlight: "You're building toward founding", body: "You're already shipping strong work independently or inside your role. You want to work alongside experienced founders before starting your own startup." },
+            { icon: Server, highlight: "You've built systems at serious scale", body: "You've owned reliability and performance for systems running under real production load. You want to build core systems from the ground up, where your work directly drives the product." },
+            { icon: BrainCircuit, highlight: "You see opportunities from deep domain experience", body: "You've developed strong expertise in a domain and see broken systems others miss. You want to turn that insight into products that ship and get used." },
         ],
     },
     howWeWork: {
         headline: "How we work with you",
         steps: [
-            { title: "We get to know you deeply", description: "We learn your journey and what your ideal next looks like — then calibrate you on technical depth, behaviour, and everything that matters. Every match starts there." },
-            { title: "We reach out only when it's real", description: "No weekly updates, no just-checking-in. When we call, it's because something worth your time exists." },
-            { title: "You talk straight to the founders", description: "No HR layer, no recruiter screen — the founders and technical leaders you'd actually work with." },
+            { title: "We understand your builder trajectory", description: "We talk through what you've built, how you build today, and where you're heading next." },
+            { title: "We share opportunities when it's a strong fit", description: "We only reach out to you when there's a startup opportunity that clearly fits your level and direction." },
+            { title: "We introduce you directly to founders", description: "We connect you straightaway with hiring managers so you can explore the opportunity immediately." },
         ],
     },
-    faqs: [
-        { q: "Do I have to be actively looking?", a: "No. Most people in our circle aren't. We reach out only when something worth your time comes up — looking or not." },
-        { q: "Does it cost anything?", a: "Nothing. We're paid by the startups we work with, never by builders." },
-        { q: "What kind of roles do you work on?", a: "Founding and early engineering, AI, and technical leadership at startups worth moving for — not volume listings." },
-        { q: "What happens after I share my details?", a: "We learn what you actually want, then stay quiet until there's a real match. No spam, no weekly check-ins." },
-        { q: "Will my current employer find out?", a: "No. Everything you share is confidential, and we never circulate your profile without your say-so." },
-    ],
     contact: {
-        headline: { start: "Get on our", highlight: "radar." },
-        subhead: "Tell us what you want next. We'll reach out when the right opportunity shows up — and not before.",
-        cta: "Let's talk",
+        headline: { start: "Tell us", highlight: "your story" },
+        subhead: "Not actively looking? We’d still love to know you",
+        cta: "Talk to us",
+        assurance: "Your profile is only shared with founders you approve",
     },
     success: {
-        title: "You are on our radar. We'll reach out only when the right opportunity matches what you actually want next.",
+        title: "Thanks for sharing your profile. We'll reach out soon to get to know you better.",
     },
     loading: {
-        submitting: "Saving your info…",
+        submitting: "Saving your profile…",
     },
     form: {
-        intro: "Tell us about you",
-        portfolioLabel: "Where can we find your background",
+        intro: "Please share your profile",
+        portfolioLabel: "Profile URL",
         portfolioPlaceholder: "Resume link, personal website, or LinkedIn URL",
         phoneLabel: "Mobile number",
         timeLabel: "Best time to reach out",
@@ -406,8 +382,8 @@ export const METADATA = {
         keywords: [...BRAND.knowsAbout, ...HOME_SEO_KEYWORDS],
     },
     builder: {
-        title: `Join with confidence | ${BRAND.name}`,
-        description: BUILDER_PAGE.hero.subhead,
+        title: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight} | ${BRAND.name}`,
+        description: `Mowka connects exceptional engineers and technical founders with the right startup opportunity, through a trusted referral process with direct access to founders.`,
         ogTitle: `${BUILDER_PAGE.hero.headline.start} ${BUILDER_PAGE.hero.headline.highlight}`,
         ogDescription: BUILDER_PAGE.hero.subhead,
         keywords: [...BRAND.knowsAbout, ...BUILDER_SEO_KEYWORDS],
