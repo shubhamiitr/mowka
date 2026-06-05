@@ -1,7 +1,14 @@
 # Analytics
 
-GA4 property: **G-5VNYMY69PY** (mowka.in)
-Search Console: linked as Domain property since Dec 2025 — covers all pages automatically.
+## Overview
+
+| Tool | What it covers | Property / ID |
+|---|---|---|
+| Google Analytics 4 | Events, funnels, traffic sources, conversions | G-5VNYMY69PY |
+| Microsoft Clarity | Session recordings, heatmaps, drop-off behaviour | x2b9jxs5tw (linked to GA4) |
+| Google Search Console | Search queries, impressions, clicks, indexation | mowka.in (linked since Dec 2025) |
+
+Both GA4 and Clarity scripts are installed in `app/layout.js`.
 
 ---
 
@@ -21,7 +28,9 @@ Search Console: linked as Domain property since Dec 2025 — covers all pages au
 
 ---
 
-## Event Inventory
+## Google Analytics 4
+
+### Event Inventory
 
 | Event | Parameters | Who | What it means |
 |---|---|---|---|
@@ -35,120 +44,78 @@ Search Console: linked as Domain property since Dec 2025 — covers all pages au
 
 Note: job card clicks are not tracked as custom events — individual job page views (`/jobs/[slug]`) are captured automatically via `page_view` and visible in path explorations.
 
-**Known gap:** "Email us" link in Contact section has no GA event — untracked founder intent signal.
-
 ---
 
-## Setup Steps
+### Setup
 
-### ✅ Step 1: Key Events
+#### ✅ Key Events
 
 Admin → Data display → Events → "Recent events" tab
 
-Click the **star (☆)** next to:
-- `booking_confirmed` — real founder conversion (completed booking on Cal.com)
+Star (☆):
+- `booking_confirmed` — real founder conversion
 - `builder_form_submit` — builder conversion
 
 Do not star: `book_call_click`, `cal_popup_opened`, `cal_load_failed`, `builder_form_open`, `page_view`.
 
 ---
 
-### ✅ Step 2: Custom Dimensions
+#### ✅ Enhanced Measurement
 
-No custom dimensions needed — all useful data is captured via built-in GA4 dimensions (page path, session source, device category etc.).
-
----
-
-### ✅ Step 3: Search Console Link
-
-Admin → Property settings → Product Links → Search Console links
-
-Already linked: `mowka.in` as Domain property since Dec 2025. No action needed.
-
----
-
-### ✅ Step 4: Enhanced Measurement
-
-Admin → Data collection and modification → Data streams → mowka.in → Enhanced measurement → gear icon ⚙
+Admin → Data collection and modification → Data streams → mowka.in → Enhanced measurement → ⚙
 
 | Setting | Set to | Why |
 |---|---|---|
 | Scrolls | ON | Free scroll depth signal |
 | Outbound clicks | ON | Tracks external link clicks |
 | Site search | ON | Useful if search is ever added |
-| Form interactions | **OFF** | Conflicts with `builder_form_open` / `builder_form_submit` — double counts |
-| Page changes based on browser history | **OFF** | `RouteAnalytics.jsx` handles `page_view` for Next.js — GA auto-detection causes duplicates |
-
-Click Save.
+| Form interactions | **OFF** | Conflicts with custom form events — double counts |
+| Page changes based on browser history | **OFF** | `RouteAnalytics.jsx` handles `page_view` — auto-detection causes duplicates |
 
 ---
 
-### ✅ Step 5: Founder Exploration + Builder Exploration
+#### ✅ Search Console Link
 
-Two explorations, each with two tabs — a funnel tab and a path tab.
+Already linked: `mowka.in` as Domain property since Dec 2025. No action needed.
 
-**Founder Exploration**
+---
 
-Left sidebar → Explore → Funnel exploration → Blank. Name the exploration "Founder Exploration".
+### Explorations
 
-**Tab 1 — Funnel** (rename tab to "Funnel")
+#### Founder Exploration
 
-Steps — click pencil ✏ next to STEPS:
+Left sidebar → Explore → Funnel exploration → Blank. Name it "Founder Exploration".
+
+**Tab 1 — Funnel**
 
 | Step name | Condition |
 |---|---|
 | Started Session | `session_start` |
+| Clicked Book a Call | `book_call_click` |
 | Opened Calendar | `cal_popup_opened` |
 | Confirmed Booking | `booking_confirmed` |
 
-Variables panel (left):
+Segments to add: `Direct traffic`, `Mobile traffic`, `Organic traffic`, `Web traffic` (desktop).
 
-Segments — click +, add:
-- `Direct traffic` — word of mouth / people who already know you
-- `Mobile traffic` — mobile converts worse, important to track separately
-- `Organic traffic` — Google search, most important for SEO
-- `Web traffic` — desktop (GA's confusing name for device = desktop)
+Dimensions to add: `Event name`, `Country`, `Device category`, `First user medium`, `Session source`, `Session medium`.
 
-Skip: US, Paid traffic, Tablet traffic, Email/SMS.
+Settings: Visualisation = Standard funnel, Breakdown = Device category, Make open funnel = OFF.
 
-Dimensions — click +, add:
-- `Event name` — slice any report by which event fired
-- `Country` — geographic breakdown
-- `Device category` — desktop vs mobile
-- `First user medium` — how they found Mowka the very first time ever
-- `Session source` — where this session came from (google, instagram, direct)
-- `Session medium` — organic / referral / cpc for this session
+**Tab 2 — Path**
 
-Settings panel (right):
-- Visualisation: `Standard funnel`
-- Make open funnel: `OFF`
-- Segment comparisons: leave empty
-- Breakdown: `Device category`
-- Show elapsed time: `OFF`
+Click + next to tab → Path exploration. Click "Start again" → "Ending point" → Event name → `book_call_click`.
 
-**Tab 2 — Path** (click + next to tab → Path exploration → rename tab to "Path")
+Shows which pages founders visited before clicking "Book a call". Note: the modal title says "Starting point" when setting ending point — GA4 UI bug, it works correctly.
 
-- Click **"Start again"** (top right of chart)
-- Click **"Ending point"**
-- Select node type: `Event name`
-- Search and select: `book_call_click`
-
-This shows which pages founders visited before clicking "Book a call" — the decision moment.
-
-Note: when you click "Ending point" the modal title still says "Starting point" — GA4 UI bug. It is correctly set as ending point once you confirm.
-
-Settings panel:
-- View unique nodes only: `ON`
-- Breakdown: drag `Device category` in
-- Values: `Event count`
+Settings: View unique nodes only = ON, Breakdown = Device category, Values = Event count.
 
 ---
 
-**Builder Exploration**
+#### Builder Exploration
 
-In the Explorations list, find "Founder Exploration" → click three dots (⋮) → Duplicate. Rename to "Builder Exploration". Only change two things:
+Duplicate "Founder Exploration" → rename to "Builder Exploration". Change only:
 
-**Tab 1 — Funnel** — replace steps with:
+**Tab 1 — Funnel** steps:
 
 | Step name | Condition |
 |---|---|
@@ -156,47 +123,51 @@ In the Explorations list, find "Founder Exploration" → click three dots (⋮) 
 | Opened Form | `builder_form_open` |
 | Submitted Form | `builder_form_submit` |
 
-**Tab 2 — Path** — replace ending point `book_call_click` with `builder_form_open`
-
-This shows which pages builders visited before opening the form — including individual job pages like `/jobs/full-stack-engineer-consumer-ai`.
+**Tab 2 — Path** — replace ending point with `builder_form_open`.
 
 ---
 
-**Founder funnel:** `book_call_click` → `cal_popup_opened` → `booking_confirmed`
-`cal_load_failed` tracked separately — if count is close to `book_call_click`, drop-off is technical failure not disinterest.
-
----
-
-### Step 6: Jobs Path Exploration
-
-To see which job listings get the most interest and what builders do after:
+#### Jobs Exploration
 
 Left sidebar → Explore → Path exploration → Blank. Name it "Jobs Exploration".
 
-- Click **"Start again"**
-- Click **"Starting point"**
-- Select node type: `Page path and screen class`
-- Select: `/jobs`
+Click "Start again" → "Starting point" → Page path → `/jobs`.
 
-This shows the forward path from the jobs listing page — which individual job pages builders navigate to, and what they do after (open the builder form, leave, go back).
-
-No custom events needed — `page_view` captures all job page navigation automatically.
+Shows which job pages builders navigate to from the listing and what they do after.
 
 ---
 
-### Step 7: Search Query Report
+### Search Query Report
 
 Reports → Search Console → Queries
 
-Shows exact Google search terms, landing page, clicks, impressions, CTR, position. Google organic only — no equivalent exists for direct, referral, or social sources.
+Shows exact Google search terms, landing page, clicks, impressions, CTR, position.
 
 - Founder queries: filter landing page = `/`
 - Builder queries: filter landing page = `/builder` or `/jobs`
 
 ---
 
-## What GA4 Cannot Tell You
+## Microsoft Clarity
 
-GA4 shows drop-off numbers but not reasons. To understand WHY someone opened the form but didn't submit, you need session recordings.
+Project ID: **x2b9jxs5tw** — linked to GA4 property G-5VNYMY69PY.
 
-**Install Microsoft Clarity** (free) — records actual user sessions as videos. You'll see exactly where users scroll, what they click, and where they get stuck. One script tag install, same as GA.
+**What it answers that GA4 can't:**
+- Did the Cal.com popup load or fail silently after a click?
+- Where do founders scroll and stop on the home page?
+- Did the builder form confuse anyone before they dropped off?
+
+**How to use:**
+- Recordings — watch real sessions, filter by page or device
+- Heatmaps — click and scroll patterns per page
+- Inside any recording, "View in GA4" jumps to that user's session in GA4
+- Inside GA4, sessions with recordings show a "View recording" link
+
+Dashboard: clarity.microsoft.com
+
+---
+
+## Known Gaps
+
+- "Email us" link in Contact section has no GA event — untracked founder intent signal
+- `cal_load_failed` is the signal for technical drop-off — if its count is close to `book_call_click`, the Cal popup is failing, not founders losing interest

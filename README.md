@@ -67,6 +67,7 @@ npm run dev                   # http://localhost:3000
 |---|---|---|
 | Vercel Observability | API errors, function error rate, 4XX/5XX by route | vercel.com → mowka → Observability |
 | Google Analytics (GA4) | Page views, form submissions, booking conversions | analytics.google.com — property G-5VNYMY69PY |
+| Microsoft Clarity | Session recordings, heatmaps, drop-off behaviour | clarity.microsoft.com — project x2b9jxs5tw (linked to GA4) |
 | Google Search Console | Search queries, impressions, clicks, indexation | search.google.com/search-console |
 
 See [ANALYTICS.md](./ANALYTICS.md) for event inventory, GA4 exploration setup, and known gaps.
