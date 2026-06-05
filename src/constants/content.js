@@ -271,7 +271,7 @@ export const HOME_PAGE = {
     contact: {
         headline: { start: "Bring in your", highlight: "next game changer" },
         subhead: "Try us with your toughest role.",
-        primaryCta: "Book a Call",
+        cta: "Book a Call",
         reassurance: "· No upfront fees · Pay only after they join",
     },
 };

@@ -1,6 +1,6 @@
 # Mowka
 
-High-trust hiring partner for teams that move fast and care deeply about who they build with.
+Founder-caliber talent search for startups. Helps ambitious startups hire engineers, AI talent, and technical leaders through direct outreach, trusted referrals, and deep candidate evaluation.
 
 ---
 
@@ -32,61 +32,51 @@ npm run dev                   # http://localhost:3000
 
 | Route | Description |
 |---|---|
-| `/` | Home — for companies hiring builders |
+| `/` | Home — for founders hiring builders |
 | `/builder` | Builder intake — for engineers joining the network |
+| `/jobs` | Open roles listing |
+| `/jobs/[slug]` | Individual job detail page |
+| `/insights` | Articles (noindexed — temporarily hidden) |
+| `/insights/[slug]` | Individual insight page (noindexed) |
 | `/privacy` | Privacy policy |
 | `/terms` | Terms of service |
 
 ---
 
-## Changing content
+## Where things live
 
-Almost all copy lives in `src/constants/content.js` — headlines, subheads, FAQs, CTAs, metadata.
+| What | Where | Notes |
+|---|---|---|
+| Page routes | `app/` | Each folder is a route |
+| API routes | `app/api/` | Server-side only |
+| Home + builder copy, CTAs, metadata | `src/constants/content.js` | Start here for most copy changes |
+| Job listings | `src/constants/jobs.js` | `status: "open"` to publish, `"closed"` to noindex, `"draft"` to hide |
+| Insight articles | `src/constants/insights.js` | |
+| Page-level components | `src/components/home/`, `src/components/builder/` | |
+| Shared UI components | `src/components/ui/` | |
+| Global styles + design tokens | `app/globals.css` | |
+| Supabase admin client | `src/lib/supabase-server.js` | |
+| Cal.com booking link | `src/constants/content.js` → `SITE_CONTENT.calLink` | |
+| AI crawler content | `public/llms.txt` | Update manually after positioning changes |
 
-After changing core positioning, update `public/llms.txt` manually so AI crawlers stay current.
+---
 
-## Changing the booking widget
+## Monitoring & analytics
 
-Cal.com event type: https://app.cal.com/event-types/5740517?tabName=setup
+| Tool | What it covers | Where |
+|---|---|---|
+| Vercel Observability | API errors, function error rate, 4XX/5XX by route | vercel.com → mowka → Observability |
+| Google Analytics (GA4) | Page views, form submissions, booking conversions | analytics.google.com — property G-5VNYMY69PY |
+| Google Search Console | Search queries, impressions, clicks, indexation | search.google.com/search-console |
 
-The embed link is set in `content.js` → `SITE_CONTENT.calLink`.
+See [ANALYTICS.md](./ANALYTICS.md) for event inventory, GA4 exploration setup, and known gaps.
 
 ---
 
 ## Database
 
-Managed via Supabase UI or Claude Code. RLS enabled on both tables — only server-side API routes can write (service_role key bypasses RLS).
+RLS enabled — only server-side API routes can write (service_role key bypasses RLS).
 
 | Table | Stores |
 |---|---|
 | `builder_submissions` | Builder intake: phone, portfolio URL, preferred contact time |
-| `company_leads` | Company leads: website, role/JD link |
-
----
-
-## Project structure
-
-```
-app/
-  api/
-    builder/connect     Builder intake API
-    company/connect     Company lead capture API
-  builder/              /builder page
-  privacy/              /privacy page
-  terms/                /terms page
-
-src/
-  components/
-    home/               Hero, Problem, Process, WhyMowka, Contact
-    builder/            Builder, BuilderHero, BuilderForm
-    ui/                 Shared: Footer, Logo, Reveal, MotionLogo
-    legal/              PrivacyPolicy, TermsOfService
-    Home.jsx            Home page composition
-    ClientLayout.jsx    Smooth scroll wrapper
-
-  constants/
-    content.js          All copy, metadata, and config
-
-  lib/
-    supabase-server.js  Supabase admin client
-```

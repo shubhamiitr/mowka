@@ -8,7 +8,7 @@ import { event } from '../lib/gtag';
 
 const { success, loading, errors } = BUILDER_PAGE;
 
-export function useBuilderConnect(source = 'unknown') {
+export function useBuilderConnect() {
     const [step, setStep] = useState('idle');
     const [phone, setPhone] = useState('');
     const [preferredTime, setPreferredTime] = useState('');
@@ -16,7 +16,7 @@ export function useBuilderConnect(source = 'unknown') {
     const [errorMsg, setErrorMsg] = useState('');
 
     const open = () => {
-        event('builder_form_open', { source });
+        event('builder_form_open');
         setStep('form');
     };
 
@@ -39,7 +39,7 @@ export function useBuilderConnect(source = 'unknown') {
             });
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || errors.default);
-            event('builder_form_submit', { source });
+            event('builder_form_submit');
             setStep('done');
             setTimeout(dismiss, 4000);
         } catch (err) {

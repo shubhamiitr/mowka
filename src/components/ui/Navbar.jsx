@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
-import { CalButton } from './CalButton';
+import { FounderCta } from './FounderCta';
 import { BuilderFormCta } from './BuilderFormCta';
 
 const DESKTOP_LINK = "text-sm font-medium text-mowka-text-secondary hover:text-mowka-text-primary transition-all duration-300 hover:-translate-y-0.5 tracking-wide cursor-pointer";
@@ -15,7 +15,7 @@ const MOBILE_LINK = "text-3xl font-serif text-mowka-text-primary hover:text-mowk
  * Unified navbar for all pages.
  *
  * links: [{ label, href }]  — hrefs starting with '#' use anchor scroll, others use Next.js Link
- * cta:   { type: 'cal' | 'builder-form' | 'link', label, href? }
+ * cta:   { type: 'cal' | 'builder-form', label }
  */
 export const Navbar = ({ links = [], cta }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -46,27 +46,17 @@ export const Navbar = ({ links = [], cta }) => {
             </Link>
         );
 
-    const renderCta = (compact) => {
+    const renderCta = (hamburgerMenu) => {
         if (!cta) return null;
         if (cta.type === 'cal') {
             return (
-                <CalButton variant="primary" size={compact ? 'compact' : 'md'} icon="arrow" onClick={closeMenu}>
+                <FounderCta variant={hamburgerMenu ? 'compactBtn' : 'primaryBtn'} onClick={closeMenu}>
                     {cta.label}
-                </CalButton>
+                </FounderCta>
             );
         }
         if (cta.type === 'builder-form') {
-            return <BuilderFormCta label={cta.label} compact={compact} />;
-        }
-        if (cta.type === 'link') {
-            const cls = compact
-                ? "text-sm font-medium text-white bg-mowka-action-primary hover:bg-mowka-action-primary-hover px-5 py-2 rounded-md transition-all duration-300 inline-flex items-center gap-1.5 group"
-                : "group btn btn-primary";
-            return (
-                <Link href={cta.href} onClick={closeMenu} className={cls}>
-                    {cta.label}
-                </Link>
-            );
+            return <BuilderFormCta label={cta.label} variant={hamburgerMenu ? 'compactBtn' : 'primaryBtn'} />;
         }
         return null;
     };

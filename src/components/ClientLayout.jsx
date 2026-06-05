@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { getCalApi } from '@calcom/embed-react';
 import { usePathname } from 'next/navigation';
+import { event } from '../lib/gtag';
 
 export default function ClientLayout({ children }) {
     const pathname = usePathname();
@@ -23,6 +24,9 @@ export default function ClientLayout({ children }) {
                 hideEventTypeDetails: false,
                 layout: 'month_view',
             });
+            cal('on', { action: 'bookerViewed',        callback: () => event('cal_popup_opened') });
+            cal('on', { action: 'bookingSuccessfulV2', callback: () => event('booking_confirmed') });
+            cal('on', { action: 'linkFailed',          callback: () => event('cal_load_failed') });
         })();
     }, []);
 

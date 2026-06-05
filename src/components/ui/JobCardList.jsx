@@ -1,9 +1,6 @@
-"use client";
-
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { JobMetaStrip } from './JobMetaStrip';
-import { event } from '../../lib/gtag';
 
 export const JobCardList = ({ jobs }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-4xl mx-auto">
@@ -12,7 +9,6 @@ export const JobCardList = ({ jobs }) => (
                 key={j.slug}
                 href={`/jobs/${j.slug}`}
                 className="type-timeline-card group !flex-row items-center justify-between"
-                onClick={() => event('job_card_click', { job_title: j.title, job_slug: j.slug })}
             >
                 <div>
                     <div className="flex items-center gap-3">

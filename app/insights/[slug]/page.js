@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
     return {
         title: `${a.title} — ${BRAND.name}`,
         description: a.excerpt,
+        robots: { index: false, follow: false },
         alternates: { canonical: `${BASE}/insights/${a.slug}` },
         openGraph: {
             type: 'article',

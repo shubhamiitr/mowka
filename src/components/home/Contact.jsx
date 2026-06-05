@@ -1,14 +1,14 @@
 "use client";
 
 import { ArrowRight } from 'lucide-react';
-import { CalButton } from '../ui/CalButton';
+import { FounderCta } from '../ui/FounderCta';
 import { Footer } from '../ui/Footer';
 import { HOME_PAGE, BRAND } from '../../constants/content';
 
 const MAIL_SUBJECT = encodeURIComponent('Team building inquiry');
 
 export const Contact = () => {
-    const { headline, subhead, primaryCta, reassurance } = HOME_PAGE.contact;
+    const { headline, subhead, cta, reassurance } = HOME_PAGE.contact;
 
     return (
         <>
@@ -29,9 +29,9 @@ export const Contact = () => {
                     </p>
 
                     <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <CalButton variant="primary" icon="arrow" source="home_contact">
-                            {primaryCta}
-                        </CalButton>
+                        <FounderCta>
+                            {cta}
+                        </FounderCta>
                         <a
                             href={`mailto:${BRAND.email}?subject=${MAIL_SUBJECT}`}
                             className="group btn btn-secondary"

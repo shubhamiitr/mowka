@@ -12,6 +12,7 @@ const BASE = BRAND.url;
 export const metadata = {
     title: `Insights — ${BRAND.name}`,
     description: 'Practical hiring advice for startup founders — scoping roles, evaluating builders, and closing offers.',
+    robots: { index: false, follow: false },
     alternates: { canonical: `${BASE}/insights` },
     openGraph: {
         type: 'website',

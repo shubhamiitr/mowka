@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
 import { BRAND, HOME_PAGE } from '../../constants/content';
+import { FounderCta } from './FounderCta';
+import { BuilderFormCta } from './BuilderFormCta';
 
 const COLUMNS = [
     {
@@ -24,7 +26,7 @@ const COLUMNS = [
         heading: 'For builders',
         links: [
             { label: 'Open Roles', href: '/jobs' },
-            { label: 'Let\'s Talk', href: '/builder' },
+            { label: 'Let\'s Talk', isBuilderForm: true },
         ],
     },
 ];
@@ -67,17 +69,19 @@ export const Footer = () => {
                                 </p>
                                 <ul className="space-y-3.5">
                                     {col.links.map((link) => {
+                                        if (link.isBuilderForm) {
+                                            return (
+                                                <li key={link.label}>
+                                                    <BuilderFormCta label={link.label} variant="plainLink" />
+                                                </li>
+                                            );
+                                        }
                                         if (link.isCal) {
                                             return (
                                                 <li key={link.label}>
-                                                    <button
-                                                        data-cal-link={BRAND.calLink}
-                                                        data-cal-namespace="30min"
-                                                        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-                                                        className="text-[13px] font-medium text-white/80 hover:text-white transition-colors duration-200 text-left bg-transparent border-0 p-0 cursor-pointer block"
-                                                    >
+                                                    <FounderCta variant="plainLink">
                                                         {link.label}
-                                                    </button>
+                                                    </FounderCta>
                                                 </li>
                                             );
                                         }

@@ -42,5 +42,7 @@ pricing.html
 .claude/
 supabase/.temp/
 
-*.md 
-!Readme.md
+# MD Files
+CLAUDE.md
+GEMINI.md
+BUILDER_ICP.md

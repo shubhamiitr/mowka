@@ -7,7 +7,7 @@ import { useBuilderConnect } from '../../hooks/useBuilderConnect';
 const { hero } = BUILDER_PAGE;
 
 export const BuilderHero = () => {
-    const { open, modal } = useBuilderConnect('builder_hero');
+    const { open, modal } = useBuilderConnect();
 
     return (
         <section className="hero-section !min-h-0 !pb-16 md:!pb-20">
