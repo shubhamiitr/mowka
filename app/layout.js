@@ -50,7 +50,8 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-5VNYMY69PY', { send_page_view: false });
+            var isLocal = window.location.hostname === 'localhost';
+            gtag('config', 'G-5VNYMY69PY', Object.assign({ send_page_view: false }, isLocal ? { traffic_type: 'internal' } : {}));
           `}
                 </Script>
             </head>

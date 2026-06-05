@@ -6,7 +6,7 @@
 |---|---|---|
 | Google Analytics 4 | Events, funnels, traffic sources, conversions | G-5VNYMY69PY |
 | Microsoft Clarity | Session recordings, heatmaps, drop-off behaviour | x2b9jxs5tw (linked to GA4) |
-| Google Search Console | Search queries, impressions, clicks, indexation | mowka.in (linked since Dec 2025) |
+| Google Search Console | Search queries, impressions, clicks, indexation | mowka.in |
 
 Both GA4 and Clarity scripts are installed in `app/layout.js`.
 
@@ -74,15 +74,36 @@ Admin → Data collection and modification → Data streams → mowka.in → Enh
 
 ---
 
+#### ✅ Cross-Domain & Auto-Detected Domains
+
+Admin → Data collection and modification → Data Streams → mowka.in → Configure tag settings → Show all → Configure your domains:
+
+- Remove any `vercel.app` suggestions — keep only `mowka.in`
+- Scroll to "Auto-detected domains" → turn OFF "Monitor auto-detected domains for diagnostics" — prevents GA4 from auto-adding every Vercel preview deployment URL
+
+---
+
+#### ✅ Internal Traffic Filter
+
+The code in `app/layout.js` sets `traffic_type: 'internal'` automatically when `hostname === 'localhost'` — works on any network, no IP management needed.
+
+To activate the filter in GA4:
+
+Admin → Data collection and modification → Data filters → Internal Traffic → set state to **Active**.
+
+Warning: once Active, excluded data is permanently gone. Takes 24-36 hours to apply.
+
+---
+
 #### ✅ Search Console Link
 
-Already linked: `mowka.in` as Domain property since Dec 2025. No action needed.
+Admin → Property settings → Product Links → Search Console links → Add → select `mowka.in` as Domain property.
 
 ---
 
 ### Explorations
 
-#### Founder Exploration
+#### ✅ Founder Exploration
 
 Left sidebar → Explore → Funnel exploration → Blank. Name it "Founder Exploration".
 
@@ -111,7 +132,7 @@ Settings: View unique nodes only = ON, Breakdown = Device category, Values = Eve
 
 ---
 
-#### Builder Exploration
+#### ✅ Builder Exploration
 
 Duplicate "Founder Exploration" → rename to "Builder Exploration". Change only:
 
@@ -151,6 +172,28 @@ Shows exact Google search terms, landing page, clicks, impressions, CTR, positio
 ## Microsoft Clarity
 
 Project ID: **x2b9jxs5tw** — linked to GA4 property G-5VNYMY69PY.
+
+### Setup
+
+#### ✅ Step 1: Create Project
+
+clarity.microsoft.com → New project → Name: Mowka, URL: mowka.in, Industry: B2B Services.
+
+#### ✅ Step 2: Install Script
+
+Script is already installed in `app/layout.js` — no action needed.
+
+#### ✅ Step 3: Link GA4
+
+Settings → Setup → Google Analytics integration → Get Started → connect property G-5VNYMY69PY.
+
+Enables "View in GA4" from any recording and "View recording" links inside GA4 sessions.
+
+#### Step 4: Verify on Production
+
+After deploying, visit mowka.in yourself → check Clarity → Recordings. Your session should appear within a few minutes. Settings → Setup shows a green checkmark once the script is detected.
+
+---
 
 **What it answers that GA4 can't:**
 - Did the Cal.com popup load or fail silently after a click?
