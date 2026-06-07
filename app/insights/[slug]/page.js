@@ -3,10 +3,10 @@ import { notFound } from 'next/navigation';
 import { Navbar } from '../../../src/components/ui/Navbar';
 import { Footer } from '../../../src/components/ui/Footer';
 import { INSIGHTS, getInsight } from '../../../src/constants/insights';
-import { BRAND, NAV_CTA } from '../../../src/constants/content';
+import { BRAND, HOME_PAGE } from '../../../src/constants/content';
 
 const NAV_LINKS = [{ label: 'Open Roles', href: '/jobs' }];
-const NAVBAR_CTA = { type: 'cal', label: NAV_CTA };
+const NAVBAR_CTA = { type: 'cal', label: HOME_PAGE.hero.cta };
 
 const BASE = BRAND.url;
 
