@@ -201,6 +201,7 @@ export const HOME_PAGE = {
             },
         ],
         note: "Feel free to reach out for any other roles not listed above.",
+        cta: { label: "View Open Roles", href: "/jobs" },
     },
     testimonials: {
         headline: "What founders say about working with us",
@@ -275,16 +276,6 @@ export const HOME_PAGE = {
         reassurance: "· No upfront fees · Pay only after they join",
     },
 };
-
-export const NAV_ITEMS = [
-    { label: "About", href: "#about" },
-    { label: "How we work", href: "#how-we-work" },
-    { label: "Open Roles", href: "/jobs", page: true },
-    { label: "Insights", href: "/insights", page: true },
-    { label: "For Builders", href: "/builder", page: true },
-];
-
-export const NAV_CTA = "Book a Call";
 
 export const BUILDER_PAGE = {
     hero: {
