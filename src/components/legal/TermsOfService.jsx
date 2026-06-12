@@ -6,6 +6,7 @@ import { Footer } from "../ui/Footer";
 import { BRAND } from "../../constants/content";
 
 const NAV_LINKS = [
+    { label: 'Home', href: '/' },
     { label: 'For Founders', href: '/' },
     { label: 'For Builders', href: '/builder' },
 ];

@@ -4,7 +4,10 @@ import { Footer } from '../../src/components/ui/Footer';
 import { INSIGHTS } from '../../src/constants/insights';
 import { BRAND, HOME_PAGE } from '../../src/constants/content';
 
-const NAV_LINKS = [{ label: 'Open Roles', href: '/jobs' }];
+const NAV_LINKS = [
+    { label: 'Home', href: '/' },
+    { label: 'Open Roles', href: '/jobs' },
+];
 const NAVBAR_CTA = { type: 'cal', label: HOME_PAGE.hero.cta };
 
 const BASE = BRAND.url;

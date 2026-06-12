@@ -4,6 +4,7 @@ import { Navbar } from './ui/Navbar';
 import { Footer } from './ui/Footer';
 
 const NAV_LINKS = [
+    { label: 'Home', href: '/' },
     { label: 'For Founders', href: '/' },
     { label: 'For Builders', href: '/builder' },
     { label: 'Insights', href: '/insights' },

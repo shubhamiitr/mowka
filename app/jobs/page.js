@@ -9,6 +9,7 @@ const { title, description, ogDescription } = JOBS_PAGE.meta.listing;
 const { heading } = JOBS_PAGE.listing;
 
 const NAV_LINKS = [
+    { label: 'Home', href: '/' },
     { label: 'For Builders', href: '/builder' },
     // { label: 'Insights', href: '/insights' },
     { label: 'For Founders', href: '/' },

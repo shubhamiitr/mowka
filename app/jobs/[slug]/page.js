@@ -8,6 +8,7 @@ import { BuilderFormCta } from '../../../src/components/ui/BuilderFormCta';
 import { BRAND } from '../../../src/constants/content';
 
 const NAV_LINKS = [
+    { label: 'Home', href: '/' },
     { label: 'For Founders', href: '/' },
     { label: 'For Builders', href: '/builder' },
     // { label: 'Insights', href: '/insights' },

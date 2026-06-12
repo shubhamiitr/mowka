@@ -8,6 +8,7 @@ import { BuilderContact } from './BuilderContact';
 import { BUILDER_PAGE } from '../../constants/content';
 
 const NAV_LINKS = [
+    { label: 'Home', href: '/' },
     { label: 'Open Roles', href: '/jobs' },
     // { label: 'Insights', href: '/insights' },
     { label: 'For Founders', href: '/' },
